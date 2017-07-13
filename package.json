@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A blog by Juliet and Jonathan Lam",
   "author": "Jonathan Lam <jlam55555@gmail.com>",
+  "engines": {
+    "node": "8.1.4"
+  },
   "dependencies": {
     "express": "4.15.3",
     "handlebars": "4.0.10",
