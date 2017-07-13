@@ -1,0 +1,8 @@
+<h1>{{ title }}</h1>
+<h2>{{ date }}</h2>
+<h3>By <a href="">{{ author }}</a></h3>
+<div id="postBody"></div>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.1/dist/showdown.min.js"></script>
+<script>
+  document.getElementById("postBody").innerHTML = new showdown.Converter().makeHtml("{{ markdown }}");
+</script>
