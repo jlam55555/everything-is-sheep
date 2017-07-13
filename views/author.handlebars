@@ -1,0 +1,8 @@
+<h1>Author: {{name}}</h1>
+<img src="{{profilePicture}}">
+<p>{{description}}</p>
+<ul>
+  {{#each authoredPosts}}
+    <li><a href="/posts/{{filename}}">{{title}}</a></li>
+  {{/each}}
+</ul>
