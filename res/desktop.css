@@ -52,11 +52,18 @@ body {
   display: block;
   flex-shrink: 1;
 }
+#titleBar {
+  margin-top: -1em;
+  margin-left: -1em;
+  padding: 1em 0;
+  width: calc(100% + 2em);
+}
 #title {
   line-height: initial;
   flex-shrink: 1;
   flex-grow: 0;
   padding: 0;
+  width: 100%;
 }
 #titleBreak {
   display: block;
@@ -64,10 +71,6 @@ body {
 #postList {
   display: block;
   flex-shrink: 1;
-}
-.date {
-  color: #aca1a1;
-  font-size: 0.75em;
 }
 #authorList {
   display: block;

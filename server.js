@@ -109,7 +109,7 @@ app.get("/posts/*", function(req, res, next) {
   var postData = clone(postList.find(function(post) { // note: this updates postList!!!
     return req.url.slice(7) === post.filename;
   }));
-  if(postData === undefined) {
+  if(Object.keys(postData).length === 0 && postData.constructor === Object) {
     next();
     return;
   }

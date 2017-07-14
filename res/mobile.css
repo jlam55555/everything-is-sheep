@@ -77,13 +77,25 @@ ul {
 #sidebar {
   background-color: #26282c;
   color: #f7efed;
-  overflow: hidden;
+  overflow: visible;
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#sidebar.expanded {
+  height: 100%;
+  justify-content: flex-start;
+  text-align: center;
+}
+#titleBar {
+  width: 100%;
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  flex-wrap: nowrap;
 }
 #title {
   text-decoration: none !important;
@@ -92,9 +104,37 @@ ul {
   flex-grow: 1;
   line-height: 1em;
   padding: 0.5em;
+  height: 2em;
 }
-#titleBreak, #logo, #postList, #authorList {
+#titleBreak, #logo, .sidebarList, .navLink {
   display: none;
+}
+#sidebar.expanded #titleBar {
+  flex-grow: 1;
+}
+#sidebar.expanded #title {
+  display: none;
+}
+#sidebar.expanded #menuButton {
+  height: auto;
+  width: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+#sidebar.expanded #menuButton::before {
+  content: "\00d7  Close Menu";
+}
+#sidebar.expanded .navLink {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2em;
 }
 #menuButton {
   display: inline-block;
@@ -103,9 +143,18 @@ ul {
   font-size: 2em;
   padding: 0.5em;
   cursor: pointer;
+  width: 2em;
+  height: 2em;
+}
+#menuButton::before {
+  content: "\2630";
 }
 #menuButton:hover, #menuButton:active {
   background-color: #224a91;
+}
+.date {
+  color: #aca1a1;
+  font-size: 0.75em;
 }
 #sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
   background-color: #224a91;

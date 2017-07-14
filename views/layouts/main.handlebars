@@ -6,6 +6,8 @@
     <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
     <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/res/main.js"></script>
     <link rel="stylesheet" href="/res/mobile.css">
     <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
@@ -14,16 +16,21 @@
   </head>
   <body>
     <div id="sidebar">
-      <a href="/" class="center" id="title">Everything <br id="titleBreak">is Sheep</a>
-      <div id="menuButton">&#9776;</div>
+      <div id="titleBar">
+        <a href="/" class="center" id="title">Everything <br id="titleBreak">is Sheep</a>
+        <div id="menuButton"></div>
+      </div>
+      <a href="/" class="navLink">Return home</a>
+      <a href="/posts" class="navLink">View all posts</a>
+      <a href="/authors" class="navLink">View all authors</a>
       <a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>
-      <div id="postList">
-        <h2>Posts</h2>
+      <div id="postList" class="sidebarList">
+        <h2>Recent Posts</h2>
         {{#each postList}}
           <div><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></div> 
         {{/each}}
       </div>
-      <div id="authorList">
+      <div id="authorList" class="sidebarList">
         <h2>Authors</h2>
         {{#each authorList}}
           <div><a href="/authors/{{filename}}">{{name}}</a></div>
