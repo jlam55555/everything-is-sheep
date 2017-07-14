@@ -15,6 +15,9 @@ var converter = new showdown.Converter();
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
   helpers: {
+    authorFilename: function() {
+      return this.author.toLowerCase().replace(/ /g, "-");
+    },
     formatPost: function() {
       return new showdown.Converter().makeHtml(this.markdown);
     },
@@ -65,26 +68,43 @@ fs.readdir("./authors", function(error, authors) {
   }
 });
 
+// url rewriting middleware
+app.use(function(req, res, next) {
+  if(req.url !== req.url.toLowerCase().replace(/ |%20/g, "-")) {
+    res.redirect(req.url.toLowerCase().replace(/ |%20/g, "-"));
+  } else {
+    next();
+  }
+});
+
 // handle routing (index)
 app.get("/", function(req, res) {
   res.render("index", {postList: postList, authorList: authorList});
 });
 
 // handle routing (posts)
-app.get("/posts/*", function(req, res) {
+app.get("/posts/*", function(req, res, next) {
   var postData = postList.find(function(post) {
-    return req.url.replace(/\%20| /g, "-").slice(7) == post.filename;
-  }) || {};
+    return req.url.slice(7) == post.filename;
+  });
+  if(postData === undefined) {
+    next();
+    return;
+  }
   postData.postList = postList;
   postData.authorList = authorList;
   res.render("post", postData);
 });
 
 // handle routing (authors)
-app.get("/authors/*", function(req, res) {
+app.get("/authors/*", function(req, res, next) {
   var authorData = authorList.find(function(author) {
-    return req.url.replace(/\%20| /g, "-").toLowerCase().slice(9) == author.filename;
-  }) || {};
+    return req.url.slice(9) == author.filename;
+  });
+  if(authorData === undefined) {
+    next();
+    return;
+  }
   authorData.postList = postList;
   authorData.authorList = authorList;
   var authoredPosts = []
@@ -99,6 +119,11 @@ app.get("/authors/*", function(req, res) {
 
 // handle routing (resources)
 app.use("/res", express.static("res"));
+
+// handle routing (404)
+app.use("/*", function(req, res) {
+  res.render("404", {url: req.originalUrl, postList: postList, authorList: authorList});
+});
 
 // listen on port
 app.listen(process.env.PORT || 5000);
