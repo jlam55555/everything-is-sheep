@@ -1,22 +1,121 @@
+/* color guide
+ - light blue: #446cb3
+ - blue:       #224a91
+ - dark blue:  #113980
+ - near white: #f7efed
+ - white-grey: #ded2cf
+ - light grey: #aca1a1
+ - dark grey:  #26282c
+*/
+
 /* general styles */
 * {
   box-sizing: border-box;
-  font-family: georgia, serif;
   font-size: 16px;
+  font-family: "open sans", sans-serif;
   padding: 0;
   margin: 0;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+a:not(.imgLink):hover {
+  background-color: #ded2cf;
+  text-decoration: none;
+  box-shadow: 0.25em 0.25em 0 #aca1a1;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.75em; } 
+h6 { font-size: 0.5em; }
+p {
+  margin: 1em 0;
+}
+ul {
+  padding: 0 1em;
+}
+
+/* generic classes */
+.center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* main.handlebars layout details */
 body {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
+/* sidebar styles */
 #sidebar {
-  flex-basis: 10em;
+  flex-basis: 15em;
   flex-grow: 1;
+  background-color: #26282c;
+  color: #f7efed;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
+#sidebar > * {
+  margin: 0.5em 1em;
+}
+#title {
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 2em;
+  flex-shrink: 1;
+}
+#logo {
+  width: 10em;
+  height: 10em;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 1;
+}
+#postList {
+  flex-shrink: 1;
+}
+.date {
+  color: #aca1a1;
+  font-size: 0.75em;
+}
+#authorList {
+  flex-shrink: 1;
+}
+#sidebar a:not(.imgLink):hover {
+  background-color: #224a91;
+  box-shadow: 0.25em 0.25em 0 black;
+}
+/* main content div styles */
 #content {
   flex-basis: 20em;
   flex-grow: 10;
+  padding: 1em 2em;
+  overflow-y: auto;
+}
+
+/* author template styles */
+#authorHeader {
+  background-color: #446cb3;
+  width: calc(100% + 4em);
+  margin: -1em 0 0 -2em;
+  height: 20em;
+  color: #f7efed;
+  overflow: auto;
+}
+#authorPicture {
+  border-radius: 100%;
+  width: 10em;
+  height: 10em;
+  background-color: white;
+  margin: 3em auto 1em auto;
 }

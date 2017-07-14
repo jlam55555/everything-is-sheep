@@ -18,7 +18,7 @@ fs.readdir("./posts", function(error, posts) {
   for(var post of posts) {
     if(post.slice(-5) === ".json") {
       var postData = require("./posts/" + post);
-      postList.push({filename: post.slice(0, -5), title: postData.title, data: postData});
+      postList.push({filename: post.slice(0, -5), title: postData.title, date: postData.date, data: postData});
     }
   }
   postList.sort(function(post1, post2) {
