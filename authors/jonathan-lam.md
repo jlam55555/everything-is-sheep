@@ -1,4 +1,4 @@
-Jonathan is an avid programmer and mathematician. He is also the site engineer and designer for this site.
+Jonathan is wannabe professional programmer and mathematician. He is also the site engineer and designer for Everything is Sheep.
 
 [![profile for Lambda Ninja on Stack Exchange, a network of free, community-driven Q&amp;A sites"][SOImg]][SOProfile]
 

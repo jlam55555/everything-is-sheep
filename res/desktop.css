@@ -1,0 +1,82 @@
+/* color guide
+ - light blue: #446cb3
+ - blue:       #224a91
+ - dark blue:  #113980
+ - near white: #f7efed
+ - white-grey: #ded2cf
+ - light grey: #aca1a1
+ - dark grey:  #26282c
+*/
+
+/* general styles */
+* {
+  font-size: 16px;
+}
+body, html {
+  height: 100%;
+}
+a:not(.imgLink):hover, a:not(.imgLink).active {
+  box-shadow: 0.25em 0.25em 0 #aca1a1;
+}
+
+/* general classes */
+/* none */
+
+/* main.handlebars layout details */
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+/* sidebar styles */
+#sidebar {
+  flex-wrap: nowrap;
+  flex-basis: 15em;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: static;
+  padding: 1em;
+}
+#sidebar > * {
+  margin: 0.5em 1em;
+}
+#menuButton {
+  display: none;
+}
+#logo {
+  display: block;
+  width: 10em;
+  height: 10em;
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 1;
+}
+#title {
+  line-height: initial;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 0;
+}
+#titleBreak {
+  display: block;
+}
+#postList {
+  display: block;
+  flex-shrink: 1;
+}
+.date {
+  color: #aca1a1;
+  font-size: 0.75em;
+}
+#authorList {
+  display: block;
+  flex-shrink: 1;
+}
+#sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
+  box-shadow: 0.25em 0.25em 0 black;
+}
+/* main content div styles */
+#content {
+  margin-top: 0;
+}

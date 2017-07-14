@@ -5,15 +5,17 @@
     <meta name="description" content="A blog by Juliet and Jonathan Lam">
     <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
     <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
-    <link rel="stylesheet" href="/res/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
     <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>-->
     <title>Everything is Sheep{{#if title}}: {{title}}{{/if}}{{#if name}}: {{name}}{{/if}}</title>
   </head>
   <body>
     <div id="sidebar">
-      <a href="/" class="center" id="title">Everything<br>is Sheep</a>
+      <a href="/" class="center" id="title">Everything <br id="titleBreak">is Sheep</a>
+      <div id="menuButton">&#9776;</div>
       <a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>
       <div id="postList">
         <h2>Posts</h2>

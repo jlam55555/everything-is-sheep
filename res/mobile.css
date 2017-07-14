@@ -9,15 +9,23 @@
 */
 
 /* general styles */
+@media(max-width: 499px) {
+  * {
+    font-size: 3vw;
+  }
+}
+@media(min-width: 500px) {
+  * {
+    font-size: 16px;
+  }
+}
 * {
   box-sizing: border-box;
-  font-size: 16px;
   font-family: "open sans", sans-serif;
   padding: 0;
   margin: 0;
 }
 body, html {
-  height: 100%;
   width: 100%;
 }
 a {
@@ -27,10 +35,9 @@ a {
 a.imgLink {
   text-decoration: none;
 }
-a:not(.imgLink):hover {
+a:not(.imgLink):hover, a:not(.imgLink).active {
   background-color: #ded2cf;
   text-decoration: none;
-  box-shadow: 0.25em 0.25em 0 #aca1a1;
 }
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
@@ -66,54 +73,46 @@ ul {
 }
 
 /* main.handlebars layout details */
-body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
 /* sidebar styles */
 #sidebar {
-  flex-basis: 15em;
-  flex-grow: 1;
   background-color: #26282c;
   color: #f7efed;
-  padding: 1em;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-#sidebar > * {
-  margin: 0.5em 1em;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 #title {
   text-decoration: none !important;
   font-weight: bold;
   font-size: 2em;
+  flex-grow: 1;
+  line-height: 1em;
+  padding: 0.5em;
+}
+#titleBreak, #logo, #postList, #authorList {
+  display: none;
+}
+#menuButton {
+  display: inline-block;
   flex-shrink: 1;
+  line-height: 1;
+  font-size: 2em;
+  padding: 0.5em;
+  cursor: pointer;
 }
-#logo {
-  width: 10em;
-  height: 10em;
-  margin: 0 auto;
-  display: block;
-  flex-shrink: 1;
-}
-#postList {
-  flex-shrink: 1;
-}
-.date {
-  color: #aca1a1;
-  font-size: 0.75em;
-}
-#authorList {
-  flex-shrink: 1;
-}
-#sidebar a:not(.imgLink):hover {
+#menuButton:hover, #menuButton:active {
   background-color: #224a91;
-  box-shadow: 0.25em 0.25em 0 black;
+}
+#sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
+  background-color: #224a91;
 }
 /* main content div styles */
 #content {
+  margin-top: 4em;
   flex-basis: 20em;
   flex-grow: 10;
   padding: 1em 2em;
@@ -145,7 +144,7 @@ body {
 }
 .postView {
   box-shadow: 0 0 1px #26282c;
-  margin: 2em;
+  margin: 1em 1em 0 0;
   padding: 2em 1em;
   flex-shrink: 1;
   flex-basis: 20em;
