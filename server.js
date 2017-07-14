@@ -15,6 +15,9 @@ var converter = new showdown.Converter();
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
   helpers: {
+    formatDescriptionNoLinks: function() {
+      return converter.makeHtml(this.description).replace(/\<\/?a[^\>]*\>/g, "");
+    },
     formatDescription: function() {
       return converter.makeHtml(this.description);
     },
@@ -25,7 +28,7 @@ app.engine("handlebars", handlebars.create({
       if(this.markdown.length < 50) {
         return converter.makeHtml(this.markdown);
       } else {
-        return converter.makeHtml(this.markdown.slice(0, 50)) + "&hellip;";
+        return converter.makeHtml(this.markdown.slice(0, 50).replace(/([0-9a-zA-Z])([^0-9a-zA-Z]*)$/, "$1&hellip;$2"));
       }
     }
   },
@@ -35,7 +38,10 @@ app.set("view engine", "handlebars");
 
 // get name of all posts
 var postList = [];
+var postsCompleted = 0;
+var totalPosts;
 fs.readdir("./posts", function(error, posts) {
+  totalPosts = posts.length;
   for(var post of posts) {
     if(post.slice(-5) === ".json") {
       (function() {
@@ -48,10 +54,7 @@ fs.readdir("./posts", function(error, posts) {
           postData.filename = _post.slice(0, -5);
           postData.markdown = markdown;
           postList.push(postData);
-
-          postList.sort(function(post1, post2) {
-            return new Date(post2.date) - new Date(post1.date);
-          });
+          postsCompleted++;
         });
       })();
     }
@@ -60,7 +63,10 @@ fs.readdir("./posts", function(error, posts) {
 
 // get name of all authors
 var authorList = [];
+var authorsCompleted = 0;
+var totalAuthors;
 fs.readdir("./authors", function(error, authors) {
+  totalAuthors = authors.length;
   for(var author of authors) {
     if(author.slice(-5) === ".json") {
       (function() {
@@ -73,11 +79,37 @@ fs.readdir("./authors", function(error, authors) {
           authorData.filename = _author.slice(0, -5);
           authorData.description = markdown;
           authorList.push(authorData);
+          authorsCompleted++;
         });
       })();
     }
   }
 });
+
+// do stuff with completed lists of posts and authors
+var t = setInterval(function() {
+  console.log("Checking if get posts and get authors completed...");
+
+  // when all posts are completed
+  if(postsCompleted === totalPosts/2 && authorsCompleted === totalAuthors/2) {
+
+    // sort posts by date
+    postList.sort(function(post1, post2) {
+      return new Date(post2.date) - new Date(post1.date);
+    });
+
+    // add author object to posts    
+    for(var i = 0; i < postList.length; i++) {
+      postList[i].author = authorList.find(function(author) {
+        return author.name === postList[i].author;
+      });
+    }
+
+    // end setInterval()
+    console.log("Get posts and get authors completed.");
+    clearInterval(t);
+  }
+}, 50);
 
 // url rewriting middleware
 app.use(function(req, res, next) {
@@ -93,30 +125,25 @@ app.get("/", function(req, res) {
   res.render("index", {postList: postList, authorList: authorList});
 });
 
-// clone object helper function
-function clone(object) {
-  var copy = {};
-  for(var attribute in object) {
-    if(object.hasOwnProperty(attribute)) {
-      copy[attribute] = object[attribute];
-    }
-  }
-  return copy;
-}
+// handle routing (postList)
+app.get("/posts", function(req, res) {
+  res.render("postList", {postList: postList, authorList: authorList});
+});
+
+// handle routing (authorList)
+app.get("/authors", function(req, res) {
+  res.render("authorList", {postList: postList, authorList: authorList});
+});
 
 // handle routing (posts)
 app.get("/posts/*", function(req, res, next) {
-  var postData = clone(postList.find(function(post) { // note: this updates postList!!!
+  var postData = postList.find(function(post) {
     return req.url.slice(7) === post.filename;
-  }));
-  if(Object.keys(postData).length === 0 && postData.constructor === Object) {
+  });
+  if(postData === undefined) {
     next();
     return;
   }
-  var authorData = authorList.find(function(author) {
-    return postData.author === author.name;
-  });
-  postData.author = authorData;
   postData.postList = postList;
   postData.authorList = authorList;
   res.render("post", postData);
@@ -135,7 +162,7 @@ app.get("/authors/*", function(req, res, next) {
   authorData.authorList = authorList;
   var authoredPosts = []
   for(var post of postList) {
-    if(post.author == authorData.name) {
+    if(post.author.name == authorData.name) {
       authoredPosts.push(post);
     }
   }

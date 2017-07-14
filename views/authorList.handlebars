@@ -1,0 +1,9 @@
+<div id="postViews">
+  {{#each authorList}}
+    <a class="imgLink postView" href="/author/{{filename}}">
+      <img src="{{profilePicture}}" class="postViewAuthorPicture authorViewPicture">
+      <h2>{{name}}</h2>
+      <p>{{{formatDescriptionNoLinks}}}</p>
+    </a>
+  {{/each}}
+</div>

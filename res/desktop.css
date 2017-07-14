@@ -83,3 +83,9 @@ body {
 #content {
   margin-top: 0;
 }
+
+/* author template styles */
+.postView {
+  flex-basis: 30em;
+  margin: 1em 1em;
+}
