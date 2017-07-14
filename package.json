@@ -9,7 +9,8 @@
   "dependencies": {
     "express": "4.15.3",
     "handlebars": "4.0.10",
-    "express-handlebars": "3.0.0"
+    "express-handlebars": "3.0.0",
+    "showdown": "1.7.1"
   },
   "repository": {
     "type": "git",

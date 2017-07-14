@@ -23,6 +23,9 @@ body, html {
 a {
   color: inherit;
 }
+a.imgLink {
+  text-decoration: none;
+}
 a:not(.imgLink):hover {
   background-color: #ded2cf;
   text-decoration: none;
@@ -118,4 +121,20 @@ body {
   height: 10em;
   background-color: white;
   margin: 3em auto 1em auto;
+}
+#postViews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-items: flex-start;*/
+}
+.postView {
+  box-shadow: 0 0 1px #26282c;
+  margin: 2em;
+  padding: 2em 1em;
+  flex-shrink: 1;
+  flex-basis: 20em;
+  max-height: 20em;
+  overflow-y: hidden;
 }

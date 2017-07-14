@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/res/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
     <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>-->
     <title>Everything is Sheep{{#if title}}: {{title}}{{/if}}{{#if name}}: {{name}}{{/if}}</title>
   </head>
   <body>
@@ -16,19 +17,15 @@
       <a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>
       <div id="postList">
         <h2>Posts</h2>
-        <ul>
-          {{#each postList}}
-            <li><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></li> 
-          {{/each}}
-        </ul>
+        {{#each postList}}
+          <div><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></div> 
+        {{/each}}
       </div>
       <div id="authorList">
         <h2>Authors</h2>
-        <ul>
-          {{#each authorList}}
-            <li><a href="/authors/{{filename}}">{{name}}</a></li>
-          {{/each}}
-        </ul>
+        {{#each authorList}}
+          <div><a href="/authors/{{filename}}">{{name}}</a></div>
+        {{/each}}
       </div>
     </div>
     <div id="content">

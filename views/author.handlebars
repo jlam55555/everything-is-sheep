@@ -4,8 +4,12 @@
 </div>
 <p>{{description}}</p>
 <h2>Authored Posts</h2>
-<ul>
+<div id="postViews">
   {{#each authoredPosts}}
-    <li><a href="/posts/{{filename}}">{{title}}</a></li>
+    <a class="imgLink postView" href="/posts/{{filename}}">
+      <h2 class="postViewTitle">{{title}}</h2>
+      <h3 class="postViewDate">{{date}}</h2>
+      <p class="postViewPreview">{{{preview}}}</p>
+    </a>
   {{/each}}
-</ul>
+</div>
