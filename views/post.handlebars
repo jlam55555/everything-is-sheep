@@ -1,5 +1,7 @@
+<img src="{{author.profilePicture}}" id="postAuthorPicture">
 <h1>{{title}}</h1>
-<h2>{{date}}</h2>
-<h3>By <a href="/authors/{{authorFilename}}">{{author}}</a></h3>
+<h3>By <a href="/authors/{{author.filename}}">{{author.name}}</a> on {{date}}</h3>
+<hr class="short">
 <div id="postBody">{{{formatPost}}}</div>
+<hr class="short">
 <p>Return <a href="/">home</a>.</p>

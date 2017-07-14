@@ -22,6 +22,7 @@ body, html {
 }
 a {
   color: inherit;
+  font-size: inherit;
 }
 a.imgLink {
   text-decoration: none;
@@ -37,6 +38,15 @@ h3 { font-size: 1.25em; }
 h4 { font-size: 1em; }
 h5 { font-size: 0.75em; } 
 h6 { font-size: 0.5em; }
+hr {
+  margin: 2em 0;
+  border: none;
+  background-color: #26282c;
+  height: 0.125em;
+}
+hr.short {
+  width: 15em;
+}
 p {
   margin: 1em 0;
 }
@@ -49,6 +59,10 @@ ul {
   display: block;
   text-align: center;
   margin: 0 auto;
+}
+.right {
+  display: block;
+  text-align: right;
 }
 
 /* main.handlebars layout details */
@@ -127,7 +141,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /*align-items: flex-start;*/
+  align-items: flex-start;
 }
 .postView {
   box-shadow: 0 0 1px #26282c;
@@ -137,4 +151,13 @@ body {
   flex-basis: 20em;
   max-height: 20em;
   overflow-y: hidden;
+}
+
+/* post template styles */
+#postAuthorPicture {
+  border-radius: 100%;
+  width: 5em;
+  height: 5em;
+  float: left;
+  margin-right: 1em;
 }
