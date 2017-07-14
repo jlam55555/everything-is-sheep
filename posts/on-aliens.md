@@ -1,0 +1,5 @@
+What are "aliens"?
+
+Most often they're green and have dangerous brain tumors. They don't always have a nose, and their eyes are huge and mysterious. They're from outer space, and they have the technology that we lack to travel intergalactically. So it's almost always that aliens have the upper hand, that humans are the technologically-inferior victims of some alien attack.
+
+Then again, sometimes the term "alien" can refer to something external to one's country. A foreigner. The type that xenophobia waves off in streams of anti-foreigner hate on Facebook or by the tragic murders of immigrant groups. People see these aliens in the same way: attacking the nation by sucking up funds for refugee camps that could otherwise be helping legal citizens of the country, or by compliciting with terrorist groups that are only marginally attached by some distant bond of religion. Never mind that those aliens that often are seen as "attackers" are the ones that are being attacked already by civil war or famine; to some, aliens will all be aliens.
