@@ -20,7 +20,7 @@ a:not(.imgLink):hover, a:not(.imgLink).active {
 }
 
 /* general classes */
-/* none */
+/* nothing here */
 
 /* main.handlebars layout details */
 body {
@@ -64,9 +64,16 @@ body {
   flex-grow: 0;
   padding: 0;
   width: 100%;
+  height: auto;
 }
 #titleBreak {
   display: block;
+}
+.sidebarList > div {
+  margin: 0.25em 0;
+}
+.sidebarList > div > a {
+  text-decoration: none;
 }
 #postList {
   display: block;

@@ -227,6 +227,7 @@ ul {
 
 /* post list / search template styles */
 #searchBar {
+  text-align: left;
   width: 90%;
   margin: 1em auto;
   outline: none;

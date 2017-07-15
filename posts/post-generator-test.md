@@ -1,0 +1,1 @@
+This is a post for testing. It was created by an automatic post generator designed to make post creation easier in the future.
