@@ -16,6 +16,8 @@ body, html {
   height: 100%;
 }
 a:not(.imgLink):hover, a:not(.imgLink).active {
+  background-color: #ded2cf;
+  text-decoration: none;
   box-shadow: 0.25em 0.25em 0 #aca1a1;
 }
 
@@ -90,6 +92,7 @@ body {
   flex-shrink: 1;
 }
 #sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
+  background-color: #224a91;
   box-shadow: 0.25em 0.25em 0 black;
 }
 /* main content div styles */

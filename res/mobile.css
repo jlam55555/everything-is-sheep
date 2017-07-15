@@ -32,11 +32,10 @@ a {
   color: inherit;
   font-size: inherit;
 }
-a.imgLink {
-  text-decoration: none;
-}
-a:not(.imgLink):hover, a:not(.imgLink).active {
+a:not(.imgLink):active {
   background-color: #ded2cf;
+}
+a.imgLink {
   text-decoration: none;
 }
 h1 { font-size: 2em; }
@@ -87,7 +86,6 @@ ul {
 }
 #sidebar.webApp {
   padding-top: 1em;
-  background-color: green;
 }
 #sidebar.expanded {
   height: 100%;
@@ -165,15 +163,15 @@ ul {
 #menuButton::before {
   content: "\2630";
 }
-#menuButton:hover, #menuButton:active {
-  background-color: #224a91;
+#menuButton:active {
+  background-color: black;
 }
 .date {
   color: #aca1a1;
   font-size: 0.75em;
 }
-#sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
-  background-color: #224a91;
+#sidebar a:not(.imgLink):active {
+  background-color: black;
 }
 /* main content div styles */
 #content {
