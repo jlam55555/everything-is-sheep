@@ -26,7 +26,7 @@
       <a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>
       <div id="postList" class="sidebarList">
         <h2>Recent Posts</h2>
-        {{#each postList}}
+        {{#each (limitedPostList)}}
           <div><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></div> 
         {{/each}}
       </div>

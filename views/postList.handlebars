@@ -1,10 +1,25 @@
+<input id="searchBar" class="center" placeholder="&#9906; Search post title, content, or date">
+{{#if searchString}}
+  <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{searchString}}." View <a href="/posts">all posts</a>?</div>
+{{/if}}
 <div id="postViews">
-  {{#each postList}}
-    <a class="imgLink postView" href="/posts/{{filename}}">
-      <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-      <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
-      <h3 class="postViewAuthor">{{author.name}}</h2>
-      <p class="postViewPreview">{{{preview}}}</p>
-    </a>
-  {{/each}}
+  {{#if searchString}}
+    {{#each searchList}}
+      <a class="imgLink postView" href="/posts/{{filename}}">
+        <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
+        <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
+        <h3 class="postViewAuthor">{{author.name}}</h2>
+        <p class="postViewPreview">{{{preview}}}</p>
+      </a>
+    {{/each}}
+  {{else}}
+    {{#each postList}}
+      <a class="imgLink postView" href="/posts/{{filename}}">
+        <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
+        <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
+        <h3 class="postViewAuthor">{{author.name}}</h2>
+        <p class="postViewPreview">{{{preview}}}</p>
+      </a>
+    {{/each}}
+  {{/if}}
 </div>

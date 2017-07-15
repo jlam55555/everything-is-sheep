@@ -15,6 +15,12 @@ var converter = new showdown.Converter();
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
   helpers: {
+    limitedPostList: function() {
+      return this.postList.slice(0, 5);
+    },
+    sIfNotOne: function() {
+      return (this.postNumber === 1) ? "" : "s";
+    },
     formatDescriptionNoLinks: function() {
       return converter.makeHtml(this.description).replace(/\<\/?a[^\>]*\>/g, "");
     },
@@ -111,6 +117,20 @@ var t = setInterval(function() {
   }
 }, 50);
 
+// handle routing (search)
+// goes before url rewriting to avoid changing it
+app.get("/search/*", function(req, res) {
+  var searchList = [];
+  var searchString = req.url.slice(8).toLowerCase().replace(/%20/g, " ");
+  for(post of postList) {
+    var postContent = post.markdown.replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
+    if(post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString) {
+      searchList.push(post);
+    }
+  }
+  res.render("postList", {postList: postList, authorList: authorList, searchList: searchList, searchString: req.url.slice(8).replace(/%20/g, " "), postNumber: searchList.length});
+});
+
 // url rewriting middleware
 app.use(function(req, res, next) {
   if(req.url !== req.url.toLowerCase().replace(/ |%20/g, "-")) {
@@ -126,7 +146,7 @@ app.get("/", function(req, res) {
 });
 
 // handle routing (postList)
-app.get("/posts", function(req, res) {
+app.get(["/posts", "/search"], function(req, res) {
   res.render("postList", {postList: postList, authorList: authorList});
 });
 
