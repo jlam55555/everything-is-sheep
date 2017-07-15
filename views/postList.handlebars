@@ -1,6 +1,6 @@
-<input id="searchBar" class="center" placeholder="&#9906; Search post title, content, or date" autofocus>
+<input id="searchBar" class="center" placeholder="&#9906; Search posts" autofocus>
 {{#if searchString}}
-  <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{searchString}}." View <a href="/posts">all posts</a>?</div>
+  <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{searchString}}."<br>View <a href="/posts">all posts</a>?</div>
 {{/if}}
 <div id="postViews">
   {{#if searchString}}

@@ -11,7 +11,7 @@
 /* general styles */
 @media(max-width: 499px) {
   * {
-    font-size: 3vw;
+    font-size: 4.5vw;
   }
 }
 @media(min-width: 500px) {
@@ -106,7 +106,18 @@ ul {
   padding: 0.5em;
   height: 2em;
 }
-#titleBreak, #logo, .sidebarList, .navLink {
+#desktopTitle {
+  display: none;
+  font-size: inherit;
+}
+#mobileTitle {
+  font-size: 1em;
+}
+#condensedLogo {
+  height: 1.5em;
+  width: 1.5em;
+}
+#logo, .sidebarList, .navLink {
   display: none;
 }
 #sidebar.expanded #titleBar {
@@ -123,6 +134,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   padding: 0;
+  font-size: 1.5em;
 }
 #sidebar.expanded #menuButton::before {
   content: "\00d7  Close Menu";
@@ -134,7 +146,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 #menuButton {
   display: inline-block;
@@ -164,7 +176,7 @@ ul {
   margin-top: 4em;
   flex-basis: 20em;
   flex-grow: 10;
-  padding: 1em 2em;
+  padding: 1em;
   overflow-y: auto;
 }
 
@@ -190,7 +202,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 1em;
+  padding: 0;
 }
 .postView {
   box-shadow: 0 0 0.125em #26282c;
