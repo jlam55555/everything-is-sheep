@@ -85,7 +85,7 @@ ul {
   flex-direction: column;
   flex-wrap: nowrap;
 }
-#sidebar {
+#sidebar.webApp {
   padding-top: 1em;
   background-color: green;
 }
