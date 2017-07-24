@@ -38,6 +38,12 @@ a:not(.imgLink):active {
 a.imgLink {
   text-decoration: none;
 }
+small {
+  font-size: smaller;
+}
+small > *:not(small) {
+  font-size: inherit;
+}
 h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.25em; }
