@@ -40,6 +40,7 @@ a.imgLink {
 }
 code, kbd {
   font-family: courier new;
+  color: #26282c;
 }
 code {
   background-color: #aca1a1;
@@ -210,8 +211,8 @@ ul {
 /* author template styles */
 #authorHeader {
   background-color: #446cb3;
-  width: calc(100% + 2em);
-  margin: -1em 0 0 -1em;
+  width: calc(100% + 8em);
+  margin: -1em 0 0 -4em;
   height: 20em;
   color: #f7efed;
   overflow: auto;
