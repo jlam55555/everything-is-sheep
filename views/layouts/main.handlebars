@@ -22,7 +22,7 @@
   <body>
     <div id="sidebar">
       <div id="titleBar">
-        <a href="/" class="center" id="title"><span id="desktopTitle"><span id="titleTitle">Everything<br>is Sheep</span><br><span class="date" id="titleDescription">A playground for free-form teenage writing</span></span><span id="mobileTitle"><img id="condensedLogo" src="/res/img/logo-condensed.png"> EiS</span></a>
+        <a href="/" class="center" id="title" title="Return home"><span id="desktopTitle"><span id="titleTitle">Everything<br>is Sheep</span><br><span class="date" id="titleDescription">A playground for free-form teenage writing</span></span><span id="mobileTitle"><img id="condensedLogo" src="/res/img/logo-condensed.png"> EiS</span></a>
         <div id="menuButton"></div>
       </div>
       <a href="/" class="navLink">Return home</a>
@@ -32,12 +32,12 @@
         <input type="text" id="sidebarSearchInput" placeholder="Search posts">
         <div id="searchHint" class="date">Press <kbd>Enter</kbd> to search</div>
         {{#each (limitedPostList)}}
-          <div><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></div> 
+          <div><a href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">{{title}}</a> <span class="date">{{date}}</span></div> 
         {{/each}}
         <div>
-          <a class="date" href="/posts">View all posts</a><br>
-          <a class="date" href="/authors">View all authors</a><br>
-          <a class="date" href="/feed.xml">Subscribe to RSS</a>
+          <a class="date" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="date" href="/authors" title="View all authors">View all authors</a><br>
+          <a class="date" href="/feed.xml" title="Subscribe to RSS feed">Subscribe to RSS</a>
         </div>
       </div>
     </div>

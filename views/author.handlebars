@@ -6,10 +6,10 @@
 <h2>Authored Posts</h2>
 <div id="postViews">
   {{#each authoredPosts}}
-    <a class="imgLink postView" href="/posts/{{filename}}">
+    <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
       <div class="postListPostHeader">
         <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
-        <p>Tagged: {{#each tags}}{{this}}{{#if @last}}{{else}} {{/if}}{{/each}}</p>
+        <p>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
       </div>
       <p class="postViewPreview">{{{preview}}}</p>
     </a>
