@@ -1,23 +1,29 @@
-<input id="searchBar" class="center" placeholder="&#9906; Search posts">
+<input id="searchBar" class="center" placeholder="&#9906; Search posts"{{#if searchString}} value="{{searchString}}"{{/if}}>
 {{#if searchString}}
-  <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{searchString}}."<br>View <a href="/posts">all posts</a>?</div>
+  <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{{formatSearchString}}}."<br>View <a href="/posts">all posts</a>?</div>
 {{/if}}
 <div id="postViews">
   {{#if searchString}}
     {{#each searchList}}
       <a class="imgLink postView" href="/posts/{{filename}}">
-        <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-        <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
-        <h3 class="postViewAuthor">{{author.name}}</h2>
+        <div class="postListPostHeader">
+          <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
+          <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
+          <h3 class="postViewAuthor">{{author.name}}</h2>
+          <p>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
+        </div>
         <p class="postViewPreview">{{{preview}}}</p>
       </a>
     {{/each}}
   {{else}}
     {{#each postList}}
       <a class="imgLink postView" href="/posts/{{filename}}">
-        <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-        <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
-        <h3 class="postViewAuthor">{{author.name}}</h2>
+        <div class="postListPostHeader">
+          <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
+          <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
+          <h3 class="postViewAuthor">{{author.name}}</h2>
+          <p>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
+        </div>
         <p class="postViewPreview">{{{preview}}}</p>
       </a>
     {{/each}}

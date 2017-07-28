@@ -21,9 +21,6 @@ app.engine("handlebars", handlebars.create({
     sIfNotOne: function() {
       return (this.postNumber === 1) ? "" : "s";
     },
-    formatDescriptionNoLinks: function() {
-      return converter.makeHtml(this.description).replace(/\<\/?a[^\>]*\>/g, "");
-    },
     formatDescription: function() {
       return converter.makeHtml(this.description);
     },
@@ -31,11 +28,28 @@ app.engine("handlebars", handlebars.create({
       return converter.makeHtml(this.markdown);
     },
     preview: function() {
-      if(this.markdown.length < 50) {
-        return converter.makeHtml(this.markdown);
-      } else {
-        return converter.makeHtml(this.markdown.slice(0, 50).replace(/([0-9a-zA-Z])([^0-9a-zA-Z]*)$/, "$1&hellip;$2"));
+      let previewText = converter.makeHtml(this.markdown).replace(/\<[^\>]+\>/g, "");
+      return previewText.slice(0, (previewText.length < 250) ? previewText.length : 250) + ((previewText.length < 250) ? "" : "&hellip;");
+    },
+    previewDescription: function() {
+      let previewText = converter.makeHtml(this.description).replace(/\<[^\>]+\>/g, "");
+      return previewText.slice(0, (previewText.length < 250) ? previewText.length : 250) + ((previewText.length < 250) ? "" : "&hellip;");
+    },
+    formatSearchString: function() {
+      var result;
+      var tags = [];
+      var search = this.searchString;
+      while((result = /\[[a-z\-]+\]/g.exec(search)) !== null) {
+        var index = result.index;
+        var match = result[0];
+        tags.push(search.slice(index+1, index+match.length-1));
+        search = search.slice(0, index) + search.slice(index+match.length);
       }
+      search = search.trim();
+      for(var tag of tags) {
+        search += " <span class='tag'>" + tag + "</span>";
+      }
+      return search;
     }
   },
   defaultLayout: "main"
@@ -153,10 +167,28 @@ var t = setInterval(function() {
 app.get("/search/*", function(req, res) {
   var searchList = [];
   var searchString = req.url.slice(8).toLowerCase().replace(/%20/g, " ");
+
+  // filter out tags
+  var result;
+  var tags = [];
+  while((result = /\[[a-z\-]+\]/g.exec(searchString)) !== null) {
+    var index = result.index;
+    var match = result[0];
+    tags.push(searchString.slice(index+1, index+match.length-1));
+    searchString = searchString.slice(0, index) + searchString.slice(index+match.length);
+  }
+  searchString = searchString.trim();
   for(post of postList) {
     var postContent = post.markdown.replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
-    if(post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString) {
+    if(searchString !== "" && (post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString)) {
       searchList.push(post);
+      continue;
+    }
+    for(var tag of tags) {
+      if(post.tags.indexOf(tag) >= 0) {
+        searchList.push(post);
+        break;
+      }
     }
   }
   res.render("postList", {postList: postList, authorList: authorList, searchList: searchList, searchString: req.url.slice(8).replace(/%20/g, " "), postNumber: searchList.length});

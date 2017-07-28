@@ -150,8 +150,11 @@ body {
   padding: 1em 4em;
 }
 
-/* author template styles */
+/* postList, authorList, author template styles */
 .postView {
-  flex-basis: 30em;
+  flex-basis: 90%;
   margin: 1em 1em;
+}
+#searchBar {
+  width: 90%;
 }

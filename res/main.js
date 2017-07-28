@@ -9,6 +9,7 @@ $(function() {
   var sidebar = $("#sidebar");
   var searchBar = $("#searchBar");
   var sidebarSearchInput = $("#sidebarSearchInput");
+  var clickableTags = $(".tag.clickable");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -48,6 +49,14 @@ $(function() {
     if(event.which === 13 && $(this).val().trim() !== "") {
       window.location.href = "/search/" + $(this).val().trim();
     }
+  });
+
+  // clickable post tags
+  clickableTags.each(function() {
+    $(this).attr({title: "Search posts by tag [" + $(this).text() + "]"});
+  });
+  clickableTags.click(function() {
+    window.location.href = "/search/[" + $(this).text() + "]";
   });
   
 });
