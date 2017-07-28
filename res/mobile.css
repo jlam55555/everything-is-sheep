@@ -55,6 +55,11 @@ kbd {
   padding: 0 0.25em;
   margin: 0 0.25em;
 }
+kbd::before {
+  content: "\f11c";
+  font-family: fontawesome;
+  padding: 0 0.25em;
+}
 small {
   font-size: smaller;
 }
@@ -196,6 +201,29 @@ ul {
 #sidebar a:not(.imgLink):active {
   background-color: black;
 }
+#shareIcons {
+  margin-top: auto !important;
+  flex-basis: 2em;
+  text-align: center;
+}
+.shareIcon {
+  font-size: 2em;
+  padding: 0.25em;
+  border-radius: 100%;
+  transition: background-color 0.5s;
+}
+.shareIcon:nth-of-type(1):hover {
+  background-color: #f26522 !important;
+}
+.shareIcon:nth-of-type(2):hover {
+  background-color: #3b5998 !important;
+}
+.shareIcon:nth-of-type(3):hover {
+  background-color: #2290bf !important;
+}
+.shareIcon:nth-of-type(4):hover {
+  background-color: #db4935 !important;
+}
 /* main content div styles */
 #content {
   margin-top: 4em;
@@ -253,6 +281,11 @@ ul {
   background-color: #f7efed;  
   padding: 0.25em;
 }
+.tag::before {
+  content: "\f02b";
+  font-family: fontawesome;
+  padding: 0 0.25em;
+}
 .tag.clickable:hover {
   cursor: pointer;
   background-color: #ded2cf;
@@ -285,10 +318,11 @@ ul {
 #searchBar {
   text-align: left;
   width: 100%;
-  margin: 1em auto;
+  margin: 1em auto 0 auto;
   outline: none;
   font-size: 1.5em;
   padding: 0.67em;
+  padding-right: 2.5em;
   border: none;
   border-radius: 0.125em;
   box-shadow: 0 0 0.125em #26282c;
@@ -297,6 +331,14 @@ ul {
 #searchBar:hover, #searchBar:focus {
   box-shadow: 0 0 0.25em #113980;
 }
+#searchIcon {
+  display: inline-block;
+  position: relative;
+  font-size: 2em;
+  left: 90%;
+  top: -1.5em;
+  color: inherit;
+}
 #searchString {
-  margin: 2em auto;
+  margin: 0 auto 2em auto;
 }

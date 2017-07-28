@@ -1,4 +1,5 @@
-<input id="searchBar" class="center" placeholder="&#9906; Search posts"{{#if searchString}} value="{{searchString}}"{{/if}}>
+<input id="searchBar" class="center" placeholder="Search posts"{{#if searchString}} value="{{searchString}}"{{/if}}>
+<i class="fa fa-search" id="searchIcon"></i>
 {{#if searchString}}
   <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{{formatSearchString}}}."<br>View <a title="View all posts" href="/posts">all posts</a>?</div>
 {{/if}}

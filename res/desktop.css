@@ -99,13 +99,26 @@ body {
 #sidebarSearchInput {
   outline: none;
   background-color: transparent;
-  padding: 0.25em 1em;
+  padding: 0.25em 2em 0.25em 0.5em;
   border-radius: 0.25em;
   color: #f7efed;
   margin-bottom: 0.5em;
   width: 100%;
   border: 1px solid #aca1a1;
   transition: border-color 0.5s;
+}
+#sidebarSearchIcon {
+  display: block;
+  color: #aca1a1;
+  position: relative;
+  left: calc(100% - 1.5em);
+  top: -2em;
+  margin-bottom: -1em;
+  font-family: fontawesome;
+  transition: color 0.5s;
+}
+#sidebarSearchInput:focus ~ #sidebarSearchIcon {
+  color: #f7efed;
 }
 #sidebarSearchInput:focus {
   border: 1px solid #f7efed;
@@ -126,7 +139,7 @@ body {
   text-align: right;
   transition: height 0.5s;
 }
-#sidebarSearchInput:focus + #searchHint {
+#sidebarSearchInput:focus ~ #searchHint {
   height: 2em;
 }
 #authorList {

@@ -10,6 +10,9 @@ $(function() {
   var searchBar = $("#searchBar");
   var sidebarSearchInput = $("#sidebarSearchInput");
   var clickableTags = $(".tag.clickable");
+  var facebookButton = $(".fa-facebook-official");
+  var twitterButton = $(".fa-twitter");
+  var googlePlusButton = $(".fa-google-plus");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -58,5 +61,20 @@ $(function() {
   clickableTags.click(function() {
     window.location.href = "/search/[" + $(this).text() + "]";
   });
+
+  // edit share buttons
+  var url = window.location.href;
+  var notPost = false;
+  if(!/\/posts\/.+/.exec(url)) {
+    url = "https://everything-is-sheep.herokuapp.com";
+    notPost = true;
+  }
+  facebookButton.parent().attr({href: "https://www.facebook.com/sharer/sharer.php?u=" + url});
+  twitterButton.parent().attr({href: notPost
+    ? "https://twitter.com/home?status=Check%20out%20the%20blog%20Everything%20is%20Sheep,%20a%20playground%20for%20free-form%20teenage%20writing."
+    : "https://twitter.com/home?status=To%20read%3A%20%22" + $("#postTitle").text() + "%22%20(" + url + ")%20from%20Everything%20is%20Sheep"
+    });
+  googlePlusButton.parent().attr({href: "https://plus.google.com/share?url=" + url});
+  //alert(url + " " + (url === window.location.href));
   
 });
