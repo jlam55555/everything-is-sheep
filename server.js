@@ -113,7 +113,7 @@ var t = setInterval(function() {
     
     // create RSS feed
     let feedXml = "<?xml version='1.0' encoding='UTF-8' ?><rss version='2.0'><channel><title>Everything is Sheep</title><link>https://everything-is-sheep.herokuapp.com</link><description>A playground for free-form teenage writing</description>";
-    let truncatedList = postList.slice(0, 10);
+    let truncatedList = postList.slice(0, (postList.length < 20) ? postList.length : 20);
     for(let post of truncatedList) {
 
       // really convoluted way to get RFC2822-formatted dates
@@ -123,8 +123,8 @@ var t = setInterval(function() {
 
       // preview as RSS description
       let preview = converter.makeHtml(post.markdown);
-      if(post.markdown.length >= 50) {
-        preview = converter.makeHtml(post.markdown.slice(0, 50).replace(/([0-9a-zA-Z])([^0-9a-zA-Z]*)$/, "$1&hellip;$2"));
+      if(preview.length >= 100) {
+        preview = converter.makeHtml(preview.replace(/\<[^\>]+\>/g, "").slice(0, 100) + "&hellip;");
       }
       // safestring code courtesy of https://stackoverflow.com/a/12034334/2397327
       var entityMap={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','/':'&#x2F;','`':'&#x60;','=':'&#x3D;'};
