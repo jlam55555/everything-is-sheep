@@ -1,7 +1,7 @@
 {
   "name": "everything-is-sheep",
   "version": "0.0.1",
-  "description": "A blog by Juliet and Jonathan Lam",
+  "description": "A playground for free-form teenage writing",
   "author": "Jonathan Lam <jlam55555@gmail.com>",
   "engines": {
     "node": "8.1.4"
