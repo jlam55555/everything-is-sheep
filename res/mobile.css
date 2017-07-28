@@ -38,6 +38,13 @@ a:not(.imgLink):active {
 a.imgLink {
   text-decoration: none;
 }
+code, kbd {
+  font-family: courier new;
+}
+code {
+  background-color: #aca1a1;
+  padding: 0.125em;
+}
 kbd {
   font-size: inherit;
   background-color: #f7efed;

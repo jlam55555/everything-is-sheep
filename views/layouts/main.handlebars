@@ -28,26 +28,18 @@
       <a href="/" class="navLink">Return home</a>
       <a href="/posts" class="navLink">View all posts</a>
       <a href="/authors" class="navLink">View all authors</a>
-      <!--<a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>-->
       <div id="postList" class="sidebarList">
-        <input type="text" id="sidebarSearchInput" placeholder="Search Posts">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
         <div id="searchHint" class="date">Press <kbd>Enter</kbd> to search</div>
         {{#each (limitedPostList)}}
           <div><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></div> 
         {{/each}}
         <div>
           <a class="date" href="/posts">View all posts</a><br>
-          <a class="date" href="/authors">View authors</a><br>
-          <a class="date" href="/feed.xml">Subscribe to RSS feed</a>
+          <a class="date" href="/authors">View all authors</a><br>
+          <a class="date" href="/feed.xml">Subscribe to RSS</a>
         </div>
       </div>
-      <!--<div id="authorList" class="sidebarList">
-        <h2>Authors</h2>
-        {{#each authorList}}
-          <div><a href="/authors/{{filename}}">{{name}}</a></div>
-        {{/each}}
-      </div>
-      -->
     </div>
     <div id="content">
       {{{ body }}}

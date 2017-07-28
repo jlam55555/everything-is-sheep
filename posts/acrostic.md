@@ -1,12 +1,12 @@
-**<kbd>J</kbd>** uggling permutations of cubies<br>
-**<kbd>O</kbd>** bjecting to the natural order of life, death, and superhero movies<br>
-**<kbd>N</kbd>** egotiating priorities with my demon of procrastination<br>
-**<kbd>A</kbd>** nalyzing memories during REM<br>
-**<kbd>T</kbd>** alking to and holding staring contests with the cats<br>
-**<kbd>H</kbd>** acking things apart and together and code<br>
-**<kbd>A</kbd>** bsorbing random molecules unfortunate enough to be ingested<br>
-**<kbd>N</kbd>** othing useful (but hopefully only very rarely)
+**<code>J</code>** uggling permutations of cubies<br>
+**<code>O</code>** bjecting to the natural order of life, death, and superhero movies<br>
+**<code>N</code>** egotiating priorities with my demon of procrastination<br>
+**<code>A</code>** nalyzing memories during REM<br>
+**<code>T</code>** alking to and holding staring contests with the cats<br>
+**<code>H</code>** acking things apart and together and code<br>
+**<code>A</code>** bsorbing random molecules unfortunate enough to be ingested<br>
+**<code>N</code>** othing useful (but hopefully only very rarely)
 
-**<kbd>L</kbd>** ying about grades to classmates to sound neither snotty nor fake<br>
-**<kbd>A</kbd>** rranging systems to permutations of lower entropy<br>
-**<kbd>M</kbd>** athematics of all sorts
+**<code>L</code>** ying about grades to classmates to sound neither snotty nor fake<br>
+**<code>A</code>** rranging systems to permutations of lower entropy<br>
+**<code>M</code>** athematics of all sorts
