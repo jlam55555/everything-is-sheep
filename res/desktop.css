@@ -10,10 +10,11 @@
 
 /* general styles */
 * {
-  font-size: 16px;
+  font-size: inherit;
 }
 body, html {
   height: 100%;
+  font-size: 16px;
 }
 a:not(.imgLink):hover, a:not(.imgLink).active {
   background-color: #ded2cf;
@@ -133,12 +134,20 @@ body {
   flex-shrink: 1;
 }
 #sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
-  background-color: #224a91;
-  box-shadow: 0.25em 0.25em 0 black;
+  background-color: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+}
+#title:hover #titleTitle {
+  text-decoration: underline;
+}
+#titleDescription {
+  text-decoration: none !important;
 }
 /* main content div styles */
 #content {
   margin-top: 0;
+  padding: 1em 4em;
 }
 
 /* author template styles */
