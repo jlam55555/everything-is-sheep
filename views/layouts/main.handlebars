@@ -22,26 +22,32 @@
   <body>
     <div id="sidebar">
       <div id="titleBar">
-        <a href="/" class="center" id="title"><span id="desktopTitle">Everything<br>is Sheep</span><span id="mobileTitle"><img id="condensedLogo" src="/res/img/logo-condensed.png"> EiS</span></a>
+        <a href="/" class="center" id="title"><span id="desktopTitle">Everything<br>is Sheep<br><span class="date">A playground for free-form teenage writing</span></span><span id="mobileTitle"><img id="condensedLogo" src="/res/img/logo-condensed.png"> EiS</span></a>
         <div id="menuButton"></div>
       </div>
       <a href="/" class="navLink">Return home</a>
       <a href="/posts" class="navLink">View all posts</a>
       <a href="/authors" class="navLink">View all authors</a>
-      <a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>
+      <!--<a href="/" class="imgLink"><img id="logo" src="/res/img/logo.png"></a>-->
       <div id="postList" class="sidebarList">
-        <h2>Recent Posts</h2>
+        <input type="text" id="sidebarSearchInput" placeholder="Search Posts">
+        <div id="searchHint" class="date">Press <kbd>Enter</kbd> to search</div>
         {{#each (limitedPostList)}}
           <div><a href="/posts/{{filename}}">{{title}}</a> <span class="date">{{date}}</span></div> 
         {{/each}}
-        <div><a class="date" href="/search">Search posts</a> <span class="date">|</span> <a class="date" href="/posts">View all posts</a></div>
+        <div>
+          <a class="date" href="/posts">View all posts</a><br>
+          <a class="date" href="/authors">View authors</a><br>
+          <a class="date" href="/feed.xml">Subscribe to RSS feed</a>
+        </div>
       </div>
-      <div id="authorList" class="sidebarList">
+      <!--<div id="authorList" class="sidebarList">
         <h2>Authors</h2>
         {{#each authorList}}
           <div><a href="/authors/{{filename}}">{{name}}</a></div>
         {{/each}}
       </div>
+      -->
     </div>
     <div id="content">
       {{{ body }}}

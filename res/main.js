@@ -8,6 +8,7 @@ $(function() {
   var menuButton = $("#menuButton");
   var sidebar = $("#sidebar");
   var searchBar = $("#searchBar");
+  var sidebarSearchInput = $("#sidebarSearchInput");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -41,4 +42,12 @@ $(function() {
     }
 
   }).resize();
+
+  // sidebar search functionality
+  sidebarSearchInput.keyup(function(event) {
+    if(event.which === 13 && $(this).val().trim() !== "") {
+      window.location.href = "/search/" + $(this).val().trim();
+    }
+  });
+  
 });

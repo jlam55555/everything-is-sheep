@@ -110,6 +110,37 @@ var t = setInterval(function() {
         return author.name === postList[i].author;
       });
     }
+    
+    // create RSS feed
+    let feedXml = "<?xml version='1.0' encoding='UTF-8' ?><rss version='2.0'><channel><title>Everything is Sheep</title><link>https://everything-is-sheep.herokuapp.com</link><description>A playground for free-form teenage writing</description>";
+    let truncatedList = postList.slice(0, 10);
+    for(let post of truncatedList) {
+
+      // really convoluted way to get RFC2822-formatted dates
+      let formatter = new Intl.DateTimeFormat("en-us", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
+      let formattedDate = formatter.format(new Date(post.date));
+      formattedDate = formattedDate.slice(0, 5) + formattedDate.slice(9, 11) + formattedDate.slice(4, 9) + formattedDate.slice(13) + " 00:00:00 +0000";
+
+      // preview as RSS description
+      let preview = converter.makeHtml(post.markdown);
+      if(post.markdown.length >= 50) {
+        preview = converter.makeHtml(post.markdown.slice(0, 50).replace(/([0-9a-zA-Z])([^0-9a-zA-Z]*)$/, "$1&hellip;$2"));
+      }
+      // safestring code courtesy of https://stackoverflow.com/a/12034334/2397327
+      var entityMap={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','/':'&#x2F;','`':'&#x60;','=':'&#x3D;'};
+      preview = preview.replace(/[&<>"'`=\/]/g, function(s) {
+        return entityMap[s];
+      });
+
+      feedXml += "<item><title>" + post.title + "</title><link>https://everything-is-sheep.herokuapp.com/posts/" + post.filename + "</link><pubDate>" + formattedDate + "</pubDate><description>" + preview + "</description></item>";
+    }
+    feedXml += "</channel></rss>";
+    fs.writeFile("feed.xml", feedXml, function(error) {
+      if(error) {
+        return console.log(error);
+      }
+      console.log("RSS feed written to /feed.xml");
+    });
 
     // end setInterval()
     console.log("Get posts and get authors completed.");
@@ -138,6 +169,11 @@ app.use(function(req, res, next) {
   } else {
     next();
   }
+});
+
+// handle routing (feed.xml)
+app.get("/feed.xml", function(req, res) {
+  res.sendFile(__dirname + "/feed.xml");
 });
 
 // handle routing (index)

@@ -57,16 +57,24 @@ body {
 #titleBar {
   margin-top: -1em;
   margin-left: -1em;
-  padding: 1em 0;
+  padding: 1em 0 0 0;
   width: calc(100% + 2em);
+  display: block;
 }
 #title {
   line-height: initial;
   flex-shrink: 1;
   flex-grow: 0;
-  padding: 0;
+  padding: 0 1em;
   width: 100%;
   height: auto;
+  text-align: left;
+}
+#title .date {
+  display: block;
+  padding-top: 1em;
+  font-size: 0.5em;
+  font-weight: normal;
 }
 #mobileTitle {
   display: none;
@@ -86,6 +94,39 @@ body {
 #postList {
   display: block;
   flex-shrink: 1;
+}
+#sidebarSearchInput {
+  outline: none;
+  background-color: transparent;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  color: #f7efed;
+  margin-bottom: 0.5em;
+  width: 100%;
+  border: 1px solid #aca1a1;
+  transition: border-color 0.5s;
+}
+#sidebarSearchInput:focus {
+  border: 1px solid #f7efed;
+}
+#sidebarSearchInput::-webkit-input-placeholder {
+  color: #aca1a1;
+}
+#sidebarSearchInput::-moz-placeholder {
+  opacity: 1;
+  color: #aca1a1;
+}
+#sidebarSearchInput::-ms-placeholder {
+  color: #aca1a1;
+}
+#searchHint {
+  height: 0;
+  overflow: hidden;
+  text-align: right;
+  transition: height 0.5s;
+}
+#sidebarSearchInput:focus + #searchHint {
+  height: 2em;
 }
 #authorList {
   display: block;
