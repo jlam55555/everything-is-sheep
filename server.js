@@ -15,9 +15,6 @@ var converter = new showdown.Converter();
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
   helpers: {
-    limitedPostList: function() {
-      return this.postList.slice(0, 5);
-    },
     sIfNotOne: function() {
       return (this.postNumber === 1) ? "" : "s";
     },
@@ -106,7 +103,14 @@ fs.readdir("./authors", function(error, authors) {
   }
 });
 
+// get quotes
+var quotes = require("./quotes.json");
+var quote = function() {
+  return quotes[Math.floor(Math.random()*quotes.length)];
+};
+
 // do stuff with completed lists of posts and authors
+var limitedPostList = [];
 var t = setInterval(function() {
   console.log("Checking if get posts and get authors completed...");
 
@@ -117,6 +121,9 @@ var t = setInterval(function() {
     postList.sort(function(post1, post2) {
       return new Date(post2.date) - new Date(post1.date);
     });
+
+    // set limitedPostList to last five posts
+    limitedPostList = postList.slice(0, 5);
 
     // add author object to posts    
     for(var i = 0; i < postList.length; i++) {
@@ -191,7 +198,7 @@ app.get("/search/*", function(req, res) {
       }
     }
   }
-  res.render("postList", {postList: postList, authorList: authorList, searchList: searchList, searchString: req.url.slice(8).replace(/%20/g, " "), postNumber: searchList.length});
+  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchString: req.url.slice(8).replace(/%20/g, " "), postNumber: searchList.length, quote: quote()});
 });
 
 // url rewriting middleware
@@ -210,17 +217,17 @@ app.get("/feed.xml", function(req, res) {
 
 // handle routing (index)
 app.get("/", function(req, res) {
-  res.render("index", {postList: postList, authorList: authorList});
+  res.render("index", {limitedPostList: limitedPostList, quote: quote()});
 });
 
 // handle routing (postList)
 app.get(["/posts", "/search"], function(req, res) {
-  res.render("postList", {postList: postList, authorList: authorList});
+  res.render("postList", {limitedPostList: limitedPostList, postList: postList, quote: quote()});
 });
 
 // handle routing (authorList)
 app.get("/authors", function(req, res) {
-  res.render("authorList", {postList: postList, authorList: authorList});
+  res.render("authorList", {limitedPostList: limitedPostList, authorList: authorList, quote: quote()});
 });
 
 // handle routing (posts)
@@ -232,8 +239,8 @@ app.get("/posts/*", function(req, res, next) {
     next();
     return;
   }
-  postData.postList = postList;
-  postData.authorList = authorList;
+  postData.limitedPostList = limitedPostList;
+  postData.quote = quote();
   res.render("post", postData);
 });
 
@@ -246,8 +253,7 @@ app.get("/authors/*", function(req, res, next) {
     next();
     return;
   }
-  authorData.postList = postList;
-  authorData.authorList = authorList;
+  authorData.limitedPostList = limitedPostList;
   var authoredPosts = []
   for(var post of postList) {
     if(post.author.name == authorData.name) {
@@ -255,6 +261,7 @@ app.get("/authors/*", function(req, res, next) {
     }
   }
   authorData.authoredPosts = authoredPosts;
+  authorData.quote = quote();
   res.render("author", authorData);
 });
 
@@ -263,7 +270,7 @@ app.use("/res", express.static("res"));
 
 // handle routing (404)
 app.use("/*", function(req, res) {
-  res.render("404", {url: req.originalUrl, postList: postList, authorList: authorList});
+  res.render("404", {url: req.originalUrl, limitedPostList: limitedPostList, quote: quote()});
 });
 
 // listen on port

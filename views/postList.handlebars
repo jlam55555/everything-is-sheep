@@ -9,7 +9,7 @@
       <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
         <div class="postListPostHeader">
           <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-          <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
+          <h2 class="postViewTitle">{{title}} <span class="smallText">{{date}}</span></h2>
           <h3 class="postViewAuthor">{{author.name}}</h2>
           <p>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
         </div>
@@ -21,7 +21,7 @@
       <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
         <div class="postListPostHeader">
           <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-          <h2 class="postViewTitle">{{title}} <span class="date">{{date}}</span></h2>
+          <h2 class="postViewTitle">{{title}} <span class="smallText">{{date}}</span></h2>
           <h3 class="postViewAuthor">{{author.name}}</h2>
           <p>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
         </div>

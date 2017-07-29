@@ -9,9 +9,6 @@
 */
 
 /* general styles */
-* {
-  font-size: inherit;
-}
 body, html {
   height: 100%;
   font-size: 16px;
@@ -24,10 +21,10 @@ a:not(.imgLink):hover, a:not(.imgLink).active {
 
 /* general classes */
 .mobile {
-  display: none;
+  display: none !important;
 }
 .desktop {
-  display: initial;
+  display: initial !important;
 }
 
 /* main.handlebars layout details */
@@ -36,7 +33,31 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 /* sidebar styles */
+#authorList {
+  display: block;
+  flex-shrink: 1;
+}
+#postList > div {
+  margin: 0.25em 0;
+}
+#postList > div > a {
+  text-decoration: none;
+}
+#postList {
+  display: block;
+  flex-shrink: 1;
+}
+#searchHint {
+  height: 0;
+  overflow: hidden;
+  text-align: right;
+  transition: height 0.5s;
+}
+#sidebarSearchInput:focus ~ #searchHint {
+  height: 2em;
+}
 #sidebar {
   flex-wrap: nowrap;
   flex-basis: 15em;
@@ -48,69 +69,6 @@ body {
 }
 #sidebar > * {
   margin: 0.5em 1em;
-}
-#menuButton {
-  display: none;
-}
-#logo {
-  display: block;
-  width: 10em;
-  height: 10em;
-  margin: 0 auto;
-  display: block;
-  flex-shrink: 1;
-}
-#titleBar {
-  margin-top: -1em;
-  margin-left: -1em;
-  padding: 1em 0 0 0;
-  width: calc(100% + 2em);
-  display: block;
-}
-#title {
-  line-height: initial;
-  flex-shrink: 1;
-  flex-grow: 0;
-  padding: 0 1em;
-  width: 100%;
-  height: auto;
-  text-align: left;
-}
-#title .date {
-  display: block;
-  padding-top: 1em;
-  font-size: 0.5em;
-  font-weight: normal;
-}
-#mobileTitle {
-  display: none;
-}
-#desktopTitle {
-  display: block;
-}
-#titleBreak {
-  display: block;
-}
-.sidebarList > div {
-  margin: 0.25em 0;
-}
-.sidebarList > div > a {
-  text-decoration: none;
-}
-#postList {
-  display: block;
-  flex-shrink: 1;
-}
-#sidebarSearchInput {
-  outline: none;
-  background-color: transparent;
-  padding: 0.25em 2em 0.25em 0.5em;
-  border-radius: 0.25em;
-  color: #f7efed;
-  margin-bottom: 0.5em;
-  width: 100%;
-  border: 1px solid #aca1a1;
-  transition: border-color 0.5s;
 }
 #sidebarSearchIcon {
   display: block;
@@ -125,45 +83,56 @@ body {
 #sidebarSearchInput:focus ~ #sidebarSearchIcon {
   color: #f7efed;
 }
+#sidebarSearchInput {
+  outline: none;
+  background-color: transparent;
+  padding: 0.25em 2em 0.25em 0.5em;
+  border-radius: 0.25em;
+  color: #f7efed;
+  margin-bottom: 0.5em;
+  width: 100%;
+  border: 1px solid #aca1a1;
+  transition: border-color 0.5s;
+}
 #sidebarSearchInput:focus {
   border: 1px solid #f7efed;
 }
-#sidebarSearchInput::-webkit-input-placeholder {
-  color: #aca1a1;
-}
-#sidebarSearchInput::-moz-placeholder {
-  opacity: 1;
-  color: #aca1a1;
-}
-#sidebarSearchInput::-ms-placeholder {
-  color: #aca1a1;
-}
-#searchHint {
-  height: 0;
-  overflow: hidden;
-  text-align: right;
-  transition: height 0.5s;
-}
-#sidebarSearchInput:focus ~ #searchHint {
-  height: 2em;
-}
-#authorList {
-  display: block;
-  flex-shrink: 1;
-}
+#sidebarSearchInput::-webkit-input-placeholder { color: #aca1a1; }
+#sidebarSearchInput::-moz-placeholder { opacity: 1; color: #aca1a1; }
+#sidebarSearchInput::-ms-placeholder { color: #aca1a1; }
 #sidebar a:not(.imgLink):hover, #sidebar a:not(.imgLink):active {
   background-color: transparent;
   box-shadow: none;
   text-decoration: underline;
 }
-#title:hover #titleTitle {
-  text-decoration: underline;
+#title {
+  line-height: initial;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding: 0 1em;
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+#titleBar {
+  margin-top: -1em;
+  margin-left: -1em;
+  padding: 1em 0 0 0;
+  width: calc(100% + 2em);
+  display: block;
+}
+#titleBreak {
+  display: block;
 }
 #titleDescription {
   text-decoration: none !important;
-}
-#sidebar > .shareIcons {
+  font-weight: normal;
   display: block;
+  padding-top: 1em;
+  font-size: 0.5em;
+}
+#title:hover #titleTitle {
+  text-decoration: underline;
 }
 /* main content div styles */
 #content {
@@ -171,7 +140,7 @@ body {
   padding: 1em 4em;
 }
 
-/* postList, authorList, author template styles */
+/* other template styles */
 .postView {
   flex-basis: 90%;
   margin: 1em 1em;

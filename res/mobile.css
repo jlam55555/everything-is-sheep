@@ -10,18 +10,19 @@
 
 /* general styles */
 @media(max-width: 499px) {
-  * {
+  body, html {
     font-size: 4.5vw;
   }
 }
 @media(min-width: 500px) {
-  * {
+  body, html {
     font-size: 16px;
   }
 }
 * {
   box-sizing: border-box;
   font-family: "open sans", sans-serif;
+  font-size: inherit;
   padding: 0;
   margin: 0;
 }
@@ -95,15 +96,93 @@ ul {
   margin: 0 auto;
 }
 .desktop {
-  display: none;
+  display: none !important;
 }
 .right {
   display: block;
   text-align: right;
 }
+.smallText {
+  color: #aca1a1;
+  font-size: 0.75em;
+}
 
 /* main.handlebars layout details */
 /* sidebar styles */
+#sidebar a:not(.imgLink):active {
+  background-color: black;
+}
+#condensedLogo {
+  height: 0.75em;
+  width: 0.75em;
+}
+#menuButton {
+  display: inline-block;
+  flex-shrink: 1;
+  line-height: 1;
+  font-size: 2em;
+  padding: 0.5em;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+}
+#menuButton::before {
+  font-family: fontawesome;
+  content: "\f0c9";
+}
+#menuButton:active {
+  background-color: black;
+}
+#sidebar.expanded #menuButton {
+  height: auto;
+  width: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.5em;
+}
+#sidebar.expanded #menuButton::before {
+  font-family: inherit;
+  content: "Close Menu";
+}
+#mobileTitle {
+  font-size: 1em;
+}
+.navLink {
+  display: none;
+}
+#sidebar.expanded .navLink {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.shareIcon {
+  font-size: 2em;
+  padding: 0.25em;
+  border-radius: 100%;
+  transition: color, background-color 0.5s;
+}
+.shareIcon:hover {
+  color: #f7efed;
+}
+.shareIcon:nth-of-type(1):hover{background-color: #f26522 !important;}
+.shareIcon:nth-of-type(2):hover{background-color: #3b5998 !important;}
+.shareIcon:nth-of-type(3):hover{background-color: #2290bf !important;}
+.shareIcon:nth-of-type(4):hover{background-color: #db4935 !important;}
+.shareIcons.content {
+  text-align: left;
+}
+.shareIcons {
+  margin-top: auto !important;
+  flex-basis: 2em;
+  text-align: center;
+}
 #sidebar {
   background-color: #26282c;
   color: #f7efed;
@@ -123,13 +202,6 @@ ul {
   justify-content: flex-start;
   text-align: center;
 }
-#titleBar {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
-}
 #title {
   text-decoration: none !important;
   font-weight: bold;
@@ -139,102 +211,18 @@ ul {
   padding: 0.5em 0.5em 0.5em 2.5em;
   height: 2em;
 }
-#desktopTitle {
-  display: none;
-  font-size: inherit;
-}
-#mobileTitle {
-  font-size: 1em;
-}
-#condensedLogo {
-  height: 1.5em;
-  width: 1.5em;
-}
-#logo, .sidebarList, .navLink {
-  display: none;
-}
-#sidebar.expanded #titleBar {
-  flex-grow: 1;
-}
 #sidebar.expanded #title {
   display: none;
 }
-#sidebar.expanded #menuButton {
-  height: auto;
-  width: auto;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0;
-  font-size: 1.5em;
-}
-#sidebar.expanded #menuButton::before {
-  content: "\00d7  Close Menu";
-}
-#sidebar.expanded .navLink {
+#titleBar {
   width: 100%;
-  flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.5em;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
 }
-#menuButton {
-  display: inline-block;
-  flex-shrink: 1;
-  line-height: 1;
-  font-size: 2em;
-  padding: 0.5em;
-  cursor: pointer;
-  width: 2em;
-  height: 2em;
-}
-#menuButton::before {
-  content: "\2630";
-}
-#menuButton:active {
-  background-color: black;
-}
-.date {
-  color: #aca1a1;
-  font-size: 0.75em;
-}
-#sidebar a:not(.imgLink):active {
-  background-color: black;
-}
-#sidebar > .shareIcons {
-  display: none;
-}
-.shareIcons {
-  margin-top: auto !important;
-  flex-basis: 2em;
-  text-align: center;
-}
-.shareIcons.content {
-  text-align: left;
-}
-.shareIcon {
-  font-size: 2em;
-  padding: 0.25em;
-  border-radius: 100%;
-  transition: all 0.5s;
-}
-.shareIcon:hover {
-  color: #f7efed;
-}
-.shareIcon:nth-of-type(1):hover {
-  background-color: #f26522 !important;
-}
-.shareIcon:nth-of-type(2):hover {
-  background-color: #3b5998 !important;
-}
-.shareIcon:nth-of-type(3):hover {
-  background-color: #2290bf !important;
-}
-.shareIcon:nth-of-type(4):hover {
-  background-color: #db4935 !important;
+#sidebar.expanded #titleBar {
+  flex-grow: 1;
 }
 /* main content div styles */
 #content {
@@ -248,7 +236,7 @@ ul {
   margin-top: 5em;
 }
 
-/* author template styles */
+/* other template styles */
 #authorHeader {
   background-color: #446cb3;
   width: calc(100% + 8em);
@@ -264,13 +252,16 @@ ul {
   background-color: white;
   margin: 3em auto 1em auto;
 }
-#postViews {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0;
+.authorViewPicture {
+  height: 2em;
+  width: 2em;
+}
+#postAuthorPicture {
+  border-radius: 100%;
+  width: 5em;
+  height: 5em;
+  float: left;
+  margin-right: 1em;
 }
 .postListPostHeader {
   background-color: #ded2cf;
@@ -289,19 +280,6 @@ ul {
   border-radius: 0.25em;
   transition: box-shadow 0.5s;
 }
-.tag {
-  background-color: #f7efed;  
-  padding: 0.25em;
-}
-.tag::before {
-  content: "\f02b";
-  font-family: fontawesome;
-  padding: 0 0.25em;
-}
-.tag.clickable:hover {
-  cursor: pointer;
-  background-color: #ded2cf;
-}
 .postView:hover, .postView:active {
   box-shadow: 0 0 0.5em #113980;
 }
@@ -312,21 +290,30 @@ ul {
   float: left;
   margin: 0.125em 1em 0 0;
 }
-.authorViewPicture {
-  height: 2em;
-  width: 2em;
+#postViews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
 }
-
-/* post template styles */
-#postAuthorPicture {
-  border-radius: 100%;
-  width: 5em;
-  height: 5em;
-  float: left;
-  margin-right: 1em;
+#quote {
+  text-align: center;
+  width: 75%;
+  min-width: 20em;
+  margin: 2em auto;
 }
-
-/* post list / search template styles */
+#quote > #circles {
+  display: block;
+  margin-bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+#quote > #circles > i {
+  display: inline-block;
+  margin: 0 0.5em;
+}
 #searchBar {
   text-align: left;
   width: 100%;
@@ -353,4 +340,17 @@ ul {
 }
 #searchString {
   margin: 0 auto 2em auto;
+}
+.tag {
+  background-color: #f7efed;  
+  padding: 0.25em;
+}
+.tag::before {
+  content: "\f02b";
+  font-family: fontawesome;
+  padding: 0 0.25em;
+}
+.tag.clickable:hover {
+  cursor: pointer;
+  background-color: #ded2cf;
 }
