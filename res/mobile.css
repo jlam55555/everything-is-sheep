@@ -94,6 +94,9 @@ ul {
   text-align: center;
   margin: 0 auto;
 }
+.desktop {
+  display: none;
+}
 .right {
   display: block;
   text-align: right;
@@ -201,16 +204,25 @@ ul {
 #sidebar a:not(.imgLink):active {
   background-color: black;
 }
-#shareIcons {
+#sidebar > .shareIcons {
+  display: none;
+}
+.shareIcons {
   margin-top: auto !important;
   flex-basis: 2em;
   text-align: center;
+}
+.shareIcons.content {
+  text-align: left;
 }
 .shareIcon {
   font-size: 2em;
   padding: 0.25em;
   border-radius: 100%;
-  transition: background-color 0.5s;
+  transition: all 0.5s;
+}
+.shareIcon:hover {
+  color: #f7efed;
 }
 .shareIcon:nth-of-type(1):hover {
   background-color: #f26522 !important;

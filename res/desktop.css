@@ -23,7 +23,12 @@ a:not(.imgLink):hover, a:not(.imgLink).active {
 }
 
 /* general classes */
-/* nothing here */
+.mobile {
+  display: none;
+}
+.desktop {
+  display: initial;
+}
 
 /* main.handlebars layout details */
 body {
@@ -156,6 +161,9 @@ body {
 }
 #titleDescription {
   text-decoration: none !important;
+}
+#sidebar > .shareIcons {
+  display: block;
 }
 /* main content div styles */
 #content {
