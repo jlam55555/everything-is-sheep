@@ -147,6 +147,9 @@ ul {
   font-family: inherit;
   content: "Close Menu";
 }
+.match {
+  background-color: yellow;
+}
 #mobileTitle {
   font-size: 1em;
 }

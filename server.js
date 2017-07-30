@@ -25,7 +25,50 @@ app.engine("handlebars", handlebars.create({
       return converter.makeHtml(this.markdown);
     },
     preview: function() {
-      let previewText = converter.makeHtml(this.markdown).replace(/\<[^\>]+\>/g, "");
+      var previewText = converter.makeHtml(this.markdown).replace(/\<[^\>]+\>/g, "");
+      return previewText.slice(0, (previewText.length < 250) ? previewText.length : 250) + ((previewText.length < 250) ? "" : "&hellip;");
+    },
+    searchTitle: function(searchString) {
+      searchString = searchString.replace(/\[[^\]]+\]/g, "");
+      var search = new RegExp(searchString, "i");
+      var result;
+      if((result = search.exec(this.title)) !== null) {
+        return this.title.slice(0, result.index) + "<span class='match'>" + result[0] + "</span>" + this.title.slice(result.index+result[0].length, this.title.length);
+      }
+      return this.title;
+    },
+    searchDate: function(searchString) {
+      if(searchString === this.date) {
+        return "<span class='match'>" + this.date + "</span>";
+      }
+      return this.date;
+    },
+    searchTag: function(searchString) {
+      var searchTags = /\[([^\]]+)\]/g;
+      var result;
+      while((result = searchTags.exec(searchString)) !== null) {
+        if(this.toString() === result[1]) {
+          return "<span class='match'>" + this + "</span>";
+        }
+      }
+      return this;
+    },
+    searchPreview: function(searchString) {
+      var previewText = converter.makeHtml(this.markdown).replace(/\<[^\>]+\>/g, "");
+      searchString = searchString.replace(/\[[^\]]+\]/g, "");
+      var search = new RegExp(searchString, "i");
+      var result;
+      if((result = search.exec(previewText)) !== null) {
+        return previewText.slice(
+            (result.index-(125-result[0].length/2))<0
+            ?0
+            :(result.index-(125-result[0].length/2)), result.index)
+          + "<span class='match'>" + result[0] + "</span>"
+          + previewText.slice(result.index+result[0].length,
+            (result.index+result[0].length+(125-result[0].length/2))>previewText.length
+            ?previewText.length
+            :result.index+result[0].length+(125-result[0].length/2));
+      }
       return previewText.slice(0, (previewText.length < 250) ? previewText.length : 250) + ((previewText.length < 250) ? "" : "&hellip;");
     },
     previewDescription: function() {
@@ -105,6 +148,9 @@ fs.readdir("./authors", function(error, authors) {
 
 // get quotes
 var quotes = require("./quotes.json");
+for(var i = 0; i < quotes.length; i++) {
+  quotes[i].source = converter.makeHtml(quotes[i].source);
+}
 var quote = function() {
   return quotes[Math.floor(Math.random()*quotes.length)];
 };
@@ -186,16 +232,16 @@ app.get("/search/*", function(req, res) {
   }
   searchString = searchString.trim();
   for(post of postList) {
-    var postContent = post.markdown.replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
-    if(searchString !== "" && (post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString)) {
-      searchList.push(post);
-      continue;
-    }
+    var tagsMatched = true;
     for(var tag of tags) {
-      if(post.tags.indexOf(tag) >= 0) {
-        searchList.push(post);
+      if(post.tags.indexOf(tag) === -1) {
+        tagsMatched = false;
         break;
       }
+    }
+    var postContent = post.markdown.replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
+    if((tagsMatched && searchString !== "" && (post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString)) || (tagsMatched && searchString === "")) {
+      searchList.push(post);
     }
   }
   res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchString: req.url.slice(8).replace(/%20/g, " "), postNumber: searchList.length, quote: quote()});
