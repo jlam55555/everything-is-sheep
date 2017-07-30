@@ -148,3 +148,6 @@ body {
 #searchBar {
   width: 90%;
 }
+#searchIcon {
+  left: calc(95% - 1.5em);
+}

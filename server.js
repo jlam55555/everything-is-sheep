@@ -239,7 +239,7 @@ app.get("/search/*", function(req, res) {
         break;
       }
     }
-    var postContent = post.markdown.replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
+    var postContent = converter.makeHtml(post.markdown).replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
     if((tagsMatched && searchString !== "" && (post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString)) || (tagsMatched && searchString === "")) {
       searchList.push(post);
     }

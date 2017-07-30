@@ -44,7 +44,7 @@ code, kbd {
   color: #26282c;
 }
 code {
-  background-color: #aca1a1;
+  background-color: #ded2cf;
   padding: 0.125em;
 }
 kbd {
@@ -146,6 +146,22 @@ ul {
 #sidebar.expanded #menuButton::before {
   font-family: inherit;
   content: "Close Menu";
+}
+#mainSearchHint {
+  max-height: 0;
+  transition: max-height 0.5s;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+#mainSearchHint ul {
+  margin: 1em 0;
+}
+#mainSearchHint li {
+  margin: 0 1em;
+}
+#searchBar:focus ~ #mainSearchHint {
+  max-height: 30em;
 }
 .match {
   background-color: yellow;
@@ -337,7 +353,7 @@ ul {
   display: inline-block;
   position: relative;
   font-size: 2em;
-  left: 90%;
+  left: calc(100% - 1.5em);
   top: -1.5em;
   color: inherit;
 }

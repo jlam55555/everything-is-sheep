@@ -1,5 +1,16 @@
 <input id="searchBar" class="center" placeholder="Search posts"{{#if searchString}} value="{{searchString}}"{{/if}}>
 <i class="fa fa-search" id="searchIcon"></i>
+<div id="mainSearchHint">
+  Press <kbd>Enter</kbd> to search.
+  Search by:
+  <ul>
+    <li>Post titles: <a class="imgLink" title="Try it!" href="/search/Losing is Winning"><code>Losing is Winning</code></a></li>
+    <li>Post dates (exactly as seen): <a class="imgLink" title="Try it!" href="/search/07/18/17"><code>07/18/17</code></a></li>
+    <li>Post content: <a class="imgLink" title="Try it!" href="/search/I'm a little slaphappy right now so this sloppy brain-dump of a post may sound waffly"><code>I'm a little slaphappy right now so this sloppy brain-dump of a post may sound waffly</code></a></li>
+    <li>Post tags(s): <a class="imgLink" title="Try it!" href="/search/[essay][brain-dump]"><code>[essay][brain-dump]</code></a></li>
+  </ul>
+  You may combine tag searches with any of the other search types (e.g., <a class="imgLink" title="Try it!" href="/search/[essay]Winning"><code>[essay]Winning</code></a>). Only posts that include <em>all</em> of the search elements provided will be shown.
+</div>
 {{#if searchString}}
   <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{{formatSearchString}}}."<br>View <a title="View all posts" href="/posts">all posts</a>?</div>
 {{/if}}
