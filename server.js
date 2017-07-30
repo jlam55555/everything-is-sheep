@@ -287,7 +287,28 @@ app.get("/posts/*", function(req, res, next) {
   }
   postData.limitedPostList = limitedPostList;
   postData.quote = quote();
+  if(postData.hitcount === undefined) postData.hitcount = 0;
+
+  // parsing cookies courtesy of https://stackoverflow.com/a/3409200/2397327
+  function parseCookies(i){var o={},e=i.headers.cookie;return e&&e.split(";").forEach(function(i){var e=i.split("=");o[e.shift().trim()]=decodeURI(e.join("="))}),o}
+  if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
+    res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 1e6, httpOnly: true});
+    postData.hitcount++;
+  }
+
   res.render("post", postData);
+  var postJson = JSON.stringify({
+    author: postData.author.name,
+    date: postData.date,
+    title: postData.title,
+    tags: postData.tags,
+    hitcount: postData.hitcount
+  });
+  fs.writeFile("./posts/" + postData.filename + ".json", postJson, function(error) {
+    if(error) {
+      console.log(error);
+    }
+  });
 });
 
 // handle routing (authors)
