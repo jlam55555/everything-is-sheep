@@ -286,7 +286,7 @@ app.get("/search/:searchString", function(req, res) {
     }
   }
   searchList = postSort(searchList, req.query.sort);
-  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchType: req.query.sort, searchString: searchString, postNumber: searchList.length, quote: quote()});
+  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchType: req.query.sort, searchString: req.params.searchString, postNumber: searchList.length, quote: quote()});
 });
 
 // url rewriting middleware
