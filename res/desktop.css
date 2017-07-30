@@ -145,9 +145,21 @@ body {
   flex-basis: 90%;
   margin: 1em 1em;
 }
-#searchBar {
+#search {
+  flex-wrap: nowrap;
   width: 90%;
+  margin: 0 auto;
+}
+#searchBar {
+  flex: 1 1 60%;
+  padding: 0.67em 0.67em 0.67em 2.5em;
+  border-radius: 0.125em 0 0 0.125em;
 }
 #searchIcon {
-  left: calc(95% - 1.5em);
+  left: calc(5% + 0.5em);
+}
+#searchType {
+  flex: 1;
+  border-radius: 0 0.125em 0.125em 0;
+  border-left: none;
 }

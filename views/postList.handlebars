@@ -1,11 +1,21 @@
-<input id="searchBar" class="center" placeholder="Search posts"{{#if searchString}} value="{{searchString}}"{{/if}}>
 <i class="fa fa-search" id="searchIcon"></i>
+<div id="search">
+  <input id="searchBar" class="center" placeholder="Search posts"{{#if searchString}} value="{{searchString}}"{{/if}}>
+  <select id="searchType">
+    <option value="date_desc" {{checkSelect "date_desc"}}>Date (new-old)</option>
+    <option value="date_asc" {{checkSelect "date_asc"}}>Date (old-new)</option>
+    <option value="title_asc" {{checkSelect "title_asc"}}>Title (A-Z)</option>
+    <option value="title_desc" {{checkSelect "title_desc"}}>Title (Z-A)</option>
+    <option value="views_desc" {{checkSelect "views_desc"}}>Views (most-least)</option>
+    <option value="views_asc" {{checkSelect "views_asc"}}>Views (least-most)</option>
+  </select>
+</div>
 <div id="mainSearchHint">
   Press <kbd>Enter</kbd> to search.
   Search by:
   <ul>
     <li>Post titles: <a class="imgLink" title="Try it!" href="/search/Losing is Winning"><code>Losing is Winning</code></a></li>
-    <li>Post dates (exactly as seen): <a class="imgLink" title="Try it!" href="/search/07/18/17"><code>07/18/17</code></a></li>
+    <li>Post dates (exactly as seen): <a class="imgLink" title="Try it!" href="/search/07%2F18%2F17"><code>07/18/17</code></a></li>
     <li>Post content: <a class="imgLink" title="Try it!" href="/search/I'm a little slaphappy right now so this sloppy brain-dump of a post may sound waffly"><code>I'm a little slaphappy right now so this sloppy brain-dump of a post may sound waffly</code></a></li>
     <li>Post tags(s): <a class="imgLink" title="Try it!" href="/search/[essay][brain-dump]"><code>[essay][brain-dump]</code></a></li>
   </ul>

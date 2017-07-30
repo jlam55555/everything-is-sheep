@@ -90,6 +90,9 @@ app.engine("handlebars", handlebars.create({
         search += " <span class='tag'>" + tag + "</span>";
       }
       return search;
+    },
+    checkSelect: function(searchType) {
+      return (this.searchType === searchType) ? "selected" : "";
     }
   },
   defaultLayout: "main"
@@ -215,11 +218,49 @@ var t = setInterval(function() {
   }
 }, 50);
 
+// re-sorting function for search and postList pages
+function postSort(postArray, sortType) {
+  var sortFunction;
+  switch(sortType) {
+    case "views_asc":
+      sortFunction = function(a, b) {
+        return a.hitcount - b.hitcount;
+      };
+      break;
+    case "views_desc":
+      sortFunction = function(a, b) {
+        return b.hitcount - a.hitcount;
+      };
+      break;
+    case "title_asc":
+      sortFunction = function(a, b) {
+        return a.title.replace(/ /g, "").localeCompare(b.title.replace(/ /g, ""));
+      };
+      break;
+    case "title_desc":
+      sortFunction = function(a, b) {
+        return b.title.replace(/ /g, "").localeCompare(a.title.replace(/ /g, ""));
+      };
+      break;
+    case "date_asc":
+      sortFunction = function(a, b) {
+        return new Date(a.date) - new Date(b.date);
+      };
+      break;
+    case "date_desc":
+    default:
+      sortFunction = function(a, b) {
+        return new Date(b.date) - new Date(a.date);
+      };
+  }
+  return postArray.slice(0).sort(sortFunction);
+}
+
 // handle routing (search)
 // goes before url rewriting to avoid changing it
-app.get("/search/*", function(req, res) {
+app.get("/search/:searchString", function(req, res) {
   var searchList = [];
-  var searchString = req.url.slice(8).toLowerCase().replace(/%20/g, " ");
+  var searchString = req.params.searchString.toLowerCase();
 
   // filter out tags
   var result;
@@ -244,7 +285,8 @@ app.get("/search/*", function(req, res) {
       searchList.push(post);
     }
   }
-  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchString: req.url.slice(8).replace(/%20/g, " "), postNumber: searchList.length, quote: quote()});
+  searchList = postSort(searchList, req.query.sort);
+  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchType: req.query.sort, searchString: searchString, postNumber: searchList.length, quote: quote()});
 });
 
 // url rewriting middleware
@@ -268,7 +310,8 @@ app.get("/", function(req, res) {
 
 // handle routing (postList)
 app.get(["/posts", "/search"], function(req, res) {
-  res.render("postList", {limitedPostList: limitedPostList, postList: postList, quote: quote()});
+  postList = postSort(postList, req.query.sort);
+  res.render("postList", {limitedPostList: limitedPostList, postList: postList, quote: quote(), searchType: req.query.sort});
 });
 
 // handle routing (authorList)
@@ -292,7 +335,7 @@ app.get("/posts/*", function(req, res, next) {
   // parsing cookies courtesy of https://stackoverflow.com/a/3409200/2397327
   function parseCookies(i){var o={},e=i.headers.cookie;return e&&e.split(";").forEach(function(i){var e=i.split("=");o[e.shift().trim()]=decodeURI(e.join("="))}),o}
   if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
-    res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 1e6, httpOnly: true});
+    res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
     postData.hitcount++;
   }
 

@@ -13,20 +13,32 @@ $(function() {
   var facebookButton = $(".fa-facebook-official");
   var twitterButton = $(".fa-twitter");
   var googlePlusButton = $(".fa-google-plus");
+  var mainSearchHint = $("#mainSearchHint");
+  var searchType = $("#searchType");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
   });
 
+  searchBar.focus(function() {
+    mainSearchHint.addClass("activated");
+  });
+  searchType.focus(function() {
+    mainSearchHint.addClass("activated");
+  });
   searchBar.blur(function() {
-    if($(this).val().trim() !== "") {
-      window.location.href = "/search/" + $(this).val().trim();
-    }
+    mainSearchHint.removeClass("activated");
+  });
+  searchType.blur(function() {
+    mainSearchHint.removeClass("activated");
   });
   searchBar.keydown(function(event) {
-    if(event.which === 13) {
-      $(this).blur();
-    } 
+    if(event.which === 13 && $(this).val().trim() !== "") {
+      window.location.href = "/search/" + $(this).val().trim().replace(/\//g, "%2f") + "?sort=" + searchType.val();
+    }
+  });
+  searchType.change(function() {
+    window.location.href = "/search/" + searchBar.val().trim().replace(/\//g, "%2F") + "?sort=" + $(this).val();
   });
 
   $(window).resize(function() {
@@ -75,6 +87,5 @@ $(function() {
     : "https://twitter.com/home?status=To%20read%3A%20%22" + $("#postTitle").text() + "%22%20(" + url + ")%20from%20Everything%20is%20Sheep"
     });
   googlePlusButton.parent().attr({href: "https://plus.google.com/share?url=" + url});
-  //alert(url + " " + (url === window.location.href));
   
 });
