@@ -6,9 +6,6 @@
     <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
     <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://use.fontawesome.com/a46f002d02.js"></script>
-    <script src="/res/main.js"></script>
     <link rel="stylesheet" href="/res/mobile.css">
     <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
@@ -18,6 +15,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="EiS" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://use.fontawesome.com/a46f002d02.js"></script>
+    <script src="/res/main.js"></script>
     <title>Everything is Sheep{{#if title}}: {{title}}{{/if}}{{#if name}}: {{name}}{{/if}}</title>
   </head>
   <body>
@@ -42,7 +42,7 @@
         <i id="sidebarSearchIcon" class="fa fa-search"></i>
         <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
         {{#each limitedPostList}}
-          <div><a href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">{{title}}</a> <span class="smallText">{{date}}</span></div> 
+          <div><a href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">{{title}}</a> <span class="smallText">{{formatDate}}</span></div> 
         {{/each}}
         <div>
           <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>

@@ -38,10 +38,10 @@ app.engine("handlebars", handlebars.create({
       return this.title;
     },
     searchDate: function(searchString) {
-      if(searchString === this.date) {
-        return "<span class='match'>" + this.date + "</span>";
+      if(searchString === new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit"}).format(new Date(this.date))) {
+        return "<span class='match'>" + new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit"}).format(new Date(this.date)) + "</span>";
       }
-      return this.date;
+      return new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit"}).format(new Date(this.date));
     },
     searchTag: function(searchString) {
       var searchTags = /\[([^\]]+)\]/g;
@@ -90,6 +90,11 @@ app.engine("handlebars", handlebars.create({
         search += " <span class='tag'>" + tag + "</span>";
       }
       return search;
+    },
+    formatDate(isLong) {
+      return isLong !== undefined
+        ? new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit"}).format(new Date(this.date))
+        : new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit", timeZoneName: "short"}).format(new Date(this.date));
     },
     checkSelect: function(searchType) {
       return (this.searchType === searchType) ? "selected" : "";
@@ -185,12 +190,6 @@ var t = setInterval(function() {
     let feedXml = "<?xml version='1.0' encoding='UTF-8' ?><rss version='2.0'><channel><title>Everything is Sheep</title><link>https://everything-is-sheep.herokuapp.com</link><description>A playground for free-form teenage writing</description>";
     let truncatedList = postList.slice(0, (postList.length < 20) ? postList.length : 20);
     for(let post of truncatedList) {
-
-      // really convoluted way to get RFC2822-formatted dates
-      let formatter = new Intl.DateTimeFormat("en-us", {weekday: "short", day: "numeric", month: "short", year: "numeric"});
-      let formattedDate = formatter.format(new Date(post.date));
-      formattedDate = formattedDate.slice(0, 5) + formattedDate.slice(9, 11) + formattedDate.slice(4, 9) + formattedDate.slice(13) + " 00:00:00 +0000";
-
       // preview as RSS description
       let preview = converter.makeHtml(post.markdown);
       if(preview.length >= 100) {
@@ -202,7 +201,7 @@ var t = setInterval(function() {
         return entityMap[s];
       });
 
-      feedXml += "<item><title>" + post.title + "</title><link>https://everything-is-sheep.herokuapp.com/posts/" + post.filename + "</link><pubDate>" + formattedDate + "</pubDate><description>" + preview + "</description></item>";
+      feedXml += "<item><title>" + post.title + "</title><link>https://everything-is-sheep.herokuapp.com/posts/" + post.filename + "</link><pubDate>" + post.date + "</pubDate><description>" + preview + "</description></item>";
     }
     feedXml += "</channel></rss>";
     fs.writeFile("feed.xml", feedXml, function(error) {
@@ -281,7 +280,7 @@ app.get("/search/:searchString", function(req, res) {
       }
     }
     var postContent = converter.makeHtml(post.markdown).replace(/\<[^\>]+\>/g, "").toLowerCase(); // remove all tags to get just text content
-    if((tagsMatched && searchString !== "" && (post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || post.date === searchString)) || (tagsMatched && searchString === "")) {
+    if((tagsMatched && searchString !== "" && (post.title.toLowerCase().indexOf(searchString) >= 0 || postContent.indexOf(searchString) >= 0 || new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit"}).format(new Date(post.date)) === searchString)) || (tagsMatched && searchString === "")) {
       searchList.push(post);
     }
   }
@@ -304,7 +303,7 @@ app.get("/feed.xml", function(req, res) {
 });
 
 // handle routing (index)
-app.get("/", function(req, res) {
+app.get(["/", "/index.html"], function(req, res) {
   res.render("index", {limitedPostList: limitedPostList, quote: quote()});
 });
 

@@ -4,7 +4,6 @@ $(function() {
   // src: https://gist.github.com/irae/1042167 (condensed version)
   (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
 
-  // mobile menu
   var menuButton = $("#menuButton");
   var sidebar = $("#sidebar");
   var searchBar = $("#searchBar");
@@ -15,6 +14,7 @@ $(function() {
   var googlePlusButton = $(".fa-google-plus");
   var mainSearchHint = $("#mainSearchHint");
   var searchType = $("#searchType");
+  var content = $("#content");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -87,5 +87,9 @@ $(function() {
     : "https://twitter.com/home?status=To%20read%3A%20%22" + $("#postTitle").text() + "%22%20(" + url + ")%20from%20Everything%20is%20Sheep"
     });
   googlePlusButton.parent().attr({href: "https://plus.google.com/share?url=" + url});
-  
+
+  if(window.location.href.indexOf("#") >= 0) {
+    content.scrollTop($("#" + window.location.href.split("#")[1]).offset().top);
+  }
+
 });
