@@ -166,5 +166,33 @@
   {
     "quote": "When life shuts a door on you, open it again. That's how they work.",
     "source": "*Unknown*"
+  },
+  {
+    "quote": "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.",
+    "source": "Linus Torvalds"
+  },
+  {
+    "quote": "One bad programmer can easily create two new jobs a year.",
+    "source": "David Parnas"
+  },
+  {
+    "quote": "Computers are good at following instructions, but not at reading your mind.",
+    "source": "Donald Knuth"
+  },
+  {
+    "quote": "Talk is cheap. Show me the code.",
+    "source": "Linus Torvalds"
+  },
+  {
+    "quote": "Always code as if the guy who ends up maintaining or testing your code will be a violent psychopath who knows where you live.",
+    "source": "Dave Carhart"
+  },
+  {
+    "quote": "When debugging, novices  insert corrective code; experts remove defective code.",
+    "source": "Richard Pattis"
+  },
+  {
+    "quote": "And then it occurred to me that a computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.",
+    "source": "Bill Bryson"
   }
 ]
