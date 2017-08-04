@@ -262,6 +262,9 @@ ul {
 #content.webApp {
   margin-top: 5em;
 }
+#content img {
+  max-width: 100%;
+}
 
 /* other template styles */
 #authorHeader {
