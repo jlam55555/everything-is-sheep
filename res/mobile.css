@@ -39,6 +39,10 @@ a:not(.imgLink):active {
 a.imgLink {
   text-decoration: none;
 }
+blockquote {
+  background-color: #f7efed;
+  padding: 1em;
+}
 code, kbd {
   font-family: courier new;
   color: #26282c;
