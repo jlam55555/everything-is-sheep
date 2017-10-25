@@ -140,7 +140,7 @@
     "source": "Floor"
   },
   {
-    "quote": "You know it's cold outside when you go outside and it's cold",
+    "quote": "You know it's cold outside when you go outside and it's cold.",
     "source": "*Unknown*"
   },
   {
@@ -338,5 +338,9 @@
   {
     "quote": "Once I went down the road of being a stinker, I couldn't go back.",
     "source": "Mr. Ecsedy"
+  },
+  {
+    "quote": "If at first you don't succeed, hide all evidence you ever tried.",
+    "source": "[A friend of Billy Collins](https://www.ted.com/talks/billy_collins_everyday_moments_caught_in_time#t-252120)"
   }
 ]
