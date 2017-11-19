@@ -12,6 +12,10 @@ var fs = require("fs");
 var showdown = require("showdown");
 var converter = new showdown.Converter();
 
+// pg-promise for database (views, comments?)
+var pgp = require("pg-promise")();
+var db = pgp(process.env.DATABASE_URL + "?ssl=true");
+
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
   helpers: {
