@@ -1,0 +1,3 @@
+Sorry, I will (probably) not be posting for the next few days out of a major restructuring of the post storage for bandwidth (speed) improvements. <small>(More specifically, I am trying to reduce the number of posts that are downloaded to the number that you need.)</small> I’ll try to have junior blogger Juliet post in my stead.
+
+Sorry! <small>(Yes, I’ll pretend there are readers out there …)</small>
