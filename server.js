@@ -15,6 +15,10 @@ var converter = new showdown.Converter();
 // pg-promise for database (views, comments?)
 var pgp = require("pg-promise")();
 var db = pgp(process.env.DATABASE_URL + "?ssl=true");
+// remove all possible dangerous characters
+var safestring = function(input) {
+  return input.toString().replace(/[\0\'\"\b\n\r\t\\\%\_\x08\x09\x1a]/g, ""); 
+};
 
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
@@ -333,28 +337,40 @@ app.get("/posts/*", function(req, res, next) {
   }
   postData.limitedPostList = limitedPostList;
   postData.quote = quote();
-  if(postData.hitcount === undefined) postData.hitcount = 0;
 
-  // parsing cookies courtesy of https://stackoverflow.com/a/3409200/2397327
-  function parseCookies(i){var o={},e=i.headers.cookie;return e&&e.split(";").forEach(function(i){var e=i.split("=");o[e.shift().trim()]=decodeURI(e.join("="))}),o}
-  if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
-    res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
-    postData.hitcount++;
-  }
+  // hitcount only stored in db
+  db.oneOrNone("select hitcount from posts where title='" + safestring(postData.filename) + "'")
+    .then(function(data) {
 
-  res.render("post", postData);
-  var postJson = JSON.stringify({
-    author: postData.author.name,
-    date: postData.date,
-    title: postData.title,
-    tags: postData.tags,
-    hitcount: postData.hitcount
-  });
-  fs.writeFile("./posts/" + postData.filename + ".json", postJson, function(error) {
-    if(error) {
-      console.log(error);
-    }
-  });
+      // parsing cookies courtesy of https://stackoverflow.com/a/3409200/2397327
+      function parseCookies(i){var o={},e=i.headers.cookie;return e&&e.split(";").forEach(function(i){var e=i.split("=");o[e.shift().trim()]=decodeURI(e.join("="))}),o}
+
+      // if not in database create new post
+      if(data === null) {
+        postData.hitcount = 1;
+        if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
+          res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
+        }
+        db.none("insert into posts (title) values ('" + safestring(postData.filename) + "')")
+          .catch(function(e) {
+            console.log("error: inserting post into db: " + e);
+          });
+      } else {
+        postData.hitcount = data.hitcount;
+        if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
+          res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
+          postData.hitcount++;
+          db.none("update posts set hitcount=" + safestring(postData.hitcount) + " where title='" + safestring(postData.filename) + "'")
+            .catch(function(e) {
+              console.log("error: update hitcount in db: " + e);
+            });
+        }
+      }
+      res.render("post", postData);
+    })
+    .catch(function(e) {
+      console.log("error: get hitcount: " + e);
+    });
 });
 
 // handle routing (authors)
