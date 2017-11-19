@@ -1,0 +1,3 @@
+The recruitment process has paid off...
+
+Although she's not in high school, a junior highschooler's insight should be plenty. Hello Juliet!
