@@ -1,0 +1,23 @@
+I used to hate writing in a notebook. They were far too clunky. Loose leaf proved far more practical. There was no need to keep seven notebooks, one for each subject, in my backpack; instead, I could keep just the amount of paper I needed. I could then gather together the papers from the last unit and store them away in my rooms hoard of old schoolwork (88 pounds of pure paper, the last time I checked).
+
+But how the times have changed! I'm writing into a notebook now, and I don't see myself stopping. I even often write into a notebook first, and then rip it out to put in my binder. It might not be more practical, but it is more likeable.
+
+I think the most logical reason for this change of heart is that my focus has changed. Loose leaf may work better if the focus is purely academic, but it longer is for me.I only realized that this year (senior year of high school&mdash; late, but not too late) when the curtain of standardized testing and college essays fell. These revealed the forests of sturdy oaks that stood behind the many sheets of paper used in those standardized tests and homework assignments. The strong, durable, hardworking pillars of society, the people of the job market and the great corporations built upon them. So my paper began to open up for other purposes. Drafting essays like this, for example.
+
+Previously, I had drafted essays almost exclusively on a computer. I can type at over 100 words per minute, so typing must certainly be quicker&hellip; right? Wrong. No matter how much of a computer enthusiast I am, I know that (at least for the foreseeable future) no computer will have the same feeling of crossing out, highlighting, and crumpling-out-and-tossing-into-the-trash-can-over-your-shoulder kind of feeling. Plus, if you can't think quicker than you write, what's the point of this increased efficiency? (It's the same withe Rubik's cubing&mdash; a general principle is that you don't need a faster cube if your mind cannot keep up with your fingers.) Study guides and flashcards were also completely digitalized in freshman year. But since then, I haven't the time to type up those 20-page goliaths or detailed Quizlet sets, and it hasn't impacted my grades too much. I guess what I got out of those was the discipline.
+
+But what a notebook does best is capture a sense of time&mdash; the depth of the writing, a physical record of experience. This is only my second notebook, but as I look back on the dilapidated and scribbled-through first edition "Notebook of Things," as I've dubbed it, it makes me glow. I wrote that. All 140 pages of that (even if some are missing from the notebook). 
+
+My inspiration for writing a notebook came from a peer of mine who I encountered at a MIT seminar. He carried a notebook, in which he had some questions prepared to ask the speaker. Not too unusual. What was unusual was that it had all of his other notes&mdash; regular notes from school, from school clubs, from interviews. And this kid is one of the most successful students and leaders in my class. When he helped me again later to prepare for an interview, he heavily suggested that I keep a notebook at hand.
+
+So I copied him.
+
+And it was beautiful.
+
+It's not the only thing I've picked up from others, so that my perspective has completely turned around only when I've experienced it. Another is writing with pen. While I used to think this highly impractical (you can't erase it!) I've begun to see the practicality of it. I write almost exclusively in (gel) pen now when I have the choice. Gel and fountain pens, merely by merit of less friction, greatly reduce fatigue when compared to writing with pencils, especially dull pencils. (They also make writing mathematical expressions really elegant.) And about two years ago, I discovered the fun in blogging (and programming all the while) and I haven't completely stopped since. Hurrah!
+
+While it may not be as logical to use a notebook as opposed to loose leaf paper, it has made such a difference. I can write an essay onto a notebook with a Pilot G-2 gel pen about writing an essay on a notebook with pen, by my bedside, with a sun lamp turned on, leaned over sideways. Can't do that with a laptop. Or with pencil and paper (eraser shavings). Or with loose leaf (paper will fall everywhere).
+
+But a notebook is just right. It keeps together, is a pen-holder, clipboard, and transformable binder-paper all in one, and is just the right size.
+
+If you haven't tried it, I urge you: please do. It will change you.
