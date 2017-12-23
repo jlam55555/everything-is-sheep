@@ -275,8 +275,8 @@ ul {
 /* other template styles */
 #authorHeader {
   background-color: #446cb3;
-  width: calc(100% + 8em);
-  margin: -1em 0 0 -4em;
+  width: calc(100% + 2em);
+  margin: -1em 0 0 -1em;
   height: 20em;
   color: #f7efed;
   overflow: auto;
