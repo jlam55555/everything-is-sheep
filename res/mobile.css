@@ -51,7 +51,9 @@ code, kbd {
 code {
   word-wrap: break-word;
   white-space: normal;
-  background-color: #ded2cf;
+  display: inline-block;
+  max-width: 100%;
+  background-color: white;
   padding: 0.125em;
 }
 input, select, textarea {
