@@ -293,7 +293,17 @@ app.get("/search/:searchString", function(req, res) {
     }
   }
   searchList = postSort(searchList, req.query.sort);
-  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchType: req.query.sort, searchString: req.params.searchString, postNumber: searchList.length, quote: quote()});
+
+  // narrow down search list
+  var postNumber = searchList.length;
+  var pageLength = 10;
+  var searchPage = parseInt(req.query.page || 1);
+  if(isNaN(searchPage) || searchPage < 1 || searchPage > searchList.length/pageLength+1) {
+    searchPage = 1;
+  }
+  searchList = searchList.slice((searchPage-1)*pageLength, searchPage*pageLength);
+
+  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchType: req.query.sort, searchString: req.params.searchString, postNumber: postNumber, quote: quote()});
 });
 
 // url rewriting middleware
@@ -317,8 +327,16 @@ app.get(["/", "/index.html"], function(req, res) {
 
 // handle routing (postList)
 app.get(["/posts", "/search"], function(req, res) {
-  postList = postSort(postList, req.query.sort);
-  res.render("postList", {limitedPostList: limitedPostList, postList: postList, quote: quote(), searchType: req.query.sort});
+  var slicedPostList = postSort(postList, req.query.sort);
+  // narrow down post list
+  var postNumber = postList.length;
+  var pageLength = 10;
+  var postPage = parseInt(req.query.page || 1);
+  if(isNaN(postPage) || postPage < 1 || postPage > postList.length/pageLength+1) {
+    postPage = 1;
+  }
+  slicedPostList = slicedPostList.slice((postPage-1)*pageLength, postPage*pageLength);
+  res.render("postList", {limitedPostList: limitedPostList, postList: slicedPostList, postNumber: postNumber, quote: quote(), searchType: req.query.sort});
 });
 
 // handle routing (authorList)

@@ -15,6 +15,9 @@ $(function() {
   var mainSearchHint = $("#mainSearchHint");
   var searchType = $("#searchType");
   var content = $("#content");
+  var currentPage = $(".currentPage");
+  var pageCount = $(".pageCount");
+  var postNumber = $("#postNumber");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -90,6 +93,24 @@ $(function() {
 
   if(window.location.href.indexOf("#") >= 0) {
     content.scrollTop($("#" + window.location.href.split("#")[1]).offset().top);
+  }
+
+  // edit page for postList navigation count
+  if(pageCount) {
+    var pageCountNumber = Math.ceil(postNumber.text() / 10);
+    pageCount.text(pageCountNumber);
+    for(var i = 0; i < pageCountNumber; i++) {
+      currentPage.append($("<option/>").text(i+1).val(i+1));
+    }
+    var currentPageNumber = (/page=(\d+)/.exec(window.location.href) || {1: 1})[1];
+    currentPage.val(currentPageNumber);
+    currentPage.change(function() {
+      if(window.location.href.indexOf("page=") > 0) {
+        window.location.href = window.location.href.replace(/(page=)\d+/, "$1" + $(this).val());
+      } else {
+        window.location.href = window.location.href + (window.location.href.indexOf("?") > 0 ? "&" : "?") + "page=" + $(this).val();
+      }
+    });
   }
 
 });

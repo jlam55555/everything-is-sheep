@@ -290,6 +290,10 @@ ul {
   height: 2em;
   width: 2em;
 }
+.pageControl {
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
 #postAuthorPicture {
   border-radius: 100%;
   width: 5em;
@@ -302,6 +306,10 @@ ul {
   width: calc(100% + 2em);
   padding: 1em;
   margin: -2em 0  0 -1em;
+}
+#postNumberContainer {
+  padding: 0 auto 2em 0;
+  text-align: center;
 }
 .postView {
   padding: 2em 1em;

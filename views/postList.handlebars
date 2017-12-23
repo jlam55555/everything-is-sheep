@@ -22,7 +22,15 @@
   You may combine tag searches with any of the other search types (e.g., <a class="imgLink" title="Try it!" href="/search/[essay]Winning"><code>[essay]Winning</code></a>). Only posts that include <em>all</em> of the search elements provided will be shown.
 </div>
 {{#if searchString}}
-  <div id="searchString" class="center">{{postNumber}} post{{sIfNotOne}} found for search "{{{formatSearchString}}}."<br>View <a title="View all posts" href="/posts">all posts</a>?</div>
+  <div id="searchString" class="center"><span id="postNumber">{{postNumber}}</span> post{{sIfNotOne}} found for search "{{{formatSearchString}}}."<br>View <a title="View all posts" href="/posts">all posts</a>?</div>
+{{else}}
+  <div id="postNumberContainer">Viewing all <span id="postNumber">{{postNumber}}</span> posts.</div>
+{{/if}}
+{{#if postNumber}}
+  <div class="pageControl">
+    <p>Viewing page <select class="currentPage">
+    </select> of <span class="pageCount"></span>.</p>
+  </div>
 {{/if}}
 <div id="postViews">
   {{#if searchString}}
@@ -51,3 +59,9 @@
     {{/each}}
   {{/if}}
 </div>
+{{#if postNumber}}
+  <div class="pageControl">
+    <p>Viewing page <select class="currentPage">
+    </select> of <span class="pageCount"></span>.</p>
+  </div>
+{{/if}}
