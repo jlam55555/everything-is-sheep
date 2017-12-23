@@ -4,7 +4,7 @@ Literary synthesis with a focus on *Hamlet* for English class.
 
 "Care to share a truth?"
 
-    “It is as easy as lying.” Hamlet 3.2.387.
+> “It is as easy as lying.” Hamlet 3.2.387.
 
 In a world that values sincerity as a trait above almost any other, lies— treachery, conspiracy, rumors, and even white lies— run abundant. Honesty is a virtue run amok, and it always seems that the most virtuous die the most untimely deaths. The people who can understand their own truth and communicate it with others live the most fulfilling lies. Those that are convinced of a faulty truth, or those that can know the truth but cannot tell it to others (an *inner truth*), often result in tragedy.
 
@@ -43,7 +43,7 @@ Communication is key.
 
 --
 
-    “Tell the truth but tell it slant—” Dickinson 1
+> “Tell the truth but tell it slant—” Dickinson 1
 
 Human society is built upon the idea of the forum: conversation, discussion, debate. While the truth may be dangerously “Too bright for our infirm Delight” (Dickinson 3), it is certainly better to reveal some truth (a “slant” truth) than none at all. Because if one holds ideas to himself, with sole intentions but no cooperation or other real action, what happens at his death? What is he to the world who keeps his secrets and tells not one bit of the truth?
 
