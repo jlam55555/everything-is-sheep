@@ -134,7 +134,11 @@ fs.readdir("./posts", function(error, posts) {
               postData.hitcount = data.hitcount;
             })
             .catch(function(e) {
-              console.log("error with getting hitcounts: " + e);
+              if(e == "TypeError: Cannot read property 'hitcount' of null") {
+                postData.hitcount = 0;
+              } else {
+                console.log("error with getting hitcounts: " + e);
+              }
             });
           postList.push(postData);
           postsCompleted++;
