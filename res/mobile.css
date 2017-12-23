@@ -49,6 +49,7 @@ code, kbd {
   color: #26282c;
 }
 code {
+  white-space: normal;
   background-color: #ded2cf;
   padding: 0.125em;
 }
