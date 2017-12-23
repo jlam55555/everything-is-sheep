@@ -12,7 +12,7 @@ I was inspired to write this by the start of our winter holidays and by a peer-w
 
 Actually, just as I was about to post this, here comes Juliet (co-blogger) barging in the front door, holding up her prized Starbursts from school, saying:
 
-    We have a whole lot of Starbursts now. We had a Bingo game in class today and the winners got Starbursts. But I had to give some away. Juliet, thehomeworklife blogger
+> We have a whole lot of Starbursts now. We had a Bingo game in class today and the winners got Starbursts. But I had to give some away. Juliet, thehomeworklife blogger
 
 [1]: http://www.tasteofhome.com/recipes/holiday---celebration-recipes/christmas-recipes/top-10-christmas-candy-recipes
 [2]: http://thechallenge.dupont.com/essay/
