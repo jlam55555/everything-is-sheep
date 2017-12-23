@@ -21,14 +21,19 @@
   <li><strong>Release 1.0.0</strong> (07/31/17): First release. Basic blog functionality.
     <ul>
       <li><strong>1.0.0</strong> (07/27/17): Includes basic blog workings, such as: a post generator (w/ JSON metadata and Markdown posts with Showdown MD-to-HTML converter), a templating engine (Handlebars), a cool backend (Node.js w/ Express), quick free hosting (Heroku), a search bar, RWD (mobile and desktop versions), a basic logo, an RSS feed, iOS standalone web-app capability, and basic routing info (e.g., index.html homepage and 404 page).</li>
-      <li><strong>1.1.0</strong> (07/31/17): Introducing less-important but still desirable blog features. Includes FontAwesome support, post tags/categories, social media buttons, hitcount, improved title-text descriptions for links, improved internal templating data injection, code cleanup from sidebar cleanup. Major sidebar and index.html revamp.
+      <li><strong>1.1</strong>: Introducing less-important but still desirable blog features. Includes FontAwesome support, post tags/categories, social media buttons, hitcount, improved title-text descriptions for links, improved internal templating data injection, code cleanup from sidebar cleanup. Major sidebar and index.html revamp.
         <ul>
           <li><strong>1.1.1</strong> (07/28/17): Introduced convenience/visual changes: FA, social media buttons, post tags, searching by post tags, and title-text descriptions.</li>
           <li><strong>1.1.2</strong> (07/29/17): Major visual overhaul to sidebar and index.html. On desktop sidebar, added search bar with search hint, removed logo to remove clutter, turned authors into link instead of list, added short description. On index.html, added changelog, blog features, "prolegomenon" section.</li>
           <li><strong>1.1.3</strong> (07/30/17): Internal cleanup changes: send less data to templates to improve load time, made mobile/desktop RWD more robust with CSS classes, and cleaned up CSS. Also added quote generator, search highlighting, and search hint to main post search bar features.</li>
-          <li><strong>1.1.4</strong> (07/31/17) Internal feature addition: post sorting in the /search/ and /post/ directories, cleaned up routing to those views, added support for named anchor tags, and updated internal dates to RFC 2822 specifications for easier conversion to feed.</li>
-          <li><strong>1.1.5</strong> (11/19/17) (<strong>current release</strong>): Fixed page hit-counter by associating with PG DB, incorporated THL blog posts.</li>
-          <li><strong>1.1.5</strong> (???) (<strong>upcoming release</strong>): Post images, added comments section (Disqus or vanilla w/ login system), easier navigation between adjacent posts (left/right arrows), post list limits (prevent overly-long list).</li>
+          <li><strong>1.1.4</strong> (07/31/17): Internal feature addition: post sorting in the /search/ and /post/ directories, cleaned up routing to those views, added support for named anchor tags, and updated internal dates to RFC 2822 specifications for easier conversion to feed.</li>
+          <li><strong>1.1.5</strong> (11/19/17): Fixed page hit-counter by associating with PG DB, incorporated THL blog posts.</li>
+        </ul>
+      </li>
+      <li><strong>1.2.0</strong> Improving site experience for the user. Includes more manageable post list, fixed inconsistent margins, cleaner styles, removal of unnecessary elements, and a comments section.
+        <ul>
+          <li><strong>1.2.0</strong> (12/22/17) (<strong>current release</strong>): Shortened post lists to 10 per page, simplified code block styles, buffed up blockquote styles, removed extra elements in file metadata for mobile, and fixed elements that were over the full width of their containers.</li>
+          <li><strong>1.2.1</strong> (???) (<strong>upcoming release</strong>): Post images, added comments section (Disqus or vanilla w/ login system), easier navigation between adjacent posts (left/right arrows)</li>
         </ul>
       </li>
     </ul>
