@@ -112,7 +112,7 @@ app.engine("handlebars", handlebars.create({
 }).engine);
 app.set("view engine", "handlebars");
 
-// get name of all posts
+// get name, hitcount of all posts
 var postList = [];
 var postsCompleted = 0;
 var totalPosts;
@@ -129,6 +129,13 @@ fs.readdir("./posts", function(error, posts) {
           }
           postData.filename = _post.slice(0, -5);
           postData.markdown = markdown;
+          db.oneOrNone("select hitcount from posts where title='" + safestring(postData.filename) + "'")
+            .then(function(data) {
+              postData.hitcount = data.hitcount;
+            })
+            .catch(function(e) {
+              console.log("error with getting hitcounts: " + e);
+            });
           postList.push(postData);
           postsCompleted++;
         });
