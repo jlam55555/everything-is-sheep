@@ -1,0 +1,13 @@
+In my simplified view of the world, high school is a plot for many to gradually raise money for and stall by educating themselves to go to prom. And then high school’s over, there's college, and then life hits like a brick.
+
+I’m not sure what others may think about prom, but in that simplified notion in my head, it’s a recipe for disaster. I just uncovered a draft of a speech I almost delivered in sophomore year dedicated entirely to prom. The premise of the speech could be summed up by this paragraph:
+
+> And if you really think about it, is there truly any happiness in prom? It's a one-night stand that all the student's fundraisers go towards. It's the notion of fun and dating, but there's no substance to it. One night of dancing and hanging out with friends, and then it's over. To top that, if you don't live the rest of your life with your date, then it might be a night lost, money wasted, hearts broken.
+
+High school is *not* a microcosm of adult life, which means that it does not need all of the vices and romance that an adult life is known to entail. Your life savings should not go entirely towards your wedding (prom) and funeral (graduation). As high school should be a wonderful time for growth— academic, physical, emotional— the funds and effort and excitement should go towards the experience in between. Pay for all of the teachers that are being laid off because of the school’s low budget! Pay for the special education students, who need the money most for their education! Pay to buy the new technology the students always lament they missed! Do something inventive with all of that energy! Come on, school, do *something* that will last longer than a night!
+
+Some people say dating is just practice for real life, or just a necessary part of the high school experience. I still don’t agree. Why make the night to remember something so unrepresentative of the entire high school experience of lifelong growth and inspiration? It just vexes me.
+
+The final part of my disagreement may be contentious for many people. In my mind, prom is a long show-off competition. *Here’s my date; (s)he’s more handsome (beautiful) than yours.* Really, what is less entertaining about a casual, cheap party at a friend’s house, without all of the extra-ness? Or perhaps with a date, why not a romantic dinner-for-two at a small restaurant table, alone, meaningfully? It has the added benefit of avoiding public humiliation if (s)he rejects you.
+
+Prom is the reason I never ran for class or student council. If I were chosen, I would try my best to do away with it, or to replace it with something more representative of high school, albeit still celebratory. It shouldn’t be known as a night of partying expensively, but of successes and no regrets.
