@@ -1,0 +1,31 @@
+A working definition of memoir, based on "Go Carolina" by David Sedaris, "Pest Control" by Augusten Burroughs, "Chubby for Life" by Mindy Kaling, "The Ten Thousand Things" by Cheryl Strayed, and the first chapter of *The Glass Castle* by Jeanette Walls. (And a little bit from *The Things They Carried* by Tim O'Brien.)
+
+I think that a memoir is nothing more than that aspiration to remember. A kind of desperate grab to retain the fleeting happy moments, the elusive sad moments. That's how it is for me. Do you agree? (I've got to add a comments section soon, but schoolwork calls.)
+
+---
+
+"Memoir: A Working Definition"
+
+Memoir. It’s a mirror. It’s a self-portrait. It’s a story. It’s the past.
+
+It’s a story about the death of a mother. The pulling of a tooth, or the condemnation to eternal chubbiness. And it could be for the entertainment of others: it might be comical to hear what a teething child learns about the tooth fairy for the first time, or heartening to know that even the more despicable people in life are, after all, just people trying to make a living as a speech therapist.
+
+But more than anything, it’s about and for the memoirist and nobody else. The funny moments, the tears, and the joy are all a part of the writer. It’s *not* a conscious effort to inform or entertain others. If that is the case, then the story becomes fiction.
+
+Fiction is what Tim O’Brien calls “happening-truth,” but not necessarily true to the author; true and particularly appealing to the audience. This is more appealing to a reader because of its sensible, plain conveyal of information. (On the other hand, his book *The Things They Carried*, while almost completely fabricated, can be considered a memoir, a “story-truth” truer than reality. The characters and plot details may not have occurred, but they were very real to him in the stories they told and the necessary relationships they shared.)
+
+But memoirs are something more honest, and perhaps very uncomfortable. It’s definitely not as straightforward as fiction: it probably seems that the the anger in Strayed’s statement, “Duluth was a freezing hick town where doctors who didn’t know what the hell they were talking about told forty-five-year-old vegetarian-ish, garlic-eating, natural-remedy-using nonsmokers that they had late-stage lung cancer” (Strayed 10) has no place in the story of a mother’s death. Nor the green pantsuit or the names of the apartment complexes outside of Minneapolis where Strayed used to live. In fact, the entire story can be told in a few words, as it often is, much more simply:
+
+> I began a journey to find myself. I realized only later that it had begun with the tragic death of my mother, who had been a great part of my life.
+
+After all, every part of this is true. It can be used as the introduction to a story about a journey— people would understand. People could fill in the blanks with close deaths from their own lives, relive their own horrors or joys. It doesn’t *feel* very genuine like a memoir, however, because that’s not how the person remembers it best. In short, **a memoir is an attempt to capture a core memory as closely as possible to what a person remembers feeling at the time, encapsulating it with then thoughts and emotions**. That little Augusten Burroughs remembered that the beautiful flight attendant called him “precious,” and that he liked it so much because it reminded him of gemstones. He remembered that the “impossibly exotic South,” with his grandparents’ “Technicolor peacocks” and “yet more sunshine,” as a part of his memory. These are not simply superficial details to add to the reality of the situation: they are in fact crucial pieces to the story, true or not (considering that memory is easily warped, according to Mary Karr in “The Art of Memoir”). Missing little pieces, like Strayed’s impulse to “take pleasure from [the male nurse]” (Strayed 21) in the sudden irrational mind that it would somehow help her situation, can’t be glossed over. Little moments like this define a person: Burrough’s good-natured naïvete and Strayed’s desperation. These moments can’t be told in any other way.
+
+I began writing in tenth grade to try to improve my grade in English class. I began a blog, writing random snapshots of my life: mostly little events that set me off (e.g., excessive hype for the wasteful and socially-cemented prom) or enlighten me (e.g., discovering a brilliant reduction method for a complex logic puzzle on my own). And many of these probably would fall into the memoir genre. Most of the time I write to remember, whether it be the strong loathing I have for the wasteful, socially-cemented prom, or the joy of discovering a mathematical reduction method on my own. Most often, the blog posts are associated with specific events, but that’s not what it’s about. You can’t recall what you don’t remember, and writing memoirs is my solution to the fear of forgetting.
+
+Kaling’s “Chubby for Life” and Strayed’s “The Ten Thousand Things” focus on a broader theme, with supporting stories and the complete, random details that come to mind. Burrough’s “Pest Control,” Sedaris’s “Go Carolina,” and Walls’s “The Glass Castle” are focused on their younger, less judgmental selves and the actions and impressions of the time.
+
+Throughout all of these memoirs (including mine), there’s the common theme of the variation in content and style. I often use multimedia in my blog, as does Kaling in her memoir, because pictures can carry heavier connotations with words. Strayed uses motifs, such as “religion” and female independence. All of these little details are “triggers,” designed so that the memory, in all of its emotional glory, can be relived.
+
+That’s it.
+
+Some definitions of memoir are to achieve some intelligent, greater-society purpose: to educate oneself or society from past mistakes, to portray a past event with brutal honesty, or to paint an all-encompassing of a person. But these are just side effects, born of the power of wanting to remember. The little details, the impromptu realizations and naïve assumptions, may seem funny to an outside audience, but they are just meant to preserve a chunk of the life of the memoirist in pristine condition. From this “chunk of life” we can learn many things, whether we mean to or not.
