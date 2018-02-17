@@ -18,6 +18,10 @@ $(function() {
   var currentPage = $(".currentPage");
   var pageCount = $(".pageCount");
   var postNumber = $("#postNumber");
+  var commentName = $("#commentName");
+  var commentText = $("#commentText");
+  var submitComment = $("#submitComment");
+  var postTitle = $("#postTitle");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -112,5 +116,12 @@ $(function() {
       }
     });
   }
+  
+  // submit comment
+  submitComment.click(function() {
+    $.post("/comment", { comment: commentText.val(), name: commentName.val(), title: postTitle.text() }, function(data) {
+      console.log(data);
+    })
+  });
 
 });

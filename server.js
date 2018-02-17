@@ -2,6 +2,11 @@
 var express = require("express");
 var app = express();
 
+// body-parser for getting POST variables
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // handlebars as templating engine
 var handlebars = require("express-handlebars");
 
@@ -15,6 +20,7 @@ var converter = new showdown.Converter();
 // pg-promise for database (views, comments?)
 var pgp = require("pg-promise")();
 var db = pgp(process.env.DATABASE_URL + "?ssl=true");
+
 // remove all possible dangerous characters
 var safestring = function(input) {
   return input.toString().replace(/[\0\'\"\b\n\r\t\\\%\_\x08\x09\x1a]/g, ""); 
@@ -129,8 +135,10 @@ fs.readdir("./posts", function(error, posts) {
           }
           postData.filename = _post.slice(0, -5);
           postData.markdown = markdown;
-          db.oneOrNone("select hitcount from posts where title='" + safestring(postData.filename) + "'")
+          db.oneOrNone("select * from posts where title='" + safestring(postData.filename) + "'")
             .then(function(data) {
+              postData.id = data.id;
+              postData.comments = JSON.parse(data.comments);
               postData.hitcount = data.hitcount;
             })
             .catch(function(e) {
@@ -400,6 +408,62 @@ app.get("/posts/*", function(req, res, next) {
     .catch(function(e) {
       console.log("error: get hitcount: " + e);
     });
+});
+
+// handle comments
+// flag to prevent spamming; max one comment every five seconds
+var recentComment = false;
+app.post("/comment", function(req, res) {
+  var comment = req.body.comment;
+  var name = req.body.name;
+  var postTitle = req.body.title;
+  
+  // error code 0: spam detection
+  if(recentComment) {
+    res.json({success: false, error: 1});
+    return;
+  }
+  
+  // error code 1: invalid name length
+  if(name.length < 2 || name.length > 50) {
+    res.json({success: false, error: 1})
+    return;
+  }
+  
+  // error code 2: invalid comment length
+  if(comment.length < 10 || comment.length > 500) {
+    res.json({success: false, error: 2});
+    return;
+  }
+  
+  // error code 3: illegal characters
+  if(comment !== safestring(comment)) {
+    res.json({success: false, error: 3});
+    return;
+  }
+  
+  // error code 4: post doesn't exist
+  var post = postList.find(p => p.title == postTitle);
+  if(post === undefined) {
+    res.json({success: false, error: 4});
+    return;
+  }
+  
+  // success; add to database, set spam flag
+  var commentJson = {
+    name: name,
+    comment: comment,
+    date: new Date()
+  };
+  post.comments.push(commentJson);
+  db.none(`update posts set comments='${JSON.stringify(post.comments)}' where id=${safestring(post.id)}`)
+    .catch(function(e) {
+      console.log("error: updating comments: " + e);
+    });
+  
+  recentComment = true;
+  setTimeout(() => recentComment = false, 5000);
+  res.json({success: true});
 });
 
 // handle routing (authors)
