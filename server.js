@@ -440,7 +440,7 @@ app.post("/comment", function(req, res) {
   }
   
   // error code 3: illegal characters
-  if(comment !== safestring(comment)) {
+  if(comment !== safestring(comment) || name !== safestring(name)) {
     res.json({success: false, error: 3});
     return;
   }
@@ -458,7 +458,7 @@ app.post("/comment", function(req, res) {
     comment: comment,
     date: new Date()
   };
-  post.comments.push(commentJson);
+  post.comments.unshift(commentJson);
   db.none(`update posts set comments='${JSON.stringify(post.comments)}' where id=${safestring(post.id)}`)
     .catch(function(e) {
       console.log("error: updating comments: " + e);

@@ -22,6 +22,7 @@ $(function() {
   var commentText = $("#commentText");
   var submitComment = $("#submitComment");
   var postTitle = $("#postTitle");
+  var writeComment = $("#writeComment");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -120,7 +121,30 @@ $(function() {
   // submit comment
   submitComment.click(function() {
     $.post("/comment", { comment: commentText.val(), name: commentName.val(), title: postTitle.text() }, function(data) {
-      console.log(data);
+      if(data.success) {
+        writeComment.after(`<div class="comment"><div class="commentDate">just submitted</div><div class="commentName">${commentName.val()}</div><div class="commentText">${commentText.val()}</div></div>`);
+        commentText.empty();
+        commentName.empty();
+      } else {
+        var error;
+        switch(data.error) {
+          case 0:
+            error = "Spam detection activated. Please wait up 5 seconds before submitting another comment.";
+            break;
+          case 1:
+            error = "Invalid name length. Name must be between 2 and 50 characters.";
+            break;
+          case 2:
+            error = "Invalid comment length. Comment must be between 10 and 500 characters.";
+            break;
+          case 3:
+            error = "Invalid characters in name or comment. Use only alphanumeric or space characters.";
+            break;
+          case 4:
+            error = "Post doesn't exist. (What did you do?)";
+            break;
+        }
+      }
     })
   });
 
