@@ -12,15 +12,17 @@
 <div id="postBody">{{{formatPost}}}</div>
 <hr class="short">
 <h3>Comments</h3>
-<div>
-  <p>Add a comment:</p>
+<div id="writeComment">
+  <p>Write a comment</p>
   <input type="text" id="commentName" placeholder="Name">
   <textarea id="commentText" placeholder="Comment"></textarea>
   <button id="submitComment">Submit</button>
 </div>
 {{#each comments}}
-  <div>Name: {{name}}</div>
-  <div>Date: {{date}}</div>
-  <div>Comment: {{comment}}</div>
+  <div class="comment">
+    <div class="commentDate">@ {{formatCommentDate}}</div>
+    <div class="commentName">{{name}}</div>
+    <div class="commentText">{{comment}}</div>
+  </div>
 {{/each}}
 <p>This post has {{hitcount}} views. Return <a href="/" title="Return home">home</a>.</p>

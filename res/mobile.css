@@ -433,3 +433,43 @@ ul, ol {
   cursor: pointer;
   background-color: #ded2cf;
 }
+
+/* comments */
+#commentName, #commentText, #submitComment, .comment {
+  width: 100%;
+  border: 1px solid #ded2cf;
+  margin-bottom: 0.5em;
+  border-radius: 0.125em;
+  padding: 0.5em;
+  transition: border-color 0.2s;
+}
+#commentName:focus, #commentText:focus, #submitComment:hover {
+  border-color: #aca1a1;
+}
+#commentText {
+  height: 10em;
+}
+#submitComment {
+  float: right;
+  width: auto;
+  background-color: #f7efed;
+}
+#submitComment:hover, #submitComment:focus {
+  cursor: pointer;
+  outline: none;
+}
+.comment * {
+  margin: 1em;
+}
+#writeComment + .comment {
+  margin-top: 4em;
+}
+.comment > .commentName {
+  text-decoration: underline;
+}
+.comment > .commentDate {
+  display: inline-block;
+  float: right;
+  font-size: smaller;
+  color: #26282c;
+}

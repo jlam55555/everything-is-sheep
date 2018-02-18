@@ -110,6 +110,9 @@ app.engine("handlebars", handlebars.create({
         ? new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit"}).format(new Date(this.date))
         : new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit", timeZoneName: "short"}).format(new Date(this.date));
     },
+    formatCommentDate() {
+      return new Intl.DateTimeFormat("en-US", {month: "2-digit", day: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit"}).format(new Date(this.date));
+    },
     checkSelect: function(searchType) {
       return (this.searchType === searchType) ? "selected" : "";
     }
