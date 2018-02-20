@@ -26,6 +26,39 @@ var safestring = function(input) {
   return input.toString().replace(/[\0\'\"\b\n\r\t\\\%\_\x08\x09\x1a]/g, ""); 
 };
 
+// escape possible dangerous characters in HTML / SQL
+// newer version of safestring -- start migrating uses over to this function as appropriate
+// uses advice from http://wonko.com/post/html-escaping
+var charEntityMap = {
+  // these are for HTML or SQL safety
+  "&": "&#38;",
+  "<": "&#60;",
+  ">": "&#62;",
+  "\"": "&#34;",
+  "'": "&#39;",
+  "`": "&#97;",
+  ",": "&#44;",
+  "!": "&#33;",
+  "@": "&#64;",
+  "$": "&#36;",
+  "%": "&#38;",
+  "(": "&#40;",
+  ")": "&#41;",
+  "=": "&#61;",
+  "+": "&#43;",
+  "{": "&#123;",
+  "}": "&#125;",
+  "[": "&#91;",
+  "]": "&#93;",
+  // these are for DB safety
+  "\\": "&#92;",
+  "_": "&#95;"
+};
+var unsafeEntityString = `[\\${Object.keys(charEntityMap).join("\\")}]`;
+var unsafeEntityRegex = new RegExp(unsafeEntityString, "g");
+var illegalEntityRegex = /[\0\b\n\r\t\x08\x09\x1a]/g;
+var sanitize = input => input.replace(unsafeEntityRegex, (match) => charEntityMap[match]).replace(illegalEntityRegex, "");
+
 // set view engine to handlebars
 app.engine("handlebars", handlebars.create({
   helpers: {
@@ -115,6 +148,17 @@ app.engine("handlebars", handlebars.create({
     },
     checkSelect: function(searchType) {
       return (this.searchType === searchType) ? "selected" : "";
+    },
+    // shows next/previous posts
+    previousNextPost: function() {
+      var output = "";
+      if(this.previousPost) {
+        output += `Previous post: <a href="/posts/${this.previousPost.filename}">${this.previousPost.title}</a>${this.nextPost?"<br>":""}`;
+      }
+      if(this.nextPost) {
+        output += `Next post: <a href="/posts/${this.nextPost.filename}">${this.nextPost.title}</a>`;
+      }
+      return output;
     }
   },
   defaultLayout: "main"
@@ -375,6 +419,20 @@ app.get("/posts/*", function(req, res, next) {
     next();
     return;
   }
+  
+  // get adjacent post titles, store in postData
+  var timeIndex = postList.indexOf(postData);
+  var previousIndex = null;
+  var nextIndex = null;
+  if(timeIndex !== postData.length-1) {
+    previousIndex = timeIndex + 1;
+  }
+  if(timeIndex !== 0) {
+    nextIndex = timeIndex - 1;
+  }
+  postData.previousPost = previousIndex === null ? null : { filename: postList[previousIndex].filename, title: postList[previousIndex].title };
+  postData.nextPost = nextIndex === null ? null : { filename: postList[nextIndex].filename, title: postList[nextIndex].title };
+  
   postData.limitedPostList = limitedPostList;
   postData.quote = quote();
 
@@ -439,11 +497,10 @@ app.post("/comment", function(req, res) {
     return;
   }
   
-  // error code 3: illegal characters
-  if(comment !== safestring(comment) || name !== safestring(name)) {
-    res.json({success: false, error: 3});
-    return;
-  }
+  // replace illegal characters
+  // (used to be error code 3)
+  name = sanitize(name);
+  comment = sanitize(comment);
   
   // error code 4: post doesn't exist
   var post = postList.find(p => p.title == postTitle);
@@ -466,7 +523,7 @@ app.post("/comment", function(req, res) {
   
   recentComment = true;
   setTimeout(() => recentComment = false, 5000);
-  res.json({success: true});
+  res.json({success: true, sanitizedComment: comment});
 });
 
 // handle routing (authors)

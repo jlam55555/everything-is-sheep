@@ -8,21 +8,24 @@
   <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
   <a class="shareIcon" title="Share on Google+"><i class="fa fa-google-plus fa-fw"></i></a>
 </div>
+{{{previousNextPost}}}
 <hr class="short">
 <div id="postBody">{{{formatPost}}}</div>
 <hr class="short">
 <h3>Comments</h3>
 <div id="writeComment">
   <p>Write a comment</p>
-  <input type="text" id="commentName" placeholder="Name">
-  <textarea id="commentText" placeholder="Comment"></textarea>
+  <div id="commentError"></div>
+  <input type="text" id="commentName" placeholder="Name" maxlength="50">
+  <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
   <button id="submitComment">Submit</button>
 </div>
 {{#each comments}}
   <div class="comment">
     <div class="commentDate">@ {{formatCommentDate}}</div>
     <div class="commentName">{{name}}</div>
-    <div class="commentText">{{comment}}</div>
+    <div class="commentText">{{{comment}}}</div>
   </div>
 {{/each}}
 <p>This post has {{hitcount}} views. Return <a href="/" title="Return home">home</a>.</p>
+{{{previousNextPost}}}

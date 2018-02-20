@@ -23,6 +23,7 @@ $(function() {
   var submitComment = $("#submitComment");
   var postTitle = $("#postTitle");
   var writeComment = $("#writeComment");
+  var commentError = $("#commentError");
 
   menuButton.click(function() {
     sidebar.toggleClass("expanded");
@@ -119,12 +120,17 @@ $(function() {
   }
   
   // submit comment
+  commentText.keydown(function(event) {
+    if(event.which == 13) {
+      submitComment.click();
+    }
+  });
   submitComment.click(function() {
     $.post("/comment", { comment: commentText.val(), name: commentName.val(), title: postTitle.text() }, function(data) {
       if(data.success) {
-        writeComment.after(`<div class="comment"><div class="commentDate">just submitted</div><div class="commentName">${commentName.val()}</div><div class="commentText">${commentText.val()}</div></div>`);
-        commentText.empty();
-        commentName.empty();
+        writeComment.after(`<div class="comment"><div class="commentDate">just submitted</div><div class="commentName">${commentName.val()}</div><div class="commentText">${data.sanitizedComment}</div></div>`);
+        commentText.val("");
+        commentName.val("");
       } else {
         var error;
         switch(data.error) {
@@ -144,6 +150,7 @@ $(function() {
             error = "Post doesn't exist. (What did you do?)";
             break;
         }
+        commentError.text("Error writing comment: " + error);
       }
     })
   });
