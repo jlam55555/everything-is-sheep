@@ -176,6 +176,12 @@ fs.readdir("./posts", function(error, posts) {
       (function() {
         var _post = post;
         var postData = require("./posts/" + post);
+        // get image if exists (in ./res/img/headers/[post-name].png)
+        try {
+          var url = `/res/img/headers/${ _post.slice(0, -5) }.png`;
+          fs.statSync("." + url);
+          postData.imageUrl = url;
+        } catch(e) {}
         fs.readFile("./posts/" + _post.slice(0, -5) + ".md", "utf-8", function(error, markdown) {
           if(error) {
             return console.log(error);

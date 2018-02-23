@@ -1,3 +1,6 @@
+{{#if imageUrl}}
+  <img src="{{imageUrl}}" class="mobile" id="postImage">
+{{/if}}
 <img src="{{author.profilePicture}}" id="postAuthorPicture">
 <h1 id="postTitle">{{title}}</h1>
 <h3 id="postAuthor">By <a href="/authors/{{author.filename}}" title="View author {{author.name}}">{{author.name}}</a> on {{formatDate}}</h3>
@@ -9,7 +12,12 @@
   <a class="shareIcon" title="Share on Google+"><i class="fa fa-google-plus fa-fw"></i></a>
 </div>
 {{{previousNextPost}}}
-<hr class="short">
+{{#if imageUrl}}
+  <img src="{{imageUrl}}" class="desktop" id="postImage">
+{{else}}
+  <hr class="short desktop">
+{{/if}}
+<hr class="short mobile">
 <div id="postBody">{{{formatPost}}}</div>
 <hr class="short">
 <h3>Comments</h3>

@@ -56,20 +56,22 @@
         <a class="shareIcon" title="Share on Google+"><i class="fa fa-google-plus fa-fw"></i></a>
       </div>
     </div>
-    <div id="content">
-      {{{ body }}}
-      <div id="quote">
-        <span id="circles" class="smallText">
-          <i class="fa fa-circle"></i> 
-          <i class="fa fa-circle-o"></i> 
-          <i class="fa fa-circle"></i> 
-          <i class="fa fa-circle-o"></i> 
-          <i class="fa fa-circle"></i>
-        </span><br>
-        <sup><i class="fa fa-quote-left smallText"></i></sup> 
-          {{{quote.quote}}} 
-        <sup><i class="fa fa-quote-right smallText"></i></sup>
-        <span class="smallText">{{{quote.source}}}</span>
+    <div id="contentWrapper">
+      <div id="content">
+        {{{ body }}}
+        <div id="quote">
+          <span id="circles" class="smallText">
+            <i class="fa fa-circle"></i> 
+            <i class="fa fa-circle-o"></i> 
+            <i class="fa fa-circle"></i> 
+            <i class="fa fa-circle-o"></i> 
+            <i class="fa fa-circle"></i>
+          </span><br>
+          <sup><i class="fa fa-quote-left smallText"></i></sup> 
+            {{{quote.quote}}} 
+          <sup><i class="fa fa-quote-right smallText"></i></sup>
+          <span class="smallText">{{{quote.source}}}</span>
+        </div>
       </div>
     </div>
     <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
