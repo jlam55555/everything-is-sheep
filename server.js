@@ -192,6 +192,7 @@ fs.readdir("./posts", function(error, posts) {
             .then(function(data) {
               postData.id = data.id;
               postData.comments = JSON.parse(data.comments);
+              console.log(postData.comments);
               postData.hitcount = data.hitcount;
             })
             .catch(function(e) {
