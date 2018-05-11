@@ -86,10 +86,10 @@ h4 { font-size: 1em; }
 h5 { font-size: 0.75em; }
 h6 { font-size: 0.5em; }
 hr {
-  margin: 2em 0;
+  margin: 2em;
   border: none;
   background-color: #26282c;
-  height: 0.125em;
+  height: 1px;
 }
 hr.short {
   width: 15em;
@@ -282,7 +282,7 @@ ul, ol {
 
 /* other template styles */
 #authorHeader {
-  background-color: #446cb3;
+  background-color: #6588c5;
   width: calc(100% + 2em);
   margin: -1em 0 0 -1em;
   height: 20em;
@@ -303,6 +303,25 @@ ul, ol {
 .pageControl {
   margin: 0 auto 2em auto;
   text-align: center;
+}
+#postBody {
+  width: 100%;
+  max-width: 64em;
+  margin: 0 auto;
+}
+#postHeader, #postFooter {
+  background-color: #6588c5;
+  color: white;
+  padding: 2em 2em;
+  margin: 2em 0;
+  width: calc(100% + 2em);
+  margin-left: -1em;
+}
+#postHeader {
+  margin-top: -1em;
+}
+#postFooter ::placeholder {
+  color: #aca1a1;
 }
 #postAuthor {
   padding: 0.5em 0;
@@ -423,6 +442,7 @@ ul, ol {
 }
 .tag {
   background-color: #f7efed;
+  color: #26282c;
   padding: 0.25em;
 }
 .tag::before {
@@ -441,13 +461,15 @@ ul, ol {
 }
 #commentName, #commentText, #submitComment, .comment {
   width: 100%;
-  border: 1px solid #ded2cf;
+  border: none;
+  box-shadow: 0 0 1px 0 #aca1a1;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  transition: border-color 0.2s;
+  transition: box-shadow 0.2s;
+  background-color: white;
 }
 #commentName:focus, #commentText:focus, #submitComment:hover {
-  border-color: #aca1a1;
+  box-shadow: 0 0 1px 0 white;
 }
 #commentText {
   height: 10em;
@@ -460,6 +482,9 @@ ul, ol {
 #submitComment:hover, #submitComment:focus {
   cursor: pointer;
   outline: none;
+}
+.comment {
+  color: #26282c;
 }
 .comment * {
   margin: 1em;
