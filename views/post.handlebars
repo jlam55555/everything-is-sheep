@@ -1,7 +1,4 @@
 <div id='postHeader'>
-  {{#if imageUrl}}
-    <img src="{{imageUrl}}" class="mobile" id="postImage">
-  {{/if}}
   <img src="{{author.profilePicture}}" id="postAuthorPicture">
   <h1 id="postTitle">{{title}}</h1>
   <h3 id="postAuthor">By <a href="/authors/{{author.filename}}" title="View author {{author.name}}">{{author.name}}</a> on {{formatDate}}</h3>
@@ -15,13 +12,13 @@
     <br><br>
   </div>
   {{{previousNextPost}}}
-  {{#if imageUrl}}
-    <img src="{{imageUrl}}" class="desktop" id="postImage">
-  {{else}}
-    <hr class="short desktop">
-  {{/if}}
 </div>
-<div id="postBody">{{{formatPost}}}</div>
+<div id="postBody">
+  {{#if imageUrl}}
+    <img src="{{imageUrl}}" id="postImage">
+  {{/if}}
+  {{{formatPost}}}
+</div>
 <div id='postFooter'>
   <h3>Comments</h3>
   <div id="writeComment">

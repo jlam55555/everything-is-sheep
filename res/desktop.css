@@ -200,7 +200,7 @@ body {
 #postImage {
   min-width: calc(100% + 8em);
   min-height: 2em;
-  margin: 1em 0 1em -4em !important;
+  margin: 1em 0 3em -4em !important;
 }
 .postView {
   flex-basis: 90%;
