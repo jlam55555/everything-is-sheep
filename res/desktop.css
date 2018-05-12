@@ -13,11 +13,6 @@ body, html {
   height: 100%;
   font-size: 16px;
 }
-a:not(.imgLink):hover, a:not(.imgLink).active {
-  background-color: #ded2cf;
-  text-decoration: none;
-  box-shadow: 0.25em 0.25em 0 #aca1a1;
-}
 
 /* general classes */
 .mobile {
@@ -183,11 +178,11 @@ body {
 }
 #postAuthorPicture {
   display: block !important;
+  flex: 0 0 0;
   border-radius: 100%;
   width: 5em;
   height: 5em;
-  float: left;
-  margin-right: 1em;
+  margin-right: 1em !important;
 }
 #postHeader, #postFooter {
   width: calc(100% + 8em);
@@ -197,10 +192,21 @@ body {
 #postHeader {
   margin-top: -1em;
 }
+#postMainInfo {
+  display: flex;
+  flex-direction: row;
+}
+#postMainInfoTitleAuthor {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  justify-content: center;
+}
 #postImage {
-  min-width: calc(100% + 8em);
+  min-width: 100%;
+  width: 100%;
   min-height: 2em;
-  margin: 1em 0 3em -4em !important;
+  margin: 3em 0 !important;
 }
 .postView {
   flex-basis: 90%;

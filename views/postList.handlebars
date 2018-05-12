@@ -38,11 +38,13 @@
       <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
         <div class="postListPostHeader">
           <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-          <h2 class="postViewTitle">{{{searchTitle ../searchString}}} <span class="smallText">{{{searchDate ../searchString}}}</span></h2>
-          <h3 class="postViewAuthor">{{author.name}}</h2>
-          <p>Tagged: {{#each tags}}<span class="tag">{{{searchTag ../../searchString}}}</span> {{/each}}</p>
+          <div class='postListPostHeaderMain'>
+            <h2 class="postViewTitle">{{{searchTitle ../searchString}}} <span class="smallText">{{{searchDate ../searchString}}}</span></h2>
+            <h3 class="postViewAuthor">{{author.name}}</h2>
+          </div>
         </div>
         <p class="postViewPreview">{{{searchPreview ../searchString}}}</p>
+        <p class='postViewTagList'>Tagged: {{#each tags}}<span class="tag">{{{searchTag ../../searchString}}}</span> {{/each}}</p>
       </a>
     {{/each}}
   {{else}}
@@ -50,11 +52,13 @@
       <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
         <div class="postListPostHeader">
           <img src="{{author.profilePicture}}" class="postViewAuthorPicture">
-          <h2 class="postViewTitle">{{title}} <span class="smallText">{{formatDate}}</span></h2>
-          <h3 class="postViewAuthor">{{author.name}}</h2>
-          <p>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
+          <div class='postListPostHeaderMain'>
+            <h2 class="postViewTitle">{{title}} <span class="smallText">{{formatDate}}</span></h2>
+            <h3 class="postViewAuthor">{{author.name}}</h2>
+          </div>
         </div>
         <p class="postViewPreview">{{{preview}}}</p>
+        <p class='postViewTagList'>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
       </a>
     {{/each}}
   {{/if}}
