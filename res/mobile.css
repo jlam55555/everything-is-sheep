@@ -43,6 +43,7 @@ blockquote {
   background-color: #f7efed;
   padding: 0.25em 1em;
   border-left: 3px solid #224a91;
+  margin: 1em 0;
 }
 code, kbd {
   font-family: courier new;
