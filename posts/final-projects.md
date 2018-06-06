@@ -30,7 +30,7 @@ I'm going to deviate from the usual posting directly to EiS because of the volum
 
 > **Synopsis**: The Wellness project aimed to have students advocating a cause they were passionate about. In the end, I simply used my Spanish Community Outreach Project, as did all the other Spanish 6 students, because it already fulfilled nearly all of the requirements. Attached below are the additional or translated assignments.
 
-> **Downloads**: <a href='/res/downloads/final-wellness-slideshow.pdf' downlaod>Slidehow</a> | <a href='/res/downloads/final-wellness-reflections.pdf' download>Reflections</a>
+> **Downloads**: <a href='/res/downloads/final-wellness-slideshow.pdf' download>Slidehow</a> | <a href='/res/downloads/final-wellness-reflections.pdf' download>Reflections</a>
 
 ### 5. AP Computer Science Principles: AP Create Performance Task
 
@@ -38,7 +38,7 @@ I'm going to deviate from the usual posting directly to EiS because of the volum
 
 > As for an actual senior project, that is a project we are writing in Processing (a superset of Java), but it's not nearly as intensive as this project.
 
-> **Downloads**: <a href='/res/downloads/final-csp-report.pdf' download>Report</a> | <a href='/res/downloads-final-csp-source-code.pdf' download>Source code</a>
+> **Downloads**: <a href='/res/downloads/final-csp-report.pdf' download>Report</a> | <a href='/res/downloads/final-csp-source-code.pdf' download>Source code</a> | <a href='/res/downloads/final-csp-video.mp4' download>Video explanation</a>
 
 ### 6. Journaling: Pseudo-memoir
 
