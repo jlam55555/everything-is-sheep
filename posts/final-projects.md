@@ -44,10 +44,16 @@ I'm going to deviate from the usual posting directly to EiS because of the volum
 
 > **Synopsis**: The class is named, "Journaling: The Art of Memoir." As a culminating project, we've experimented with different memoir forms as the class progressed, often mimicking the styles encountered in class. This includes traditional essay-style memoirs, poetry and free-form, graphic memoir (not imitated), and reportive journaling. And the cool thing is: memoir is true! (This is true! I think).
 
-> The final project consists of compiling all of the entries in a thoughtful way, so I'll re-upload when that is completed.
-
 > **Downloads**: <a href='/res/downloads/final-journaling-memoir.pdf' download>Pseudo-memoir</a>
 
-### 7. AP Statistics: [currently incomplete]
+### 7. AP Statistics: Statistical Analysis of Rubik's Cube Timers
 
-> *Coming soon. (Hint: It's about Rubik's cubes!)*
+> **Synopsis**: The AP Statistics project was to analyze a real-world application of our choice with statistical methods. I chose, once again, Rubik's cubes as the subject. Specifically, I wanted to compare whether different common scramblers had an effect on my solving times. In the end, it appears that there is (most likely) no significant difference between the scramblers.
+
+> (There's really little real-world significance to this, because this can't be extrapolated past myself. It was fun anyways.)
+
+> **Downloads**: <a href='/res/downloads/final-statistics-slideshow.pdf' download>Slideshow</a>
+
+---
+
+**Edit: 6/13/18**: Uploaded re-compiled memoir and statistics project.
