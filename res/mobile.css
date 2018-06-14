@@ -119,6 +119,10 @@ ul, ol {
   color: #aca1a1;
   font-size: 0.75em;
 }
+/* increase spacing for mathjax */
+span.mjx-chtml.MJXc-display {
+  margin: 2em 0;
+}
 
 /* main.handlebars layout details */
 /* sidebar styles */
