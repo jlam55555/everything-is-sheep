@@ -1,7 +1,7 @@
 A classmate of mine researched the Fibonacci numbers and the golden ratio, φ (phi), for his AP calculus project. One part he skimmed over is that there is an explicit formula for calculating Fibonacci terms, called Binet's formula:
 
 \\[
-  Fib(n) = \frac{1}{\sqrt 5}\left((1+\sqrt 5)^2 - (1-\sqrt 5)^2\right)
+  Fib(n) = \frac{1}{\sqrt 5}\left((1+\sqrt 5)^n - (1-\sqrt 5)^n\right)
 \\]
 
 It didn't strike me at the time as important, until I saw it again in [SICP][1] exercise 1.13. The exercise goes as following:
