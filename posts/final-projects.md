@@ -1,4 +1,4 @@
-Hello! I haven't posted much in the last four months, and I regret it. It's been quite busy, especially with AP exams and all the final projects. Every class I took this year second-semester required a final project, and all but Journaling required a presentation. Now that they're all done, I think it's worth posting some here. (The only project that is not yet complete is my AP Statistics project, which will be due next week.)
+Hello! I haven't posted much in the last four months, and I regret it. It's been quite busy, especially with AP exams and all the final projects. Every class I took this year second-semester required a final project, and all but Journaling required a presentation. Now that they're all done, I think it's worth posting them here.
 
 I'm going to deviate from the usual posting directly to EiS because of the volume of some of the works. Instead, you may download any of the files below.
 
