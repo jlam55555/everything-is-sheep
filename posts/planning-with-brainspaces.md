@@ -29,3 +29,67 @@ I didn't intend on spending so much time writing this post, or going so deep int
 
 [1]: /res/img/posts/brain-spaces.png
 [2]: https://en.wikipedia.org/wiki/FLOPS
+
+<!-- 
+// brain spaces image code
+// interpreter: my own JS library: https://jsfiddle.net/jlam55555/vqebq5gv/174/embedded/result
+// general styles
+lw(3)
+ss(gra300)
+r(0, 0, w, h, 0, false);
+
+// queue items
+fs(b700)
+r(25, 225, 100, 50, 0)
+r(25, 225, 100, 50, 0, false)
+fs(b300)
+r(150, 225, 50, 50, 0)
+r(150, 225, 50, 50, 0, false)
+fs(b300)
+r(225, 225, 50, 50, 0)
+r(225, 225, 50, 50, 0, false)
+fs(b500)
+r(300, 225, 75, 50, 0)
+r(300, 225, 75, 50, 0, false)
+
+// draw objects in registers
+fs(b300)
+r(450, 50, 60, 60, 0)
+r(450, 305, 60, 60, 0)
+fs(b700)
+r(450, 150, 60, 120, 0)
+
+// registers
+ctx.setLineDash([15, 5]);
+ss(g300)
+r(450, 50, 60, 60, 0, false)
+r(450, 135, 60, 60, 0, false)
+r(450, 220, 60, 60, 0, false)
+r(450, 305, 60, 60, 0, false)
+ss(r300)
+r(450, 390, 60, 60, 0, false)
+
+// worker
+ctx.setLineDash([1,0])
+fs(pu500)
+ss(r300)
+c(550, 100, 20, 20)
+
+// words
+fs(gra500)
+lw(1)
+f('montserrat', 25)
+ft('Queue', 25, 200)
+ft('Registers', 310, 410)
+ft('Employee', 550, 150)
+
+// arrow
+ss(gra500)
+ctx.beginPath()
+ctx.moveTo(125, 190)
+ctx.lineTo(350, 190)
+ctx.lineTo(350-5, 190-5)
+ctx.moveTo(350, 190)
+ctx.lineTo(350-5, 190+5)
+ctx.stroke()
+-->
