@@ -334,6 +334,7 @@ span.mjx-chtml.MJXc-display {
   margin: 0 auto;
 }
 #postHeader {
+  background: linear-gradient(to bottom right, #6588c5, #65c595);
   margin-top: -1em;
 }
 #postFooter ::placeholder {
