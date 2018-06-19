@@ -319,6 +319,7 @@ span.mjx-chtml.MJXc-display {
   width: 100%;
   max-width: 64em;
   margin: 0 auto;
+  line-height: 1.75;
 }
 #postHeader, #postFooter {
   background-color: #6588c5;
