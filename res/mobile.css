@@ -613,6 +613,7 @@ span.mjx-chtml.MJXc-display {
   }
   #postHeader, #postFooter {
     color: black;
+    background-color: transparent;
   }
   .container {
     max-width: 100%;
