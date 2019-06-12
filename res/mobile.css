@@ -56,13 +56,14 @@ code, kbd {
   font-family: courier new;
 }
 code {
-  /* style details copied from the pre > code styles (i.e., Zenburn theme)*/
+  /* style details copied from the pre > code styles (i.e., Zenburn theme) */
   color: #3f3f3f;
   background-color: #dcdcdc;
   border-radius: 0.25em;
   padding: 0.25em;
   font-family: "IBM Plex Mono";
   margin: 0.25em 0;
+  word-break: break-word;
 }
 pre > code.hljs {
   padding: 1em;
