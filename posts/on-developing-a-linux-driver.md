@@ -376,10 +376,11 @@ and the uninstall instructions are:
 
 ### Conclusion
 
-So it turns out that I had to leave home right after finishing writing a working driver (my train left 20 minutes later), so I didn't get around to a lot of additional tweaking, testing, and tidying up. Until I get back home, the code may remain a bit messy and have some parts I unnecessarily took from Wacom. But it works, and I'm pretty proud of getting it to work, even if it is such a short script (when writing this article and distilling down the steps, how much I accomplished seems
-almost trivial) and if I completely ripped much of it off of Wacom's open source driver.
+So it turns out that I had to leave home right after finishing writing a working driver (my train left 20 minutes later), so I didn't get around to a lot of additional tweaking, testing, and tidying up. Until I get back home, the code may remain a bit messy and have some parts I unnecessarily took from Wacom. But it works, and I'm pretty proud of getting it to work, even if it is such a short script (when writing this article and distilling down the steps, how much I accomplished seems almost trivial) and if I completely ripped much of it off of Wacom's open source driver.
 
-This was a fun effort that consumed my weekend (and the past few hours writing this). I really think it paid off with how much I learnt about the Linux kernel and drivers, and I think it'll keep paying off as I continue to expand on this driver (looking forward to a configuration GUI soon!). I hope this might help to get you started writing drivers as well!
+There's still much to do, however -- I'd like to implement drivers for all of Veikk's drawing tablets, as well as a configuration utility. There's also cleanup to do, signing the module, and fixing the `hid-generic` bug; I've been talking with an S640 user who had trouble installing this driver because of the signed module and because of `hid-generic`.
+
+This was a fun effort that consumed my weekend (and the past few hours writing this). I really think it paid off with how much I learnt about the Linux kernel and drivers, and I think it'll keep paying off as I continue to expand on this driver. I hope this might others started writing drivers as well!
 
 [0]: http://www.veikk.com/s640/
 [1]: https://firealpaca.com/
