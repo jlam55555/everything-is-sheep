@@ -73,6 +73,7 @@ pre > code.hljs {
   font-family: "IBM Plex Mono";
   margin-bottom: 1.5em;
   max-height: 60em;
+  white-space: pre;
 }
 pre > code.hljs * {
   font-family: "IBM Plex Mono";
@@ -608,7 +609,7 @@ span.mjx-chtml.MJXc-display {
     margin-top: 0;
   }
   pre > code.hljs {
-/*    white-space: pre-wrap;*/
+    white-space: pre-wrap;
   }
   #postHeader, #postFooter {
     color: black;
