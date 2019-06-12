@@ -170,8 +170,6 @@ body {
 #content {
   margin: 0;
   padding: 0;
-  padding: 1em 4em;
-  /*max-width: 64em;*/
 }
 
 /* other template styles */
@@ -188,9 +186,9 @@ body {
   margin-right: 1em !important;
 }
 #postHeader, #postFooter {
-  width: calc(100% + 8em);
+  width: 100%;
   padding: 3em 4em;
-  margin: 3em 0 3em -4em;
+  margin: 3em 0 3em 0;
 }
 #postHeader {
   margin-top: -1em;
