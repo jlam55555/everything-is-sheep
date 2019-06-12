@@ -608,7 +608,7 @@ span.mjx-chtml.MJXc-display {
     margin-top: 0;
   }
   pre > code.hljs {
-    white-space: pre-wrap;
+/*    white-space: pre-wrap;*/
   }
   #postHeader, #postFooter {
     color: black;
