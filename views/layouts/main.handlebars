@@ -75,19 +75,24 @@
     <div id="contentWrapper">
       <div id="content">
         {{{ body }}}
-        <div id="quote">
-          <span id="circles" class="smallText">
-            <i class="fa fa-circle"></i>
-            <i class="fa fa-circle-o"></i>
-            <i class="fa fa-circle"></i>
-            <i class="fa fa-circle-o"></i>
-            <i class="fa fa-circle"></i>
-          </span><br>
-          <sup><i class="fa fa-quote-left smallText"></i></sup>
-            {{{quote.quote}}}
-          <sup><i class="fa fa-quote-right smallText"></i></sup>
-          <span class="smallText">{{{quote.source}}}</span>
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <span id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </span><br>
+            <sup><i class="fa fa-quote-left smallText"></i></sup>
+              {{{quote.quote}}}
+            <sup><i class="fa fa-quote-right smallText"></i></sup>
+            <span class="smallText">{{{quote.source}}}</span>
+          </div>
         </div>
+
       </div>
     </div>
   </body>

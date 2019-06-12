@@ -1,17 +1,20 @@
 <div id="authorHeader">
-  <img id="authorPicture" class="center" src="{{profilePicture}}">
-  <h1 id="authorName" class="center">{{name}}</h1>
+  <div class='container'>
+    <img id="authorPicture" class="center" src="{{profilePicture}}">
+    <h1 id="authorName" class="center">{{name}}</h1>
+  </div>
 </div>
-<p>{{{formatDescription}}}</p>
-<h2>Authored Posts</h2>
-<div id="postViews">
-  {{#each authoredPosts}}
-    <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
-      <div class="postListPostHeader postListPostHeaderMain">
-        <h2 class="postViewTitle">{{title}} <span class="smallText">{{formatDate}}</span></h2>
-      </div>
-      <p class="postViewPreview">{{{preview}}}</p>
-      <p class='postViewTagList'>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
-    </a>
-  {{/each}}
+<div class='container'>
+  <p>{{{formatDescription}}}</p>
+  <div id="postViews">
+    {{#each authoredPosts}}
+      <a class="imgLink postView" href="/posts/{{filename}}" title="View post &quot;{{title}}&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">{{title}} <span class="smallText">{{formatDate}}</span></h2>
+        </div>
+        <p class="postViewPreview">{{{preview}}}</p>
+        <p class='postViewTagList'>Tagged: {{#each tags}}<span class="tag">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
+      </a>
+    {{/each}}
+  </div>
 </div>

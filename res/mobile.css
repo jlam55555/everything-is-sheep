@@ -129,6 +129,11 @@ ul, ol {
 .center {
   display: block;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  max-width: 40em;
   margin: 0 auto;
 }
 .desktop {
@@ -340,7 +345,6 @@ span.mjx-chtml.MJXc-display {
 }
 #postBody {
   width: 100%;
-  max-width: 40em;
   margin: 0 auto;
   line-height: 1.5;
 }
@@ -354,7 +358,6 @@ span.mjx-chtml.MJXc-display {
 }
 #postFooterContainer {
   width: 100%;
-  max-width: 64em;
   margin: 0 auto;
 }
 #postHeader {
@@ -423,7 +426,10 @@ span.mjx-chtml.MJXc-display {
   box-shadow: 0 0 1px black;
 }
 .postViewTitle {
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
+}
+.postViewTitle > .smallText {
+  font-weight: normal;
 }
 .postViewAuthorPicture {
   border-radius: 100%;
@@ -445,7 +451,6 @@ span.mjx-chtml.MJXc-display {
   justify-content: center;
   align-items: flex-start;
   padding: 0;
-  max-width: 40em;
   margin: 0 auto;
 }
 #quote {

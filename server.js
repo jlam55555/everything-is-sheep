@@ -463,7 +463,7 @@ app.get("/posts/*", function(req, res, next) {
   var timeIndex = postList.indexOf(postData);
   var previousIndex = null;
   var nextIndex = null;
-  if(timeIndex !== postData.length-1) {
+  if(timeIndex !== postList.length-1) {
     previousIndex = timeIndex + 1;
   }
   if(timeIndex !== 0) {

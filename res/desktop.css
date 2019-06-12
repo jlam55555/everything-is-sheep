@@ -21,6 +21,9 @@ body, html {
 .desktop {
   display: initial !important;
 }
+.desktop-start {
+  margin-top: 2em;
+}
 
 /* main.handlebars layout details */
 body {
