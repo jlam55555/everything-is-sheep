@@ -23,8 +23,11 @@ var db = pgp(process.env.DATABASE_URL + "?ssl=true");
 
 // remove all possible dangerous characters
 var safestring = function(input) {
-  return input.toString().replace(/[\0\'\"\b\n\r\t\\\%\_\x08\x09\x1a]/g, ""); 
+  return input.toString().replace(/[\0\'\"\b\n\r\t\\\%\_\x08\x09\x1a]/g, "");
 };
+
+// get url from req obj
+const getUrl = req => req.protocol + '://' + req.get('host') + req.baseUrl + req.path;
 
 // escape possible dangerous characters in HTML / SQL
 // newer version of safestring -- start migrating uses over to this function as appropriate
@@ -176,12 +179,18 @@ fs.readdir("./posts", function(error, posts) {
       (function() {
         var _post = post;
         var postData = require("./posts/" + post);
-        // get image if exists (in ./res/img/headers/[post-name].png)
+        // get image if exists (in ./res/img/headers/[post-name].png/.jpg)
         try {
           var url = `/res/img/headers/${ _post.slice(0, -5) }.png`;
           fs.statSync("." + url);
           postData.imageUrl = url;
-        } catch(e) {}
+        } catch(e) {
+          try {
+            var url = `/res/img/headers/${ _post.slice(0, -5) }.jpg`;
+            fs.statSync("." + url);
+            postData.imageUrl = url;
+          } catch(e) {}
+        }
         fs.readFile("./posts/" + _post.slice(0, -5) + ".md", "utf-8", function(error, markdown) {
           if(error) {
             return console.log(error);
@@ -259,13 +268,13 @@ var t = setInterval(function() {
     // set limitedPostList to last five posts
     limitedPostList = postList.slice(0, 5);
 
-    // add author object to posts    
+    // add author object to posts
     for(var i = 0; i < postList.length; i++) {
       postList[i].author = authorList.find(function(author) {
         return author.name === postList[i].author;
       });
     }
-    
+
     // create RSS feed
     let feedXml = "<?xml version='1.0' encoding='UTF-8' ?><rss version='2.0'><channel><title>Everything is Sheep</title><link>https://everything-is-sheep.herokuapp.com</link><description>A playground for free-form teenage writing</description>";
     let truncatedList = postList.slice(0, (postList.length < 20) ? postList.length : 20);
@@ -375,7 +384,15 @@ app.get("/search/:searchString", function(req, res) {
   }
   searchList = searchList.slice((searchPage-1)*pageLength, searchPage*pageLength);
 
-  res.render("postList", {limitedPostList: limitedPostList, searchList: searchList, searchType: req.query.sort, searchString: req.params.searchString, postNumber: postNumber, quote: quote()});
+  res.render("postList", {
+    limitedPostList: limitedPostList,
+    searchList: searchList,
+    searchType: req.query.sort,
+    searchString: req.params.searchString,
+    postNumber: postNumber,
+    quote: quote(),
+    url: getUrl(req)
+  });
 });
 
 // url rewriting middleware
@@ -394,7 +411,11 @@ app.get("/feed.xml", function(req, res) {
 
 // handle routing (index)
 app.get(["/", "/index.html"], function(req, res) {
-  res.render("index", {limitedPostList: limitedPostList, quote: quote()});
+  res.render("index", {
+    limitedPostList: limitedPostList,
+    quote: quote(),
+    url: getUrl(req)
+  });
 });
 
 // handle routing (postList)
@@ -408,12 +429,24 @@ app.get(["/posts", "/search"], function(req, res) {
     postPage = 1;
   }
   slicedPostList = slicedPostList.slice((postPage-1)*pageLength, postPage*pageLength);
-  res.render("postList", {limitedPostList: limitedPostList, postList: slicedPostList, postNumber: postNumber, quote: quote(), searchType: req.query.sort});
+  res.render("postList", {
+    limitedPostList: limitedPostList,
+    postList: slicedPostList,
+    postNumber: postNumber,
+    quote: quote(),
+    searchType: req.query.sort,
+    url: getUrl(req)
+  });
 });
 
 // handle routing (authorList)
 app.get("/authors", function(req, res) {
-  res.render("authorList", {limitedPostList: limitedPostList, authorList: authorList, quote: quote()});
+  res.render("authorList", {
+    limitedPostList: limitedPostList,
+    authorList: authorList,
+    quote: quote(),
+    url: getUrl(req)
+  });
 });
 
 // handle routing (posts)
@@ -425,7 +458,7 @@ app.get("/posts/*", function(req, res, next) {
     next();
     return;
   }
-  
+
   // get adjacent post titles, store in postData
   var timeIndex = postList.indexOf(postData);
   var previousIndex = null;
@@ -438,9 +471,10 @@ app.get("/posts/*", function(req, res, next) {
   }
   postData.previousPost = previousIndex === null ? null : { filename: postList[previousIndex].filename, title: postList[previousIndex].title };
   postData.nextPost = nextIndex === null ? null : { filename: postList[nextIndex].filename, title: postList[nextIndex].title };
-  
+
   postData.limitedPostList = limitedPostList;
   postData.quote = quote();
+  postData.url = getUrl(req);
 
   // hitcount only stored in db
   db.oneOrNone("select hitcount from posts where title='" + safestring(postData.filename) + "'")
@@ -484,37 +518,37 @@ app.post("/comment", function(req, res) {
   var comment = req.body.comment;
   var name = req.body.name;
   var postTitle = req.body.title;
-  
+
   // error code 0: spam detection
   if(recentComment) {
     res.json({success: false, error: 1});
     return;
   }
-  
+
   // error code 1: invalid name length
   if(name.length < 2 || name.length > 50) {
     res.json({success: false, error: 1})
     return;
   }
-  
+
   // error code 2: invalid comment length
   if(comment.length < 10 || comment.length > 500) {
     res.json({success: false, error: 2});
     return;
   }
-  
+
   // replace illegal characters
   // (used to be error code 3)
   name = sanitize(name);
   comment = sanitize(comment);
-  
+
   // error code 4: post doesn't exist
   var post = postList.find(p => p.title == postTitle);
   if(post === undefined) {
     res.json({success: false, error: 4});
     return;
   }
-  
+
   // success; add to database, set spam flag
   var commentJson = {
     name: name,
@@ -526,7 +560,7 @@ app.post("/comment", function(req, res) {
     .catch(function(e) {
       console.log("error: updating comments: " + e);
     });
-  
+
   recentComment = true;
   setTimeout(() => recentComment = false, 5000);
   res.json({success: true, sanitizedComment: comment});
@@ -542,6 +576,7 @@ app.get("/authors/*", function(req, res, next) {
     return;
   }
   authorData.limitedPostList = limitedPostList;
+  authorData.url = getUrl(req);
   var authoredPosts = []
   for(var post of postList) {
     if(post.author.name == authorData.name) {
@@ -558,7 +593,12 @@ app.use("/res", express.static("res"));
 
 // handle routing (404)
 app.use("/*", function(req, res) {
-  res.render("404", {url: req.originalUrl, limitedPostList: limitedPostList, quote: quote()});
+  res.render("404", {
+    url: req.originalUrl,
+    limitedPostList: limitedPostList,
+    quote: quote(),
+    url: getUrl(req)
+  });
 });
 
 // listen on port

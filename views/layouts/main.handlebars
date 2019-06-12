@@ -8,13 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/res/mobile.css">
     <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
     <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
     <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="EiS" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta name="og:site_name" content="Everything is Sheep">
+    <meta name="og:title" content="Everything is Sheep{{#if title}}: {{title}}{{/if}}{{#if name}}: {{name}}{{/if}}">
+    <meta name="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta name="og:url" content="{{url}}">
+    {{#if imageUrl}}
+      <meta name="og:image" content="{{imageUrl}}">
+    {{/if}}
     <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://use.fontawesome.com/a46f002d02.js"></script>

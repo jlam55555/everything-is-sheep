@@ -41,21 +41,40 @@ a.imgLink {
 }
 blockquote {
   background-color: #f7efed;
-  padding: 0.25em 1em;
-  border-left: 3px solid #224a91;
-  margin: 1em 0;
+  padding: 0.5em 0.5em 0.5em 1em;
+  border-left: 0.5em solid #224a91;
+  margin: 0 0 1.5em 0;
+  border-radius: 0.5em;
+}
+blockquote > p {
+  margin: 0;
+}
+a > code {
+  text-decoration: underline;
 }
 code, kbd {
   font-family: courier new;
-  color: #26282c;
 }
 code {
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  display: inline-block;
-  max-width: 100%;
-  background-color: white;
-  padding: 0.125em;
+  /* style details copied from the pre > code styles (i.e., Zenburn theme)*/
+  color: #3f3f3f;
+  background-color: #dcdcdc;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  font-family: "IBM Plex Mono";
+  margin: 0.25em 0;
+}
+pre > code.hljs {
+  padding: 1em;
+  border-radius: 0.5em;
+  border-left: 0.5em solid #7f9f7f;
+  line-height: 1.2em;
+  font-family: "IBM Plex Mono";
+  margin-bottom: 1.5em;
+  max-height: 60em;
+}
+pre > code.hljs * {
+  font-family: "IBM Plex Mono";
 }
 input, select, textarea {
   font-family: inherit;
@@ -86,8 +105,11 @@ h3 { font-size: 1.25em; }
 h4 { font-size: 1em; }
 h5 { font-size: 0.75em; }
 h6 { font-size: 0.5em; }
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem;
+}
 hr {
-  margin: 2em;
+  margin: 0 0 2em 0;
   border: none;
   background-color: #26282c;
   height: 1px;
@@ -96,7 +118,7 @@ hr.short {
   width: 15em;
 }
 p {
-  margin: 1em 0;
+  margin: 0 0 1.5em 0;
 }
 ul, ol {
   padding: 0 1em;
@@ -317,9 +339,9 @@ span.mjx-chtml.MJXc-display {
 }
 #postBody {
   width: 100%;
-  max-width: 64em;
+  max-width: 40em;
   margin: 0 auto;
-  line-height: 1.75;
+  line-height: 1.5;
 }
 #postHeader, #postFooter {
   background-color: #6588c5;
@@ -357,8 +379,8 @@ span.mjx-chtml.MJXc-display {
 .postListPostHeader {
   background-color: #f4f4f4;
   width: calc(100% + 2em);
-  padding: 1em;
-  margin: -2em 0  0 -1em;
+  padding: 1em 1em 0 1em;
+  margin: -2em 0  1.5em -1em;
   display: flex;
   flex-direction: row;
 }
@@ -374,6 +396,9 @@ span.mjx-chtml.MJXc-display {
 }
 #postTitle {
   font-size: 1.5em;
+}
+#postAuthor, #postTitle {
+  margin-bottom: 0;
 }
 #postTags, #postAdjacentPosts {
   margin: 0;
@@ -396,6 +421,9 @@ span.mjx-chtml.MJXc-display {
 .postView:hover, .postView:active {
   box-shadow: 0 0 1px black;
 }
+.postViewTitle {
+  margin-bottom: 0;
+}
 .postViewAuthorPicture {
   border-radius: 100%;
   height: 4em;
@@ -416,6 +444,8 @@ span.mjx-chtml.MJXc-display {
   justify-content: center;
   align-items: flex-start;
   padding: 0;
+  max-width: 40em;
+  margin: 0 auto;
 }
 #quote {
   text-align: center;
