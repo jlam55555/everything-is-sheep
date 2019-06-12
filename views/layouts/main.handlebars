@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/res/mobile.css">
     <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
     <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
     <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
@@ -45,10 +46,12 @@
             <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
           </span>
           <span class="mobile">
-            <img id="condensedLogo" src="/res/img/logo-condensed.png"> EiS
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
           </span>
         </a>
-        <div id="menuButton" class="mobile"></div>
+        <div id="menuButton" class="mobile no-print"></div>
       </div>
       <a href="/" class="navLink mobile">Return home</a>
       <a href="/posts" class="navLink mobile">View all posts</a>
@@ -65,11 +68,11 @@
           <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
         </div>
       </div>
-      <div class="shareIcons desktop">
+      <div class="shareIcons desktop no-print">
         <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
         <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
         <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
-        <a class="shareIcon" title="Share on Google+"><i class="fa fa-google-plus fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
       </div>
     </div>
     <div id="contentWrapper">
@@ -79,17 +82,19 @@
         <!-- quote box -->
         <div class='container'>
           <div id="quote">
-            <span id="circles" class="smallText">
+            <p id="circles" class="smallText">
               <i class="fa fa-circle"></i>
               <i class="fa fa-circle-o"></i>
               <i class="fa fa-circle"></i>
               <i class="fa fa-circle-o"></i>
               <i class="fa fa-circle"></i>
-            </span><br>
-            <sup><i class="fa fa-quote-left smallText"></i></sup>
-              {{{quote.quote}}}
-            <sup><i class="fa fa-quote-right smallText"></i></sup>
-            <span class="smallText">{{{quote.source}}}</span>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                {{{quote.quote}}}
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText">{{{quote.source}}}</p>
           </div>
         </div>
 

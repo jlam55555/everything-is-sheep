@@ -9,12 +9,12 @@
     </div>
     <p id="postTags">Tagged: {{#each tags}}<span class="tag clickable">{{this}}</span>{{#if @last}}{{else}} {{/if}}{{/each}}</p>
     <p id='postAdjacentPosts'>{{{previousNextPost}}}</p>
-    <div class="shareIcons mobile">
+    <div class="shareIcons mobile no-print">
       <br>
       <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
       <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
       <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
-      <a class="shareIcon" title="Share on Google+"><i class="fa fa-google-plus fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
     </div>
   </div>
 </div>
@@ -30,7 +30,7 @@
 <div id='postFooter'>
   <div id='postFooterContainer' class='container'>
     <h3>Comments</h3>
-    <div id="writeComment">
+    <div id="writeComment" class='no-print'>
       <p>Write a comment</p>
       <div id="commentError"></div>
       <input type="text" id="commentName" placeholder="Name" maxlength="50">
@@ -43,6 +43,8 @@
         <div class="commentName">{{name}}</div>
         <div class="commentText">{{{comment}}}</div>
       </div>
+    {{else}}
+      <p>No comments for this post.</p>
     {{/each}}
     <p>This post has {{hitcount}} views. Return <a href="/" title="Return home">home</a>.</p>
     {{{previousNextPost}}}

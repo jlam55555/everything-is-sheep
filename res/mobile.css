@@ -134,10 +134,15 @@ ul, ol {
 }
 .container {
   max-width: 40em;
+  padding-left: 1em;
+  padding-right: 1em;
   margin: 0 auto;
 }
 .desktop {
   display: none !important;
+}
+.print {
+  display: none;
 }
 .right {
   display: block;
@@ -298,7 +303,7 @@ span.mjx-chtml.MJXc-display {
 }
 #content {
   margin-top: 4em;
-  padding: 1em;
+  padding: 1em 0;
 }
 #content.webApp {
   margin-top: 5em;
@@ -351,10 +356,8 @@ span.mjx-chtml.MJXc-display {
 #postHeader, #postFooter {
   background-color: #6588c5;
   color: white;
-  padding: 2em 2em;
+  padding: 2em 0;
   margin: 2em 0;
-  width: calc(100% + 2em);
-  margin-left: -1em;
 }
 #postFooterContainer {
   width: 100%;
@@ -570,7 +573,7 @@ span.mjx-chtml.MJXc-display {
 .comment * {
   margin: 1em;
 }
-#writeComment + .comment {
+#writeComment + * {
   margin-top: 4em;
 }
 .comment > .commentName {
@@ -581,4 +584,36 @@ span.mjx-chtml.MJXc-display {
   float: right;
   font-size: smaller;
   color: #26282c;
+}
+
+/* print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print {
+    display: initial;
+  }
+  #sidebar {
+    position: static;
+  }
+  #sidebar a {
+    text-align: left;
+    padding-left: 1em;
+  }
+  #content {
+    margin-top: 0;
+  }
+  #writeComment + * {
+    margin-top: 0;
+  }
+  pre > code.hljs {
+    white-space: pre-wrap;
+  }
+  #postHeader, #postFooter {
+    color: black;
+  }
+  .container {
+    max-width: 100%;
+  }
 }
