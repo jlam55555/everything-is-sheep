@@ -15,7 +15,7 @@ var fs = require("fs");
 
 // showdown for handlebars markdown output
 var showdown = require("showdown");
-var converter = new showdown.Converter();
+var converter = new showdown.Converter({ tables: true });
 
 // pg-promise for database (views, comments?)
 var pgp = require("pg-promise")();
