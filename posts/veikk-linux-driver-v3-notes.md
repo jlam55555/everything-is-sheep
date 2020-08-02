@@ -144,5 +144,6 @@ This section will list some of the strange things that have been noticed during 
 [libinput]: https://wiki.archlinux.org/index.php/libinput
 [hid-report-parser]: https://eleccelerator.com/usbdescreqparser/
 [hid-report-tutorial]: https://eleccelerator.com/tutorial-about-usb-hid-report-descriptors/
+[a50-report]: https://github.com/jlam55555/veikk-linux-driver/issues/4#issuecomment-581004043
 [a15-report]: https://github.com/jlam55555/veikk-linux-driver/issues/14#issuecomment-580415066
 [kernel-style-guide]: https://www.kernel.org/doc/html/latest/process/coding-style.html
