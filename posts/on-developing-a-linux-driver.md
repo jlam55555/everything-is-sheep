@@ -4,6 +4,8 @@
 
 A quick guide on understanding, developing, and compiling a Linux driver with no prior knowledge, featuring a case study. From someone who wrote a simple Linux driver in three days with no prior knowledge.
 
+**Update August 2020**: This device is the first in a series documenting the development of the VEIKK Linux driver. The later blog posts are [VEIKK Linux Driver v3 Notes][v3-notes] and [Button Mapping Journeys][button-mapping-journeys].
+
 ### Background
 
 My sister really likes to draw. Our family got her a [Veikk S640 pen tablet][0] for her birthday last year. The problem is that most of the computers in our family run Linux, and the only drivers provided by Veikk are for Windows and Mac. On Linux, it is recognized as a mouse, so position and click are registered, but not pressure or the stylus buttons. So I revived an old Windows XP computer, installed the driver and a fun little piece of drawing freeware called [FireAlpaca][1], and that was that.
@@ -48,17 +50,17 @@ If you read the tutorial "Writing device drivers in Linux: A brief tutorial," yo
     // linux headers
     #include <linux/kernel.h>
     // ...
-
+    
     // module functions to implement for start/exit
     static int mod_init(void);
     static void mod_exit(void);
-
+    
     // kernel space functions to implement
     int mod_open(struct inode *inode, struct file *filp);
     int mod_release(struct inode *inode, struct file *filp);
     ssize_t mod_read(struct inode *inode, size_t count, loff_t *f_pos);
     ssize_t mod_write(struct inode *inode, size_t count, loff_t *f_pos);
-
+    
     // mapping from file operations (user space) to kernel space functions
     struct file_operations mod_fops = {
       read: mod_read,
@@ -66,11 +68,11 @@ If you read the tutorial "Writing device drivers in Linux: A brief tutorial," yo
       open: mod_open,
       release: mod_release
     };
-
+    
     // functions run when starting/exiting the module
     module_init(mod_init);
     module_exit(mod_exit);
-
+    
     // module license (required)
     MODULE_LICENSE("GPL");
 
@@ -82,7 +84,7 @@ I.e.:
 
     #define MODULE_MAJOR_NUMBER 60
     #define MODULE_NAME "test-module"
-
+    
     static int mod_init(void) {
       // ...
       register_chrdev(MODULE_MAJOR_NUMBER, MODULE_NAME, &mod_fops);
@@ -105,15 +107,15 @@ Now, instead of `register_chrdev()` (which is used for a simple generic [charact
     #define USB_VENDOR_ID 0x2feb
     #define USB_PRODUCT1_ID 0x0001
     #define USB_PRODUCT2_ID 0x0002
-
+    
     // same fops functions and mapping variable and module functions
     // (except the init() function, see below) as previous example
-
+    
     // extra usb devices functions to implement
     // called when device (matching usb_id_table) connect/disconnect
     static int usb_mod_probe(struct usb_interface *intf, const struct usb_device_id *id);
     static void usb_mod_disconnect(struct usb_interface *int);
-
+    
     // id table is a list of devices to match
     // note that terminating entry must be empty
     static struct usb_device_id usb_id_table[] = {
@@ -122,10 +124,10 @@ Now, instead of `register_chrdev()` (which is used for a simple generic [charact
       // ... etc.
       { }   // terminating entry
     };
-
+    
     // for hotplugging scripts
     MODULE_DEVICE_TABLE(usb, usb_id_table);
-
+    
     // data for registering usb device driver
     static struct usb_driver usb_driver {
       .name       = USB_MOD_NAME,
@@ -134,7 +136,7 @@ Now, instead of `register_chrdev()` (which is used for a simple generic [charact
       .fops       = &usb_mod_fops,
       .id_table   = usb_mod_id_table
     };
-
+    
     // driver init function
     static int usb_mod_init(void) {
       // ...
@@ -190,7 +192,7 @@ There are two important `struct`s to discuss before continuing. Wacom created a 
       struct input_dev *pad_input;
       unsigned char data[VEIKK_PKGLEN_MAX];
     };
-
+    
     // struct for hardware interface
     struct veikk {
       struct usb_device *usbdev;
@@ -252,7 +254,7 @@ These can be written concisely as:
     int btn_touch =     data[1] & 0x01;
     int btn_stylus =    data[1] & 0x02;
     int btn_stylus2 =   data[1] & 0x04;
-
+    
     // absolute readings
     int abs_x =         (data[3] << 8) | (unsigned char) data[2];
     int abs_y =         (data[5] << 8) | (unsigned char) data[4];
@@ -346,20 +348,20 @@ The final `Makefile` for the Veikk driver looks like this (and can be adapted fo
 
     MOD_NAME := veikk
     BUILD_DIR := /lib/modules/$(shell uname -r)
-
+    
     obj-m := $(MOD_NAME).o
-
+    
     all:
       make -C $(BUILD_DIR)/build M=$(CURDIR) modules
-
+    
     clean:
       make -C $(BUILD_DIR)/build M=$(CURDIR) clean
-
+    
     install:
       make -C $(BUILD_DIR)/build M=$(CURDIR) modules_install
       depmod
       modprobe veikk
-
+    
     uninstall:
       modprobe -r $(MOD_NAME)
       rm $(BUILD_DIR)/extra/$(MOD_NAME).ko*
@@ -411,3 +413,5 @@ This was a fun effort that consumed my weekend (and the past few hours writing t
 [26]: https://unix.stackexchange.com/a/13035/307410
 [27]: https://elixir.bootlin.com/linux/v5.1.5/source/arch/c6x/include/asm/unaligned.h#L22
 [28]: https://github.com/jlam55555/veikk-s640-driver
+[v3-notes]: http://everything-is-sheep.herokuapp.com/posts/veikk-linux-driver-v3-notes
+[button-mapping-journeys]:http://everything-is-sheep.herokuapp.com/posts/button-mapping-journeys

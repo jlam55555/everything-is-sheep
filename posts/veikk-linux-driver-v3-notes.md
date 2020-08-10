@@ -1,6 +1,6 @@
 (This is a live document, since v3 is still in alpha)
 
-This can be thought of as the sequel to [On Developing a Linux Driver][eis-blog-post].
+This can be thought of as the sequel to [On Developing a Linux Driver][eis-blog-post]. There is also [Button Mapping Journeys][next-blog-post], which is specifically about user-space mapping for the buttons using the X ecosystem of tools in version 3 of the driver.
 
 ## What is v3? (Or v2, or v1, for that matter?)
 *[You don't have to read this part if you're looking to help develop/test this driver, but it may provide some useful background on some of the challenges and rationale behind some actions.]*
@@ -48,7 +48,7 @@ The VEIKK devices emit some default HID usages for common drawing device keys an
 
 However, in case the user doesn't install a special key mapping, the default fallback key mapping can be toggled using a sysfs parameter. I.e., if this switch is toggled, then the tablet will report the default <kbd>F5</kbd>, <kbd>I</kbd>, etc. to X, so that no remapping is necessary.
 
-*[TODO: I'm still working on learning and implementing these tools]*
+You can see [this blog post][next-blog-post] for an explanation of button mapping in user space, since it wasn't nearly as simple as originally imagined.
 
 #### Fixing VEIKK quirks
 In addition, v2 was not all that fundamentally different from v1, and didn't fix some underlying bugs that were there from the start, mostly related to the device quirks:
@@ -126,6 +126,7 @@ The following are the bugs associated with this driver. I'll try to list the aff
 I'm listing these here because I spent a fair amount of time (and frustration) trying to get things to work with Ubuntu 14.04. 
 
 - Sometimes the pen input or the keyboard input (or both) for the A50 were not reporting any events when plugged in on Ubuntu 14.04 with kernel 4.4. It seemed very random and I could not find a way to reliably reproduce it. For example, sometimes just reloading the module without any changes (e.g., something like `modprobe -r veikk && modprobe veikk` or `make uninstall install` caused it to switch from working to not-working or vice versa). Recently it has not been an issue. This hasn't occurred on either the S640 or the VK1560.
+    
     - Testing environment: Ubuntu 14.04, kernel 4.4, A50
     
 - I was getting *very strange* issues with registering devices. In particular, if I tried to register certain keycodes on the `struct input_dev`s (i.e., the events you see when you run `evtest`), the device wouldn't report any events at all. In particular, if I didn't register digitizer events on the keyboard *or* if I didn't register any key event higher than keycode with event 352 (<kbd>KEY_OK</kbd>), then the buttons wouldn't report any events. But doing one or the other of these fixed the issue. Also, if I attempted to register any keyboard events with keycodes less than event 256 (<kbd>BTN_0</kbd>), no events would register. The former is okay because I found the workaround; the latter was kind of unbearable because while I could report keys like <kbd>BTN_0</kbd>, I can't report normal keys like <kbd>Ctrl</kbd> and <kbd>C</kbd> (i.e., the default keymap), thus not allowing the default keymap (which was discussed earlier in "Fixing the mapping problem") and forcing the user to use a mapping solution like xkb. The strange thing is that the `hid-generic` driver does successfully register and report these normal keys, which means that it's definitely not impossible; but I spent too many hours of my time slaving over this and trying to trace stack dumps and function calls and scanning the [v4.4 Elixir Bootlin HID sections and headers][v44-elixir-bootlin] and generally ripping my brains out. It's not worth it for me.
@@ -171,3 +172,5 @@ This section will list some of the strange things that have been noticed during 
 [kernel-style-guide]: https://www.kernel.org/doc/html/latest/process/coding-style.html
 [v44-elixir-bootlin]: https://elixir.bootlin.com/linux/v4.4/source/drivers/hid
 [hid-generic-stealing-device]: https://github.com/jlam55555/veikk-linux-driver/issues/2
+
+[next-blog-post]:http://everything-is-sheep.herokuapp.com/posts/button-mapping-journeys
