@@ -18,8 +18,8 @@ var showdown = require("showdown");
 var converter = new showdown.Converter({ tables: true });
 
 // pg-promise for database (views, comments?)
-var pgp = require("pg-promise")();
-var db = pgp(process.env.DATABASE_URL + "?ssl=true");
+// var pgp = require("pg-promise")();
+// var db = pgp(process.env.DATABASE_URL + "?ssl=true");
 
 // remove all possible dangerous characters
 var safestring = function(input) {
@@ -197,19 +197,19 @@ fs.readdir("./posts", function(error, posts) {
           }
           postData.filename = _post.slice(0, -5);
           postData.markdown = markdown;
-          db.oneOrNone("select * from posts where title='" + safestring(postData.filename) + "'")
-            .then(function(data) {
-              postData.id = data.id;
-              postData.comments = JSON.parse(data.comments);
-              postData.hitcount = data.hitcount;
-            })
-            .catch(function(e) {
-              if(e == "TypeError: Cannot read property 'hitcount' of null") {
-                postData.hitcount = 0;
-              } else {
-                console.log("error with getting hitcounts: " + e);
-              }
-            });
+          // db.oneOrNone("select * from posts where title='" + safestring(postData.filename) + "'")
+          //   .then(function(data) {
+          //     postData.id = data.id;
+          //     postData.comments = JSON.parse(data.comments);
+          //     postData.hitcount = data.hitcount;
+          //   })
+          //   .catch(function(e) {
+          //     if(e == "TypeError: Cannot read property 'hitcount' of null") {
+          //       postData.hitcount = 0;
+          //     } else {
+          //       console.log("error with getting hitcounts: " + e);
+          //     }
+          //   });
           postList.push(postData);
           postsCompleted++;
         });
@@ -477,38 +477,40 @@ app.get("/posts/*", function(req, res, next) {
   postData.url = getUrl(req);
 
   // hitcount only stored in db
-  db.oneOrNone("select hitcount from posts where title='" + safestring(postData.filename) + "'")
-    .then(function(data) {
+  // db.oneOrNone("select hitcount from posts where title='" + safestring(postData.filename) + "'")
+  //   .then(function(data) {
 
-      // parsing cookies courtesy of https://stackoverflow.com/a/3409200/2397327
-      function parseCookies(i){var o={},e=i.headers.cookie;return e&&e.split(";").forEach(function(i){var e=i.split("=");o[e.shift().trim()]=decodeURI(e.join("="))}),o}
+  //     // parsing cookies courtesy of https://stackoverflow.com/a/3409200/2397327
+  //     function parseCookies(i){var o={},e=i.headers.cookie;return e&&e.split(";").forEach(function(i){var e=i.split("=");o[e.shift().trim()]=decodeURI(e.join("="))}),o}
 
-      // if not in database create new post
-      if(data === null) {
-        postData.hitcount = 1;
-        if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
-          res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
-        }
-        db.none("insert into posts (title) values ('" + safestring(postData.filename) + "')")
-          .catch(function(e) {
-            console.log("error: inserting post into db: " + e);
-          });
-      } else {
-        postData.hitcount = data.hitcount;
-        if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
-          res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
-          postData.hitcount++;
-          db.none("update posts set hitcount=" + safestring(postData.hitcount) + " where title='" + safestring(postData.filename) + "'")
-            .catch(function(e) {
-              console.log("error: update hitcount in db: " + e);
-            });
-        }
-      }
-      res.render("post", postData);
-    })
-    .catch(function(e) {
-      console.log("error: get hitcount: " + e);
-    });
+  //     // if not in database create new post
+  //     if(data === null) {
+  //       postData.hitcount = 1;
+  //       if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
+  //         res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
+  //       }
+  //       db.none("insert into posts (title) values ('" + safestring(postData.filename) + "')")
+  //         .catch(function(e) {
+  //           console.log("error: inserting post into db: " + e);
+  //         });
+  //     } else {
+  //       postData.hitcount = data.hitcount;
+  //       if(parseCookies(req).viewed === undefined || parseCookies(req).viewed.indexOf(postData.filename) === -1) {
+  //         res.cookie("viewed", (parseCookies(req).viewed || "") + "+" + postData.filename, {maxAge: 15*60*1000, httpOnly: true});
+  //         postData.hitcount++;
+  //         db.none("update posts set hitcount=" + safestring(postData.hitcount) + " where title='" + safestring(postData.filename) + "'")
+  //           .catch(function(e) {
+  //             console.log("error: update hitcount in db: " + e);
+  //           });
+  //       }
+  //     }
+  //     res.render("post", postData);
+  //   })
+  //   .catch(function(e) {
+  //     console.log("error: get hitcount: " + e);
+    //   });
+    postData.hitcount = 0;
+    res.render("post", postData);
 });
 
 // handle comments
