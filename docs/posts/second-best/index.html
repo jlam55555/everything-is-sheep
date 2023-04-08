@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Second Best">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/second-best">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Second Best</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Second Best</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 01/28/16</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">the-homework-life</span> <span class="tag clickable">the-homework-life-thought</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/introducing-word">Introducing Word!</a><br>Next post: <a href="/posts/to-keep-or-not-to-keep">To Keep or not to Keep?</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>It's not <em>always</em> true. In fact, it's difficult to be exactly second place. But that's the way I feel, on average, on days like these. So close to the top, but not quite there. Most of the time you're up there. But sometimes you're not. No one's perfect, but &hellip; why not?</p>
+<p>Today was a terrific example of this. I shot through the earlier classes of the day with a whiz of enthusiasm. In Spanish, I did all my work and understood what happened. In English, I actually enjoyed the fishbowl activity. In science, I caught on to the activity without any lack of understanding. In mathematics, I pushed the class understanding further. Even in Principles of Engineering, in which our project was so miserably doomed yesterday, my partner and I managed to turn it around into a relatively decent job. And my sense of "good" reflects, in general, how well I think I did in the class. And that generally reflects how well I did do in the class.</p>
+<p>That was all before American government. And no, I'm not saying that I dislike the class or the teacher, who is all but ignorant. It's a great class, taught in a sarcastically-humorous way, mocking our subjects of study and the people who don't understand them for their hypocritical foolishness. I know that we're being taught correct, objective material (or at least I sure hope we are, especially in such a controversial field), but there's a problem. I don't have much of a view. On many of the political spectrums, I'm <a href="https://www.google.com/search?q=define+smack+dab&oq=define+smack+dab&aqs=chrome..69i57.1986j0j7&sourceid=chrome&es_sm=93&ie=UTF-8">smack dab</a> in the middle, a very <a href="https://en.wikipedia.org/wiki/Moderate">moderate</a> viewpoint. This may be  result of the open-thinking I've learned to consider from multiple sides, but, unfortunately, this has its downfalls. In class today, when we had to discuss the <a href="https://www.whitehouse.gov/the-press-office/2016/01/12/remarks-president-barack-obama-%E2%80%93-prepared-delivery-state-union-address">State of the Union address</a> that happened a week ago, I had little to say. I still raised my hand nonetheless, to make general comments on the video of the address. Unfortunately for me, I was ignored most of class. All but one time. And that one time, although I had thought out everything I was going to say by the beginning of class, all my arguments had been taken and I hadn't compensated enough for that, making me stutter and lose my train of thought. Meanwhile, the same people were called upon upwards of six or seven times to speak their opinion.</p>
+<p>Simply put, I'm kind of bummed. At the time, I was even angry &mdash; angry at him for not calling on me and angry at myself for making a fool of myself. On top of that, I had forgotten to do one part of my homework that took a few points off. I also was frazzled from the initial fear of my English and Principles of Engineering class because of the activities that we did today (that luckily went well). But this really threw me off the good track that I had hoped to set myself on today.</p>
+<p>Unfortunately, these little things that go wrong set everything off. This little interruption today essentially ruined my day <small>(if you haven't realized by now that I am a nerdy student and that school is (most) of my life, then here's a good example)</small> and that I will sulk on it for days to come if and when I start doing better in that class. Unfortunately, this happens on a larger scale for grades in general: school is all right. <em>Hey, here's an A+! There's another! Hey, they're all A's!</em> And then you look at English and see the miserable score that's straddling the line to my first B. Yes, English with Mrs. Huminski is supposed to be a difficult class with relatively lower grades than the classes regarding maths or sciences, but it still has a big toll on my ego. It's the one thing that keeps me from boasting about straight A's without twisting the truth a little bit <small>(although it depends on your definition of "straight A's")</small>. It's the one thing that's keeping you away from a perfect GPA and a perfect transcript across the board. It's also the one thing that keeps you away from feeling amazing about yourself and letting you go on without the drag that the average person feels, the "Oh, no! I've got a test today. If I fail this, then I can't pass the class &hellip;". They're the ones that take out their calculators and worry about getting D's or F's, held back by a concern for their ability to pass. I fortunately am not too concerned about such a drastic possibility, but the little blips that make my grade deviate from that 100% that bum me out so much like today's experience.</p>
+<p>Also, feel free to call me <a href="https://www.google.com/search?q=define+egotistical&oq=define+egotistical&aqs=chrome..69i57.2599j0j7&sourceid=chrome&es_sm=93&ie=UTF-8">egotistical</a>. Call me a <a href="https://www.google.com/search?q=define+egotistical&oq=define+egotistical&aqs=chrome..69i57.2599j0j7&sourceid=chrome&es_sm=93&ie=UTF-8#safe=off&q=define+perfectionist">perfectionist</a>. That's what I am. It's difficult for me to move on over every little mistake I make to the point that it harms my ability to move on. I can't take anything lightly, no matter how much I hate it; as I had mentioned in my previous post, I believe in <a href="http://www.thehomeworklife.co.nf/index.html?post=46">"individual inertia"</a> that keeps me up. Here's my chance to make complaints that no one will listen to, to openly discuss my unrealistic dreams of achieving a level of humanity that seems all to impossible.</p>
+<p>There. I've had my share of cries and complaints for the day. If it seems all too negative, there is a positive side to all of this.</p>
+<p>The closer you get to your goal <small>(in my case, the objective goal of A+'s throughout)</small>, the more motivated you are. Similar to any electromagnetic force, <a href="http://www.physicsclassroom.com/class/estatics/Lesson-3/Inverse-Square-Law">the closer you get to what you "want," the stronger the pull</a>. And I'm not quite like <a href="https://en.wikipedia.org/wiki/Holden_Caulfield">Holden Caulfield</a>. The difference between me and the average-Joe of a high schooler is that I understand the power of mistakes. I've had my fair share of them, and I complain about them every day. But to consciously use them to your advantage, as I have with <a href="http://www.thehomeworklife.co.nf/index.html?post=15">metacognition</a>, is the next step. It is the force that allows you to get ahead. No traditional studying or even the best teaching could teach you the way <em>you</em> learn and work best. And I've tried to utilize this to the utmost. Without it, there would be no <em>TheHomeworkLife</em> (the blog). I wouldn't be writing these for the sake of writing and expressing my thoughts, but instead spending more time sulking about homework. I wouldn't be working towards self-improvements.</p>
+<p>Recently, though, I've come to to the realization that no one is simply the "best." It struck me hard that no one is the best at everything, nor can anyone be perfect or anywhere near. No one can be the one to have it all, so that they can sit back and relax while others catch up to them. No one is at the top of the world. And therefore, I've come to accept the way that I am, in some ways, "second best." It's a title I made for myself that I've both hated and loved in different periods of time. There is no first place in life, and we always have some catching up to do. We're always improving towards the ever-closer point of infinite perfection.</p>
+<p>It's an idea that even us perfectionists have to familiarize us with in order to move on. Anyone who tries can push themselves to this conceptual status &hellip; it's all about the effort. And I believe now that it truly is the force that propels us forwards.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/introducing-word">Introducing Word!</a><br>Next post: <a href="/posts/to-keep-or-not-to-keep">To Keep or not to Keep?</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Stop waiting for Prince Charming. Get up and find him. The poor idiot may be stuck in a tree or something.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p><em>Unknown</em></p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

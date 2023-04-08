@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Tech. Todo and Wanttodo">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/tech-todo-and-wanttodo">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Tech. Todo and Wanttodo</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Tech. Todo and Wanttodo</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 01/04/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">brain-dump</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/frowns-and-smiles-baldness-sleep">Frowns and smiles, baldness, sleep</a><br>Next post: <a href="/posts/discovering-a-mathematical-reduction-method">Discovering a Mathematical Reduction Method</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>A lot has happened since the last post. It's been the life of December break. This mostly means writing and rewriting most of my college essays, going back to school, bowling, a math meet, and shoveling. (Today's a snow day, and tomorrow will be too!)</p>
+<p>But in the world of tech, there's a lot of good stuff going on as well. Unfortunately, I missed two hackathons because of college apps or because they would interfere with finals. I've updated <a href="http://jonathanlam.tech">my personal website</a>, with a few optimiations and style edits. And in the near future (after college apps and finals finish), I have so many ideas in mind that I have written down in my notebook, including but not limited to: finishing up the <a href="https://saferideser9.org">Safe Rides Website</a>, revamping <a href="http://barlowbowling.github.io">the Barlow Bowling website</a>, and writing a new, creative blog <a href="http://jonathanlam.tech/babap">BABAP</a>. More on the last one later.</p>
+<p>There are also many other, smaller projects that I'd like to revisit and wrap up. Apply what I've learned in the last few years to fix Periodic Letters, Flappy, Pop the Lock, Speller, etc. Put them at a level that is presentable to the world.</p>
+<p>And outside of my past projects, I'd also like to make a portable Raspberry Pi voice control, Raspberry Pi calculator (that is much cheaper than the standard graphing calculators on the market today), initiate a business for tax reduction purposes, and so much more. And I've begun studying or re-learning Angular 2, a popular JS framework; Bootstrap, a common JS/CSS styling tool; and Java 9, to be able to push the limits of building large-scale past web-applications. I can't wait to begin learning these officially in college!</p>
+<p>And I've discovered a few things in the coding world today that I had to write down. First, Font Awesome 5! I'm using it only on my personal website at the moment, but I'll bring it into play when the need arises.</p>
+<p>Secondly, Brackets, which I've only experimented with in the past at its buggy dawn many years ago, has become more amazing and slightly less buggy! "Less buggy" as in I took about an hour trying to get its 2015 extension <code>brackets-terminal</code> to work, which was eventually successful and very satisfying. That was frustrating because an issue was opened on it in GitHub (as well as with the installation) two year ago, without any follow-up. Luckly I found a simple workaround, which was very irregular (I later figured that out, too) but very satisfying. One of my teammates was using it during StuyHacks in December, so I thought I'd give it another try. <strong>edit</strong>: I'm actually using Brackets right now to transcribe my posts, as it has an extension <code>markdown-preview</code> and looks very sleek with the Tomorrow Night theme. It's great!</p>
+<p>And lastly, a <a href="https://meta.stackoverflow.com/questions/361390/can-posts-to-stack-overflow-be-fingerprinted-using-hidden-unicode-characters">Meta Stack Overflow post</a> revealed the potential dangers of special unicode-characters, such as zero-width spaces, when copying and pasting code. So I'll make sure to be careful with that.</p>
+<p><strong>edit:</strong> Also, Java 9 is out! I remember the excitement when Java 8 came out. I don't remember exactly what I was excited about, because the main difference I knew was that Java 8 came with lambdas, which I didn't understand then. But Java 9 has been out since the fourth quarter of 2017, and another version is estimated to come out in March (Java 18.3, a.k.a. Java 10)! Java 9 comes with cool features like a REPL interpreter (finally!) and improved modularization (to avoid the mess with JARs and classpaths, thank goodness). I'm very excited to look into it again. I'm aiming to re-read through the <a href="http://docs.oracle.com/javase/tutorial">Oracle Javadocs</a> from the start, retrace the footsteps that led me into this addictive mess of coding knowledge five years ago.</p>
+<p>So that's all for now, folks! I have so much (real) content in mind for future blog posts, and I hope to transcribe them ASAP. I have a huge todo list for high school, college, and code commissions. But I have a much larger want-todo list, and I can't keep up. I can't wait for the summer and college!</p>
+<p><strong>edit:</strong> Most of these recent essays were written some time between the beginning of December break and now. I've only found the time to transcribe them now. I've adjusted the dates on the blog to the date of composition (rather than today's date, the date of transcription).</p>
+<p><strong>Edits made at time of transcription: 1/13/18</strong> </p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/frowns-and-smiles-baldness-sleep">Frowns and smiles, baldness, sleep</a><br>Next post: <a href="/posts/discovering-a-mathematical-reduction-method">Discovering a Mathematical Reduction Method</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Once I went down the road of being a stinker, I couldn't go back.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Mr. Ecsedy</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

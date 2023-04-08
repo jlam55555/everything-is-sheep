@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Introducing Flappy (Bird)!">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/introducing-flappy-bird">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Introducing Flappy (Bird)!</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Introducing Flappy (Bird)!</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 02/05/16</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">the-homework-life</span> <span class="tag clickable">the-homework-life-site</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/homework-reading-journals">Homework Reading Journals</a><br>Next post: <a href="/posts/the-high-school-life">The High School Life</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>I was asked by a friend recently if I was able to design a rendition of Mario. He had grand designs for some of the characters. Happy that I had just learned some about <a href="http://www.w3schools.com/html/html5_canvas.asp">HTML5 <code>&lt;canvas&gt;</code></a>, I quickly obliged, ready to take on the challenge.</p>
+<p><img class="half postImageRight" src="images/posts/flappyAction.png" /><p>Unfortunately, within minutes I realize how little I knew about Mario. I decided to change it to something simpler. <a href="http://flappybird.io/">Flappy Bird</a>, the minimalistic, pixelated, Nintendo-right-infringing iPhone game that caught the world by storm for a few days, came to mind. It was quickly taken down because <a href="http://www.ibtimes.com/flappy-bird-game-deleted-over-nintendo-copyright-creator-receiving-death-threats-1554401">Nintendo had claims to some similar design features</a>. Anyhow, it was popular, I understand the basics, and the framework I had built for Mario so far (i.e., the floor and the background) didn't have to be scrapped.</p><p>Another inspiration of mine was <a href="http://hunterlightman.com/2014/01/30/flappy-block/#more-219">Hunter Lightman</a>, a coder a few years above me at my school. According to his blog, he challenged himself to build a version of Flappy Bird in <em>25 minutes!</em> And he followed through with a game that is deployable on both Android and iOS. That's truly amazing. I don't have the necessary tools to develop for mobile systems, but I thought the idea of designing it with Canvas would be simple enough. It's not a fully-featured app-designer, and it is meant mainly for simple graphics and animations. According to Wikipedia:</p><blockquote class="quote"><span class="quoted">The canvas element is part of HTML5 and allows for dynamic, scriptable rendering of 2D shapes and bitmap images. It is a low level, procedural model that updates a bitmap and does not have a built-in scene graph.</span><span class="author">Wikipedia, <a href="https://en.wikipedia.org/wiki/Canvas_element">"Canvas Element"</a></span></blockquote><p>As you can see, it is often meant for quick scripting, on the fly. There are many other, more popular game-building platforms, such as <a href="https://en.wikipedia.org/wiki/Adobe_Flash">Adobe Flash</a>. But because it is one of the few (perhaps only?) scriptable-graphics platforms I know, I decided to go along with it.</p><p>Here is the finished product. Along with the basic features of Flappy Bird (namely a "flappy bird" and simple Nintendo-ish pipes to avoid), I added a few extras for fun and for practice. The clouds were done similar to the pipes, a constant stream of randomly-generated figures (that are also randomly spaced). I created hit regions for the buttons (which is not too simple with Canvas because it <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">"does not provide information about any drawn objects"</a>). And I reinforced my knowledge of the basic animations and shapes. Like Hunter Lightman, I probably spent the most time tweaking play-ability factors such as gravity and sizes of objects, but there was also a considerable amount of time spent debugging because of my unfamiliarity. All in all, it took from yesterday morning to tonight, with about three hours coding and a little bit more time thinking. It's just over 500 lines of code. Luckily, I didn't have to focus on too many optimizations, because it is so simple; however, it was still more difficult than I originally had predicted. Overall, however, it was a fun little project and a great first attempt at a real video game.</p><p>Happy flapping with <a href="extras/Flappy"><strong>Flappy</strong></a>!</p></p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/homework-reading-journals">Homework Reading Journals</a><br>Next post: <a href="/posts/the-high-school-life">The High School Life</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Nature uses only the longest threads to weave her patterns, so each small piece of her fabric reveals the organization of the entire tapestry.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Richard Feynman, <em>The Character of Physical Law</em></p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

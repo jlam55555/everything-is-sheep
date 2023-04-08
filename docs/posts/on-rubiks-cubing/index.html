@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: On Rubik&#x27;s Cubing">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/on-rubiks-cubing">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: On Rubik&#x27;s Cubing</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">On Rubik&#x27;s Cubing</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 08/22/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">essay</span> <span class="tag clickable">college-essay-draft</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/dream-catcher-081317">Dream Catcher: 08/13/17</a><br>Next post: <a href="/posts/rhetorical-analysis-jimmy-carters-essay">Rhetorical Analysis: Jimmy Carter's Essay</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>The past few weeks I've done a few thousand solves on my Rubik's cube. It's branded as a Guoguan Yuexiao, a funny name that YouTubers often pronounce incorrectly. "Gwoe-guan Yoo-shao." The cube, which came out the first quarter in 2016, was considered among the best in the market for speed and corner cutting. I got that model, and two days after it arrived, the Rubik's cube company sent out a promotion by email featuring pre-orders for the all-new Yuexiao Pro and a magnetic version. To top that off, another promotion was a 40%-off back-to-school discount for the regular Yuexiao. Needless to say, I was somewhat disappointed with my order.</p>
+<p>But it was still a major step up from my last cube. The cube that I tried to lubricate with cooking spray and teflon, the cube that I cleaned with dishwashed soap and a toothbrush, and the cube that brought me into speedcubing from a worn-out Rubik's-brand cube. In the end, I can't say that I was totally disappointed. After all, the two weeks of fanatic anticipation between order and delivery imbued the cube with the same kind of fascination as the herd of baby turkeys lurking around our neighborhood or free merchendise from hackathons.</p>
+<p>It was a cube with all of the fanciness of 2016&mdash; squared-off corners to prevent corner twists but rounded centers, as well as great corner-cutting and speed. (2017 is a different story, but this cube was already great for my standards.) I read all of the reviews online, watched YouTube videos comparing it to other market leaders, joined the Reddit community just so that I could more actively participate in discussions of the cube. I looked up how to wash and lubricate it, looked up ratings (and dismissed the ones that dissed the Yuexiao), and restrained myself on my old cube to build up the hype even more.</p>
+<p>And this was all done in private. And perhaps too late&mdash; I don't know the use of comparing the cube to other cubes <em>after</em> I had bought it, but I did it anyways. I guess part of it had to do with the beginning of summer vacation and the sudden explosion of my free time, but I suddenly <em>had</em> to know everything about this cube.</p>
+<p>I guess it's a poor habit of mine. A bit of a vice. It's been the same with laptops and other items of interest in the past three years: bowling balls, expensive pens, programming development environments, t-shirts and stickers from large technology corporations. But it never follows through. The way of the Chinese family is frugality and elder worship. Frugality is the easy one; listening to my dad is not. To him, any of these points of interest is an unnecessary time-waster. Or perhaps it's that these items are highly material. So I don't buy, can't buy.</p>
+<p>This cube was different. It wasn't without its limits. Good performance in school, respecting elders, not requesting my parents to purchase a single item over the course of my high school. And then, of course, limiting the price of the item of choice (the cube was a mediocre fifteen dollars). I decided that if I wanted to get something out of Rubik's cubing, it was worth investing in a new Rubik's cube, one that was fast, competition-legal, and not smothered inside with the remains of months-old cooking spray. (Only after I bought it did I realize that stickerless Rubik's cubes like my old cube were competition-legal.)</p>
+<p>Those were the reasons. Is it possible to hate impulse? I think I still did it impulsively, but with those reasons. The reasons that made me run out to the mailbox after the mail truck disappeared, and made me so happy when the little brown package arrived. Playing with it, almost directly from the start, was as if I had discovered the solution to the most difficult Project Euler math problem all by myself. Pure satisfaction. To watch my averages drop like they had when I began Rubik's cubing, and break records nearly every session was amazing! Sunshine and butterflies!</p>
+<p>There was even that bubbly sensation of learning again from the beginning, as if this cube were fundamentally different. Not to mention that since I've gotten the cube, I've attempted radically different methods from the mainstream speedcubing method (abbreviated CFOP) for other ways of solving the cube, from blind solving to one-handed solving to other speedcubing methods. The coolest part is that new methods are always being created&mdash; the current science of Rubik's cubing has only really begun in the last decade, and speedcubing methods are improved upon by the top speedcubers.</p>
+<p>The Rubik's cube is not a toy. It is a carefully-calculated, addictive, mathematical genius of a puzzle. And even if it was just a toy, the fact that there are ways of playing with it that have not even been invented yet makes it worth so much more.</p>
+<p>&mdash;</p>
+<p>This is (was) my first attempt at a personal, college-like essay. It's something unique and original, but not very telling, unfortunately. I sound like a materialistic fanatic and not much else. Guess I'll just have to try again!</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/dream-catcher-081317">Dream Catcher: 08/13/17</a><br>Next post: <a href="/posts/rhetorical-analysis-jimmy-carters-essay">Rhetorical Analysis: Jimmy Carter's Essay</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                If at first you don't succeed, then skydiving definitely isn't for you.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Steven Wright</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

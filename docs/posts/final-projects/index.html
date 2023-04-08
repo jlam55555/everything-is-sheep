@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Final Projects">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/final-projects">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Final Projects</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Final Projects</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 06/05/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">academia</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/the-american-dream">The American Dream</a><br>Next post: <a href="/posts/proof-of-binets-formula">Proof of Binet's Formula</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>Hello! I haven't posted much in the last four months, and I regret it. It's been quite busy, especially with AP exams and all the final projects. Every class I took this year second-semester required a final project, and all but Journaling required a presentation. Now that they're all done, I think it's worth posting them here.</p>
+<p>I'm going to deviate from the usual posting directly to EiS because of the volume of some of the works. Instead, you may download any of the files below.</p>
+<hr />
+<h3 id="1apcalculusbcanintroductiontogrouptheoryfeattherubikscube">1. AP Calculus BC: An Introduction to Group Theory (feat. the Rubik's Cube)</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: In AP Calc., the final project was to research any interesting mathematical concept outside the scope of high school mathematics. Since Rubik's cubing is an amazing hobby, I decided to study more about the mathematical structure related to Rubik's cubing, known as Group Theory. Groups fall under Set Theory (and subsequently Abstract Algebra), and are mathematical structures designed to model mathematical and real-world objects that have some sort of form-preserving "symmetry."</p>
+  <p>It looks better with a Rubik's cube for demonstration, but here it is nonetheless.</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-calc-slideshow.pdf' download>Slideshow</a> | <a href='/res/downloads/final-calc-handout.pdf' download>Handout</a> | <a href='/res/downloads/final-calc-essay.pdf' download>Essay</a></p>
+</blockquote>
+<h3 id="2apphysics1anintroductiontostatisticalmechanics">2. AP Physics 1: An Introduction to Statistical Mechanics</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: The project for AP Physics has the same assignment as for calculus. An idea that my dad originally suggested I consider was statistical physics: the use of statistics to describe some interesting properties of physics that would seem impossible in every way except if you consider a probability distribution (in which every state is possible). He considered it in a quantum-mechanical sense, but I stuck to the classical-mechanical treatment of thermodynamics and other large-DOF systems for sake of simplicity.</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-physics-slideshow.pdf' download>Slideshow</a> | <a href='/res/downloads/final-physics-handout.pdf' download>Handout</a> | <a href='/res/downloads/final-physics-essay.pdf' download>Essay</a></p>
+</blockquote>
+<h3 id="3spanish6communityoutreachproject">3. Spanish 6: Community Outreach Project</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: The most ambitious, time-consuming, lengthy, and painful of all of these. And perhaps the most enlightening as well. For the project was a five-month endeavor (two months planning, two months on-site) of learning Spanish via cultural immersion. I chose an easy route here, which was still not very simple: I volunteered at Thomas Hooker School's Lighthouse Afterschool Program. Many of the previous Spanish 6 students had gone to Lighthouse, making the process more streamlined, and the school that I went to was very accommodating (compared to what I've heard from the other schools), so I'm grateful for that.</p>
+  <p>There were multiple parts to this, so I will simply include the presentation slideshow and the packet that contains all of the other materials (e.g., outline, journal entries, handout, etc.).</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-spanish-slideshow.pdf' download>Slideshow</a> | <a href='/res/downloads/final-spanish-packet.pdf' download>Packet</a></p>
+</blockquote>
+<h3 id="4wellness12senioradvocacyproject">4. Wellness 12: Senior Advocacy Project</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: The Wellness project aimed to have students advocating a cause they were passionate about. In the end, I simply used my Spanish Community Outreach Project, as did all the other Spanish 6 students, because it already fulfilled nearly all of the requirements. Attached below are the additional or translated assignments.</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-wellness-slideshow.pdf' download>Slidehow</a> | <a href='/res/downloads/final-wellness-reflections.pdf' download>Reflections</a></p>
+</blockquote>
+<h3 id="5apcomputerscienceprinciplesapcreateperformancetask">5. AP Computer Science Principles: AP Create Performance Task</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: This is not actually the final project for the class, but is instead one of the AP requirements and one of the final major projects of the year. We were prompted to write a program that demonstrated several programming concepts and write about it. We were given a month. For this, I worked with Rahul Kiefer. You will need a computer for the display and at least one (and maximum four) smartphones as controllers. The URL of the completed project is: <a href='//racing-game-csp.herokuapp.com' target='_blank'>https://racing-game-csp.herokuapp.com</a>.</p>
+  <p>As for an actual senior project, that is a project we are writing in Processing (a superset of Java), but it's not nearly as intensive as this project.</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-csp-report.pdf' download>Report</a> | <a href='/res/downloads/final-csp-source-code.pdf' download>Source code</a> | <a href='/res/downloads/final-csp-video.mp4' download>Video explanation</a></p>
+</blockquote>
+<h3 id="6journalingpseudomemoir">6. Journaling: Pseudo-memoir</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: The class is named, "Journaling: The Art of Memoir." As a culminating project, we've experimented with different memoir forms as the class progressed, often mimicking the styles encountered in class. This includes traditional essay-style memoirs, poetry and free-form, graphic memoir (not imitated), and reportive journaling. And the cool thing is: memoir is true! (This is true! I think).</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-journaling-memoir.pdf' download>Pseudo-memoir</a></p>
+</blockquote>
+<h3 id="7apstatisticsstatisticalanalysisofrubikscubetimers">7. AP Statistics: Statistical Analysis of Rubik's Cube Timers</h3>
+<blockquote>
+  <p><strong>Synopsis</strong>: The AP Statistics project was to analyze a real-world application of our choice with statistical methods. I chose, once again, Rubik's cubes as the subject. Specifically, I wanted to compare whether different common scramblers had an effect on my solving times. In the end, it appears that there is (most likely) no significant difference between the scramblers.</p>
+  <p>(There's really little real-world significance to this, because this can't be extrapolated past myself. It was fun anyways.)</p>
+  <p><strong>Downloads</strong>: <a href='/res/downloads/final-statistics-slideshow.pdf' download>Slideshow</a></p>
+</blockquote>
+<hr />
+<p><strong>Edit: 6/13/18</strong>: Uploaded re-compiled memoir and statistics project.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/the-american-dream">The American Dream</a><br>Next post: <a href="/posts/proof-of-binets-formula">Proof of Binet's Formula</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                I'd like to invite you to try the following problems for homework.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Mr. Ecsedy, on homework</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

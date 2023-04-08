@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Introducing BaBaP!">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/introducing-babap">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Introducing BaBaP!</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Introducing BaBaP!</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 06/24/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">coding</span> <span class="tag clickable">site</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/senior-exit-thoughts">Senior Exit Thoughts</a><br>Next post: <a href="/posts/better-rtc-with-webrtc">Better RTC with WebRTC</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>The first post on <a href="http://thehomeworklife.co.nf">The Homework Life</a> was published 12/17/2015, about two and a half years ago.</p>
+<p>The first post on <a href="/">Everything is Sheep</a> was published 7/12/2017, nearly a year ago.</p>
+<p>And the first post on <a href="http://www.babap.co.nf">BaBaP</a> was published 6/22/2018, some two days ago. Woohoo!</p>
+<hr />
+<h3 id="whatisbabap">What is BaBaP?</h3>
+<p>BaBaP was an idea I've envisioned for over a year now. The initial idea was to create a blog with some sort of analogy to the physical idea of "navigation," especially after realizing the inefficiencies of THL. (In fact, the <a href="http://www.jonathanlam.tech/babap">"first iteration"</a> was something I wrote almost exactly a year after THL and shortly before EiS.)</p>
+<p>But because I already have this blog, and my sister mentioned she might want to experiment with blogging, I decided to revitalize this project with the goal of handing it over to my sister to author.</p>
+<p>To avoid redundancy, here's the brief description I wrote on the "About" tab on BaBaP:</p>
+<blockquote>
+  <p>You're probably wondering, What is BaBaP? What does it stand for?</p>
+  <p>And the answer is, Not much. Something along the lines of Bits and Bytes and Pieces. Or Bits and Bites and Pieces. Or Bits and Bites and Peaces. Think peace signs, computers (bits and bytes), or cakes (bites and pieces). But it can mean anything that fits the acronym. In other words, it's free-form, in a modern way.</p>
+  <p>The main vision for BaBaP was to create an interactive experience. You can navigate this blog just as you navigate this world: walk around, enter homes or museums, talk to others. Perhaps you even take portals to your favorite exhibit, or to a random part of the world. Unfortunately, this part of BaBaP does not exist yet, in this very early stage.</p>
+</blockquote>
+<p>Let's break that down.</p>
+<hr />
+<h3 id="themap">The Map</h3>
+<p>Unfortunately, the last part of that description is still true: the "Map" tab is still very much a work in progress. The closest thing I have to a physical Map navigation is the first iteration, which looks something like the following:</p>
+<p><img src="/res/img/posts/first-babap.png" alt="first iteration code" /></p>
+<p>What this offers is the ability to have multiple users enter a very plain map, see their own position and the position of everyone around them change in real-time, and detect when a person is on top of a "house" (to allow future action). Simple.</p>
+<p>While a simple visual system like this was not difficult to set up, what is the most difficult part is the organization of the map. The only fundamental, concrete part in mind is that posts will be houses, arranged along some sort of somewhat-meaningful streets. But everything on from there is a design choice. For example:</p>
+<ul>
+<li>What will be the attributes of the house, and how can they meaningful portray different aspects of the post? (e.g., will different colors/house styles indicate more popular posts?)</li>
+<li>What will the streets mean? Will it be a thematic grouping (i.e., by post tags) or some other?</li>
+<li>After the meaning of the street-house groupings is decided, what will happen to houses that exist on multiple streets?</li>
+<li>When people want to view a blog post, should there be a visual representation of the blog post (still in the "map mode"), or should it bring the user to the ordinary post page?</li>
+<li>What is the origin? Do people spawn in random places? Or do they always begin in some sort of "town square," from which all the streets begin and diverge?</li>
+<li>Can people leave comments on houses (posts)? If so, how will these be represented/viewed?</li>
+</ul>
+<p>And then there will be quite a few logistical issues, once multiperson functionality is available:</p>
+<ul>
+<li>Can people chat? Would that degrade or improve the quality of the blog?</li>
+<li>What happens when a new post is added, and the entire blog may "shift"?</li>
+<li>What if there are too many people, and this affects the performance of the blog? (This one is really only hypothetical, because almost no one views this blog.)</li>
+</ul>
+<p>This leaves room for a ton of possibilities, and I don't expect it to look cohesive for any reasonable time. Hopefully, the idea will continue to solidify over the next year.</p>
+<hr />
+<h3 id="theblog">The Blog</h3>
+<p>While the idea for the map is solidifying, I wanted to solidify a content stream. While I could have done this with the existing content from THL or EiS, I thought this might overwhelm the blog. Better to start with nothing and build up an organizational pattern that logically follows the blog's growth and fundamental structure than to be overwhelmed by a (relative) goliath of information. After the blog is mature, however, I may use these blogs' data to fine-tune and generalize the map structure, and perhaps create a universal blog-mapping application. If that's the case, it won't be coming too soon.</p>
+<p>This content stream would still need some kind of medium, in the meantime. So that means another (ordinary) blog!</p>
+<p>Between all three blogs, there is a fundamental difference in the storage and delivery (server-side workings) of the blog content:</p>
+<ul>
+<li>THL uses a MySQL database to store all the posts and their data. It uses PHP scripts to request the posts. The main organizational structure is an ID system: chronology is established by an orderly post ID sorting, and posts can be accessed by their ID.</li>
+<li>EiS uses a file-based system, inspired by the <a href="https://jekyllrb.com/">Jekyll blog</a> system's simplicity and speed. A Node.JS server reads all of the posts and their metadata into a single variable. The server selectively sends out filtered parts of that variable to the client. The posts are accessed by name, and order (chronology) is determined by sorting the post list by date.</li>
+<li>BaBaP uses a file-based system like EiS, but returns to PHP CGI-scripts like THL. For the most part, it works like THL.</li>
+</ul>
+<p>The choice to use a file-based post system is mostly for the ease of editing post data and metadata. There are a few reasons for the switch from Node.JS to PHP, mostly outlined <a href="/posts/the-wonders-of-php">in this post</a>. Another problem I was worried about was saving large volumes of post data in one variable and sending a good chunk of it to the webpage as I did in EiS, which I worried would have negative consequences in the long run, if EiS's volume dramatically increased. Thus, I stuck to PHP scripts that only read the metadata and post content when necessary, only reading and sending post metadata in the post lists a single post's data when reading a specific article.</p>
+<p>The embarrassing truth about most of these changes is that I have no idea what is more performant, nor does it really make a huge difference. I have my suspicions, but I haven't put in the effort to exhaustively try out different scenarios by loading each blog with so much information that there is a noticeable difference in server-side performance between each blog. Most likely, there will never be nearly enough content to cause performance issues. </p>
+<p>Despite all these performance issues, I can say that BaBaP looks relatively clean. Here's how it looks:</p>
+<p><img src="/res/img/posts/current-babap.png" alt="BaBaP example post" /></p>
+<p>I made the effort to make BaBaP seem like a seamless SPA using Vue.js. There are no page reloading (via a simple router written in Vue), and adding simple loading animations and lazy-loading images makes the site very smooth. And because the interface is so simple, it was not difficult to make it responsive with a mobile-first design. Overall, I'm pretty happy with how it looks, considering this second iteration was written in under than a week.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/senior-exit-thoughts">Senior Exit Thoughts</a><br>Next post: <a href="/posts/better-rtc-with-webrtc">Better RTC with WebRTC</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                You might ask yourself, 'Self, ...'
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Mr. Ecsedy</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

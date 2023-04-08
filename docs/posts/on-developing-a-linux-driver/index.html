@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: On Developing a Linux Driver">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/on-developing-a-linux-driver">
+      <meta property="og:image" content="/res/img/headers/on-developing-a-linux-driver.jpg">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: On Developing a Linux Driver</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">On Developing a Linux Driver</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 06/11/19</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">veikk</span> <span class="tag clickable">coding</span> <span class="tag clickable">linux</span> <span class="tag clickable">tutorial</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/diary-of-a-college-kid">Diary of a College Kid</a><br>Next post: <a href="/posts/veikk-linux-driver-v3-notes">VEIKK Linux Driver v3 Notes</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+      <img src="/res/img/headers/on-developing-a-linux-driver.jpg" id="postImage">
+    <blockquote>
+  <p>"Do you pine for the days when men were men and wrote their own device drivers?" ~ Linus Torvalds</p>
+</blockquote>
+<h1 id="ondevelopingalinuxdriver">On Developing a Linux Driver</h1>
+<p>A quick guide on understanding, developing, and compiling a Linux driver with no prior knowledge, featuring a case study. From someone who wrote a simple Linux driver in three days with no prior knowledge.</p>
+<p><strong>Update August 2020</strong>: This device is the first in a series documenting the development of the VEIKK Linux driver. The later blog posts are <a href="http://everything-is-sheep.herokuapp.com/posts/veikk-linux-driver-v3-notes">VEIKK Linux Driver v3 Notes</a> and <a href="http://everything-is-sheep.herokuapp.com/posts/button-mapping-journeys">Button Mapping Journeys</a>.</p>
+<h3 id="background">Background</h3>
+<p>My sister really likes to draw. Our family got her a <a href="http://www.veikk.com/s640/">Veikk S640 pen tablet</a> for her birthday last year. The problem is that most of the computers in our family run Linux, and the only drivers provided by Veikk are for Windows and Mac. On Linux, it is recognized as a mouse, so position and click are registered, but not pressure or the stylus buttons. So I revived an old Windows XP computer, installed the driver and a fun little piece of drawing freeware called <a href="https://firealpaca.com/">FireAlpaca</a>, and that was that.</p>
+<p>Fast forward a year. I had just built my first computer out of old spare computer parts. Then I happened across <a href="https://unix.stackexchange.com/questions/507687/graphic-tablet-veikk-pressure-sensitivity-on-linux">this post on the Linux Stack Exchange</a>, in which @tobiasBora found a way to make pressure sensitivity work on Linux. I tried his Python script, and it worked. It uses the <code>uinput</code> and <code>libevdev</code> libraries to create a new virtual device and to send out tablet events from that new virtual device, respectively.</p>
+<p>Yay! Now I could use GIMP and Krita as drawing creation tools with this new pressure sensitivity.</p>
+<p>@tobiasBora's post ended with:</p>
+<blockquote>
+  <p>Enjoy! (and I'll let you know if I write the C driver at some points)</p>
+</blockquote>
+<p>Seeing that no driver had been written yet, I thought I might give it a shot.</p>
+<h3 id="gettingstartedwithdriversabriefconceptualunderstanding">Getting started with drivers: a brief conceptual understanding</h3>
+<p>This is not intended to be a full conceptual understanding, but a brief working understanding.</p>
+<p>Users and user programs operate in the "user space," interacting with the user and with the kernel. They have no direct access to hardware devices, but can interact through the kernel interface for the hardware devices.</p>
+<p>On the other hand, any code that is part of the Linux kernel is in the "kernel space," and provides a programming interface for user space applications. You can think of the kernel as the core of the Linux operating system (and it's on <a href="https://github.com/torvalds/linux">GitHub</a>!).</p>
+<p>To get a sense of the interface that user space applications have to work with, you can check out the <code>/dev/</code> directory to see hardware devices. As we'll be dealing with input devices in this article, check out the <code>/dev/input</code> directory. Every file there represents an input device (since "files" in Linux don't always stick to the colloquial sense of the term), for which you can receive events (by reading the device) or push events or data to (by writing to the device).</p>
+<p>To see some of this in action, try running <code>evtest</code>, choose an input device, and interact with that device. The events you're receiving are from that kernel-to-user-space file-like interface. Alternatively, you can run <code>cat /dev/input/[device-name-here]</code> to view input events as raw data.</p>
+<p>But something needs to create these files, and handle user space actions like reading and writing to them. That's where the driver comes in. The driver creates this interface, mapping hardware actions (i.e., reading or writing raw data from some port) to the file-like interface. So when you open the device file for reading, you're actually calling the driver's <code>read</code> function, which can decide what to reutrn to you. Likewise, when you open, close, or write to the file, corresponding driver
+functions are being called.</p>
+<p><a href="http://freesoftwaremagazine.com/articles/drivers_linux/">"Writing device drivers in Linux: A brief tutorial"</a> was probably the most useful tutorial for this conceptual understanding. It does a very good job of explaining what it calls the user space and kernel space and the one-to-one mapping between the two. It explains each of the user operations very well and provides two full driver examples.</p>
+<h3 id="writingadriver">Writing a driver</h3>
+<h4 id="part0writingabasicdriverwithoutahardwareinterface">Part 0: Writing a basic driver (without a hardware interface)</h4>
+<p>It's not hard to find a tutorial to start making drivers for Linux, but there didn't seem to be any that fit my needs of learning the basics and using the HID module. It took a lot of searching and rereading and copying and looking up and logging and debugging and blowing up a few Linux kernels to get it right.</p>
+<p>To get started, <a href="https://stackoverflow.com/questions/2039444/why-are-drivers-and-firmwares-almost-always-written-in-c-or-asm-and-not-c">Linux drivers are always written in C or Assembly code</a>, so it'd be a good idea to learn one (most likely C).</p>
+<p>If you read the tutorial "Writing device drivers in Linux: A brief tutorial," you'd see that a driver is called a "module" and written in C. (This modular design can then be loaded into the Linux kernel without recompiling the whole kernel, and is thus called a Loadable Kernel Module (LKM).) The basic view of the module looks like this:</p>
+<pre><code>// linux headers
+#include &lt;linux/kernel.h&gt;
+// ...
+
+// module functions to implement for start/exit
+static int mod_init(void);
+static void mod_exit(void);
+
+// kernel space functions to implement
+int mod_open(struct inode *inode, struct file *filp);
+int mod_release(struct inode *inode, struct file *filp);
+ssize_t mod_read(struct inode *inode, size_t count, loff_t *f_pos);
+ssize_t mod_write(struct inode *inode, size_t count, loff_t *f_pos);
+
+// mapping from file operations (user space) to kernel space functions
+struct file_operations mod_fops = {
+  read: mod_read,
+  write: mod_write,
+  open: mod_open,
+  release: mod_release
+};
+
+// functions run when starting/exiting the module
+module_init(mod_init);
+module_exit(mod_exit);
+
+// module license (required)
+MODULE_LICENSE("GPL");
+</code></pre>
+<p>(There are a lot of types here, which were not familiar to me as a non-kernel developer. If you're confused like I was, looking up device definitions on the <a href="https://elixir.bootlin.com/linux/latest/source">Bootlin Elixir Cross Referencer for Linux</a> was very helpful.)</p>
+<p>You can see clearly the mapping of user space file operations to kernel space operations with the <code>mod_fops</code> variable. This mapping will be loaded in the creation of the driver in <code>mod_init()</code>, which should call <code>register_chrdev(MODULE_MAJOR_NUMBER, MODULE_NAME, &amp;mod_fops)</code> to register the module as a device.</p>
+<p>I.e.:</p>
+<pre><code>#define MODULE_MAJOR_NUMBER 60
+#define MODULE_NAME "test-module"
+
+static int mod_init(void) {
+  // ...
+  register_chrdev(MODULE_MAJOR_NUMBER, MODULE_NAME, &amp;mod_fops);
+  // ...
+}
+module_init(mod_init);
+</code></pre>
+<p>As noted in the tutorial, you would have to create the <code>/dev/module</code> file manually for this simple driver to work, and it doesn't interface with a real hardware device
+(but does show how to allocate and use kernel memory), but you can interface with the device file like you would any other driver.</p>
+<h4 id="part1writingausbinterfacingdriver">Part 1: Writing a USB-interfacing driver</h4>
+<p>The conceptual tutorial above is great for very simple applications, but what if we wanted to write something a little more complex? While that may be great for your own hobby electronics gizmos, an example of a driver written with the <code>usbhid</code> module may be useful. There doesn't seem to be much documentation (or at least worked programming examples) on the module, so I hope this will be helpful to someone.</p>
+<p>Driver development changes a little bit when a hardware device is used. Here we'll be dealing with a USB device, so some extra steps have to be taken, which are detailed well in <a href="https://kernel.readthedocs.io/en/sphinx-samples/writing_usb_driver.html">this article</a>.</p>
+<p>Now, instead of <code>register_chrdev()</code> (which is used for a simple generic <a href="https://linux-kernel-labs.github.io/master/labs/device_drivers.html">character device</a>), a <code>struct usb_driver</code> object will need to be created, with the same file operations mapping, and new <code>usb_mod_probe()</code>, <code>usb_mod_disconnect()</code>, and <code>usb_mod_id_table</code> entities. </p>
+<pre><code>#define USB_MOD_NAME "usb-test-driver"
+#define USB_VENDOR_ID 0x2feb
+#define USB_PRODUCT1_ID 0x0001
+#define USB_PRODUCT2_ID 0x0002
+
+// same fops functions and mapping variable and module functions
+// (except the init() function, see below) as previous example
+
+// extra usb devices functions to implement
+// called when device (matching usb_id_table) connect/disconnect
+static int usb_mod_probe(struct usb_interface *intf, const struct usb_device_id *id);
+static void usb_mod_disconnect(struct usb_interface *int);
+
+// id table is a list of devices to match
+// note that terminating entry must be empty
+static struct usb_device_id usb_id_table[] = {
+  { USB_DEVICE(USB_VENDOR_ID, USB_PRODUCT1_ID) },
+  { USB_DEVICE(USB_VENDOR_ID, USB_PRODUCT2_ID) },
+  // ... etc.
+  { }   // terminating entry
+};
+
+// for hotplugging scripts
+MODULE_DEVICE_TABLE(usb, usb_id_table);
+
+// data for registering usb device driver
+static struct usb_driver usb_driver {
+  .name       = USB_MOD_NAME,
+  .probe      = usb_mod_probe,
+  .disconnect = usb_mod_disconnect,
+  .fops       = &amp;usb_mod_fops,
+  .id_table   = usb_mod_id_table
+};
+
+// driver init function
+static int usb_mod_init(void) {
+  // ...
+  usb_register(&amp;usb_driver);
+  // ...
+}
+module_init(usb_mod_init);
+</code></pre>
+<p>There are a few extra parts here. First, <code>usb_id_table</code> is an array of objects created using the <code>USB_DEVICE</code> macro; when a device matching any entry from the ID table is matched, the <code>usb_mod_probe()</code> function is called. If <code>usb_mod_probe()</code> returns 0, then the driver is attached to the device. Similarly, <code>usb_mod_disconnect()</code> is called when a device disconnects from the driver.</p>
+<p>The ID table is an array of <code>struct usb_device_id</code> (with a null terminating entry). Each <code>struct usb_device_id</code> (except for the null entry) is used to match one or more hardware devices; the <code>USB_DEVICE(vendorId, productId)</code> macro defaults to matching a specific device by vendor and product ID. I used this in my driver, as I was matching a very specific product (Veikk's vendor ID is <code>0x2feb</code>, and the Veikk S640 has product ID <code>0x0001</code>.)</p>
+<p>Lastly, note the <code>MODULE_DEVICE_TABLE</code> macro: this registers the ID table for hotplugging, so that when a device matching the ID table is plugged into the computer, this driver will get loaded automatically.</p>
+<h4 id="part2workingwithusbhidforhiddevices">Part 2: Working with <code>usbhid</code> for HID devices</h4>
+<p>If you're not planning to work with HID devices fitting the <code>input</code> protocol, you can totally ignore this. But if you are, this should be helpful because I could not seem to find explanatory examples of this. But be warned that this was all learnt by inference looking over Wacom's driver, and may not be totally complete.</p>
+<p>I read over the tutorials and reference pages that are linked above, along with many others, but I still didn't know where to start. I didn't particularly want to deal with pure raw data and the <code>fops</code> objects, primarily because there are standards for what events should look like (e.g., pen pressure, position, and button presses), so that programs can uniformly interpret them as according to some specification. (I'm not really sure what the specification is called, but I'll refer to it as
+the HID specification.) In other words, the data being read from the device files should follow some uniform interface, and I didn't want to implement it from scratch.</p>
+<p>I began to look for examples. (Quick flash of false hope: <a href="https://github.com/hawku/TabletDriver">Hawku's TabletDriver</a> includes the Veikk S640! But it's for the Windows/MacOS game osu!) Then I peeked around Linux and found out that there was <a href="https://github.com/torvalds/linux/tree/master/drivers/hid">a directory of HID drivers</a>. In the end, I looked heavily at the files in the <code>usbhid</code> subdirectory (the <code>usbhid</code> directory) and the Wacom files (<code>wacom-sys.c</code>, <code>wacom-wac.c</code>, <code>wacom-wac.h</code>). By inspection, it looks as though the <code>wacom-sys.c</code> had more of the core module files, and the <code>wacom-wac.c</code> file had more of the customization details for all of its devices. Because I was working only with a single tablet, the Veikk S640, I decided to not worry about much of <code>wacom-wac.c</code> until I had to get to it. Of course, many useful definitions were in <code>wacom-wac.h</code>, as well as in <code>linux/hid.h</code>, and <code>linux/usb/input.h</code>. Again, if any symbol is unclear, I highly recommend looking up its source and definition in the <a href="https://elixir.bootlin.com/linux/latest/source">Bootlin Elixir Cross Referencer for Linux</a>, which proved very useful for me.</p>
+<p>How I went about it was starting from the basics: creating a module. Like the upgrade from a generic character device to a USB driver, the upgrade from a USB driver to using the <code>usbhid</code> library changes the syntax slightly. The <code>struct usb_driver</code> is now replaced with a (very similar) <code>struct hid_driver</code>, and then a macro is defined to set up this driver, replacing the <code>module_init()</code> and <code>module_exit()</code> functions. So this part is actually shorter than before.</p>
+<pre><code>static struct hid_driver veikk_driver = {
+  .name       = "veikk",
+  .id_table   = id_table,
+  .probe      = veikk_probe,
+  .remove     = veikk_remove,
+  .raw_event  = veikk_raw_event
+};
+module_hid_driver(veikk_driver);
+</code></pre>
+<p>Next was to implement the ID table. Again, this is similar to the USB driver. The vendor and device ID was found with the <code>lsusb</code> command.</p>
+<pre><code>static const struct hid_device_id id_table[] = {
+  // Veikk's vendor ID is 0x2feb
+  // S640's product ID is 0x0001
+  { HID_USB_DEVICE(0x2feb, 0x0001) },
+  { }
+};
+MODULE_DEVICE_TABLE(hid, id_table);
+</code></pre>
+<p>The next step was to implement the <code>veikk_probe()</code> and <code>veikk_remove()</code> methods. I thought this was going to be brief, but that was not the case! After this was done, however, then I could check if the driver was loaded when the device was present. The rest of the steps was heavily reliant on Wacom's code, since I could not find a tutorial on using the <code>usbhid</code> driver.</p>
+<p>There are two important <code>struct</code>s to discuss before continuing. Wacom created a <code>struct wacom</code> to hold hardware interface data, and a <code>struct wacom_wac</code> to hold user interface data (i.e., the <code>struct input_dev</code>s that will write to the driver device file). (I'm not actually sure what the <code>_wac</code> in <code>wacom_wac</code> stands for, but I went ahead and named my own <code>struct veikk</code> and <code>struct veikk_vei</code>.) Organizationally, there is one <code>struct veikk</code> and <code>struct veikk_vei</code> for each device, so they could have been combined into a single <code>struct</code>, but I stuck to Wacom's convention. Here are their definitions:</p>
+<pre><code>// struct for user interface
+struct veikk_vei {
+  struct input_dev *pen_input;
+  struct input_dev *touch_input;
+  struct input_dev *pad_input;
+  unsigned char data[VEIKK_PKGLEN_MAX];
+};
+
+// struct for hardware interface
+struct veikk {
+  struct usb_device *usbdev;
+  struct usb_interface *intf;
+  struct veikk_vei veikk_vei; 
+  struct hid_device *hdev;
+};
+</code></pre>
+<p>The probe function is passed the <code>hid_device</code> struct and the <code>hid_device_id</code> (from the device table, and thus device information can be obtained from here. Because this driver was only for one device, I didn't use this ability). Here's a summary of the <code>veikk_probe()</code> (and all functions called by it).</p>
+<ol>
+<li>Allocate an empty <code>struct veikk</code> in the kernel (using <a href="https://stackoverflow.com/questions/12256986/what-is-the-difference-between-devm-kzalloc-and-kzalloc-in-linux-driver-prog"><code>devm_kzalloc()</code></a>), populate it with the hardware device and interface details, and add it to the HID device struct (devices have an arbitrary data member <code>driver_data</code> that can be populated using <code>hid_set_drvdata()</code>).</li>
+<li><a href="https://elixir.bootlin.com/linux/v5.1.5/source/include/linux/hid.h#L1025"><code>hid_parse()</code></a> to parse a report description of the device and populate fields of the HID device struct (necessary for <code>hid_hw_start()</code>).</li>
+<li>Allocate a <code>struct input_dev</code> associated with the Veikk's pen using <a href="https://elixir.bootlin.com/linux/v5.1.5/source/drivers/input/input.c#L1848"><code>devm_input_allocate_device()</code></a>. This will manage writing the events to the user later.</li>
+<li>Set up the input capabilities of the pen:<ul>
+<li>Set the <code>EV_KEY</code> and <code>EV_ABS</code> event bits.</li>
+<li>Set the <code>INPUT_PROP_POINTER</code> property bit.</li>
+<li>Set the <code>BTN_TOUCH</code>, <code>BTN_STYLUS</code>, and <code>BTN_STYLUS2</code> key bits.</li>
+<li>Set the parameters of the <code>EV_ABS</code> inputs (minimum, maxmimum, and resolution for X, Y, and pressure)</li></ul></li>
+<li><a href="https://elixir.bootlin.com/linux/v5.1.5/source/drivers/hid/hid-core.c#L1960"><code>hid_hw_start()</code></a> to start HID device.</li>
+</ol>
+<p>The <code>veikk_remove()</code> function performs these tasks:</p>
+<ol>
+<li><a href="https://elixir.bootlin.com/linux/v5.1.5/source/drivers/hid/hid-core.c#L1987"><code>hid_hw_stop()</code></a> to remove the device.</li>
+<li>Set driver data to NULL using <code>hid_set_drvdata()</code>.</li>
+</ol>
+<p>When I compiled the driver, I encountered another problem: <code>hid-generic</code>, the default <code>hid-device</code>, was taking the device before my driver, even though a comment in its driver states that "If any other driver wants the device, leave the device to this other driver." Note that only one driver can bind to any hardware device, and that <code>hid-generic</code> also detects the Veikk tablet (remember, it identifies it as a mouse). I found <a href="https://unix.stackexchange.com/a/13035/307410">a way to unbind a driver</a>, and by doing this I was able to successfully bind the tablet to my driver.</p>
+<pre><code>sudo su
+echo -n "0003:2FEB:0001.xxxx" &gt; /sys/bus/hid/drivers/hid-generic/unbind
+</code></pre>
+<p>where <code>0003</code> and <code>xxxx</code> are the major and minor numbers of the tablet, respectively. Along this same vein of thought, you can see which devices are attached to a driver because they are listed in the driver's directory (e.g., <code>/sys/bus/hid/drivers/hid-generic</code> for <code>hid-generic</code> or <code>/sys/bus/hid/drivers/veikk</code> for my driver) as directories. Similarly, the devices (e.g., in <code>/sys/bus/hid/devices/</code>) are directories with a <code>driver</code> subdirectory that link to their attached driver. I found this interwoven link between driver and device pretty fascinating. (It also makes for fun <code>/[DEVICE]/driver/[DEVICE]/driver/[DEVICE]/driver/</code> directory recursion.)</p>
+<p>I was compiling this on kernel 4.15 when I had this error, but when I ran this on 4.18 and 5.1 kernels, this hotplugging issue never appeared and the driver worked perfectly. There was <a href="https://github.com/torvalds/linux/commit/c17a7476e4c41884d82e3675c25ceae982c07a63#diff-39103c0ab0adbfd593c80a1f9452ae86">an update to the automatic unbinding of <code>hid-generic</code></a> affecting 4.17 and later that may have caused this, but I'm not sure. I'll reinstall these older kernels and do more testing in the future.</p>
+<p>The next step was to actually parse the data coming in. Now that everything was set up, this part was relatively easy (and fun!). This involves implementing the <code>veikk_raw_event()</code> function. The function is handed a pointer to raw data, and the length of the data. The S640 returned uniform 8-byte packets.</p>
+<ol>
+<li>Parse raw data* for pressure, x and y coordinates, button presses.</li>
+<li>Report these data using <code>input_report_key()</code> (for button presses) and <code>import_report_abs()</code> (for position and pressure).</li>
+</ol>
+<p>The Wacom driver had many different device-dependent parsing functions. I decided that I wanted to do this step for myself rather than take any influence from Wacom's driver. By virtue of logging and experimenting with the pen, here's what the 64 bits seemed to signify.</p>
+<ol>
+<li><strong>Byte 0</strong>: The constant value 1. Most likely the product ID.</li>
+<li><strong>Byte 1</strong>: First five bits 0, last three bits 0.<ul>
+<li>Bit 5 indicates if stylus button 2 is being pressed.</li>
+<li>Bit 6 indicates if stylus button 1 is being pressed.</li>
+<li>Bit 7 indicates if the pen is touching the pad.</li></ul></li>
+<li><strong>Byte 2</strong>: All variable. The last 8 bits of the X position.</li>
+<li><strong>Byte 3</strong>: First bit 0, last seven bits variable. The first 7 bits of the X position.</li>
+<li><strong>Byte 4</strong>: All variable. The last 8 bits of the Y position.</li>
+<li><strong>Byte 5</strong>: First bit 0, last seven bits variable. The first 7 bits of the Y position.</li>
+<li><strong>Byte 6</strong>: All variable. The last 8 bits of the pressure.</li>
+<li><strong>Byte 7</strong>: First three bits 0, last five bits variable. The first 5 bits of the pressure.</li>
+</ol>
+<p>These observations were very satisfactory, because the Veikk S640 is reported to have 32768x32768 (2^15x2^15) position resolution and 8192 (2^13) pressure levels. And look! 15 bits for position in either dimension, and 13 for pressure.</p>
+<p>These can be written concisely as:</p>
+<pre><code>// buttons
+int btn_touch =     data[1] &amp; 0x01;
+int btn_stylus =    data[1] &amp; 0x02;
+int btn_stylus2 =   data[1] &amp; 0x04;
+
+// absolute readings
+int abs_x =         (data[3] &lt;&lt; 8) | (unsigned char) data[2];
+int abs_y =         (data[5] &lt;&lt; 8) | (unsigned char) data[4];
+int abs_pressure =  (data[7] &lt;&lt; 8) | (unsigned char) data[6];
+</code></pre>
+<p>Peeking at the Wacom data parsing, it looks like there's a method in <code>asm/unaligned</code> to do exactly the latter operation: <a href="https://elixir.bootlin.com/linux/v5.1.5/source/arch/c6x/include/asm/unaligned.h#L22"><code>get_unaligned_le16()</code></a>, so the absolute readings can be simplified:</p>
+<pre><code>// absolute readings
+int abs_x =         get_unaligned_le16(&amp;data[2]);
+int abs_y =         get_unaligned_le16(&amp;data[4]);
+int abs_pressure =  get_unaligned_le16(&amp;data[6]);
+</code></pre>
+<p>And that was that! This sent in the data beautifully, and the driver works: pressure sensitivity and the buttons work well and have their intended use in drawing programs (e.g., GIMP and Krita). You can see the whole Veikk driver <a href="https://github.com/jlam55555/veikk-s640-driver">on GitHub</a>. Currently, it is under 300 lines, much slimmed down compared to the 8000 lines for the Wacom driver.</p>
+<h3 id="debuggingthedriver">Debugging the driver</h3>
+<p>This is short, but I wanted to make this its own section so it'd stand out.</p>
+<p>While I'm not terribly sure how to debug using standard debugging tools since this runs in kernel space, it is easy to log outputs.</p>
+<p>But <em>where</em>? It's not attached to some terminal when it is run by the kernel.</p>
+<p>It turns out, kernel drivers may use the <code>printk()</code> function, whose output is logged to <code>dmesg</code> (driver message). Running <code>dmesg -w</code> to watch the output makes it feel just like any console logging output. This was useful when reverse-engineering the raw data input.</p>
+<h3 id="drivercompilation">Driver compilation</h3>
+<p>This is easy to look up, but most sources do not provide an explanation of the steps. To see if your module (driver) is installed, run <code>lsmod | grep MODULE_NAME</code> (e.g., <code>lsmod | grep veikk</code>). Play around with <code>lsmod</code> (list modules); to see more details about any module, use <code>modinfo MODULE_NAME</code>. (Replace <code>MODULE_NAME</code> in all of the following snippets with your module name)</p>
+<p>You can load your module two different ways: "temporarily" or "permanently" (installation). The difference is that a temporary driver is not loaded from <code>/lib/modules/$(uname -r)/modules.dep</code>, while a permanent one is. (Note that this is not a technical definition, but just an easy designation, and are fundamentally the same.) The former method is simpler and quicker than the latter.</p>
+<p>Note that in all of the below examples, <code>uname -r</code> refers to the current kernel version, and <code>$(uname -r)</code> is a command substitution (i.e., will be replaced with a string literal of your current kernel version).</p>
+<p>Pay attention to the <strong>NOTE</strong> below.</p>
+<p>If you don't want to read these subsections and just want compilation and installation to work, check out the "Completed Makefile" section below for the finished product. The rest is just explanation.</p>
+<h4 id="compilingthedriver">Compiling the driver</h4>
+<p><em>Make</em> (haha?) sure you have <code>make</code> installed on your system (package <code>build-essentials</code>), as well as the linux headers (in Ubuntu, this lies in the <code>linux-headers-$(uname -r)</code>; in Arch, this lies in the <code>linux-headers</code> package). The symptom of the latter is that the <code>/lib/modules/$(uname -r)/build</code> directory will be missing.</p>
+<p>Write the following into your <code>Makefile</code>:</p>
+<pre><code>obj-m := MODULE_NAME.o
+</code></pre>
+<p>To compile, use the following command:</p>
+<pre><code>make -C /lib/modules/$(uname -r)/build M=$(CURDIR) modules
+</code></pre>
+<p>Here's a quick breakdown of the command:</p>
+<pre><code>make                                               modules  // run the `modules` target (from the kernel Makefil)
+     -C /lib/modules/$(uname -r)/build                      // look at the Makefile in this directory
+                                       M=$(CURDIR)          // look at the current directory for source files
+</code></pre>
+<p>In short, the <code>make</code> command tells make to look at the <code>Makefile</code> in the <code>/lib/modules/$(uname -r)/build</code> directory, and run its <code>modules</code> target on the files in the current directory.</p>
+<p><strong>NOTE</strong>: Take note of the use of <code>$(CURDIR)</code> instead of <code>$(PWD)</code> (<code>$(shell pwd)</code> or <code>$(pwd)</code> are also possible alternatives, but <code>$(CURDIR)</code> is to be preferred). See <a href="https://stackoverflow.com/a/52447088/2397327">this</a>, <a href="https://sourceforge.net/p/ipt-netflow/bugs-requests-patches/53/">this</a>, <a href="https://patchwork.kernel.org/patch/9440613/">this</a>. In tutorials about compiling the Linux module, I've only seen <code>$(PWD)</code> (e.g., <a href="https://www.tldp.org/LDP/lkmpg/2.6/html/x181.html">this</a>, <a href="https://stackoverflow.com/questions/37507320/how-to-compile-a-kernel-module">this</a>, <a href="https://wiki.archlinux.org/index.php/Compile_kernel_module">this</a>). While <code>$(PWD)</code> seemed to be set for <code>make</code> on my system, it was not when running <code>sudo make install</code> (or any sudo command); this cleared the <code>/lib/modules/$(uname -r)/kernel</code> directory, where almost all the drivers are stored, wiping all of my drivers (except for the one I just made, since it gets installed in <code>/lib/modules/$(uname -r)/extra</code>). I'm not entirely sure why this happens, but it happened on kernel versions 4.15.0-20-lowlatency, 4.15.0-51-lowlatency, and 4.15.0-51-generic, and was a problem I didn't know how to fix. Luckily I had other kernel versions to switch to when the previous one broke (thanks Ukuu!), and the problem was diagnosed and a solution found after only messing up three kernels. I don't know if my system is abnormal or if the abundance of tutorials online are outdated, but I'd say it can't hurt to switch to <code>$(CURDIR)</code>.</p>
+<h4 id="temporarydriverloadingloadingfromfilesinsmodandrmmod">Temporary driver loading/Loading from files: <code>insmod</code> and <code>rmmod</code></h4>
+<p>After compiling the driver, run <code>insmod MODULE_NAME.ko</code> to load it. Pretty self-explanatory. When you run <code>lsmod</code>, you should now see your driver pop up, and you can try out your driver. Hurrah!</p>
+<p>To unload it, you can run <code>rmmod MODULE_NAME</code>. Note that there is no <code>.ko</code>, because <code>rmmod</code> takes a <em>module name</em> as an input, <em>not</em> a driver file.</p>
+<p>Since this temporary loading does not save your file to the <code>/lib/modules/$(uname -r)</code> directory (and therefore the driver is not in <code>/lib/modules/$(uname -r)/modules.dep</code>), the module will not be "saved" onto your computer and will not persist when rebooting.</p>
+<h4 id="permanentdriverloadinginstallmodprobeanddepmod">Permanent driver loading (install): <code>modprobe</code> (and <code>depmod</code>)</h4>
+<p>("Permanent" in the sense that it is not temporary, and will remain on your system on boot, but it can still be unloaded.)</p>
+<p>This involves the <code>make modules_install</code> command, which compiles the module and saves it to the <code>/lib/modules/$(uname -r)/extra</code> directory. The format of the command is similar to the compilation, but instead uses the <code>modules_install</code> target. Make sure you have already run the <code>make modules</code> (compilation) command.</p>
+<pre><code>make -C /lib/modules/$(uname -r)/build M=$(CURDIR) modules_install
+</code></pre>
+<p>Now the driver is installed within <code>/lib/modules/$(uname -r)</code>, but it still has to be loaded. There are two more commands that will come in handy here: <code>depmod</code> and <code>modprobe</code>. <code>depmod</code> scans the <code>/lib/modules/$(uname -r)</code> directory and its subdirectories for drivers, and updates the <code>/lib/modules/$(uname -r)/modules.dep</code> file. <code>modprobe</code> is used to load or unload modules found by <code>depmod</code> (i.e., installed modules). Thus:</p>
+<pre><code>depmod
+modprobe MODULE_NAME
+</code></pre>
+<h4 id="permanentdriverunloadinguninstallmodproberanddepmod">Permanent driver unloading (uninstall): <code>modprobe -r</code> (and <code>depmod</code>)</h4>
+<p>Unload the driver, remove it from the <code>/lib/modules/$(uname -r)</code> directory, and run <code>depmod</code> to reload modules. The meaning and order of the following commands should be pretty clear; the only thing to note is the wildcard at the end of the filename. This is because it seems <a href="https://unix.stackexchange.com/questions/416397/centos7-latest-kernel-moved-from-kernel-ko-to-kernel-ko-xz">some newer kernels compress their <code>.ko</code> files</a>, leading to <code>.ko.xz</code> files.</p>
+<pre><code>modprobe -r MODULE_NAME
+rm /lib/modules/$(uname -r)/extra/MODULE_NAME.ko*
+depmod
+</code></pre>
+<h4 id="finalmakefilewithcompilationanddriverinstalluninstall">Final <code>Makefile</code> (with compilation and driver install/uninstall)</h4>
+<p>The final <code>Makefile</code> for the Veikk driver looks like this (and can be adapted for a similar driver just by changing the module name):</p>
+<pre><code>MOD_NAME := veikk
+BUILD_DIR := /lib/modules/$(shell uname -r)
+
+obj-m := $(MOD_NAME).o
+
+all:
+  make -C $(BUILD_DIR)/build M=$(CURDIR) modules
+
+clean:
+  make -C $(BUILD_DIR)/build M=$(CURDIR) clean
+
+install:
+  make -C $(BUILD_DIR)/build M=$(CURDIR) modules_install
+  depmod
+  modprobe veikk
+
+uninstall:
+  modprobe -r $(MOD_NAME)
+  rm $(BUILD_DIR)/extra/$(MOD_NAME).ko*
+  depmod
+</code></pre>
+<p>The installation instructions for this driver are:</p>
+<pre><code>make
+sudo make install clean
+</code></pre>
+<p>and the uninstall instructions are:</p>
+<pre><code>sudo make uninstall
+</code></pre>
+<h3 id="conclusion">Conclusion</h3>
+<p>So it turns out that I had to leave home right after finishing writing a working driver (my train left 20 minutes later), so I didn't get around to a lot of additional tweaking, testing, and tidying up. Until I get back home, the code may remain a bit messy and have some parts I unnecessarily took from Wacom. But it works, and I'm pretty proud of getting it to work, even if it is such a short script (when writing this article and distilling down the steps, how much I accomplished seems almost trivial) and if I completely ripped much of it off of Wacom's open source driver.</p>
+<p>There's still much to do, however -- I'd like to implement drivers for all of Veikk's drawing tablets, as well as a configuration utility. There's also cleanup to do, signing the module, and fixing the <code>hid-generic</code> bug; I've been talking with an S640 user who had trouble installing this driver because of the signed module and because of <code>hid-generic</code>.</p>
+<p>This was a fun effort that consumed my weekend (and the past few hours writing this). I really think it paid off with how much I learnt about the Linux kernel and drivers, and I think it'll keep paying off as I continue to expand on this driver. I hope this might others started writing drivers as well!</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/diary-of-a-college-kid">Diary of a College Kid</a><br>Next post: <a href="/posts/veikk-linux-driver-v3-notes">VEIKK Linux Driver v3 Notes</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                What I cannot create, I do not understand. Know how to solve every problem that has been solved.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Richard Feynman, on his blackboard at the time of his death at Caltech</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

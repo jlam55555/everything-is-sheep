@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: The Wonders of PHP">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/the-wonders-of-php">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: The Wonders of PHP</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">The Wonders of PHP</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 06/18/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">brain-dump</span> <span class="tag clickable">coding</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/planning-with-brainspaces">Planning with Brain-Spaces</a><br>Next post: <a href="/posts/senior-exit-thoughts">Senior Exit Thoughts</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>I remember the first time my uncle showed me how to use a server-side script. He called it CGI&mdash; which to many people only means "computer-generated imagery," but in this context refers to "common gateway interface"&mdash; to generate an image of the HSL spectrum in Perl. At the time, it was so cool&mdash; this was far before I knew what JavaScript was and just before many websites really began to use it to make interactive scripts. At the time, Java applets, Flash (ActionScript) apps, as well as PHP and Perl scripts were used for the majority of website interactivity. I began learning PHP to use as CGI scripts.</p>
+<p>Fast forward almost a decade, and here we are! JavaScript has taken the web by storm as the web is becoming increasingly popular and dynamic, giving every other web language serious competition. Java applets (and other NPAPI plugins) have been disallowed by web browsers, ActionScript's advantages have disappeared due to the modernization of the JS language, and server-side (CGI) scripts can be replaced with Node.js, which allows programmers to only learn one scripting language and uses the same fast V8 engine as JavaScript. Needless to say, JavaScript is an amazing language to learn, and its incredible growth in features along its growth in usage is amazing.</p>
+<p>But recently, I've wanted to look back into PHP. There are a couple of reasons:</p>
+<ul>
+<li><p>It's built for simplicity of code.</p></li>
+<li><p>Many websites still use PHP, such as Wordpress, Facebook, Google, and Wikipedia.</p></li>
+<li><p>It's been around for longer than JavaScript (and is much newer than Node.js), with clear syntactical relations to C and Perl.</p></li>
+<li><p>It's very flexible, supporting both functional and object-oriented structures.</p></li>
+<li><p>It's built for use alongside websites, similar to JavaScript (albeit in the preprocessing stage, and thus for server-side development).</p></li>
+<li><p>PHP 7 focuses on many performance improvements over PHP 5. As <a href="https://www.quora.com/Which-programming-language-has-faster-performance-PHP-or-Perl">put by Reini Urban</a>,</p></li>
+<li><p>PHP is dynamically- and weakly-typed, strongly emphasizing their automatic type conversions ("type juggling").</p>
+<blockquote>
+  <p>php7 is now the fastest of the 4 big, slow, dynamic languages perl, puhp, python, ruby. It even bypassed lua, which was previously the fastest non-jitted dynamic language.</p>
+</blockquote></li>
+<li><p>There are many free hosts for PHP, due to its wide adoption (Node.js has some free hosts too, such as Heroku, but these are harder to find and usually are more restricted.)</p></li>
+</ul>
+<p>So while these are some of the reasons, there were two reasons that prompted me to look back into PHP in the first place (I guess you could add these to the list above). They were:</p>
+<ul>
+<li>Many hiring companies want experience with PHP. While not as many as JavaScript, many websites are still built on PHP on the back-end.</li>
+<li>The only free web host I've found for Node.js (so far) is Heroku, which is an excellent service. However, it doesn't provide 24/7 hosting as part of its free service <sub>(If you've waited ten seconds for this blog to load, that's because the server stops after some duration of inactivity)</sub>, nor does it have short urls (the <code>.herokuapp.com</code> domain is not fun to type). The free web hosting platform I usually use for PHP, <a href="https://www.biz.nf">biz.nf</a>, has both features.</li>
+</ul>
+<p>So I set off to go about learning PHP the thorough way, by going straight through the tutorial. By the time of writing this article, I haven't yet finished the tutorial, but from what I've read so far, there are quite a few sweet pieces of syntactical sugar that I felt I had to put down on paper (or digital ink). Hence this blog post, which broadened into a general discussion of PHP's benefits. Here they are:</p>
+<ul>
+<li><p>There are many convenience syntaxes PHP offers. For example, trailing commas can be used for arrays for the easy addition of future properties:</p>
+<pre><code>$arr = array(2, 3, 4,);
+</code></pre>
+<p>and there is the option for destructured assignment using the <code>list()</code> function. (Neither of these features are unique to PHP, and both are available in JS as well, but I had just learned about them and found them very interesting). They also have multiple valid syntaxes for some of the same operations, such as the two valid array index access operators <code>[]</code> and <code>{}</code>.</p></li>
+<li><p>PHP 7 adds parameter and return types for functions, giving programmers the option to adjust the level of strictness they want to their code. This is very similar to the functionality available in TypeScript.</p>
+<pre><code>function sum(array $i): int { /* ... */ }
+</code></pre></li>
+<li><p>References! Something that JavaScript doesn't offer for primitive values, PHP references can easily be obtained by prepending an ampersand (<code>&amp;</code>) before a variable name. One handy application of this is modifying variables passed into <code>foreach</code> blocks or as function parameters.</p>
+<pre><code>foreach($arr as &amp;$elem) {
+  $elem++;  // this will modify the elements of the array
+}
+</code></pre></li>
+<li><p>Arrays are treated simply as consecutive spaces in memory, very similar to strings. A consequence is that many arrays and strings can be modified and their elements accessed in the same way, such as with the array index access operator <code>[]</code>.</p></li>
+<li><p>PHP has "magic functions" that have a default ability, which are specially denoted by like  <code>__magicfunctionname__</code>. While they can be accessed and overwritten much like regular functions, they have special meanings (such as <code>__construct__</code>, the constructor function).</p></li>
+<li><p>Scoping is more clearly defined with explicit <code>global</code> calls to modify variables from the parent scope.</p></li>
+<li><p>PHP has various methods to easily show (and pretty-print!) the contents of any variable, such as <code>var_dump()</code> and <code>print_r()</code>.</p></li>
+<li><p>PHP easily embeds HTML. The recursive acronym PHP stands for "PHP Hypertext Preprocessor."</p></li>
+<li><p>PHP has more string types, such as single-quoted strings <code>''</code> (no string interpretation), double-quoted strings <code>""</code> (parse variables and escape sequences), and the HEREDOC and NOWDOC syntaxes (multiline versions of the single-quoted and double-quoted string syntaxes).</p></li>
+<li><p>PHP's double-quoted syntax includes variable templating. This involves nested complex expressions and variable names as variables.</p>
+<pre><code>// simple string interpolation
+$msg = 'World';
+echo "Hello, $msg!";  // Hello, World!
+
+// variable value as a variable name -- cool!
+$varname = 'msg';
+echo "Hello, ${$varname}!"; // Hello, World!
+</code></pre></li>
+<li><p>There are many official PHP extensions. For example, I wanted to parse YAML using PHP, and there is an YAML extension (although it requires a separate installation). There are many built-in extensions as well, including MySQL (<code>mysql_*</code> functions), PCRE (<code>preg_*</code> functions), and JSON (<code>json_*</code> functions) extensions.</p></li>
+</ul>
+<p>I'm going to continue learning PHP, but that's a good list for now. I'm really excited to see what the implications for all of these are. I still have to get used to the mainly-functional syntax that much of PHP uses, but I'm optimistic about the differences it offers from JS.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/planning-with-brainspaces">Planning with Brain-Spaces</a><br>Next post: <a href="/posts/senior-exit-thoughts">Senior Exit Thoughts</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Computers are good at following instructions, but not at reading your mind.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Donald Knuth</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

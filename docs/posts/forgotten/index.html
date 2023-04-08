@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Forgotten">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/forgotten">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Forgotten</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Forgotten</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 05/09/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">brain-dump</span> <span class="tag clickable">journaling</span> <span class="tag clickable">poetry</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/church-of-prom">Church of Prom</a><br>Next post: <a href="/posts/the-american-dream">The American Dream</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>When I enter the bathroom uncle John comes in after me and says that he would stay with me, which is very nice. He is my favorite uncle. I don’t have a phone or anything to contact anyone. So I am always afraid of getting lost.</p>
+<p>I poop and leave the bathrooms but when I go back outside he is<br>Gone!</p>
+<hr />
+<p>We’re at Lake Compounce water park and I’m<br>stuck<br>outside the bathroom.</p>
+<p>I’m too short to see any the rides at the park or over the crowd.</p>
+<p>I venture out a little further, into the bright sunlight. The sun is dazzling. People are walking all around me, so that I can’t see too far in any direction. It is mid-afternoon, probably around three o’clock, so it is really busy. The bathrooms are in front of a large, open space where many of the paths meet.</p>
+<p>The only “ride” I can see is the water playground in front of me. It’s like a much larger version of the playground at Beaches Pool near our house, where the water cones balance on a rod in the middle and fill up with water and flip scarily when the water is too heavy. I used to stand under them, counting and guessing when and which way they would flip and make me scared that I would drown. But I stopped when it stopped becoming scary, or maybe because my sisters started copying me. But this playground was a lot bigger and had a lot more children to play with. It was pirate ship-themed, so it had a huge bucket at the top that poured down on the children.</p>
+<hr />
+<p>Will it be better if I stayed or went? I pout, anxious.</p>
+<p>I waited.</p>
+<p>Should I ask someone to use their phone? I only know two phone numbers (three, if you include 911): my mom’s and my dad’s. </p>
+<p>I started to walk.</p>
+<p>Because strangers might not let me use their phones, or they might kidnap me if they see me alone, a little kid, just as my parents always say. Or what if the strangers think I’m a trick? My parents keep showing us videos of their family in China who post videos of people doing horrible things to each other, like using kids as distractions for stealing. </p>
+<p>But if I leave, then my parents might go looking for me and not find me where I should be. I would be forgotten.</p>
+<p>I stop again.</p>
+<hr />
+<p>Which way do I go?</p>
+<hr />
+<pre>I        am  surrounded      by  a       wave        of  people      scattered,
+talking happily            with    each        other   while   I
+stand    in  the middle,                         not walking.
+I keep    turning                                 in  circles,
+not    sure which  way         <strong style='font-size:2em'>I</strong>            should      go.
+I keep    going   back                    and forth,  thinking that going
+means that    I will                          lose them   but     staying meant they
+will lose me.        And nobody      tries   to  help me—    they
+just    walked in   circles around  me,     giving  me  some space  but never   even
+looking.    I   am in   my  little          bubble of   being       lost.
+</pre>
+<hr />
+<p>Waiting is very awkward. I stand out because I’m not happy. I want someone to realize that. But nobody does, and I begin to grunt. I want to cry.</p>
+<hr />
+<p>Where is my family? Where could they have gone? They can’t have walked too far. I was only in the bathroom for five minutes, I swear! Maybe they left me here on purpose?</p>
+<hr />
+<p>I begin to count the times the big bucket flips.</p>
+<hr />
+<p>Should I stay?</p>
+<div style='text-align:center'>(Bucket flips.)</div>
+<div style='text-align:right'>Should I go?</div>
+<p>Should I leave? I look around again.</p>
+<div style='text-align:center'>(Bucket flips.)<br>&hellip;</div>
+<hr />
+<p>Out of the crowd, I see uncle John, who is very tall. I run over to where he waves me over at the bench at the edge of the water playground. He tells me that my cousins are on the water playground.</p>
+<hr />
+<p>I don’t like theme parks anymore. (2018 self: I still don’t.)</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/church-of-prom">Church of Prom</a><br>Next post: <a href="/posts/the-american-dream">The American Dream</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                If you have a difficult task, give it to a lazy person; they will find an easier way to do it.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Hlade's Law, sometimes misattributed to Bill Gates</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

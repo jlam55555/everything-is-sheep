@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Proof of Binet&#x27;s Formula">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/proof-of-binets-formula">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Proof of Binet&#x27;s Formula</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Proof of Binet&#x27;s Formula</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 06/13/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">math</span> <span class="tag clickable">brain-dump</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/final-projects">Final Projects</a><br>Next post: <a href="/posts/planning-with-brainspaces">Planning with Brain-Spaces</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>A classmate of mine researched the Fibonacci numbers and the golden ratio, φ (phi), for his AP calculus project. One part he skimmed over is that there is an explicit formula for calculating Fibonacci terms, called Binet's formula:</p>
+<p>\[
+  Fib(n) = \frac{1}{\sqrt 5}\left((1+\sqrt 5)^n - (1-\sqrt 5)^n\right)
+\]</p>
+<p>It didn't strike me at the time as important, until I saw it again in <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html">SICP</a> exercise 1.13. The exercise goes as following:</p>
+<blockquote>
+  <p><strong>Exercise 1.13.</strong> Prove that \(Fib(n)\) is the closest integer to \(\frac{\phi^n}{\sqrt 5}\), where \(\phi=\frac{1+\sqrt 5}{2}\). Hint: Let \(\Phi=\frac{1-\sqrt 5}{2}\). Use induction and the definition of the Fibonacci numbers &hellip; to prove that \(Fib(n)=\frac{\phi^n-\Phi^n}{\sqrt 5}\).</p>
+</blockquote>
+<p>I didn't end up figuring out the entire proof, especially the induction part. Even though I had to look up the proof for Binet's formula, and it's already littered on geeky sites throughout the web, it's such a pretty proof and I thought it would be interesting to write it in a pedagogical manner.</p>
+<blockquote>
+  <p>"If you can't explain it simply, you don't understand it well enough." Albert Einstein, maybe.</p>
+</blockquote>
+<hr />
+<p>Let's begin with some definitions and consequences of those definitions:</p>
+<ul>
+<li>\(Fib(n)=Fib(n-1)+Fib(n-2)\)</li>
+<li>\(\phi\) (phi, the "golden ratio") and \(\Phi\) (Phi, the "silver ratio") are the solutions to the quadratic equation \(x^2-x-1=0\): \(\frac{1+\sqrt 5}{2}\) and \(\frac{1-\sqrt 5}{2}\), respectively</li>
+<li>When a situation can refer to either of these two numbers, it will be denoted \(x\)</li>
+<li>Rearranging the quadratic gives that \(x^2=x+1\)</li>
+</ul>
+<p>In order to derive the Binet's formula, we need to prove the following lemma first:</p>
+<p>\[
+  x^n=xFib(n)+Fib(n-1)
+\]</p>
+<p>This is where mathematical induction becomes useful.</p>
+<p>The base case is easy to check:</p>
+<p>\[
+  x^1=xFib(1)+Fib(0)\\
+  x=x\times1+0\\
+  x=x
+\]</p>
+<p>The inductive step involves multiplying both sides by \(x\) and simplifying to show that this formula indeed works for \(n+1\):</p>
+<p>\[
+  x(x^n)=x(xFib(n)+Fib(n-1))\\
+  x^{n+1}=x^2Fib(n)+xFib(n-1)\\
+  x^{n+1}=(x+1)*Fib(n)+xFib(n-1)\\
+  x^{n+1}=xFib(n)+Fib(n)+xFib(n-1)\\
+  x^{n+1}=x(Fib(n)+Fib(n-1))+Fib(n)\\
+  x^{n+1}=xFib(n+1)+Fib(n)
+\]</p>
+<p>The inductive step uses the property that \(x^2=x+1\), and that \(Fib(n)=Fib(n-1)+Fib(n-2)\).</p>
+<p>Using this lemma, we can use the subtraction \(\phi^n-\Phi^n\) and solve for \(Fib(n)\) to get Binet's formula:</p>
+<p>\[
+  \phi^n-\Phi^n)=\phi Fib(n)+Fib(n-1)-(\Phi Fib(n)+Fib(n-1))\\
+  =\phi Fib(n)-\Phi Fib(n)\\
+  \phi^n-\Phi^n=(\phi-\Phi)\times Fib(n)\\
+  Fib(n)=\frac{\phi^n-\Phi^n}{\phi-\Phi}\\
+  Fib(n)=\frac{\phi^n-\Phi^n}{\sqrt 5}
+\]</p>
+<p>Wow. There it is. But SICP exercise 1.13 asks for one step further: why does the following formula, with nearest-integer rounding, work?</p>
+<p>\[
+  Fib(n)=\left[\frac{\phi^n}{\sqrt 5}\right]
+\]</p>
+<p>This formula is helpful because it reduces the number of calculations necessary to calculate \(Fib(n)\). This part isn't too difficult to deduce:</p>
+<p>The error for the approximation \(\frac{\phi^n}{\sqrt 5}\) is \(\frac{\Phi^n}{\sqrt 5}\). Because \(|\Phi|&lt;1\), the error approaches zero as \(n\) increases, and is maximized at \(n=0\). Therefore, the maximum error is \(|\frac{\Phi^0}{\sqrt 5}|\), which is approximately 0.447. Because this value is less than 0.5, and because the error for this approximation is always less than this, the nearest integer to this approximation will be equal to \(Fib(n)\).</p>
+<hr />
+<p><strong>Updated 6/13/18</strong>: Added MathJax support, equations look much nicer now.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/final-projects">Final Projects</a><br>Next post: <a href="/posts/planning-with-brainspaces">Planning with Brain-Spaces</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                When something goes wrong in your life, just yell, "Plot Twist!" and move on.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>fb.com/doyofdad</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

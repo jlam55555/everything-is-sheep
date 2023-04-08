@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Mind-sight in Hindsight">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/mindsight-in-hindsight">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Mind-sight in Hindsight</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Mind-sight in Hindsight</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 11/19/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">reflection</span> <span class="tag clickable">site</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/abstracting-chaos-a-universal-goal">Abstracting Chaos: A Universal Goal</a><br>Next post: <a href="/posts/move-fast-and-break-things-but-fix-them">Move Fast and Break Things (but Fix Them)</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>Before I forget, I wanted to make a quick note about what I've seen in the past two days. It's too fascinating to forget.</p>
+<p>It's been almost two years since I began posting on <a href="http://thehomeworklife.co.nf/">The Homework Life</a>. From a programming perspective, I was so enthusiastic, and changes came out every day, even as I was writing. Every new step was amazing, and the site improved by the hour. It gained so many functionalities, and grew heavily in complexity but never to the point of imploding.</p>
+<p>That's an interesting parallel to today, because the systems that I set up back then in a week are those that I can set up in a day now. Looking at the physical structure of the site, I expected it to be a lot worse and remembered it to be a lot slower than Everything is Sheep. But it's really not. The major differences are that while it uses a PHP backend, EiS uses Node.JS; THL uses MySQL for the storage of the posts, and EiS uses a template-based filesystem; THL uses HTML for the post formatting, and EiS uses Markdown. But much of the functionalities, such as tagging, searching by post content or tags, loading a specific post, having an RSS feed, sporting RWD and mobile-first design, etc., are preserved. EiS even lost some capabilities, such as putting an image on each post by default. From a technology standpoint, EiS uses newer technologies, but THL is not much slower. Here is are some basic performance statistics for the two, conducted by Pingdom:</p>
+<p><img src="http://imgur.com/GILebZ3l.png" alt="Everything is Sheep performance statistics" />
+<img src="http://imgur.com/GB67bwul.png" alt="The Homework Life performance statistics" /></p>
+<p>So THL is not terribly slow, and EiS is not terribly fast. The difference is likely just that between the two free hosts (Biz.nf vs. Heroku, the latter of which I prefer), and that THL makes use of many more images.</p>
+<p>On the other hand, EiS is a bland site. It was supposed to be modern, but the site largely lacks the use of graphics to spice it up. In hindsight, it looks that I took inspiration from <a href="https://codeblog.jonskeet.uk/">Jon Skeet's coding blog</a> for EiS, which has a similar theme. The logo is simple but it can be dull. The title is more senseless as well. The combination of these facts makes the blog much less appealing to the general public. THL is colorful, but not flashy &mdash; it's an appropriate mix of playful modernity. They're both practical and to the point, but THL wins out in appeal.</p>
+<p>--</p>
+<p>The next point of comparison is, of course, the content. THL was written in a time of distress: I felt as though I was about to fail in my Advanced English II class, and blogging was my venue for literary exploration. The programming aspect was only a secondary motive. The roles were reversed in the creation of EiS: this blog was focused more on how to improve from the mistakes made in THL. The major programmatic changes are illustrated above, and, as I've noted, they aren't so dramatic to greatly increase the site's functionality.</p>
+<p>So the writing on this site isn't so spectacular. There's not that driven creativity that was so clear two years ago. I've even started to import academic papers and steal posts from THL (eventually they will all be copied over here) to make up for the evident lack in literary creativity here.</p>
+<p>To illustrate this, take into consideration the first few days of THL. The first post was on the 12/17/15; ten days later, 18 posts had been written. That 18th post was about having a temporary break from blogging due to internal site changes. But the next two posts appeared the next day, and so on and so forth. I'm not even sure how I managed to stay so busy during the holiday season, when my cousins were over at our house. I was a frantic, amazingly-productive sophomore just doing my coder things. Nothing close has come to EiS, until this weekend.</p>
+<p>--</p>
+<p>I felt a little of that programming craze last weekend, when I worked on Safe Rides for our school. My mom had hinted strongly to me that I should finish the project that I started, because I never seem to finish any major project. So I did. All through last weekend, and through this week. And what do you know? I deployed it to the 75 volunteers yesterday for the initial beta testing. Soon, I hope to have a working system of hundreds to even thousands of users. It's a lot of social pressure. But mostly pressure by my mom.</p>
+<p>That prompted me to work on this site. After deploying Safe Rides yesterday, I worked for a few hours on bug fixes based on the experiences of the very first users. I then worked on college applications, then finished all my homework before today (except for a pesky essay for English that I have yet to finish), and then I worked on transcribing THL posts for use on EiS. And then we went out to bowl and go eat. So much done is so little time. <small>I've had such a productive birthday weekend! Yay!</small></p>
+<p>But <em>that</em> is what causes this programming frenzy. Just <em>do</em>ing things. Whatever is productive (as in, with a physical outcome that I can be proud of). I've been missing this pride since I've worked on programming. Blogging is something to motivate me. I've lost that since THL was founded, but I hope it's back. I'll need it. There's so much going on now, and this virtuous cycle is only beginning.</p>
+<p>Ok. I've begun to pace to the sound of Ghibli music playing in my head. More on that later. But now it's time to rewind and celebrate (my birthday and this wonderful feeling). Good night, THL! Good night, EiS!</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/abstracting-chaos-a-universal-goal">Abstracting Chaos: A Universal Goal</a><br>Next post: <a href="/posts/move-fast-and-break-things-but-fix-them">Move Fast and Break Things (but Fix Them)</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                If we quit voting, will they all go away?
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Bumper Sticker from <a href="https://www.amazon.com/Uncle-Triumphant-Anniversary-Bathroom-Reader/dp/1592230938"><em>Uncle John's Triumphant 20th Anniversary Bathroom Reader</em></a></p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

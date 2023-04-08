@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: An Impromptu Preacher">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/an-impromptu-preacher">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: An Impromptu Preacher</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">An Impromptu Preacher</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 11/25/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">essay</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/on-keeping-a-notebook">On Keeping a Notebook</a><br>Next post: <a href="/posts/dragon-in-training">Dragon in Training</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>Submitted to UConn for the Nutmeg Scholarship. This is a great example of how <em>not</em> to write an essay. If there will be only one reason I don't get the scholarship, this essay will be it. It boasts, has little metaphorical value, and is just a bit boring.</p>
+<p>Just thought it'd be nice to look back on this essay and laugh at my own mistakes in hindsight.</p>
+<hr />
+<p>"An Impromptu Preacher"</p>
+<p>Our bowling team was dying. In my freshman year, we had five members, the smallest number necessary to run a team. Sophomore year yielded no improvement. In my junior year, three seniors (including the previous captain) left the team, leaving me captain of only one other person.</p>
+<p>I could have called the team off. If no action had been taken, this inevitably would have occurred. Even our coach had believed that, due to our lack of enthusiasm the previous year, our team would not exist that year and thus did not bother to appear at our games and practices until I assured him that we did have a team. I could also have recruited the bare minimum of five bowlers again to meagerly subsist for another year.</p>
+<p>But I love bowling, and I set out immediately to make Barlow Bowling known. Word of mouth was the first approach, and I managed to recruit a fair number of people from my classes. The next approach was creating flyers. Alas, the flyer effort was too little and too late (for I had no prior experience with creating or distributing them). In the meantime, I worked with administration to gain improved recognition and funding for the team, and I contacted our previous captain to get the design for the team shirts. By these means, our team grew from two to fifteen people after years of no improvement. Not bad.</p>
+<p>This year, I’m doing the same, albeit with a more organized and timely effort with flyers. I believe that I can expect an increase of about five to ten people this year.
+Given an adequate cause— such as bowling, which is not only fun but also trains concentration and various fine-motor skills— I was able to mobilize over a dozen people and spread the word to many dozens more in the span of only about two weeks.</p>
+<p>While I spend the majority of my time focused on academics and scholastic extracurriculars, it doesn’t mean that this anecdote doesn’t apply. I love to spur on my peers. It’s from this motivation that I received a “motivational” character trait award and our school’s Spotlight Award for leadership, service, and character.</p>
+<p>Sometimes, the motive is a shared benefit, such as a high grade in a group project. Often, however, I simply enjoy imparting knowledge on others, and vice versa. All four years at my high school, I’ve volunteered as a mentor as part of the Math Mentoring program for the simple reason that I love all things mathematical, and I believe that everyone should feel the same joy of math. Being a student in high academic standing, it’s also not rare that other students come to me for help in other subjects such as chemistry or calculus and that I often spend a good part of my free period to help others study or solve difficult homework questions. Recently I’ve even begun the habit of hosting video calls as a mode for late-night study groups for more difficult tests.</p>
+<p>When it comes to bowling, programming, or Rubik’s cube speedsolving, for all in which I consider myself reasonably experienced relative to our school population, I often get overzealous in my attempts to indoctrinate others, sharing as much as I know. My efforts to flood my younger sister with mathematical awe has been thoroughly shunned, for example. But I believe that information is a benign medium with potential only to gain wisdom, and not to harm.</p>
+<p>My urge to preach knowledge presents a sharp contrast to the quieter me that appears when learning. When possible, I sit in the front of classrooms, never speak back to teachers for the sake of argument, and always do my homework. Arguably I’m a teacher’s pet, but I believe that means simply learning in the most effective way.</p>
+<p>I was born and raised by grandparents with very strong Chinese values of hardworkingness and discipline, which manifest themselves as an ostensible taciturnity as I do schoolwork. But I have lived my entire life in a society that is formed primarily by Caucasian Americans, whose culture places a larger emphasis on television, sports, freedom, social settings, and creativity. I impute my ability to work so diligently on the task at hand to the discipline of my grandparents, but often the tasks (such as bowling, mathematics, writing essays, etc.) are activities founded on the creative basis of the American culture.</p>
+<p>I hope to contribute to the UConn community by increasing its diversity of thought and by inspiring others. From two different upbringings, I have grown up to value education and the stubborn toil necessary to learn as much as possible, as well as to find gratification in aiding others.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/on-keeping-a-notebook">On Keeping a Notebook</a><br>Next post: <a href="/posts/dragon-in-training">Dragon in Training</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                I used to have an open mind, but my brains kept falling out.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Bumper Sticker from <a href="https://www.amazon.com/Uncle-Triumphant-Anniversary-Bathroom-Reader/dp/1592230938"><em>Uncle John's Triumphant 20th Anniversary Bathroom Reader</em></a></p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

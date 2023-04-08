@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Memoir: A Working Definition">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/memoir-a-working-definition">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Memoir: A Working Definition</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Memoir: A Working Definition</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 02/15/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">essay</span> <span class="tag clickable">literary-synthesis</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/mileage">Mileage</a><br>Next post: <a href="/posts/valentines-day-poetry">Valentine's Day Poetry</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>A working definition of memoir, based on "Go Carolina" by David Sedaris, "Pest Control" by Augusten Burroughs, "Chubby for Life" by Mindy Kaling, "The Ten Thousand Things" by Cheryl Strayed, and the first chapter of <em>The Glass Castle</em> by Jeanette Walls. (And a little bit from <em>The Things They Carried</em> by Tim O'Brien.)</p>
+<p>I think that a memoir is nothing more than that aspiration to remember. A kind of desperate grab to retain the fleeting happy moments, the elusive sad moments. That's how it is for me. Do you agree? (I've got to add a comments section soon, but schoolwork calls.)</p>
+<hr />
+<p>"Memoir: A Working Definition"</p>
+<p>Memoir. It’s a mirror. It’s a self-portrait. It’s a story. It’s the past.</p>
+<p>It’s a story about the death of a mother. The pulling of a tooth, or the condemnation to eternal chubbiness. And it could be for the entertainment of others: it might be comical to hear what a teething child learns about the tooth fairy for the first time, or heartening to know that even the more despicable people in life are, after all, just people trying to make a living as a speech therapist.</p>
+<p>But more than anything, it’s about and for the memoirist and nobody else. The funny moments, the tears, and the joy are all a part of the writer. It’s <em>not</em> a conscious effort to inform or entertain others. If that is the case, then the story becomes fiction.</p>
+<p>Fiction is what Tim O’Brien calls “happening-truth,” but not necessarily true to the author; true and particularly appealing to the audience. This is more appealing to a reader because of its sensible, plain conveyal of information. (On the other hand, his book <em>The Things They Carried</em>, while almost completely fabricated, can be considered a memoir, a “story-truth” truer than reality. The characters and plot details may not have occurred, but they were very real to him in the stories they told and the necessary relationships they shared.)</p>
+<p>But memoirs are something more honest, and perhaps very uncomfortable. It’s definitely not as straightforward as fiction: it probably seems that the the anger in Strayed’s statement, “Duluth was a freezing hick town where doctors who didn’t know what the hell they were talking about told forty-five-year-old vegetarian-ish, garlic-eating, natural-remedy-using nonsmokers that they had late-stage lung cancer” (Strayed 10) has no place in the story of a mother’s death. Nor the green pantsuit or the names of the apartment complexes outside of Minneapolis where Strayed used to live. In fact, the entire story can be told in a few words, as it often is, much more simply:</p>
+<blockquote>
+  <p>I began a journey to find myself. I realized only later that it had begun with the tragic death of my mother, who had been a great part of my life.</p>
+</blockquote>
+<p>After all, every part of this is true. It can be used as the introduction to a story about a journey— people would understand. People could fill in the blanks with close deaths from their own lives, relive their own horrors or joys. It doesn’t <em>feel</em> very genuine like a memoir, however, because that’s not how the person remembers it best. In short, <strong>a memoir is an attempt to capture a core memory as closely as possible to what a person remembers feeling at the time, encapsulating it with then thoughts and emotions</strong>. That little Augusten Burroughs remembered that the beautiful flight attendant called him “precious,” and that he liked it so much because it reminded him of gemstones. He remembered that the “impossibly exotic South,” with his grandparents’ “Technicolor peacocks” and “yet more sunshine,” as a part of his memory. These are not simply superficial details to add to the reality of the situation: they are in fact crucial pieces to the story, true or not (considering that memory is easily warped, according to Mary Karr in “The Art of Memoir”). Missing little pieces, like Strayed’s impulse to “take pleasure from [the male nurse]” (Strayed 21) in the sudden irrational mind that it would somehow help her situation, can’t be glossed over. Little moments like this define a person: Burrough’s good-natured naïvete and Strayed’s desperation. These moments can’t be told in any other way.</p>
+<p>I began writing in tenth grade to try to improve my grade in English class. I began a blog, writing random snapshots of my life: mostly little events that set me off (e.g., excessive hype for the wasteful and socially-cemented prom) or enlighten me (e.g., discovering a brilliant reduction method for a complex logic puzzle on my own). And many of these probably would fall into the memoir genre. Most of the time I write to remember, whether it be the strong loathing I have for the wasteful, socially-cemented prom, or the joy of discovering a mathematical reduction method on my own. Most often, the blog posts are associated with specific events, but that’s not what it’s about. You can’t recall what you don’t remember, and writing memoirs is my solution to the fear of forgetting.</p>
+<p>Kaling’s “Chubby for Life” and Strayed’s “The Ten Thousand Things” focus on a broader theme, with supporting stories and the complete, random details that come to mind. Burrough’s “Pest Control,” Sedaris’s “Go Carolina,” and Walls’s “The Glass Castle” are focused on their younger, less judgmental selves and the actions and impressions of the time.</p>
+<p>Throughout all of these memoirs (including mine), there’s the common theme of the variation in content and style. I often use multimedia in my blog, as does Kaling in her memoir, because pictures can carry heavier connotations with words. Strayed uses motifs, such as “religion” and female independence. All of these little details are “triggers,” designed so that the memory, in all of its emotional glory, can be relived.</p>
+<p>That’s it.</p>
+<p>Some definitions of memoir are to achieve some intelligent, greater-society purpose: to educate oneself or society from past mistakes, to portray a past event with brutal honesty, or to paint an all-encompassing of a person. But these are just side effects, born of the power of wanting to remember. The little details, the impromptu realizations and naïve assumptions, may seem funny to an outside audience, but they are just meant to preserve a chunk of the life of the memoirist in pristine condition. From this “chunk of life” we can learn many things, whether we mean to or not.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/mileage">Mileage</a><br>Next post: <a href="/posts/valentines-day-poetry">Valentine's Day Poetry</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Science is the belief in the ignorance of experts.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Richard Feynman</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

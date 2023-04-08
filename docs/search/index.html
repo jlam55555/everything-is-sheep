@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/search">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div class='container'>
+  <i class="fa fa-search" id="searchIcon"></i>
+  <div id="search">
+    <input id="searchBar" class="center" placeholder="Search posts">
+    <select id="searchType">
+      <option value="date_desc" >Date (new-old)</option>
+      <option value="date_asc" >Date (old-new)</option>
+      <option value="title_asc" >Title (A-Z)</option>
+      <option value="title_desc" >Title (Z-A)</option>
+      <option value="views_desc" >Views (most-least)</option>
+      <option value="views_asc" >Views (least-most)</option>
+    </select>
+  </div>
+  <div id="mainSearchHint">
+    Press <kbd>Enter</kbd> to search.
+    Search by:
+    <ul>
+      <li>Post titles: <a class="imgLink" title="Try it!" href="/search/Losing is Winning"><code>Losing is Winning</code></a></li>
+      <li>Post dates (exactly as seen): <a class="imgLink" title="Try it!" href="/search/07%2F18%2F17"><code>07/18/17</code></a></li>
+      <li>Post content: <a class="imgLink" title="Try it!" href="/search/I'm a little slaphappy right now so this sloppy brain-dump of a post may sound waffly"><code>I'm a little slaphappy right now so this sloppy brain-dump of a post may sound waffly</code></a></li>
+      <li>Post tags(s): <a class="imgLink" title="Try it!" href="/search/[essay][brain-dump]"><code>[essay][brain-dump]</code></a></li>
+    </ul>
+    You may combine tag searches with any of the other search types (e.g., <a class="imgLink" title="Try it!" href="/search/[essay]Winning"><code>[essay]Winning</code></a>). Only posts that include <em>all</em> of the search elements provided will be shown.
+  </div>
+    <div id="postNumberContainer">Viewing all <span id="postNumber">176</span> posts.</div>
+    <div class="pageControl">
+      <p>Viewing page <select class="currentPage">
+      </select> of <span class="pageCount"></span>.</p>
+    </div>
+  <div id="postViews">
+        <a class="imgLink postView" href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Code Opinions <span class="smallText">08/10/20</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">As a polyglot programmer who aims to become language agnostic, I feel obliged to document this somewhere. Here we go.
+After beginning to write this, I realize this sounds like an angry rant towards new programmers. If you're a new programmer, please &hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">brain-dump</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Button Mapping Journeys <span class="smallText">08/10/20</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">Follow-up to the second blog post on the Linux driver for VEIKK digitizers, which focused on the driver updates in v1.1 through v3-alpha. (That was in turn an update from the first blog post, which detailed v1 of the driver) After messing around with&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">coding</span> <span class="tag">linux</span> <span class="tag">veikk</span> <span class="tag">driver</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">VEIKK Linux Driver v3 Notes <span class="smallText">08/01/20</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">(This is a live document, since v3 is still in alpha)
+This can be thought of as the sequel to On Developing a Linux Driver. There is also Button Mapping Journeys, which is specifically about user-space mapping for the buttons using the X ecosystem of&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">veikk</span> <span class="tag">linux</span> <span class="tag">coding</span> <span class="tag">driver</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">On Developing a Linux Driver <span class="smallText">06/11/19</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">
+  "Do you pine for the days when men were men and wrote their own device drivers?" ~ Linus Torvalds
+
+On Developing a Linux Driver
+A quick guide on understanding, developing, and compiling a Linux driver with no prior knowledge, featuring a case stud&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">veikk</span> <span class="tag">coding</span> <span class="tag">linux</span> <span class="tag">tutorial</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Diary of a College Kid <span class="smallText">02/27/19</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">Hi everyone! Life has been so busy recently, and I think it's time to get back to writing regularly. My hoarder sense wants preservation.
+For now, because it's 3:45a.m., this will only be a brief summary of the lively past day-and-a-half. Hopefully m&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">site</span> <span class="tag">diary</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/introducing-remeet" title="View post &quot;Introducing Remeet!&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Introducing Remeet! <span class="smallText">06/28/18</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">Update: This project has been discontinued. Ignore this post.
+This will be an introduction to and how-to guide for Remeet, and will be completed once Remeet has achieved (most of) its major intended features.
+If you are here, and if you noticed that &hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">remeet</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/consolidation" title="View post &quot;Consolidation&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Consolidation <span class="smallText">06/25/18</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">In my last post, I wrote about a little of my history. The Homework Life was a blog I'd written in 2015. I looked back on that hosting account for the first time in over a year, to find two older sites: A Tech Life and Programath. The former was some&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">reflection</span> <span class="tag">brain-dump</span> <span class="tag">studio-ghibli</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/better-rtc-with-webrtc" title="View post &quot;Better RTC with WebRTC&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Better RTC with WebRTC <span class="smallText">06/24/18</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">For years, I've been trying to get at real time communication (RTC). The best I've done is using websockets, which work fairly well, but it requires a server. Now, setting up a Node.js server with socket.io isn't too bad, so that's not a problem.
+The&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">tutorial</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/introducing-babap" title="View post &quot;Introducing BaBaP!&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Introducing BaBaP! <span class="smallText">06/24/18</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">The first post on The Homework Life was published 12/17/2015, about two and a half years ago.
+The first post on Everything is Sheep was published 7/12/2017, nearly a year ago.
+And the first post on BaBaP was published 6/22/2018, some two days ago. Wo&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">site</span></p>
+        </a>
+        <a class="imgLink postView" href="/posts/senior-exit-thoughts" title="View post &quot;Senior Exit Thoughts&quot;">
+          <div class="postListPostHeader">
+            <img src="/res/img/jonathan-lam-profile-pic.png" class="postViewAuthorPicture">
+            <div class='postListPostHeaderMain'>
+              <h2 class="postViewTitle">Senior Exit Thoughts <span class="smallText">06/20/18</span></h2>
+              <p class="postViewAuthor">Jonathan Lam</p>
+            </div>
+          </div>
+          <p class="postViewPreview">Below is a short survey seniors from our school fill out online prior to an in-person interview with their counselor. Some irrelevant questions (i.e., filling out private information) has been omitted.
+
+
+Identify one of the most influential experienc&hellip;</p>
+          <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">reflection</span></p>
+        </a>
+  </div>
+    <div class="pageControl">
+      <p>Viewing page <select class="currentPage">
+      </select> of <span class="pageCount"></span>.</p>
+    </div>
+</div>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Choosing a college is just my wallet fighting my ego.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p><em>Someone in a college admitted group chat</em></p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

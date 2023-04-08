@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Optimize, Optimize, Optimize!">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/optimize-optimize-optimize">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Optimize, Optimize, Optimize!</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Optimize, Optimize, Optimize!</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 12/30/15</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">the-homework-life</span> <span class="tag clickable">the-homework-life-great</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/a-tic-tac-toe-game">A Tic Tac Toe Game</a><br>Next post: <a href="/posts/another-posting-break">Another Posting Break</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p><img class="half postImageRight" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif"><p>Again, I'm inspired to post by my wonder of programming. The digital world is something so huge, and sprung from the imagination of man. And look at what we've done!</p><p>What's most interesting to me is the power of algorithms, true <a href="https://www.cs.mtu.edu/~john/whatiscs.html">"computer science."</a> The concept of computer science is a bit different than <a href="http://www.davidbudden.com/degrees-demystified-1/">"software developers"</a> <small>(who design the programs, but not necessarily the underlying logic)</small>; it is:</p><blockquote class="quote"><span class="quoted">Computer science is a discipline that spans theory and practice. It requires thinking both in abstract terms and in concrete terms. The practical side of computing can be seen everywhere. Nowadays, practically everyone is a computer user, and many people are even computer programmers. Getting computers to do what you want them to do requires intensive hands-on experience. But computer science can be seen on a higher level, as a science of problem solving. Computer scientists must be adept at modeling and analyzing problems. They must also be able to design solutions and verify that they are correct. Problem solving requires precision, creativity, and careful reasoning.</span><span class="author"><a href="https://www.cs.mtu.edu/~john/whatiscs.html">Michigan Tech. Definition</a></span></blockquote><p>In other words, computer science is the science of the <em>principles</em> of computer science, not the <a href="https://en.wiktionary.org/wiki/superficial#Noun">superficials</a> of the code.</p><p>To explain this, I'd like to introduce two examples of simple algorithms I've found brilliant. The first is a shuffle algorithm, called the <a href="http://bost.ocks.org/mike/shuffle/">Fisher-Yates</a> shuffle algorithm. From that link, you can see how they optimized to get to this algorithm <small>(and with great animations, too!)</small>. Here is the final code directly from that link (fully annotated and written in JavaScript):</p><pre class="brush:jscript">function shuffle(array) {
+    var m = array.length, t, i;</p>
+<pre><code>// While there remain elements to shuffleâ€¦
+while (m) {
+
+    // Pick a remaining elementâ€¦
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+}
+
+return array;
+</code></pre>
+<p>}</pre><p>It's so simple (and <a href="http://blog.codinghorror.com/the-danger-of-naivete/">unbiased</a>), but I don't think I would've ever figured it out, even given unlimited time. Here's a brief summary of what it does:<ol><li>Inputs an array to be shuffled</li><li>Chooses a random array element from the beginning to the end</li><li>Swaps the random one and the end one</li><li>Chooses an array element from the beginning to one before the end (avoid taking that shuffled one)</li><li>Swaps the random one and the one before the end</li><li>Chooses an array element from the beginning to two before the end</li><li>Swaps the random one with the element two before the end</li><li>Repeats until everything is random (runs out of elements to choose from)</li></ol><small>(Sorry if it's a little unclear &mdash; I tend to explain rather poorly, so make sure to check the original link)</small></p><p>The second algorithm that fascinated me is the <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a>, a prime number generator.</p><p>All I had known with my insufficient insight was to divide a number by every whole number from two up to and including its perfect square root (if it had one) and check for any remainder. If any number had a remainder (if it was evenly divisible by a number), then it was composite; otherwise, it was prime.</p>Here is my original algorithm (written in Java):</p><pre class="brush:java">public class TrialDivision {</p>
+<pre><code>public static void main(String[] args) throws Exception {
+
+    // initialization
+    int N = Integer.parseInt(System.console().readLine("Enter the max value: "));
+    long start = new java.util.Date().getTime();
+    boolean[] primes = new boolean[N];
+    for(int i = 2; i &amp;lt; N; i++)
+        primes[i] = true;
+
+    // trial division
+    for(int i = 2; i &amp;lt; N; i++) {
+
+        // optimization techniques
+        if(((double) i % 2) == 0) {
+            if(i == 2)
+                continue;
+            primes[i] = false;
+            continue;
+        }
+
+        for(int j = 3; j &amp;lt;= Math.sqrt(i); j += 2)
+            if(((double) i % j) == 0)
+                primes[i] = false;
+
+    }
+
+    // printing and counting
+    System.out.printf("Time: %dms.%n", new java.util.Date().getTime() - start);
+
+    if(System.console().readLine("Print? y for yes: ").equals("y")) {
+        int count = 0;
+        for(int i = 2; i &amp;lt; N; i++)
+            if(primes[i]) {
+                count++;
+                System.out.println(i);
+            }
+        System.out.printf("Count: %d%n", count);
+    }
+
+}
+</code></pre>
+<p>}</pre><p>This had worked fine for me, until I reached this particular problem on <a href="http://www.projecteuler.net">Project Euler</a>, a site full of intense programming logic and math puzzles: </p><blockquote class="quote"><span class="quoted">The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. Find the sum of all the primes below two million.</span><span class="author"><a href="https://projecteuler.net/problem=10">ProjectEuler.net Problem #10</a></span></blockquote><p>My brute-force program had worked, but it had taken a few <em>hours</em> to complete. (The above program is actually much more optimized than the one that I originally used, and it would take about 16 seconds.) However, when I looked in the forums for others' answers, I found that many of them had used a function called "ESieve" that had taken them a few hundredths of a second to complete. I searched it up on Wikipedia, and it was amazing. It simply "sieved" out the multiples of all numbers below a number's square root. I adapted the algorithm to Java:</p><pre class="brush:java">public class ESieve {</p>
+<pre><code>public static void main(String[] args) throws Exception {
+
+    // initialization
+    int N = Integer.parseInt(System.console().readLine("Enter the max value: "));
+    long start = new java.util.Date().getTime();
+    boolean[] primes = new boolean[N];
+    for(int i = 2; i &amp;lt; N; i++)
+        primes[i] = true;
+
+    // sieving
+    for(int i = 2; i &amp;lt; Math.sqrt(N); i++)
+        if(primes[i])
+            for(int j = (int) Math.pow(i, 2); j &amp;lt; N; j += i)
+                primes[j] = false;
+
+    // printing
+    System.out.printf("Time: %dms.
+</code></pre>
+<p>", new java.util.Date().getTime() - start);</p>
+<pre><code>    if(System.console().readLine("Print? 'y' for yes: ").equals("y")) {
+                int count = 0;
+        for(int i = 2; i &amp;lt; N; i++)
+                        if(primes[i]) {
+                                System.out.println(i);
+                count++;
+            }
+        System.out.printf("Count: %d.
+</code></pre>
+<p>", count);
+        }</p>
+<pre><code>}
+</code></pre>
+<p>}</pre><p>This program finished in the ballpark of <em>1.1 seconds</em>! It really was so simple (and even shorter than the original algorithm). I discovered this over the summer and it hasn't ceased to amaze me since.</p><p>I was just informed that there is even a specific way of measuring or determining the speed of certain functions, called the <a href="https://en.wikipedia.org/wiki/Big_O_notation">"Big O Notation"</a>. I'm not really sure how it works or what it does, but it is interesting what we have come up with even to represent the rate of such an artificial process.</p><p>In summary, what intrigues me most about programming is the beauty behind the mathematics and sciences of it: there's (almost) always a better method to complete a task, and you'll always be learning fascinating new way of doing!</p></p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/a-tic-tac-toe-game">A Tic Tac Toe Game</a><br>Next post: <a href="/posts/another-posting-break">Another Posting Break</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                I want to be like water. I want to slip through fingers, but hold up a ship.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Michelle Williams</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

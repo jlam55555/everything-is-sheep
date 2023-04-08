@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: The High School Life">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/the-high-school-life">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: The High School Life</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">The High School Life</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 02/05/16</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">the-homework-life</span> <span class="tag clickable">the-homework-life-thought</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/introducing-flappy-bird">Introducing Flappy (Bird)!</a><br>Next post: <a href="/posts/goddam-profanities">Goddam Profanities</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>I had this post idea lower on my to-do list, but its increased relevance to my life because of recent events has urged me to write about it immediately.</p>
+<p>Last week, a boy from my grade and six of his friends broke into the house of another boy because of a drug debt. Even more recently, a fight broke out at the school, in the <em>main lobby</em>.  The one who attacked was rumored to have drugs in his backpack. Both of the situations were handled by the police and the aggressors were taken into custody.</p>
+<p>In the crazy world of today, this might not seem like big news. In the grand scheme of things, it certainly is not. I try to keep myself out of high school drama, and it often works out just fine. I keep away from the kids who are known to be troublesome, and they don't bother me. I try to hold myself in high esteem in this respect&mdash; I like to stay out of trouble and drama. I ignored both of these events without a thought.</p>
+<p>But recently, the realities of the high school life I'm living are starting to hit hard. It began with simple stereotypes of high school living, such as in <a href="https://en.wikipedia.org/wiki/Diary_of_a_Wimpy_Kid"><em>Diary of a Wimpy kid</em></a>, which I now realize is about the transition to middle school, but the same principles apply. High schoolers are known to be pushy. To be jocks. To be thick-headed athletes, teens who don't know any better but to use their youth to their violent advantage.</p>
+<p>But when I entered high school, I noticed a different reality. I didn't realize that <em>all</em> adults, including all the rich and successful people in this world, were high schoolers once. High school is a time to foster knowledge, a place to grow just like primary school or college. I quickly got caught up with the academic workload, and realized that high school is rigorous, and high schoolers have to be smart. It's a time when competition actually starts to set in when the socialist "everyone has the same learning capability" ideas from middle school end. There is no safety net. High schoolers either soar or fall into the abyss of a "nobody." Academics is the same: you have to try, or you won't get anywhere. And I noticed that many people turned their efforts to this aspect of life because academics weren't nearly as interesting. My views were different, and I never ceased to notice the scholastic gains I was achieving.</p>
+<p>This year, the stereotype started falling in. Many of my friends and the people I knew well gave up. Many people simply did the minimum they could to get by, losing their efforts to achieve; I'm beginning to feel the same way as well. The problem is, we are a well-established, white-dominated, rich society of <a href="https://en.wikipedia.org/wiki/Immigrant_generations#In_the_United_States">third- or fourth-generation</a> children, who have lost their sight of the American Dream. Of the hopes of a good future. They lose their ability to compete because they already have it all. Take it for granted. They don't realize that there are others out there, fighting to survive and make a living, while we feed off of our parents and are not expected of much at all.</p>
+<p>And to make matters worse, people have become increasingly affiliated with drugs. I heard little gossip about it last year, that <em>so-and-so was doing this at that place</em>. But this year, these two events had names in them. Names of people I know&mdash; they're in my grade! And although I don't know them well because of their sub-optimal reputation, I still feel somewhat fearful that the problem nearing me.</p>
+<p>I hate gossip. I really do. So when the news hit the papers and my parents brought it up at dinner, I told them the story, told them I heard only rumors and nothing too certain (although likely true), and told them that I wanted to hear no more of it. That was the end of it&mdash; we need not talk about it, and that's that. I'd hate to find out that I was incorrect because of some rumor and incorrectly place blame.</p>
+<p>But, being the unrelenting parents they are, they disregarded me. And, being the ignorant child I am, I left the dinner table and stormed up to my room to continue my homework, away from that unrest. After all, I'd warned them, and I really was fed up with the news of the fight, which had already spread throughout the school within an hour or two.</p>
+<p>The sudden quiet of the room hit me. We had just been talking about the subconscious in English class. What was dictating my actions? Did I really have complete control over my own thoughts and actions? And am I avoiding this discussion simply to avoid the problem? Was I <em>scared</em> of the drug problem at school? And it turns out, I am.</p>
+<p>I didn't realize it before, but I would have no idea what to do in a situation where a person close to me&mdash; family or friend&mdash; turned to a vice. Now, being fully rational (albeit a bit tired), I would say to myself without further justification that I would go straight to authority and report it. I value health of those near to me more than their anger at me. If I can solve their problem, why shouldn't I? But I might be lying to myself. I am unsure of my own psychology.</p>
+<p>And that is the story of my high school career turned on its head. I have a second side to look at it, one closer to "real life." But it makes sense: high school, like any school, transitions you to the next stage. And the next stage is college or work. You get to decide. Those who strive for improvement (and those forced by their parents) will turn to college; the others to various other paths. The important thing is that <em>you</em> have the choice over your own actions. And in high school, <em>you</em> learn that power; but it's up to <em>you</em> not to be led astray.</p>
+<p></p>
+<blockquote class="quote"><span class="quoted">If you make a decision, can you handle the consequences?</span><span class="author">Coach Brown</span></blockquote>
+<p></p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/introducing-flappy-bird">Introducing Flappy (Bird)!</a><br>Next post: <a href="/posts/goddam-profanities">Goddam Profanities</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                If we quit voting, will they all go away?
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Bumper Sticker from <a href="https://www.amazon.com/Uncle-Triumphant-Anniversary-Bathroom-Reader/dp/1592230938"><em>Uncle John's Triumphant 20th Anniversary Bathroom Reader</em></a></p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

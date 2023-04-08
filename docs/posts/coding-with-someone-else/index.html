@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Coding with Someone Else">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/coding-with-someone-else">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Coding with Someone Else</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Coding with Someone Else</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 09/18/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">brain-dump</span> <span class="tag clickable">essay</span> <span class="tag clickable">reflection</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/little-things">Little Things</a><br>Next post: <a href="/posts/midnight-memoirs">Midnight Memoirs</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>So… I needed help to get help. What happened was, it was late in the competition. We only had about an hour and a half left. It was about 10:30, and I was trying to solve the last challenge in the competition. There were three challenges. The first was to code an interactive demonstration of something mathematical— of your “coolest mathematical concept,” they said— and create a demonstration for their exhibit called the “Math Square,” which was essentially a huge touchscreen on the floor, with which multiple people can interact with at once. Another exhibit was a dynamic wall, which was a “wall” comprising 128 blocks, with servo motors on the top and bottom of each block to give each one the ability to move its two ends independently. The last challenge, and because this was a math museum, was to use a programming language called Mathematica, which was developed by Wolfram Alpha. The purpose of using this language was that Stephan Wolfram, the creator of Wolfram Alpha, designed this language to be very easy to use, very versatile, especially for use with mathematics, and he is also a friend of the museum’s founders.</p>
+<p>From the last hackathon, I learned that it was a great idea, in order to get more prizes, to use all of the possible technologies. Because in the last hackathon, there were all these APIs— I remember there was Yelp, and a company called Stripe— and if you used those APIs, you got essentially free “best API implementation” prizes because almost no one used them. So I decided to use Mathematica.</p>
+<p>So it was 10:30 in the morning, and the competition ended at 12:00, when we had to submit all of our projects, so I was rushing. We did not attend the Mathematica tutorial the day before, because we thought it would take too long. I don’t think that was our downfall, though. I couldn’t think of anything too mathematical that had not already been done. So I just tried to use the Mathematica language, and tried to explain it in a way that could be construed as highly mathematical. </p>
+<p>So what I did was, I inputted some text, and it used Mathematica’s ability to analyze big data in order to create a word map of the most important words in the text. The algorithm I developed to determine the word frequency calculated a score for every word in the text that was <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf" title="Only later did I realize that this was actually an empirical rule already used in existing algorithms such as td-idf (see link)">proportional to its frequency inside the input text and inversely proportional to its frequency in historical literature</a>. Then it took the top few words, and created a word cloud that indicated word score by font size. I thought this would be a cool idea. Again, it was mainly to demonstrate an application of Mathematica more than of mathematics, but it did use a little bit of science to discover useful coefficients and variables to use— at first I tried to find groups of synonymous words in the text, but this did not generate important words. I just looked across the different properties that the Wolfram Alpha Cloud had available, such as word frequency within the human language, like Google’s N-gram viewer but packed into a succinct line of code. </p>
+<p>At first I tried to create an API, because one of the cool things about Mathematica is that it is very easy to create an API, and I did it— I think. I think I made it. But it didn’t really work. And this was around 11:00 in the morning. I couldn’t figure it out. At that time, we were kind of getting desperate, because we were still trying to get our other submissions to work. The other ones were mostly working at the time, but this one was not, and I wanted to get this prize.</p>
+<p>Chris was telling me to talk to the person who came from Wolfram Alpha who gave the tutorial and was present to help out anyone in need. And also to give out the merchandise, of course. But I didn’t want to. I said, no, no no. I can figure this out myself. At that time, I was obviously very exhausted. It was not a good time. Instead of going to him, for the next fifteen to twenty minutes, I just tried to figure it out. I thought, it just worked, I just created this API. Maybe I changed something, maybe it broke, but I’ll just keep trying to do it. It was a very complicated statement, the algorithm; and then when I tried to access the API in JavaScript, the CORS permissions didn’t work on that end either. So I told Chris that there were too many things wrong with the project. Even if he could help me with Mathematica, JavaScript remained broken. There was no way he could solve all of my problems. So it wasn’t worth it.</p>
+<p>So I’m the kind of guy who used dozens of whitespace entities to try to center text on a monitor. Then I learned to use the now-deprecated centering HTML tag. And a few months later, I learned the more modern CSS text-align property that is by far the cleanest and most versatile. As long as I can get it right, it’s best if I can figure it out myself.</p>
+<p>So I didn’t explain it too much to Chris and Julian, because they were focused on polishing up the other programs while I focused on this one, and because of my selfish want to finish this— alone. But I just kind of felt bad, because I didn’t know how to collaborate with them. I didn’t know how well it would have worked out. So, after those fifteen minutes, I told Chris that he could ask the Wolfram representative. But I didn’t have the guts to go with him. I’m shy, but this felt like a defeat in the face-off with the Mathematica error, desperate. </p>
+<p>But I ended up going with him, and the man asked what we needed help with, and I just told him that this API was giving me this error that I couldn’t find a solution to online, and he said he’d look it over. Within seconds of deconstructing it, he found out that one of the ten nested brackets was in the wrong place. I thought I had had everything right, but it must have broken when I extended the program’s capabilities, but he fixed that oh-so-simple error. And that was that with Mathematica.</p>
+<p>I still couldn’t get the JavaScript end of the API to work. But now that the server-side Mathematica code was working, I had a little more inspiration. We didn’t have much time, so I finished the program in Mathematica, creating a graphical user interface within Mathematica consisting of an input box and a space for the output word cloud. Simple as that.
+In the end, that was our fifth project. We essentially won the competition. We finished first in the Dynamic Wall, were one of three finalists in the Math Square, and won the Mathematica award for using Mathematica proficiently.</p>
+<p>One of the judges, during the judging rounds, said that we had a winning formula. But that made me feel really bad. My teammates were giving me all the credit because I didn’t go out with them to buy a snack at 3:00 in the morning and it seemed like I was doing the most work, because I was independent staring at my computer for the longest time, writing the most code, staying mysterious and non-transparent. They created the Dynamic Wall on their own— they worked together, they shared computers and code, they won their exhibit. And I worked on the Math Square, started projects that I didn’t finish. And then I went to work on the Mathematica project— which I never would have finished without Chris— while Julian finished the Dynamic Wall and Chris finished the Math Square.</p>
+<p>On the way home, that left me thinking, because that need to collaborate— I’ve never felt it before. It’s crazy. I learned then that you need to work together with others. You can’t do it yourself. That guy said we had a winning formula. He asked if we had done other hackathons together. I said, yes, we did one before, but I thought later that it was almost the same. It was Chris and me, as well as two other kids we met. We did not really interact with them. We just talked with them. I went my own way with a website, they went their own way with an Android app, and Chris came up with the idea and sort of went his own way as well with the deeper understanding. We ended up third, which is not a terrible position, but it could have been so much better. It’s funny— at the Museum of Math’s hackathon, one of the judges didn’t even realize that I was on the team— she asked my teammates, did you pick up this member throughout the night? She hadn’t seen me when they were busy testing our projects. And they said, no, no, no, he was busy coding and doing the hard work while we were testing. And I feel bad, because that’s not the truth.</p>
+<p>Another point that I can add is that there was another person that tried to join our team. He seemed so dismayed halfway through the competition. He didn’t have a team, he just came by himself, but he asked us if he could work with us. And he came to work with us. He seemed really determined, he had a good idea from the beginning when none of us did.</p>
+<p>But he left halfway through the competition to go home, he said. This was in the middle of the city, and people were free to go home to rest if they wanted. But he never came back. He would have won with us. But he missed out. Because he didn’t collaborate. Couldn’t collaborate. And I think that’s the biggest problem with group projects.</p>
+<p>Even if you do all the work by yourself, it’s not the best project. You need multiple opinions. You need more people. Even all those group projects at school. It’s different. I feel like I need to code with someone else, and I feel that idea has become more and more prevalent. I’ve been coding apps with increasing proficiency, but nothing is quite like coding with someone else.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/little-things">Little Things</a><br>Next post: <a href="/posts/midnight-memoirs">Midnight Memoirs</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                The &quot;paradox&quot; is only a conflict between reality and your feeling of what reality &quot;ought to be.&quot;
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Richard Feynman</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

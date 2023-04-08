@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Making Decisions as a Lonely Sisyphus">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/making-decisions-as-a-lonely-sisyphus">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Making Decisions as a Lonely Sisyphus</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Making Decisions as a Lonely Sisyphus</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 11/19/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">literary-synthesis</span> <span class="tag clickable">essay</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/excerpts-from-hamlet-analysis">Excerpts from Hamlet Analysis</a><br>Next post: <a href="/posts/abstracting-chaos-a-universal-goal">Abstracting Chaos: A Universal Goal</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>A brief literary synthesis for English class about the short story "Eveline" by James Joyce and Shakespeare's play <em>Hamlet</em>. Written 11/10/17.</p>
+<hr />
+<p>"Making Decisions as a Lonely Sisyphus"</p>
+<p>Hamlet and Eveline are both presented with problems that have clearly-defined but difficult options to choose from. For Hamlet, the issue is the revenge of his father’s death by killing his murderous uncle, and for Eveline the chance to run away with her love to escape the harsh life under her almost-abusive father.</p>
+<p>Neither of the two characters can make their decisions conclusively. Hamlet resolves to take revenge on Claudius after he is informed by the ghost of his father of the details of the murder, but he does not resolve to kill the king right away, taking his time to resolve any doubt of Claudius’s guilt. After the guilt is confirmed, Hamlet reasons that he should kill Claudius only when sinning. After seizing letters written by the king directed to kill Hamlet, the prince returns to Denmark and yet again misses his chance to kill the clearly-guilty king. In Eveline’s case, her thoughts go between thinking about “her promise to keep the home together as long as she could” (2) and her love for her fiancé, between the fact that “[her father] could be very nice” (2) sometimes to the madness of his aging.</p>
+<p>While Hamlet and Eveline come from very different social backgrounds, their second thoughts are both caused by the similar social pressures. The apparent courses of action (that they do not readily realize) are the result of self-oriented motives. The benefits are not equally shared upon the public.</p>
+<p>Hamlet’s revenge for his father would, in his father’s words, “let not the royal bed of Denmark be \ A couch for luxury and damnèd incest” (1.5.89-90), but it involves bloody combat and has the ability to throw the nation in a state of kingless anarchy or confusion, as well as the strife of his mother and the king’s comrades. It satisfies a personal hunch and the restoration of the royalty’s honor but has the ability to destabilize a nation.</p>
+<p>Similarly, Eveline’s pursuit of personal fulfillment would benefit her husband-to-be and herself, but hurt her close family and perhaps the town around her. To dissuade some of the guilt for the latter, she tells herself that “Miss Gavan would be glad” (1) and that they would “say she was a fool” (1) — that perhaps they will be happy she had left. But the fact that she yearns for the return of the good days of her youth, in that same hometown with the people before they left, implies that she probably has the same impact on the remaining people in the city. Her leave will hurt those friends who have the same happy memory of her as she had of her friends.</p>
+<p>Thus the epiphany in both of these stories is in the realization of the broader social effect, a subconscious restraint on egocentric passion. This is embodied by the ominous words that Eveline remembers her mother saying: “Derevaun Seraun!” (3) which means “At the end of pleasure this is pain” (“Derevaun Seraun - Eveline”). An ostensibly simple success of either of the two’s decisions could be the harbinger of many nasty greater repercussions, and it is therefore unwise not to act right away. These epiphanies provide necessary restraint against rash action.</p>
+<p>But while Hamlet’s and Eveline’s actions are properly checked, they also lack timeliness. And the key to that— an unfortunate trait both characters have— is the fear of mutual trust. </p>
+<p>Hamlet trusts nobody except Horatio and the guards, who already knew about the existence of the ghost before he did. In an effort to contain his revenge plot to a personal matter, he maintains an air of secrecy and an “antic disposition” (1.5.182). While he successfully hides the problem from his old friends Rosencrantz and Guildenstern and even his loved one Ophelia, his extended play of insanity drive them all to their demises. He kept a secret, but all too well— nobody around him knew of his plot and could give him good counsel. Hamlet tested the unconditional loyalties of his old friends Rosencrantz and Guildenstern, of Ophelia and his mother, all while acting mad; naturally, they all responded poorly, and Hamlet took this to mean that they were untrustworthy. He doesn’t understand the idea of mutual trust— perhaps if he had confided in Ophelia in a normal manner, his mind would be clearer and she would not be driven to her own mental illness and death, egged on by his insulting words: “Get thee to a nunnery” (3.1.131). Similarly, Eveline does not tell of her plans to run away to her brothers or friends, so she only has the her own aforementioned selfish and societal views to guide her, and nothing else. She believed she “had nobody to protect her” (2), thinking only to her brothers (one dead and one often far away) and dead mother, but never to her fellow friends. Of course if Hamlet had told the King (whom he sought to murder) his plan, or if Eveline had told her father her plans, there would have been consequences. But the similar tragedy, and the ensuing madness, is caused by a ubiquitous and constant suspicion that inhibits their ability to lend trust (without proof of absolute loyalty).</p>
+<p>Without someone else to help, both Eveline and Hamlet get stuck in a deadly pattern of ambivalence, working up their passion almost to a sense of achievement before dashing their own hopes with some contrasting epiphany. This is the “hemiplegia or paralysis,” the inability to move or advance, that Joyce sees in Dublin’s characters such as Eveline. They push Sisyphus’s rock up his hill and dropping it on themselves, over and over. A true friend breaks the tedium by convincing the friend to leave the rock alone or by pushing it over the hill’s crest.</p>
+<pre><code>Bibliography
+“Derevaun Seraun - Eveline.” &lt;https://evelinehyperfiction.weebly.com/derevaun-seraun.html&gt;. 
+Joyce, James. “Eveline.” Dubliners.
+Shakespeare, William. Hamlet.
+</code></pre>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/excerpts-from-hamlet-analysis">Excerpts from Hamlet Analysis</a><br>Next post: <a href="/posts/abstracting-chaos-a-universal-goal">Abstracting Chaos: A Universal Goal</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Before I got married I had six theories about bringing up children; now I have six children and no theories.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>John Wilmot</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

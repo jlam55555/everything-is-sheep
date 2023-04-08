@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: On Keeping a Notebook">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/on-keeping-a-notebook">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: On Keeping a Notebook</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">On Keeping a Notebook</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 11/25/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">brain-dump</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/svgs">SVGs</a><br>Next post: <a href="/posts/an-impromptu-preacher">An Impromptu Preacher</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>I used to hate writing in a notebook. They were far too clunky. Loose leaf proved far more practical. There was no need to keep seven notebooks, one for each subject, in my backpack; instead, I could keep just the amount of paper I needed. I could then gather together the papers from the last unit and store them away in my rooms hoard of old schoolwork (88 pounds of pure paper, the last time I checked).</p>
+<p>But how the times have changed! I'm writing into a notebook now, and I don't see myself stopping. I even often write into a notebook first, and then rip it out to put in my binder. It might not be more practical, but it is more likeable.</p>
+<p>I think the most logical reason for this change of heart is that my focus has changed. Loose leaf may work better if the focus is purely academic, but it longer is for me.I only realized that this year (senior year of high school&mdash; late, but not too late) when the curtain of standardized testing and college essays fell. These revealed the forests of sturdy oaks that stood behind the many sheets of paper used in those standardized tests and homework assignments. The strong, durable, hardworking pillars of society, the people of the job market and the great corporations built upon them. So my paper began to open up for other purposes. Drafting essays like this, for example.</p>
+<p>Previously, I had drafted essays almost exclusively on a computer. I can type at over 100 words per minute, so typing must certainly be quicker&hellip; right? Wrong. No matter how much of a computer enthusiast I am, I know that (at least for the foreseeable future) no computer will have the same feeling of crossing out, highlighting, and crumpling-out-and-tossing-into-the-trash-can-over-your-shoulder kind of feeling. Plus, if you can't think quicker than you write, what's the point of this increased efficiency? (It's the same withe Rubik's cubing&mdash; a general principle is that you don't need a faster cube if your mind cannot keep up with your fingers.) Study guides and flashcards were also completely digitalized in freshman year. But since then, I haven't the time to type up those 20-page goliaths or detailed Quizlet sets, and it hasn't impacted my grades too much. I guess what I got out of those was the discipline.</p>
+<p>But what a notebook does best is capture a sense of time&mdash; the depth of the writing, a physical record of experience. This is only my second notebook, but as I look back on the dilapidated and scribbled-through first edition "Notebook of Things," as I've dubbed it, it makes me glow. I wrote that. All 140 pages of that (even if some are missing from the notebook). </p>
+<p>My inspiration for writing a notebook came from a peer of mine who I encountered at a MIT seminar. He carried a notebook, in which he had some questions prepared to ask the speaker. Not too unusual. What was unusual was that it had all of his other notes&mdash; regular notes from school, from school clubs, from interviews. And this kid is one of the most successful students and leaders in my class. When he helped me again later to prepare for an interview, he heavily suggested that I keep a notebook at hand.</p>
+<p>So I copied him.</p>
+<p>And it was beautiful.</p>
+<p>It's not the only thing I've picked up from others, so that my perspective has completely turned around only when I've experienced it. Another is writing with pen. While I used to think this highly impractical (you can't erase it!) I've begun to see the practicality of it. I write almost exclusively in (gel) pen now when I have the choice. Gel and fountain pens, merely by merit of less friction, greatly reduce fatigue when compared to writing with pencils, especially dull pencils. (They also make writing mathematical expressions really elegant.) And about two years ago, I discovered the fun in blogging (and programming all the while) and I haven't completely stopped since. Hurrah!</p>
+<p>While it may not be as logical to use a notebook as opposed to loose leaf paper, it has made such a difference. I can write an essay onto a notebook with a Pilot G-2 gel pen about writing an essay on a notebook with pen, by my bedside, with a sun lamp turned on, leaned over sideways. Can't do that with a laptop. Or with pencil and paper (eraser shavings). Or with loose leaf (paper will fall everywhere).</p>
+<p>But a notebook is just right. It keeps together, is a pen-holder, clipboard, and transformable binder-paper all in one, and is just the right size.</p>
+<p>If you haven't tried it, I urge you: please do. It will change you.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/svgs">SVGs</a><br>Next post: <a href="/posts/an-impromptu-preacher">An Impromptu Preacher</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                There’s nothing wrong with you that reincarnation won’t cure.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Jack E. Leonard</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

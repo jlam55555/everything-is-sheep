@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Grendel’s Crisis: Aesthetic Nihilism">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/grendels-crisis-aesthetic-nihilism">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Grendel’s Crisis: Aesthetic Nihilism</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Grendel’s Crisis: Aesthetic Nihilism</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 11/19/17</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">literary-synthesis</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/dont-be-indifferent-deign-to-be-human">Don’t Be [In]different: Deign to be Human</a><br>Next post: <a href="/posts/excerpts-from-hamlet-analysis">Excerpts from Hamlet Analysis</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>A literary synthesis for English class focused on John Gardner's <em>Grendel</em> (again). Written 10/21/17.</p>
+<hr />
+<p>"Grendel's Crisis: Aesthetic Nihilism"</p>
+<p>Billboards, magazines, and social media always promote the smartest, richest, and most beautiful people in the world. The people living the dream of commoners. But can it be useful to create unrealistic standards— or beautiful illusions— for ordinary humans? In his novel Grendel, John Gardner explores the idea of illusion in society through Grendel’s questioning of human society. Modern society is formed on illusion, and the ones to best protect or destroy society are the ones who best understand the nature of illusion, especially when it comes to beauty.</p>
+<p>--</p>
+<p>Grendel is the clear enemy of society, the monotony of his lonely days broken up only by the drama of faux-heroes such as Unferth or war between nation-states. Human civilization was younger than he is, and he often breaks into the meadhall and kills many men because he feels the obligation to do so. After meeting with the dragon, he realizes that his purpose is to “improve the humans] … stimulate them! … make them think and scheme” (Gardner 72). At which point Grendel realizes that there is an ultimate consequence, his motive behind the twelve years of the previously “idiotic war” (5) on the humans.
+However, the complete destruction of Hrothgar’s men is opposed by two people, before the hero Beowulf. Ordinary people with no extraordinary skill in wielding swords, but instead the truth.</p>
+<p>The greater of these two heroes is the Shaper. His songs “had changed the world, had torn up the past by its thick, gnarled roots and had transmuted it, and they, who knew the truth, remembered it his way—and so did [Grendel]” (Gardner 43)— he dictates that the people’s past was glorious, and that there is evil in the world that would plague the humans. “Grendel … was the dark side, he said in effect. The terrible race God cursed” (51). While this is a pivotal moment in Grendel’s journey of becoming a monster, as he proceeds to meet with the dragon to find his own purpose, the Shaper impresses on Grendel as an impregnable defense for the humans. The Shaper’s poetry forces Grendel back to his cave, bawling, reflective on the humans’ view of himself.</p>
+<p>Poetry is “a made thing,” according to the TED talk “Why people need poetry” by Stephen Burt. The expert poet is in fact an expert illusionist, capable of “introduc[ing] you to feelings, ways of being in the world, people, very much unlike you, maybe even people from long, long ago” (Burt). With a childhood devoid of human beings, Grendel’s only view into the emotions that people contain— those of pride, of love, of the joy of living— are through the Shaper’s words. The ability of poems to cause a person to believe for a moment that they are someone else— perhaps even a fictional character, the ultimate happy or sad person, however the poet wishes— pervades Grendel with such human contentment that he forgets the monster that he is.</p>
+<p>Of course, the dragon dismisses the Shaper’s illusion as simply a method to keep them going. He believes that poetry is whimsical, that the Shaper “spins [an illusion of reality] all together with harp runs and hoots, and they think what they think is alive, think Heaven loves them” (Gardner 65). To the dragon, who is able to see indefinitely through time and space, poetry is simply a whimsical form of art. He doesn’t see the practical side of poetry that allows lesser beings to experience life more fully through the illusion of imagination.</p>
+<p>At this point, the dragon’s theory is instilled upon Grendel and he discovers a loathing for poetry and all superficiality in mankind. The war on humans begins. The “charm” (75) of invulnerability Grendel discovers the dragon put on him is simply a metaphor for Grendel’s newfound realization: that, despite all of the Shaper’s glorifying words of a mighty human history that the men and Grendel had begun to believe under the influence of the poems, there is no truth. The poetry is a facade, and Grendel knows it— the ultimate skeptic of humankind.</p>
+<p>Interestingly, Grendel’s own words become poetic (“He stares strange-eyed at the mindless world and turns dry sticks to gold” (49)) and he realizes that all of his own thoughts are “spinning a web of words, pale walls of dreams” (8). While he consciously wages a war on the humans for the sense of artificiality that enrages him, he subconsciously puts to use poetry to express complex thoughts that regular language cannot contain. At this point, he reaches the level of human intelligence, according to its definition by Susanne Langer in her essay “Language and Thought,” which states that human intelligence is distinguished from bestial intelligence by the ability to use symbolic language pragmatically. A hypocritical satirist.</p>
+<p>The second commoner that completely revolutionizes Grendel’s philosophy is Wealtheow, a symbol of beauty, innocence, and political formalities. Grendel believes that “any simpering, eyelash-batting female in her court, given the proper setup, the minimal setup” (Gardner 102), that her beauty is a despicable form of worth because there it is only a physical characteristic; but she is beautiful. Her image and innocence “tore [Grendel] apart as once the Shaper’s song had done” (100). Grendel becomes so vexed about the meaning of her beauty that he takes the unusual opportunity to raid the meadhall in the winter to destroy Wealtheow, only to stop before killing her after once more realizing her innocence that reminds him of the “Baby Grendel that used to be” (110). Like the Shaper’s song, her beauty truly means nothing— she is no different than if she were ugly— but it represents a greater idea. An idea with the power to influence people.</p>
+<p>Beowulf is Grendel’s final mentor on the idea of illusion. He begins to present the same nihilistic view as the dragon, but it changes. “You make the world by whispers” (171) whispers Beowulf to Grendel. In other words, everything is how a person makes it out to be— this is the opposite of the dragon’s philosophy that fate is predetermined and fixed. The wall that Beowulf smashes Grendel’s head against is only a figment of Grendel’s imagination. Beowulf makes Grendel sing poetry about it to emphasize its illusory property. The dragon’s charm is an illusion as well, believed true by Grendel; Beowulf is able to defeat Grendel in spite of it because he realizes the illusion that even Grendel cannot notice, he can see another level of illusion.</p>
+<p>What gives Beowulf this ability is the difference in ideology between the dragon’s and his own. While Grendel and the dragon believe that nihilism enables them to terrorize society, as every life and death is inconsequential, Beowulf rejects this outcome. He instead focuses on a different theory known as “optimistic nihilism”— that people should always take the opportunity to make constructive choices and eliminate evil whenever possible. Beowulf clearly juxtaposes the two philosophies with his diction— he tells Grendel’s world of “murder,” “burning,” “dark nightmare-history, time-as-coffin,” but also of an alternative nihilism, where “time is the mind, the hand that makes (fingers on harpstrings, hero-swords, the acts, the eyes of queens)” (170). In his eye, in the human eye, meaning is something to be constructed like poetry, a more fundamental force than that of destruction. Monsters will menace society, but good— the beautiful poetry and the innocent youth— will always prevail.</p>
+<p>Thus Grendel’s philosophy is flawed and he is destroyed.</p>
+<p>--</p>
+<p>In contrast to the heroes and monsters, the rest of society fails to notice the illusion, and this allows a civilization to continue. For example, Hrothgar’s people see Grendel’s attack on and Beowulf’s defense of the people as simply as that: the classic monster-and-hero story. If society were represented by Plato’s Allegory of the Cave, the heroes and the monsters fight in front of the fire, casting their shadows on the walls. The rest of society are the prisoners in the cave, only able to judge the fight by the size of the shadows on the walls. They come up with the names “hero” and “monster” for the human shape and the larger, hairier, (presumably) more dangerous shape. Least of all do they realize that their shadows are not the reality. In actuality, the hero sees the monster as much more than simply a “monster” — it has a name, a personality, hateful qualities, even the occasional moment of goodwill. The monster has thoughts, has philosophies, is struggling with the idea of beauty and illusion, and the hero has his own respective beliefs.</p>
+<p>Similarly, Unferth, the aspiring hero, makes the superficial divide very clear between himself and Grendel. He repeatedly tries to condescend on Grendel by emphasizing his bestiality, whether by calling him “monster” (Gardner 82) or “foul thing” (83) or “dread creature” (84) or “wretched shape” (84). Attempting to label Grendel as a monster and not the intelligent creature that he puts Unferth at a disadvantage in the fight, and therefore he loses the fight. He does not understand as Beowulf does that the fight is not of brawn but of ideological. Grendel notices that Unferth is almost mentally prepared to “fight with men instead of poor stupid animals” (83) on their first encounter, but rejects the idea and is thus unprepared to fight Grendel’s cleverness. Grendel easily discovers that Unferth’s hero qualities are false and easily defeats him with the dragon’s charm, homologous with his own defeat by Beowulf.</p>
+<p>There is an inherent tendency of humans to over-generalize that makes so many people “ordinary” (i.e., neither monsters nor heroes). Humans “gave the clock a face, \ the chair a back, \ the table four stout legs” (Mueller 3-5) to feel safer in a world of personified entities. Humans group “inert, static, motionless, fixed and immobile” (Collins 13) together in thesauruses in order to make composing literature easier. The reason why the Shaper’s words and Wealtheow’s beauty is so influential to the people is that people are conditioned to mistaken objects for the ideas they represent and forgetting how they actually exist. The mainstream education of poetic nursery rhymes and an implementation of a large, occasionally-redundant vocabulary causes these two misleading systems of generalization.</p>
+<p>It follows then that the most influential members of society often have a non-conventional upbringing. This is simply said for Grendel, who is born in a cave, isolated from other intelligent beings. He observed the world as it was, not learning the whims of language and the discriminations of society— the education of morals. The original epic Beowulf states that Beowulf “was fostered out by [his] father, \ left in the charge of [his] people's lord” (Beowulf, 2428-2429), so he too was lacking in the moral education carried out by family.</p>
+<p>By this logic, Hrothulf, nephew of the aging king Hrothgar, is raised by a common peasant to realize cold, hard, Machiavellian values on governance. He realizes that the formalities of government are merely “stinking fraud” (119), which shows his ability to see past the Shaper’s illusion and gives him the potential to be the next major hero or monster in Hrothgar’s kingdom. What will determine which path he will take is whether or not he masters the art of aesthetic illusion.</p>
+<p>--</p>
+<p>In a letter to Susie West, Gardner wrote that “It's better to be wrong, even foolish, than nihilistic.” The statement embodies itself. Why live a life with no meaning but to destroy? It’s inevitable that we all become specks of dust in a careless universe— but humans exist to make the best and most beautiful of it.</p>
+<pre><code>Bibliography:
+Beowulf. N.p., N.d. Web. 20 Oct. 2017. &lt;http://l-adam-mekler.com/beowulf_heaney.pdf&gt;.
+Burt, Stephens. “Why people need poetry.” TED. N.p., Jun. 2013. Web. 20 Oct. 2017 &lt;https://www.ted.com/talks/stephen_burt_why_people_need_poetry/discussion?utm_medi&gt;. 
+Collins, Billy. “Thesaurus.”
+Gardner, John. Grendel. New York City: Vintage Books, 1989. Print.
+Gardner, John. “Letter to Susie West.” N.p., N.d. Web. 20 Oct. 2017. &lt;https://mseffie.com/assignments/beowulf/Letter.html&gt;. 
+Langer, Susanne. “Language and Thought.” Language Awareness: Readings for College Writers. Boston: Bedford/St. Martin’s, 2000. 96-103. Print. 
+Mueller, Lisel. “Things.” Poetry Foundation. Poetry Foundation, N.d. Web. 17 Sep. 2017.
+“Optimistic Nihilism.” Kurzgesagt – In a Nutshell. YouTube, 26 Jul. 2017. Web. 20 Oct. 2017. &lt;https://www.youtube.com/watch?v=MBRqu0YOH14&gt;.
+</code></pre>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/dont-be-indifferent-deign-to-be-human">Don’t Be [In]different: Deign to be Human</a><br>Next post: <a href="/posts/excerpts-from-hamlet-analysis">Excerpts from Hamlet Analysis</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Science is the belief in the ignorance of experts.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Richard Feynman</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

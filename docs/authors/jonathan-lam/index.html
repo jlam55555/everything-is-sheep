@@ -1,0 +1,1548 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Jonathan Lam">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/authors/jonathan-lam">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Jonathan Lam</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id="authorHeader">
+  <div class='container'>
+    <img id="authorPicture" class="center" src="/res/img/jonathan-lam-profile-pic.png">
+    <h1 id="authorName" class="center">Jonathan Lam</h1>
+  </div>
+</div>
+<div class='container'>
+  <p><p>Jonathan (a.k.a., "Lambda Ninja") is wannabe professional programmer and mathematician. He is also the site engineer and designer for Everything is Sheep.</p>
+<p>The Lambda Ninja image was coded with the JS/HTML canvas. See the code <a href="https://jsfiddle.net/jlam55555/9ajx2ttt/9/">here</a>.</p>
+<p><a href="https://stackexchange.com/users/2785906"><img src="https://stackexchange.com/users/flair/2785906.png" alt="profile for Lambda Ninja on Stack Exchange, a network of free, community-driven Q&amp;A sites&quot;" title="profile for Lambda Ninja on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a></p>
+<p><a href="https://projecteuler.net/profile/jlam55555.png"><img src="https://projecteuler.net/profile/jlam55555.png" alt="" /></a></p></p>
+  <div id="postViews">
+      <a class="imgLink postView" href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Code Opinions <span class="smallText">08/10/20</span></h2>
+        </div>
+        <p class="postViewPreview">As a polyglot programmer who aims to become language agnostic, I feel obliged to document this somewhere. Here we go.
+After beginning to write this, I realize this sounds like an angry rant towards new programmers. If you're a new programmer, please &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Button Mapping Journeys <span class="smallText">08/10/20</span></h2>
+        </div>
+        <p class="postViewPreview">Follow-up to the second blog post on the Linux driver for VEIKK digitizers, which focused on the driver updates in v1.1 through v3-alpha. (That was in turn an update from the first blog post, which detailed v1 of the driver) After messing around with&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">coding</span> <span class="tag">linux</span> <span class="tag">veikk</span> <span class="tag">driver</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">VEIKK Linux Driver v3 Notes <span class="smallText">08/01/20</span></h2>
+        </div>
+        <p class="postViewPreview">(This is a live document, since v3 is still in alpha)
+This can be thought of as the sequel to On Developing a Linux Driver. There is also Button Mapping Journeys, which is specifically about user-space mapping for the buttons using the X ecosystem of&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">veikk</span> <span class="tag">linux</span> <span class="tag">coding</span> <span class="tag">driver</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">On Developing a Linux Driver <span class="smallText">06/11/19</span></h2>
+        </div>
+        <p class="postViewPreview">
+  "Do you pine for the days when men were men and wrote their own device drivers?" ~ Linus Torvalds
+
+On Developing a Linux Driver
+A quick guide on understanding, developing, and compiling a Linux driver with no prior knowledge, featuring a case stud&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">veikk</span> <span class="tag">coding</span> <span class="tag">linux</span> <span class="tag">tutorial</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Diary of a College Kid <span class="smallText">02/27/19</span></h2>
+        </div>
+        <p class="postViewPreview">Hi everyone! Life has been so busy recently, and I think it's time to get back to writing regularly. My hoarder sense wants preservation.
+For now, because it's 3:45a.m., this will only be a brief summary of the lively past day-and-a-half. Hopefully m&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span> <span class="tag">diary</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/introducing-remeet" title="View post &quot;Introducing Remeet!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Introducing Remeet! <span class="smallText">06/28/18</span></h2>
+        </div>
+        <p class="postViewPreview">Update: This project has been discontinued. Ignore this post.
+This will be an introduction to and how-to guide for Remeet, and will be completed once Remeet has achieved (most of) its major intended features.
+If you are here, and if you noticed that &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">remeet</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/consolidation" title="View post &quot;Consolidation&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Consolidation <span class="smallText">06/25/18</span></h2>
+        </div>
+        <p class="postViewPreview">In my last post, I wrote about a little of my history. The Homework Life was a blog I'd written in 2015. I looked back on that hosting account for the first time in over a year, to find two older sites: A Tech Life and Programath. The former was some&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">reflection</span> <span class="tag">brain-dump</span> <span class="tag">studio-ghibli</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/better-rtc-with-webrtc" title="View post &quot;Better RTC with WebRTC&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Better RTC with WebRTC <span class="smallText">06/24/18</span></h2>
+        </div>
+        <p class="postViewPreview">For years, I've been trying to get at real time communication (RTC). The best I've done is using websockets, which work fairly well, but it requires a server. Now, setting up a Node.js server with socket.io isn't too bad, so that's not a problem.
+The&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">tutorial</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/introducing-babap" title="View post &quot;Introducing BaBaP!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Introducing BaBaP! <span class="smallText">06/24/18</span></h2>
+        </div>
+        <p class="postViewPreview">The first post on The Homework Life was published 12/17/2015, about two and a half years ago.
+The first post on Everything is Sheep was published 7/12/2017, nearly a year ago.
+And the first post on BaBaP was published 6/22/2018, some two days ago. Wo&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">coding</span> <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/senior-exit-thoughts" title="View post &quot;Senior Exit Thoughts&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Senior Exit Thoughts <span class="smallText">06/20/18</span></h2>
+        </div>
+        <p class="postViewPreview">Below is a short survey seniors from our school fill out online prior to an in-person interview with their counselor. Some irrelevant questions (i.e., filling out private information) has been omitted.
+
+
+Identify one of the most influential experienc&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">reflection</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/the-wonders-of-php" title="View post &quot;The Wonders of PHP&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">The Wonders of PHP <span class="smallText">06/18/18</span></h2>
+        </div>
+        <p class="postViewPreview">I remember the first time my uncle showed me how to use a server-side script. He called it CGI&mdash; which to many people only means "computer-generated imagery," but in this context refers to "common gateway interface"&mdash; to generate an image o&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">coding</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/planning-with-brainspaces" title="View post &quot;Planning with Brain-Spaces&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Planning with Brain-Spaces <span class="smallText">06/15/18</span></h2>
+        </div>
+        <p class="postViewPreview">I had this revelation in the shower that the brain acts like a very slow computer processor, with an arbitrarily defined number of cores (explained later). Each day, these cores can only process at a limited rate, and once a task is completed, the pr&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/proof-of-binets-formula" title="View post &quot;Proof of Binet&#x27;s Formula&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Proof of Binet&#x27;s Formula <span class="smallText">06/13/18</span></h2>
+        </div>
+        <p class="postViewPreview">A classmate of mine researched the Fibonacci numbers and the golden ratio, φ (phi), for his AP calculus project. One part he skimmed over is that there is an explicit formula for calculating Fibonacci terms, called Binet's formula:
+\[
+  Fib(n) = \fra&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">math</span> <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/final-projects" title="View post &quot;Final Projects&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Final Projects <span class="smallText">06/05/18</span></h2>
+        </div>
+        <p class="postViewPreview">Hello! I haven't posted much in the last four months, and I regret it. It's been quite busy, especially with AP exams and all the final projects. Every class I took this year second-semester required a final project, and all but Journaling required a&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">academia</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/the-american-dream" title="View post &quot;The American Dream&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">The American Dream <span class="smallText">06/05/18</span></h2>
+        </div>
+        <p class="postViewPreview">"The American Dream": Journaling Pseudo-Memoir Chapter 4
+
+On September 16th, 1994, the staff of Brookdale Hospital saw a Chinese man in his mid-twenties, dressed in a clean white shirt, enter the emergency section. His right eye was swollen under his&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/forgotten" title="View post &quot;Forgotten&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Forgotten <span class="smallText">05/09/18</span></h2>
+        </div>
+        <p class="postViewPreview">When I enter the bathroom uncle John comes in after me and says that he would stay with me, which is very nice. He is my favorite uncle. I don’t have a phone or anything to contact anyone. So I am always afraid of getting lost.
+I poop and leave the b&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">journaling</span> <span class="tag">poetry</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/church-of-prom" title="View post &quot;Church of Prom&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Church of Prom <span class="smallText">04/25/18</span></h2>
+        </div>
+        <p class="postViewPreview">"Church of Prom"
+
+So I was at home that night, at my computer. If you don’t know me, I love to code. I had a terminal on the screen and a notebook with a scribbled checklist.
+My goal for the night was to imitate agar.io, an online multiplayer game. P&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span> <span class="tag">speech</span> <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/updates-from-226" title="View post &quot;Updates from 2/26&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Updates from 2/26 <span class="smallText">02/27/18</span></h2>
+        </div>
+        <p class="postViewPreview">I just want to rant. Rant only describes part of it. It's a little past two in the morning, and I just finished all of my homework.
+First of all, we had a speaker come in today. His name is Kevin Hines, and he is one of the few survivors of attempted&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/brainfudged" title="View post &quot;Brainfudged&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Brainfudged <span class="smallText">02/22/18</span></h2>
+        </div>
+        <p class="postViewPreview">I'm feeling a little sick.
+The first sign was the humidity. It was quite foggy outside. And then the air in the gym felt very damp, so that many of the people in my dance class looked even more uncomfortable than they usually do. And then there was s&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/new-post-images" title="View post &quot;New post images!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">New post images! <span class="smallText">02/21/18</span></h2>
+        </div>
+        <p class="postViewPreview">I've done a few updates on the site in the last few days, mostly on the new comments section. I aim to make many more changes in the upcoming weeks.
+A few of the next planned updates will be behind-the-scenes (e.g., backing up the databases regularly&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/potential-invention-ideas" title="View post &quot;Potential Invention Ideas&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Potential Invention Ideas <span class="smallText">02/20/18</span></h2>
+        </div>
+        <p class="postViewPreview">What if we could use machine learning on brain signals? We can control the stimulus to a human brain, and we have some ability to record the brain’s activity through MRI scans. What if we train an computer to recognize what a person is seeing/feeling&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-21918" title="View post &quot;Dream Catcher 2/19/18&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher 2/19/18 <span class="smallText">02/20/18</span></h2>
+        </div>
+        <p class="postViewPreview">[Written 2/19/18. Transcribed 2/20/18.]
+I didn’t really see this dream as very memorable, but I thought I’d record it for the sake of memory. Interestingly, I feel as though I still remember as much of it as I did in the morning. On the flip side I r&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-21818" title="View post &quot;Dream Catcher: 2/18/18&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher: 2/18/18 <span class="smallText">02/18/18</span></h2>
+        </div>
+        <p class="postViewPreview">First dream I can remember in a while. (Also the first time in a little while I've had quite a bit of restful (i.e., no-homework-worrying-my-mind) sleep&mdash; what a coincidence).
+
+  There is a group project. Here are the fleeting components of it, &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/comments" title="View post &quot;Comments&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Comments <span class="smallText">02/16/18</span></h2>
+        </div>
+        <p class="postViewPreview">There's a new comments section! It's a very preliminary thing as of now. I drafted it up in about half an hour, and I'm really surprised it worked so quickly. With some basic 
+
+Right now, it has very basic (but usable) features. 
+
+Write name and comm&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/whisperers-and-shouters" title="View post &quot;Whisperers and Shouters&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Whisperers and Shouters <span class="smallText">02/15/18</span></h2>
+        </div>
+        <p class="postViewPreview">Dinnertime. My ears are being bombarded. Constant noise. People arguing. They ask me of my opinion. I give a vague response. They ask again. Some moral question about whether or not a new immigrant from China should move in (for protection) with a ma&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/valentines-day-poetry" title="View post &quot;Valentine&#x27;s Day Poetry&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Valentine&#x27;s Day Poetry <span class="smallText">02/15/18</span></h2>
+        </div>
+        <p class="postViewPreview">For journaling class, on Valentine's Day. Sorry this is a day late. 
+
+Inspired by "Your 13-Word Love Stories". They're about love, if love includes disgust.
+
+  "Puppy Love": Kissing, hugging, hand in hand. Blocking dozens of students from getting to &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">style-experiment</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/memoir-a-working-definition" title="View post &quot;Memoir: A Working Definition&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Memoir: A Working Definition <span class="smallText">02/15/18</span></h2>
+        </div>
+        <p class="postViewPreview">A working definition of memoir, based on "Go Carolina" by David Sedaris, "Pest Control" by Augusten Burroughs, "Chubby for Life" by Mindy Kaling, "The Ten Thousand Things" by Cheryl Strayed, and the first chapter of The Glass Castle by Jeanette Walls&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span> <span class="tag">literary-synthesis</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/mileage" title="View post &quot;Mileage&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Mileage <span class="smallText">02/15/18</span></h2>
+        </div>
+        <p class="postViewPreview">First chapter written for a memoir for Journaling class. (I think) it's all true.
+
+"Mileage"
+I used to live next to a trail. For many years, it was just “the trail” to me. A dirt path, two-and-a-half miles long. Where we biked and our dad easily outr&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">[reflective]</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/get-ready" title="View post &quot;Get Ready!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Get Ready! <span class="smallText">02/15/18</span></h2>
+        </div>
+        <p class="postViewPreview">I've been a little busy recently with Code Quest, studying for the AMC, bowling, the Spanish project, and other homework. But February break (a four-day weekend) begins tonight, and now that AMC is over, the pressure is off!
+It's time for a blogging &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/jinxed" title="View post &quot;Jinxed&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Jinxed <span class="smallText">01/23/18</span></h2>
+        </div>
+        <p class="postViewPreview">I was right. Too right. And now I'm crying inside.
+It's the worst feeling to know you've let someone down, and I did. Again. Today.
+We played the first place team, Fairfield High, today. And while they were undefeated, there was still a good chance t&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/jinxing" title="View post &quot;Jinxing&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Jinxing <span class="smallText">01/22/18</span></h2>
+        </div>
+        <p class="postViewPreview">I've had a relatively spectacular day. Not one amazing accomplishment and not a holiday, but little happy surprises. A surprisingly fluid turnout for the English paper oral defense. A surprisingly high grade for my Spanish presentational final. The a&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/remembering-how-to-be" title="View post &quot;Remembering how to be&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Remembering how to be <span class="smallText">01/13/18</span></h2>
+        </div>
+        <p class="postViewPreview">I just watched a movie, From Up on Poppy Hill, directed by Hayao Miyazaki in the Studio Ghibli franchise. And yet again, as for any other Ghibli movie, I am still beyond words, a few hours later. Its plot can be reduced to a few sentences, but the en&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">reflection</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/discovering-a-mathematical-reduction-method" title="View post &quot;Discovering a Mathematical Reduction Method&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Discovering a Mathematical Reduction Method <span class="smallText">01/13/18</span></h2>
+        </div>
+        <p class="postViewPreview">Just another moment of realiation that I felt that I couldn't ignore.
+I was attempting an old Math Team problem. It goes as follows: 
+Solve for x: 1 + 2/(3 + 4/(5 + 6/x)) = 7
+And it seemed pretty straightforward. Just keep simplifying the fraction, f&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">math</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/tech-todo-and-wanttodo" title="View post &quot;Tech. Todo and Wanttodo&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Tech. Todo and Wanttodo <span class="smallText">01/04/18</span></h2>
+        </div>
+        <p class="postViewPreview">A lot has happened since the last post. It's been the life of December break. This mostly means writing and rewriting most of my college essays, going back to school, bowling, a math meet, and shoveling. (Today's a snow day, and tomorrow will be too!&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/frowns-and-smiles-baldness-sleep" title="View post &quot;Frowns and smiles, baldness, sleep&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Frowns and smiles, baldness, sleep <span class="smallText">01/01/18</span></h2>
+        </div>
+        <p class="postViewPreview">1. Frowns and smiles
+A few years ago, I thought that in a frown, a person's smile goes downwards. Mine didn't. So I thought I was a bit of a happy child, smiling most of the time and not able to frown.
+But as I watched my sister's impressive frowns g&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/living-in-passes" title="View post &quot;Living in Passes&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Living in Passes <span class="smallText">12/27/17</span></h2>
+        </div>
+        <p class="postViewPreview">
+Sorting algorithms.
+College applications.
+Matrix multiplication.
+Annotated bibliographies.
+Coding projects.
+Studying classes.
+
+What do these all have in common? Each one comprises multiple tasks that themselves require multiple disparate steps.  
+I &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">reflection</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/why-im-against-prom" title="View post &quot;Why I&#x27;m Against Prom&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Why I&#x27;m Against Prom <span class="smallText">12/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">In my simplified view of the world, high school is a plot for many to gradually raise money for and stall by educating themselves to go to prom. And then high school’s over, there's college, and then life hits like a brick.
+I’m not sure what others m&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/taboo" title="View post &quot;Taboo&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Taboo <span class="smallText">12/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">I think my greatest taboo is the talk on girlfriends. For other people, sure, because it’s gossip. Typical American culture. But when it comes to girls I like, .
+There’s mostly the cultural issue. In my family, there is not a single non-Chinese perso&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/growing-into-high-society" title="View post &quot;Growing into High Society&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Growing into High Society <span class="smallText">12/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">I feel powerful sometimes in school. I’ve been a member of our local school system since the third grade, and I’ve consistently stayed near the top of my class ever since letter grades were first assigned in fifth grade. Staying true to my values, I’&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/changing-standards" title="View post &quot;Changing Standards&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Changing Standards <span class="smallText">12/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">I used to think that I should understand everything with certainty in class. This works because of that, that works because of something else. Sometimes we would be told that what we were originally taught was wrong, but there was a reasonable explan&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/finished-thl-imports" title="View post &quot;Finished THL Imports&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Finished THL Imports <span class="smallText">12/23/17</span></h2>
+        </div>
+        <p class="postViewPreview">I started importing THL posts into EiS about a month ago, but I'm finally finished today! I didn't transfer them one-by-one into EiS like I did last time, but I made a little script to transfer over the other 80 posts. (Phew!)
+Now that that's complet&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span> <span class="tag">the-homework-life</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/the-thing-he-carried" title="View post &quot;The Thing He Carried&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">The Thing He Carried <span class="smallText">12/23/17</span></h2>
+        </div>
+        <p class="postViewPreview">Not completely fictional, yet not completely true. But supposed to be truer than truth. Inspired by Tim O'Brien's The Things They Carried, written for English class.
+
+"The Thing He Carried"
+Jonathan Lam carried carried his backpack and all of his sup&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">personal-essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/majestic-coding" title="View post &quot;Majestic Coding&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Majestic Coding <span class="smallText">12/23/17</span></h2>
+        </div>
+        <p class="postViewPreview">I was just telling my sister how amazing the last few hours were. I had implemented a few new features on EiS (adding a maximum posts per post list page and associated elements) and debugged and redesigned with it completely planned out in my mind be&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span> <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/blog-progress-136-days" title="View post &quot;Blog Progress: 136 Days!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Blog Progress: 136 Days! <span class="smallText">11/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">There's nothing special about 136 days. But this blog is something special to me! (And EiS currently has 64 posts, so that's cool too).
+I was urged to write this post by my own eagerness. As you might have noticed in the last few days, I've been quit&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dragon-in-training" title="View post &quot;Dragon in Training&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dragon in Training <span class="smallText">11/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">This essay is what I've submitted as my Common App essay. (I'll assume I'll be safe posting it here given my apparent immunity to blog viewers.) It peeves me. The conclusion. I might edit it and re-post this. It's a bit too abstract right now, too di&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/an-impromptu-preacher" title="View post &quot;An Impromptu Preacher&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">An Impromptu Preacher <span class="smallText">11/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">Submitted to UConn for the Nutmeg Scholarship. This is a great example of how not to write an essay. If there will be only one reason I don't get the scholarship, this essay will be it. It boasts, has little metaphorical value, and is just a bit bori&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/on-keeping-a-notebook" title="View post &quot;On Keeping a Notebook&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">On Keeping a Notebook <span class="smallText">11/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">I used to hate writing in a notebook. They were far too clunky. Loose leaf proved far more practical. There was no need to keep seven notebooks, one for each subject, in my backpack; instead, I could keep just the amount of paper I needed. I could th&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/svgs" title="View post &quot;SVGs&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">SVGs <span class="smallText">11/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">Last year in April, I began to experiment with scalable vector graphics (SVGs). I posted some of my creations in THL here and here.
+I just wanted to post a few more here from recent experimentation. All are vectorized versions (using the scan bitmap &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">art</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/window-shopping-the-rich-mans-sport" title="View post &quot;Window Shopping: The Rich Man&#x27;s Sport&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Window Shopping: The Rich Man&#x27;s Sport <span class="smallText">11/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">I wanted to rant because 'tis the season for everything! Shopping season, that is. Black Friday season.
+Why do people have to make a day for shopping sprees? Why do people have to window shop? I know I would never do it (but then my dad says that nob&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/care-to-share-a-truth" title="View post &quot;Care to share a truth?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Care to share a truth? <span class="smallText">11/22/17</span></h2>
+        </div>
+        <p class="postViewPreview">Literary synthesis with a focus on Hamlet for English class.
+
+"Care to share a truth?"
+
+  “It is as easy as lying.” Hamlet 3.2.387.
+
+In a world that values sincerity as a trait above almost any other, lies— treachery, conspiracy, rumors, and even whi&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">literary-synthesis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/floorage-and-this" title="View post &quot;Floorage (and this)&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Floorage (and this) <span class="smallText">11/21/17</span></h2>
+        </div>
+        <p class="postViewPreview">I wrote "floorage" alongside my calculus notes a few days ago, and now I'm struggling to remember what it means. I know only that it was something my classmate R said, and that I wrote it as a trigger to remember what he said.
+Too bad.
+I found this i&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/move-fast-and-break-things-but-fix-them" title="View post &quot;Move Fast and Break Things (but Fix Them)&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Move Fast and Break Things (but Fix Them) <span class="smallText">11/20/17</span></h2>
+        </div>
+        <p class="postViewPreview">Seeing this xkcd comic again prompted me to write this.
+
+
+When you've only been adding to the code for a few days, it's time to take a break. Really.
+Are there comments delineating every line of code? What exactly does that snippet mean, the one that&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/mindsight-in-hindsight" title="View post &quot;Mind-sight in Hindsight&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Mind-sight in Hindsight <span class="smallText">11/19/17</span></h2>
+        </div>
+        <p class="postViewPreview">Before I forget, I wanted to make a quick note about what I've seen in the past two days. It's too fascinating to forget.
+It's been almost two years since I began posting on The Homework Life. From a programming perspective, I was so enthusiastic, an&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">reflection</span> <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/abstracting-chaos-a-universal-goal" title="View post &quot;Abstracting Chaos: A Universal Goal&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Abstracting Chaos: A Universal Goal <span class="smallText">11/19/17</span></h2>
+        </div>
+        <p class="postViewPreview">Final project essay for AP English Language and Composition. Written 6/12/17.
+Probably my most advanced synthesis to date, and the most verbose. But it was fun having such an open forum where I could discuss anything &mdash; algorithmic complexity wa&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">literary-synthesis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/making-decisions-as-a-lonely-sisyphus" title="View post &quot;Making Decisions as a Lonely Sisyphus&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Making Decisions as a Lonely Sisyphus <span class="smallText">11/19/17</span></h2>
+        </div>
+        <p class="postViewPreview">A brief literary synthesis for English class about the short story "Eveline" by James Joyce and Shakespeare's play Hamlet. Written 11/10/17.
+
+"Making Decisions as a Lonely Sisyphus"
+Hamlet and Eveline are both presented with problems that have clearl&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">literary-synthesis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/excerpts-from-hamlet-analysis" title="View post &quot;Excerpts from Hamlet Analysis&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Excerpts from Hamlet Analysis <span class="smallText">11/19/17</span></h2>
+        </div>
+        <p class="postViewPreview">Excerpts from some short responses from English class on Shakespeare's play Hamlet. Written 10/23/17
+
+King Claudius's Wedding Speech: Order of Events
+
+Acknowledge his brother’s death
+Talk about marriage to his brother’s wife
+Negotiate with Fortinbras&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">rhetorical-analysis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/grendels-crisis-aesthetic-nihilism" title="View post &quot;Grendel’s Crisis: Aesthetic Nihilism&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Grendel’s Crisis: Aesthetic Nihilism <span class="smallText">11/19/17</span></h2>
+        </div>
+        <p class="postViewPreview">A literary synthesis for English class focused on John Gardner's Grendel (again). Written 10/21/17.
+
+"Grendel's Crisis: Aesthetic Nihilism"
+Billboards, magazines, and social media always promote the smartest, richest, and most beautiful people in the&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">literary-synthesis</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dont-be-indifferent-deign-to-be-human" title="View post &quot;Don’t Be [In]different: Deign to be Human&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Don’t Be [In]different: Deign to be Human <span class="smallText">11/19/17</span></h2>
+        </div>
+        <p class="postViewPreview">A literary synthesis for English class focused on John Gardner's Grendel. Written 09/20/17.
+
+"Don’t Be [In]different: Deign to be Human"
+With increasing rates of terrorist attacks since the rise of Islamist extremist groups in the 21st century, study&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">literary-synthesis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/incorporating-the-past-thl-posts" title="View post &quot;Incorporating the Past: THL Posts&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Incorporating the Past: THL Posts <span class="smallText">11/18/17</span></h2>
+        </div>
+        <p class="postViewPreview">It's been a little while since I last wrote because of the business with college admissions, school, bowling, cross country, hackathons, Rubik's cubing, Safe Rides, interviewing in Bridgeport for Spanish &hellip; all just everyday business.
+Unfortuna&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span> <span class="tag">the-homework-life</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/midnight-memoirs" title="View post &quot;Midnight Memoirs&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Midnight Memoirs <span class="smallText">09/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">Can you reflect on something while you do it? If not, then this post is void. But while I think hindsight is impossible in a reflection of the present, metacognitive insight can still be pretty powerful.
+As with any desire, sleep evades me when I wan&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">reflection</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/coding-with-someone-else" title="View post &quot;Coding with Someone Else&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Coding with Someone Else <span class="smallText">09/18/17</span></h2>
+        </div>
+        <p class="postViewPreview">So… I needed help to get help. What happened was, it was late in the competition. We only had about an hour and a half left. It was about 10:30, and I was trying to solve the last challenge in the competition. There were three challenges. The first w&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span> <span class="tag">essay</span> <span class="tag">reflection</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/little-things" title="View post &quot;Little Things&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Little Things <span class="smallText">09/17/17</span></h2>
+        </div>
+        <p class="postViewPreview">A small shift to a coffee mug. And then a slight upwards push of the spectacles. No practical purpose of either.
+Stutters. Sometimes fanatic hand gestures.
+Trailing off at the end of sentences about random scientific tangents to the conversation.
+Pla&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/rhetorical-analysis-a-time-to-break-silence" title="View post &quot;Rhetorical Analysis: &quot;A Time to Break Silence&quot;&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Rhetorical Analysis: &quot;A Time to Break Silence&quot; <span class="smallText">08/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">Last practice essay before the SAT tomorrow! I'm not excited. Excerpt from "Beyond Vietnam — A Time to Break Silence" Adapted from Martin Luther King Jr..
+&mdash;
+Saving America Before Saving Vietnam
+In his essay, "A Time to Break Silence -- Beyond V&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">rhetorical-analysis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/stages-of-learning" title="View post &quot;Stages of Learning&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Stages of Learning <span class="smallText">08/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">At the beginning, everything is a success. Even when you're learning by repetition of models. Every little steps deserves some appreciation or other reward.
+After the beginning, you begin to see the true difficulty of everything in the trade. There a&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/rhetorical-analysis-jimmy-carters-essay" title="View post &quot;Rhetorical Analysis: Jimmy Carter&#x27;s Essay&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Rhetorical Analysis: Jimmy Carter&#x27;s Essay <span class="smallText">08/23/17</span></h2>
+        </div>
+        <p class="postViewPreview">In response to passage: Adapted from former US President Jimmy Carter, Foreword to Arctic National Wildlife Refuge: Seasons of Life and Land, A Photographic Journey by Subhankar Banerjee. Editing and revising assisted by KhanAcademy, in partnership w&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">rhetorical-analysis</span> <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/on-rubiks-cubing" title="View post &quot;On Rubik&#x27;s Cubing&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">On Rubik&#x27;s Cubing <span class="smallText">08/22/17</span></h2>
+        </div>
+        <p class="postViewPreview">The past few weeks I've done a few thousand solves on my Rubik's cube. It's branded as a Guoguan Yuexiao, a funny name that YouTubers often pronounce incorrectly. "Gwoe-guan Yoo-shao." The cube, which came out the first quarter in 2016, was considere&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span> <span class="tag">college-essay-draft</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-081317" title="View post &quot;Dream Catcher: 08/13/17&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher: 08/13/17 <span class="smallText">08/13/17</span></h2>
+        </div>
+        <p class="postViewPreview">
+  I was visiting colleges, but I'm not really sure who made the list that I was visiting. The first college we visited was situated in a mountainous jungle with a rock platform and precipice that we sat outside on. I think that's all of the first "c&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/nice-things-about-feet" title="View post &quot;Nice Things About Feet&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Nice Things About Feet <span class="smallText">08/12/17</span></h2>
+        </div>
+        <p class="postViewPreview">
+That feeling when the skin around the ankles when they're sore.
+That feeling when the ankles are rolled when they're sore.
+That feeling when they're tickled! 
+That feeling when the socks are removed after a long day and then are showered and then go&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-081017" title="View post &quot;Dream Catcher: 08/10/17&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher: 08/10/17 <span class="smallText">08/10/17</span></h2>
+        </div>
+        <p class="postViewPreview">I actually remember quite a bit from my dream last night and from a nap I took earlier today. Here's the first, somewhat-disturbing part of last night's dream:
+&mdash;
+
+  We were at some sort of party at a large house. I think it was a business party&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/universe-game-chaos" title="View post &quot;Universe, Game, Chaos&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Universe, Game, Chaos <span class="smallText">08/03/17</span></h2>
+        </div>
+        <p class="postViewPreview">You can see the relation between those words, right? Universe, game, chaos. It's all around us.
+A simple example would be the second law of thermodynamics, that the universe always tends to move towards a state of higher entropy (chaos). Humans are m&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/site-updates-114" title="View post &quot;Site Updates 1.1.4&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Site Updates 1.1.4 <span class="smallText">07/31/17</span></h2>
+        </div>
+        <p class="postViewPreview">There's been so many changes to the site (version 1.1.0) in the last few days! Here's a brief overview of them.
+External (Visual) Changes
+
+Added FontAwesome icons
+Improved title-text descriptions (one for every link)
+Sort posts in post list and searc&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-073117" title="View post &quot;Dream Catcher: 07/31/17&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher: 07/31/17 <span class="smallText">07/30/17</span></h2>
+        </div>
+        <p class="postViewPreview">I remember even less from this one, so this'll be tiny. Also, from now on, to hide the real people in my life that appear in any of my posts, I'll only use their first initial.
+&mdash;
+We were about to take a flight to Europe, I believe. I thought it&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/rhetorical-analysis-let-there-be-dark" title="View post &quot;Rhetorical Analysis: &quot;Let There Be Dark&quot;&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Rhetorical Analysis: &quot;Let There Be Dark&quot; <span class="smallText">07/30/17</span></h2>
+        </div>
+        <p class="postViewPreview">An SAT rhetorical analysis essay in response to an article by Paul Bogard, “Let There Be Dark.” Fifty minutes straight of just reading and writing! Here goes:
+&mdash;
+When global warming, nuclear war, or terrorism loom over humanity as very real and &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span> <span class="tag">rhetorical-analysis</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-073017" title="View post &quot;Dream Catcher: 07/30/17&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher: 07/30/17 <span class="smallText">07/29/17</span></h2>
+        </div>
+        <p class="postViewPreview">This won't be long, because I don't remember much.
+We were at a bowling lane. "We" this time refers to our grade at school&mdash; I specifically remembered a Kyle, a Rachel, and a Sam from our school, and I know that I recognized some other faces. 
+T&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dream-catcher-072917" title="View post &quot;Dream Catcher: 07/29/17&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Dream Catcher: 07/29/17 <span class="smallText">07/28/17</span></h2>
+        </div>
+        <p class="postViewPreview">I wanted to start a dream journal, because it just seemed like a fun thing to keep track of. Here's an update from last night:
+&mdash;
+As with all dreams, the highest resolution comes when you wake up, at the very end of the dream.
+So I woke up, and &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">dream-catcher</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/logo-shift" title="View post &quot;Logo Shift&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Logo Shift <span class="smallText">07/25/17</span></h2>
+        </div>
+        <p class="postViewPreview">You may wonder why the logo has changed from the sheep (which may be more representative of the title) to the simpler, (potentially "uglier"), six-rectangle square.
+
+The reason is akin to Google's changing of their logo in 2015. While their old logo,&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/on-preaching-myself" title="View post &quot;On Preaching Myself&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">On Preaching Myself <span class="smallText">07/24/17</span></h2>
+        </div>
+        <p class="postViewPreview">As I've already mentioned, I love to brag. Or participate in activities that I consider myself competent in (i.e., "compete" more than "participate"). But, almost more than any of my other narcissistic abilities, is the art of teaching (i.e., "imposi&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/acrostic" title="View post &quot;Acrostic&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Acrostic <span class="smallText">07/23/17</span></h2>
+        </div>
+        <p class="postViewPreview">J uggling permutations of cubies
+O bjecting to the natural order of life, death, and superhero movies
+N egotiating priorities with my demon of procrastination
+A nalyzing memories during REM
+T alking to and holding staring contests with the cats
+H ack&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">poem</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/mr-braggartpants" title="View post &quot;Mr. Braggartpants&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Mr. Braggartpants <span class="smallText">07/22/17</span></h2>
+        </div>
+        <p class="postViewPreview">I'm an introvert. I love to brag. I love compliments. I just don't show it (to others) (in speech) (but sometimes in writing).
+So when I helped my sister out earlier today with a programming question, boasting a bit of my coding knowledge (something &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/beef-with-superheroes" title="View post &quot;Beef with Superheroes&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Beef with Superheroes <span class="smallText">07/22/17</span></h2>
+        </div>
+        <p class="postViewPreview">With the general rise in the popularity of Marvel and DC superhero movie alike, I've become more skeptical of them (both the movies and the abilities of the heroes). Here's some of my thoughts against them:
+
+How many of their stories are recycled? Sc&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/losing-is-winning-perspective" title="View post &quot;Losing is Winning: Perspective&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Losing is Winning: Perspective <span class="smallText">07/17/17</span></h2>
+        </div>
+        <p class="postViewPreview">My family and I were playing a game of bridge (a Chinese version, diuzhuo) a few nights ago. It was a little late, my mind was already a little burned-out, and I was far more interested in trying to solve my Rubik's cube one-handed than in the game.
+&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">essay</span> <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/post-generator-test" title="View post &quot;Post Generator Test&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Post Generator Test <span class="smallText">07/14/17</span></h2>
+        </div>
+        <p class="postViewPreview">This is a post for testing. It was created by an automatic post generator designed to make post creation easier in the future.</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/a-very-long-title-and-a-very-short-post-just-for-testing" title="View post &quot;A Very Long Title and a Very Short Post just for Testing&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">A Very Long Title and a Very Short Post just for Testing <span class="smallText">07/13/17</span></h2>
+        </div>
+        <p class="postViewPreview">A short post.</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/lorem-ipsum" title="View post &quot;Lorem Ipsum&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Lorem Ipsum <span class="smallText">07/13/17</span></h2>
+        </div>
+        <p class="postViewPreview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae ornare lectus. Nam et egestas odio. Nulla vitae felis quis orci commodo blandit a sed ex. Sed in enim enim. Duis bibendum ornare luctus. Donec interdum eu leo in rhoncus. Aenean id ur&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/on-aliens" title="View post &quot;On Aliens&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">On Aliens <span class="smallText">07/12/17</span></h2>
+        </div>
+        <p class="postViewPreview">What are "aliens"?
+Most often they're green and have dangerous brain tumors. They don't always have a nose, and their eyes are huge and mysterious. They're from outer space, and they have the technology that we lack to travel intergalactically. So it&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">brain-dump</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/second-post" title="View post &quot;Second Post&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Second Post <span class="smallText">07/11/17</span></h2>
+        </div>
+        <p class="postViewPreview">This is a second post. I'm about to post some lorem ipsum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet sapien eget augue eleifend congue. Donec sit amet congue felis, a luctus justo. Etiam eu tempor orci. Donec feugiat &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/hello-world-new" title="View post &quot;Hello, World! (new)&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Hello, World! (new) <span class="smallText">07/11/17</span></h2>
+        </div>
+        <p class="postViewPreview">This is a "first post for testing. Hopefully it will work.
+header 1
+header 2
+header 3
+header 4
+header 5
+header 6</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/warm-up-champion" title="View post &quot;Warm Up Champion&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Warm Up Champion <span class="smallText">06/06/16</span></h2>
+        </div>
+        <p class="postViewPreview">During cross country or track practices, the "warm up champion" is the one to be the "try-hard" during the warm up, only to feel good in the short term by winning an easy "event" and flunk the rest of practice. And I may have did it today.
+A little b&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/reassurance" title="View post &quot;Reassurance&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Reassurance <span class="smallText">05/31/16</span></h2>
+        </div>
+        <p class="postViewPreview">I didn't realize that it had been so long since I had previously written a post. Five days. Five days? That went quickly.
+For starters, it was a long weekend, with Memorial Day in the mix. Secondly, I had lots of studying to get done. Thirdly, I had &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/professional-kids" title="View post &quot;Professional Kids&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Professional Kids <span class="smallText">05/26/16</span></h2>
+        </div>
+        <p class="postViewPreview">Just recently, I thought we were just little kids. Looking on commercial products made by huge companies with elaborate factories, I never thought us measly teenagers could compete. Until today.
+Today was our "Palooza," a half-day of school and two h&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/five-minutes" title="View post &quot;Five Minutes&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Five Minutes <span class="smallText">05/24/16</span></h2>
+        </div>
+        <p class="postViewPreview">Five minutes. A speakout. A blog post. Five minutes. What can you really do?
+Well, I can't vent out all my frustration and motivate the public and use the rhetorical devices and practice well a five-minute Sophomore Speakout. I couldn't express the e&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/my-apologies" title="View post &quot;My Apologies&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">My Apologies <span class="smallText">05/23/16</span></h2>
+        </div>
+        <p class="postViewPreview">I'm sorry, Mrs. Huminski, that I wrote I "hate" writing essays in my Sophomore Speakout. I didn't mean it&mdash; I'm just a math person, that's all. Please don't hate me.
+I'm sorry, track team, that I couldn't make qualifying times. The cross country&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/welp" title="View post &quot;Welp&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Welp <span class="smallText">05/22/16</span></h2>
+        </div>
+        <p class="postViewPreview">Yes. I started with that title. Thought it is a cool word. Is it a word?
+I took a diagnostic SAT / ACT combo test today at my school. Many of my fellow peers were there, but none seemed nervous as I. I, who worried about scores and my  future. I, who&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/acquired-taste" title="View post &quot;Acquired Taste&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Acquired Taste <span class="smallText">05/22/16</span></h2>
+        </div>
+        <p class="postViewPreview">Like a guardian angel for the school, one quote hovers above us all: "Education is not the filling of a pail, but the lighting of a fire." I find this ironic. Ironic because we drag our shovels to fill our leaky pails. Ironic because we smother the s&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/steamed-buns" title="View post &quot;Steamed Buns&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Steamed Buns <span class="smallText">05/22/16</span></h2>
+        </div>
+        <p class="postViewPreview">a really random freewrite: a dialogue of my mindsLet's go baking! said my bored mind.What should we bake? said my inquisitive mind.Ooh&mdash; let's go experiment! said my creative mind.No&mdash; let's make some steamed buns, said my experienced mind.&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/doubly-motivated" title="View post &quot;Doubly Motivated&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Doubly Motivated <span class="smallText">05/20/16</span></h2>
+        </div>
+        <p class="postViewPreview">I feel so lucky right now. I've been able to experience the first true programming language, Assembly, and feel somewhat good about attempting to understand it in one day.
+I've attempted this once, a few years ago, but simply deemed it too difficult &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/one-foot-down" title="View post &quot;One Foot Down&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">One Foot Down <span class="smallText">05/19/16</span></h2>
+        </div>
+        <p class="postViewPreview">
+On this note, donâ€™t let me catch you inactive. Idle. Purpose-less. Because every time you find yourself bored, know that thereâ€™s a great receptacle of knowledge out there, embroidered in every seam of our experiences. Just pick up your pen and j&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/tired" title="View post &quot;Tired&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Tired <span class="smallText">05/18/16</span></h2>
+        </div>
+        <p class="postViewPreview">This is going to be a short one. Five minutes only. Because I'm tired and it's late. Quick typing. Yikes!
+I just got back from a track meet. Although we (presumably) lost to three of the best teams in the league, I did what I had to. I ran a personal&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/confused-motivation" title="View post &quot;Confused Motivation&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Confused Motivation <span class="smallText">05/16/16</span></h2>
+        </div>
+        <p class="postViewPreview">I'm a little restless again, so I decided to try another one of these.
+It's beginning to get late, but I still have a substantial amount of homework. I believe that limiting the amount of time I have to do this is a good idea.
+I had quite a hefty day&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/nothing-to-write-about" title="View post &quot;Nothing to Write About&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Nothing to Write About <span class="smallText">05/16/16</span></h2>
+        </div>
+        <p class="postViewPreview">Just fifteen minutes on the clock. Fifteen minutes, counting down. Fifteen minutes ticking away.
+Is it time wasted? Or is it time learning?
+I've written my Sophomore Speakout about learning, but I feel so hypocritical. I say I feel the joy in learnin&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/do-to-learn-learn-to-flow-flow-to-do" title="View post &quot;Do to Learn; Learn to Flow; Flow to Do&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Do to Learn; Learn to Flow; Flow to Do <span class="smallText">04/20/16</span></h2>
+        </div>
+        <p class="postViewPreview">See the footnotes 1 and 2.
+Writing is difficult. I've felt it first-hand, especially with this speech. I had so much to say, ideas sketched out on beautiful flowcharts in my mind, abstract syntheses from specific experiences developed and concrete an&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/geometric-gallery" title="View post &quot;Geometric Gallery&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Geometric Gallery <span class="smallText">04/19/16</span></h2>
+        </div>
+        <p class="postViewPreview">Here are three more SVGs I have created.
+(top) An SVG version of the The Homework Life logo &mdash; drawn again from scratch(below, left) A low-poly-art cat image (from Google Images)(below, right) A low-poly-art Exploding Kittens box image (from my &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/my-scary-geometric-face" title="View post &quot;My Scary Geometric Face&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">My Scary Geometric Face <span class="smallText">04/17/16</span></h2>
+        </div>
+        <p class="postViewPreview">Just felt like putting this out there. As was the tree in the prior post, this was created using Inkscape to create a vector image with a "low-polygonal" effect.
+And watch out: Watch out &mdash; I don't have a nose!</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/rss-github-and-svgs" title="View post &quot;RSS, GitHub, and SVGs&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">RSS, GitHub, and SVGs <span class="smallText">04/16/16</span></h2>
+        </div>
+        <p class="postViewPreview">The Homework Life is one step closer to becoming a more widely supported blog with RSS feeds! Now, you can subscribe to the feed by simply giving the link to a feed reader, such as FeedReader. It allows you to easily see the ten most recent posts wit&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/bump" title="View post &quot;Bump&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Bump <span class="smallText">04/13/16</span></h2>
+        </div>
+        <p class="postViewPreview">Bump.
+That's how they do it, right? Revive a blog post? Spark some interest into a community driven by the present? A present that is always burying the past? The past that is full of virtuous mistakes and the subsequent lessons?
+And that's what I ho&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/general-status-update" title="View post &quot;General Status Update&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">General Status Update <span class="smallText">04/02/16</span></h2>
+        </div>
+        <p class="postViewPreview">Coding
+I've got another one. Based off of Jacob Wunder's Tap Tap Pop! (which was based off of Pop the Lock), here is my own version of Pop the Lock. It's arguably very simple, minimalistic, and feature-less&mdash; but it captures the main essence of &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/a-tutorial-lesson-animated-circles-and-educational-programs" title="View post &quot;A Tutorial Lesson, Animated Circles, and Educational Programs&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">A Tutorial Lesson, Animated Circles, and Educational Programs <span class="smallText">03/11/16</span></h2>
+        </div>
+        <p class="postViewPreview">I worked with the new Programming Club after school today. An alumni worked us through a simple webpage themed like his webpage that used jQuery to position and animate. It was quite interesting, and I learned a simple, mathematical way to animate it&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-great</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/new-web-apps" title="View post &quot;New Web Apps!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">New Web Apps! <span class="smallText">03/06/16</span></h2>
+        </div>
+        <p class="postViewPreview">I've posted a new little web application, Speller Bee. I know that it should be "Spelling Bee," but that name was taken on Heroku (where the Node.js server is hosted) and therefore I chose something a little different to spice it up.
+It comes with al&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/site-mixups" title="View post &quot;Site Mixups!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Site Mixups! <span class="smallText">03/04/16</span></h2>
+        </div>
+        <p class="postViewPreview">img.rounded{border-radius:100%;width:250px;max-width:100%}table#newUpdateTable td:nth-of-type(1){width:250px;max-width:50%}table#newUpdateTable td{padding:10px 20px}
+There have been many major site improvements I made today! Many are graphical change&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/tarnish" title="View post &quot;Tarnish&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Tarnish <span class="smallText">03/04/16</span></h2>
+        </div>
+        <p class="postViewPreview">If you've ever been an overextended, perfectionist high-school teenager, you'd understand. The homework life that I live is beginning to feel unattainable. In the end, you have to reach a compromise between quality and quantity. It's becoming a fact &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/from-written-words-to-spoken-meaning" title="View post &quot;From Written Words to Spoken Meaning&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">From Written Words to Spoken Meaning <span class="smallText">03/02/16</span></h2>
+        </div>
+        <p class="postViewPreview">What do I believe? Check it out at "As of February 2016", a poem based off of "As of May 2002" by Del Shortliffe1.
+And another piece I have recently written, this time in response to Catcher in the Rye, is "Little Chained Bird", a little vignette tha&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/stampede" title="View post &quot;Stampede!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Stampede! <span class="smallText">03/01/16</span></h2>
+        </div>
+        <p class="postViewPreview">I would be a student council officer for two reasons only: to have a leadership role for the National Honor Society, and to stop prom from soaking up all the studentsâ€™ money. Because, as a whole, fundraising does eventually end up going towards our&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/back-to-coding-and-posting" title="View post &quot;Back to Coding and Posting!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Back to Coding and Posting! <span class="smallText">02/16/16</span></h2>
+        </div>
+        <p class="postViewPreview">Sorry for the lack of posting in the past few days. I have been busy with other projects, especially with Node.js, an amazing JavaScript platform. It's extremely confusing and frustrating right now, but I'm managing to slowly work my way through and &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/ageless" title="View post &quot;Ageless&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Ageless <span class="smallText">02/08/16</span></h2>
+        </div>
+        <p class="postViewPreview">I go into a little fit of jealousy every time I hear someone about my age that does something amazing, or someone younger than me doing something better than I have. It's in my nature: I'm a competitive boy. But, in silent retaliation, I've decided t&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/goddam-profanities" title="View post &quot;Goddam Profanities&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Goddam Profanities <span class="smallText">02/06/16</span></h2>
+        </div>
+        <p class="postViewPreview">"Holy s***!" "F this and F that!"
+It kills me. Cussing. Swearing. Cursing. Why do people do it? I understand when it happens every once in a while, when you drop a hammer on your foot or forget to do a homework assignment, but when has that kind of l&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/the-high-school-life" title="View post &quot;The High School Life&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">The High School Life <span class="smallText">02/05/16</span></h2>
+        </div>
+        <p class="postViewPreview">I had this post idea lower on my to-do list, but its increased relevance to my life because of recent events has urged me to write about it immediately.
+Last week, a boy from my grade and six of his friends broke into the house of another boy because&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/introducing-flappy-bird" title="View post &quot;Introducing Flappy (Bird)!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Introducing Flappy (Bird)! <span class="smallText">02/05/16</span></h2>
+        </div>
+        <p class="postViewPreview">I was asked by a friend recently if I was able to design a rendition of Mario. He had grand designs for some of the characters. Happy that I had just learned some about HTML5 &lt;canvas&gt;, I quickly obliged, ready to take on the challenge.
+Unfortun&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/homework-reading-journals" title="View post &quot;Homework Reading Journals&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Homework Reading Journals <span class="smallText">02/04/16</span></h2>
+        </div>
+        <p class="postViewPreview">Wow. That was the most un-creative title I've fabricated in the past few years. I've got to work on that. But I'm tired right now, and it is appropriate for the rather dull task the assignment entails. These are all in response to homework reading jo&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/adding-another-dimension" title="View post &quot;Adding Another Dimension&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Adding Another Dimension <span class="smallText">02/03/16</span></h2>
+        </div>
+        <p class="postViewPreview">
+One thing about packing depressed me a little. I had to pack these brand-new ice skates my mother had practically just sent me a couple of days before. That depressed me &hellip; It made me feel pretty sad. She bought me the wrong kind of skate&mdas&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/my-wonderful-tenthimpression" title="View post &quot;My Wonderful Tenth-Impression&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">My Wonderful Tenth-Impression <span class="smallText">02/03/16</span></h2>
+        </div>
+        <p class="postViewPreview">First impressions. Something we'll have to deal with for the rest of our lives. For every interview. For every new place. For every new person. We're surrounded by a world that demands quick judgement or falling behind. It's a simple fact of life tha&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/reflective-remembrance-and-reinterpretation" title="View post &quot;Reflective Remembrance and Reinterpretation&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Reflective Remembrance and Reinterpretation <span class="smallText">02/02/16</span></h2>
+        </div>
+        <p class="postViewPreview">We had to write a short piece that was analytical, exploratory, and comparative in nature. It was to analyze any similarity we found between "Hole" by Andrew Porter and Catcher in the Rye&mdash; a form of juxtaposition to get more meaning out of it.
+&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/introducing-agenda" title="View post &quot;Introducing Agenda&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Introducing Agenda <span class="smallText">02/01/16</span></h2>
+        </div>
+        <p class="postViewPreview">Although I really should be studying for math team and the AMC, I decided to spend a little more time programming today. I created something I've wanted to for some time: a little Agenda.
+It's a cool little device that allows you to add classes and a&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/dont-judge-a-movie-by-its-audience" title="View post &quot;Don&#x27;t Judge a Movie by its Audience&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Don&#x27;t Judge a Movie by its Audience <span class="smallText">01/31/16</span></h2>
+        </div>
+        <p class="postViewPreview">Warning: Spoiler Alert!
+The movie theater was already packed with youngsters by the time we got there. It was released only yesterday. And by "youngsters," I mean hoards of toddlers and their young parents that made my adolescent self feel very out o&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/sketchy-hacking-potential" title="View post &quot;Sketchy Hacking Potential?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Sketchy Hacking Potential? <span class="smallText">01/31/16</span></h2>
+        </div>
+        <p class="postViewPreview">I just searched "thehomeworklife.co.nf" on Google, and I noticed a different site had mentioned it. Curious, I clicked it. It was a curious link to many GitHub links, the site name being "Open GitHub" and the URL name with "hacker-lab." Sketchy.
+Acco&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/technically-hellip-no" title="View post &quot;Technically &amp;hellip; No&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Technically &amp;hellip; No <span class="smallText">01/30/16</span></h2>
+        </div>
+        <p class="postViewPreview">"No technology allowed." O the pain I feel! Without technology allowed, we wouldn't have clothing (and ma'am, I'm sure you wouldn't want to see us naked); we wouldn't be healthy and have flawless teeth; in essence, we couldn't exist the way we do now&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/minor-site-usability-updates" title="View post &quot;Minor Site Usability Updates&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Minor Site Usability Updates <span class="smallText">01/29/16</span></h2>
+        </div>
+        <p class="postViewPreview">I know I just said that I wouldn't be making updates to the site, but it's a Saturday and I have time. There were a few minor details I wanted to fix to improve the site, like always. Here's an overview:FontAwesome Icons I've replaced some of the min&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/going-with-the-popular-flow" title="View post &quot;Going with the Popular Flow&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Going with the Popular Flow <span class="smallText">01/29/16</span></h2>
+        </div>
+        <p class="postViewPreview">Hello debutted a few months back, and it has dominated the radio since. People love it! But every time I hear it, I become severely irritated. Even angry at times. Sure there's "passion" in the song, but there's not much to the melody or musical elem&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/to-keep-or-not-to-keep" title="View post &quot;To Keep or not to Keep?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">To Keep or not to Keep? <span class="smallText">01/28/16</span></h2>
+        </div>
+        <p class="postViewPreview">We as humans are possessive creatures. We like to hold on to things, and it's very difficult to let anything go to waste if it has any value left to us, whether it be monetary or sentimental.
+I came across this recently when I was cleaning out my roo&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/second-best" title="View post &quot;Second Best&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Second Best <span class="smallText">01/28/16</span></h2>
+        </div>
+        <p class="postViewPreview">It's not always true. In fact, it's difficult to be exactly second place. But that's the way I feel, on average, on days like these. So close to the top, but not quite there. Most of the time you're up there. But sometimes you're not. No one's perfec&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/introducing-word" title="View post &quot;Introducing Word!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Introducing Word! <span class="smallText">01/27/16</span></h2>
+        </div>
+        <p class="postViewPreview">I was playing around with HTML5 &lt;canvas&gt; these past few days, and this is the most exciting piece I've made so far (besides a game that I just started that's getting exponentially complex the farther I go, so chances are I'm not going to finish&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/final-site-updates-for-now" title="View post &quot;Final Site Updates (for now)&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Final Site Updates (for now) <span class="smallText">01/27/16</span></h2>
+        </div>
+        <p class="postViewPreview">I've made a ton of site improvements recently, and I think it's time to start winding down and thinking about the posts and the content themselves. I'll still be developing little projects in the background, but I'll try to write more meaningful post&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/post-viewing-updates" title="View post &quot;Post Viewing Updates&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Post Viewing Updates <span class="smallText">01/25/16</span></h2>
+        </div>
+        <p class="postViewPreview">Main update:  The site is back up again with new updates for the length of site posts. Before, the site would show all of them at full length, with images clipped. Now, it shows all but the first post as clipped at 800 pixels in height. This allows y&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/getting-a-life" title="View post &quot;Getting a Life&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Getting a Life <span class="smallText">01/24/16</span></h2>
+        </div>
+        <p class="postViewPreview">It's not the most exciting piece, but it was an interesting prompt. We were asked to finish the "story" of the first page of Catcher in the Rye (we weren't told it was the first page, but I was informed by a higher student). And here it is: Getting A&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/a-falsy-life" title="View post &quot;A Falsy Life&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">A Falsy Life <span class="smallText">01/23/16</span></h2>
+        </div>
+        <p class="postViewPreview">The life I live is not so much an honest one. I live in a world of unnatural comfort and artificial hardships. We choose what to make difficult in our lives, and we choose what we would like to make easier. The same goes for many of the lives around &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/site-improvements" title="View post &quot;Site Improvements&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Site Improvements <span class="smallText">01/22/16</span></h2>
+        </div>
+        <p class="postViewPreview">I made a few quick changes to improve the overall display of the website.
+First of all, the date will not change if I edit a post. Therefore, the posts will appear in chronological order, and this will avoid confusion when I do edit a post. I will in&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/smile-of-the-societal-selfie" title="View post &quot;Smile of the Societal Selfie&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Smile of the Societal Selfie <span class="smallText">01/21/16</span></h2>
+        </div>
+        <p class="postViewPreview">Article Referenced: Tierney, Leah. "What Does Your Selfie Say About You? The Science Behind Our Obsession - The Shutterstock Blog." The Shutterstock Blog. Shutterstock, Inc., 13 Feb. 2015. Web. 21 Jan. 2016.
+Summary of Article: The selfie, an explodi&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/projects-list" title="View post &quot;Projects List&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Projects List <span class="smallText">01/18/16</span></h2>
+        </div>
+        <p class="postViewPreview">Because of the increasing complexity of the site, I've decided to create a quick little list of my projects in the "About" section of the page. Just click there and you'll see links to all of the projects I've posted to. The yellow links are for prog&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/speller" title="View post &quot;Speller&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Speller <span class="smallText">01/18/16</span></h2>
+        </div>
+        <p class="postViewPreview">A new little app is up again! This time, it has a useful purpose: assisting Juliet in the seventh-grade spelling bee. It was a fun challenge to create, and it only took me twenty minutes. For now, it's a bit of a rough draft that I might revisit, and&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/inbrowser-browser" title="View post &quot;In-Browser Browser&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">In-Browser Browser <span class="smallText">01/18/16</span></h2>
+        </div>
+        <p class="postViewPreview">Introducing another mini-project of mine just for fun: the In-Browser Browser. It's a minimalist tabbed web-browser-like interface inside a tab. I meant to create it as a cleaner interface and simpler to use.
+There are only two controls: Shift &#8679&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/fun-with-google-chrome-extensions" title="View post &quot;Fun with Google Chrome Extensions&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Fun with Google Chrome Extensions <span class="smallText">01/18/16</span></h2>
+        </div>
+        <p class="postViewPreview">I was playing around with Google Chrome themes and extensions recently. Here's what I've come up with in the last day:
+Dark Theme: A minimalist, black and dark-grey theme.Chat Newtab Replacement: I've modified my Chat application to be a Chrome exten&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/newfound-editing-power" title="View post &quot;Newfound Editing Power!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Newfound Editing Power! <span class="smallText">01/13/16</span></h2>
+        </div>
+        <p class="postViewPreview">This post is meant to be a test to make sure that I can successfully post this and edit it. Now, if you notice that a newer post placed under an older one, it's because I edited it &mdash I'll try to mention every edit I make. EDIT 1/23/16 from a fut&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/more-site-improvement-updates" title="View post &quot;More Site Improvement Updates&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">More Site Improvement Updates <span class="smallText">01/12/16</span></h2>
+        </div>
+        <p class="postViewPreview">And yet again, there have been improvements to the site. To the sidebar, there has been a color change, and I fixed a few bugs I created with the overall look when working with the web app. The web app is now more functional, but there are a few bugs&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/major-graphical-changes" title="View post &quot;Major Graphical Changes!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Major Graphical Changes! <span class="smallText">01/11/16</span></h2>
+        </div>
+        <p class="postViewPreview">A new favicon (the icon next to the title in the tab bar), a new logo (which I made), a new web-application for iOS &hellip; thehomeworklife has underwent major graphical changes today!
+To activate the web-application, open Safari on your mobile devi&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/othelloinspired-synthetic-dialogue-rough-draft" title="View post &quot;Othello-Inspired Synthetic Dialogue Rough Draft&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Othello-Inspired Synthetic Dialogue Rough Draft <span class="smallText">01/10/16</span></h2>
+        </div>
+        <p class="postViewPreview">The title says it all. It's an dialogue inspired by Othello (the play by Shakespeare) and a synthesis paper. Unfortunately, it's also a rough draft, but I'm working on that. And lastly, it's my first literary-work-for-school publication on this site.&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/chatroom-is-up" title="View post &quot;Chatroom is up!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Chatroom is up! <span class="smallText">01/09/16</span></h2>
+        </div>
+        <p class="postViewPreview">The result of my preliminary experimentation with Node.js and Socket.io has resulted in an interesting, real-time chat application!
+You can visit it either at lam-node-test.herokuapp.com where it's hosted on Heroku or here at TheHomeworkLife. They bo&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/my-weak-strengths" title="View post &quot;My Weak Strengths&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">My Weak Strengths <span class="smallText">01/06/16</span></h2>
+        </div>
+        <p class="postViewPreview">Simply put, I had a suboptimal school day today.
+In Wellness, we had a test on CPR, in which we hadn't covered many of the scenarios that were supposed to be "common sense." I've always had a problem with common sense.
+Secondly, we had a test in Chem&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/fun-with-gimp" title="View post &quot;Fun with GIMP&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Fun with GIMP <span class="smallText">01/03/16</span></h2>
+        </div>
+        <p class="postViewPreview">GIMP (GNU Image Manipulation Program) is a wonderful free image editing program. It comes default for some versions of Ubuntu and is a great free alternative to other powerful ones out there.
+I'd only been using it for very simple image editing (If I&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-great</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/really-realtime" title="View post &quot;Really Real-time&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Really Real-time <span class="smallText">01/02/16</span></h2>
+        </div>
+        <p class="postViewPreview">I was experimenting around with Node.js, a powerful JavaScript library that I had little understanding of. This was because I had heard it had certain websocket back-end capabilities that I had wanted for real-time data updates. In this, the server (&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/fun-with-fontawesome" title="View post &quot;Fun with FontAwesome&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Fun with FontAwesome <span class="smallText">12/31/15</span></h2>
+        </div>
+        <p class="postViewPreview">FontAwesome is a wonderful tool for modern, flat icons for the everyday web designer. I tried my hand at it today for the first to create a simple "Share" footer. Here it is!
+</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-great</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/another-posting-break" title="View post &quot;Another Posting Break&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Another Posting Break <span class="smallText">12/31/15</span></h2>
+        </div>
+        <p class="postViewPreview">Sorry, my life needs me.
+I'm working on some site updates and my midterm-examinations review (especially because I've been slacking on homework with all of this programming recently). I might have some new features live in a few days. Therefore, ther&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/optimize-optimize-optimize" title="View post &quot;Optimize, Optimize, Optimize!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Optimize, Optimize, Optimize! <span class="smallText">12/30/15</span></h2>
+        </div>
+        <p class="postViewPreview">Again, I'm inspired to post by my wonder of programming. The digital world is something so huge, and sprung from the imagination of man. And look at what we've done!What's most interesting to me is the power of algorithms, true "computer science." Th&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-great</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/a-tic-tac-toe-game" title="View post &quot;A Tic Tac Toe Game&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">A Tic Tac Toe Game <span class="smallText">12/30/15</span></h2>
+        </div>
+        <p class="postViewPreview">I thought the previous memory game was pretty fun to make and play, so I thought I'd make another one, perhaps with the same color scheme and a similar feel. And so I did!
+Introducing the Tic Tac Toe game for TheHomeworkLife. It has pretty good logic&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/a-memory-game" title="View post &quot;A Memory Game&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">A Memory Game <span class="smallText">12/29/15</span></h2>
+        </div>
+        <p class="postViewPreview">For fun and for skill, I've created a classic memory game. It uses HTML (the content), JavaScript (the logic) and CSS (the style). The jQuery (a JavaScript library) helped make it look nice as well. I played around a lot with CSS animations to make t&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-other</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/how-can-i-start-learning-to-code" title="View post &quot;How can I start learning to CODE?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">How can I start learning to CODE? <span class="smallText">12/28/15</span></h2>
+        </div>
+        <p class="postViewPreview">The world of code is pretty amazing. Many others in our innovative generation are looking for ways to learn code. I've even had people come up to me &mdash; yes, that amateur, introverted, me &mdash; to ask how they can start learning code or what th&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-great</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/new-storage-structure" title="View post &quot;New Storage Structure!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">New Storage Structure! <span class="smallText">12/28/15</span></h2>
+        </div>
+        <p class="postViewPreview">The Homework Life has switched over to a (MariaDB) database for storage! Now posts will be more secure and faster to load.
+We have switched from the JSON format (much easier to set up but harder to maintain, especially as data gets BIG) to a relation&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/temporary-posting-break" title="View post &quot;Temporary Posting Break&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Temporary Posting Break <span class="smallText">12/27/15</span></h2>
+        </div>
+        <p class="postViewPreview">Sorry, I will (probably) not be posting for the next few days out of a major restructuring of the post storage for bandwidth (speed) improvements. (More specifically, I am trying to reduce the number of posts that are downloaded to the number that yo&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/pets-behind-bars--the-right-choice" title="View post &quot;Pets Behind Bars … The Right Choice?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Pets Behind Bars … The Right Choice? <span class="smallText">12/26/15</span></h2>
+        </div>
+        <p class="postViewPreview">We had an interesting first visit to the Westfield Humane Center animal shelter today, being rejected immediately (our first choice had been adopted a few minutes earlier) and then wasting the rest of our afternoon. It wasn't really my idea (it's Jul&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/anticipation-consuming-distraction-or-spirited-motivation" title="View post &quot;Anticipation: Consuming Distraction or Spirited Motivation?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Anticipation: Consuming Distraction or Spirited Motivation? <span class="smallText">12/25/15</span></h2>
+        </div>
+        <p class="postViewPreview">What is anticipation? Anticipation is the act of predicting, of guessing, looking forwards to, and preparing for the future. For good or for bad, we anticipate all the time, from anticipating failing scores on a final exam to the joy of a merry Chris&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/metametacognition" title="View post &quot;Metametacognition&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Metametacognition <span class="smallText">12/24/15</span></h2>
+        </div>
+        <p class="postViewPreview">I began to notice that, being well-prepared and confident for tests, that my most frequent cause of careless mistakes was not because of running out of time, miscalculations, or not knowing the material - instead, it was my own mind that was anticipa&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-thought</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/introducing-search" title="View post &quot;Introducing Search!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Introducing Search! <span class="smallText">12/24/15</span></h2>
+        </div>
+        <p class="postViewPreview">
+There have just been major improvements to the blog. Here's an overview.
+Limited Default Post Load
+
+Only the last five posts are loaded at first
+See More" button at bottom of page to see up to five more posts
+Allows for better load times
+
+Search Bar&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/holiday-break-for-the-nerd" title="View post &quot;Holiday Break for the Nerd&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Holiday Break for the Nerd <span class="smallText">12/23/15</span></h2>
+        </div>
+        <p class="postViewPreview">It's easy to equate the screams of cheer and the candies and general joyfulness in school to the merriness of Christmas and winter break. But is break overrated?
+Christmas break is the first break longer than four days (Thanksgiving break) in the sch&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/meet-stackexchange-your-problems-answered-qa-style" title="View post &quot;Meet StackExchange: Your Problems, Answered Q&amp;A Style&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Meet StackExchange: Your Problems, Answered Q&amp;A Style <span class="smallText">12/23/15</span></h2>
+        </div>
+        <p class="postViewPreview">
+This is my first post tagged "Great." I truly believe in its powers and recommend it to all of the readers out there.
+
+What I'm referencing is the Q&amp;A monopoly network StackExchange. It's a great community effort of many millions of people. It's&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-great</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/another-code-test" title="View post &quot;Another Code Test&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Another Code Test <span class="smallText">12/23/15</span></h2>
+        </div>
+        <p class="postViewPreview">I'm just posting this to try out a small feature with posting. All's well; don't worry.
+Have a happy holiday season!</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/hidden-health-risks-of-holiday-candies" title="View post &quot;Hidden Health Risks of Holiday Candies&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Hidden Health Risks of Holiday Candies <span class="smallText">12/23/15</span></h2>
+        </div>
+        <p class="postViewPreview">It's yet another year. It's that holiday season again, full of family, fun, and food.
+But in that list above, one doesn't really fit in. Having fun and being around family are healthy obsessions, but what about the food? Eating too much holiday food,&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/quick-posting-debugging" title="View post &quot;Quick Posting Debugging&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Quick Posting Debugging <span class="smallText">12/22/15</span></h2>
+        </div>
+        <p class="postViewPreview">Don't mind this post. I'm just trying to make sure posting still works.</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/the-scholastic-compromise-between-quality-and-quantity" title="View post &quot;The Scholastic Compromise between Quality and Quantity&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">The Scholastic Compromise between Quality and Quantity <span class="smallText">12/22/15</span></h2>
+        </div>
+        <p class="postViewPreview">You simply cannot have the best of both worlds, or too much of a good thing.
+In terms of school, this means the difference between the amount of schoolwork and the ability to which you can complete them. In the past this was no bother, but in these l&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/unquantifiable-smart" title="View post &quot;Unquantifiable &quot;Smart&quot;&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Unquantifiable &quot;Smart&quot; <span class="smallText">12/21/15</span></h2>
+        </div>
+        <p class="postViewPreview">There's no easy way to determine intelligence, or how "smart" someone really is. No superb test scores, academic achievements, nor learning ability can be a sure-fire method of determining level of smartness.
+Sure, there's IQ tests and other specific&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/a-brief-history-of-periodic-power" title="View post &quot;A Brief History of Periodic Power&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">A Brief History of Periodic Power <span class="smallText">12/21/15</span></h2>
+        </div>
+        <p class="postViewPreview">You might know this information already, but I'm just writing to write (and teach, if you didn't already know this). We're delving into this subject in class, and I thought I'd write some about it.
+
+The Periodic Table is a wonderful tool — some say i&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-informative</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/keep-calm-and-study-on--christmas" title="View post &quot;Keep Calm and Study on ... Christmas?&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Keep Calm and Study on ... Christmas? <span class="smallText">12/21/15</span></h2>
+        </div>
+        <p class="postViewPreview">Christmas and its cheer comes near! And yet … so do midterms.
+It's understandable that there might be scheduling conflicts and the end of the semester is right after break, but it doesn't feel right to study on Christmas, or any other holiday. Sure, &hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-opinion</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/welcome-juliet-the-blogger" title="View post &quot;Welcome Juliet the blogger!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Welcome Juliet the blogger! <span class="smallText">12/21/15</span></h2>
+        </div>
+        <p class="postViewPreview">The recruitment process has paid off...
+Although she's not in high school, a junior highschooler's insight should be plenty. Hello Juliet!</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/site-update" title="View post &quot;Site Update!&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Site Update! <span class="smallText">12/18/15</span></h2>
+        </div>
+        <p class="postViewPreview">See the blog info by clicking the icon next in the subtitle for more information. I hope you like it!</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/more-hellos-to-the-world" title="View post &quot;More Hellos to the World&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">More Hellos to the World <span class="smallText">12/18/15</span></h2>
+        </div>
+        <p class="postViewPreview">Here are some more "Hello World" examples in various languages that I've learned (at least to a small extent):
+// Javascript
+document.write('Hello, World!');
+
+// Java
+public class HelloWorld
+    public static void main(String[] args) {
+        System&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+      <a class="imgLink postView" href="/posts/hello-world" title="View post &quot;Hello, World&quot;">
+        <div class="postListPostHeader postListPostHeaderMain">
+          <h2 class="postViewTitle">Hello, World <span class="smallText">12/17/15</span></h2>
+        </div>
+        <p class="postViewPreview">This is an introductory post in this blog. Let's see how it turns out.
+Why did I write this blog? Why did I post this post? We'll never know.
+If you were wondering, a "Hello World" program is often the simplest program in any language, usually to sho&hellip;</p>
+        <p class='postViewTagList'>Tagged: <span class="tag">the-homework-life</span> <span class="tag">the-homework-life-site</span></p>
+      </a>
+  </div>
+</div>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Holding onto anger is like drinking poison and expecting the other person to die.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Buddha</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Don&#x27;t Judge a Movie by its Audience">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/dont-judge-a-movie-by-its-audience">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Don&#x27;t Judge a Movie by its Audience</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Don&#x27;t Judge a Movie by its Audience</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 01/31/16</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">the-homework-life</span> <span class="tag clickable">the-homework-life-thought</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/sketchy-hacking-potential">Sketchy Hacking Potential?</a><br>Next post: <a href="/posts/introducing-agenda">Introducing Agenda</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p><strong>Warning: Spoiler Alert!</strong></p>
+<p>The movie theater was already packed with youngsters by the time we got there. It was released only yesterday. And by "youngsters," I mean hoards of toddlers and their young parents that made my adolescent self feel very out of place.</p>
+<p><img class="postImageRight quarter" src="http://content.internetvideoarchive.com/content/photos/9918/717613_118.jpg" /><p>We went to watch <a href="https://en.wikipedia.org/wiki/Kung_Fu_Panda_3">Kung Fu Panda 3</a> today in a cinema. It was a fast-paced movie that, despite having gone through three villains and two sequels with the same protagonists, has not gone downhill in its initial excitement. So it turned out to be a fun children's movie, and we got a kick out of our little family outing.</p><p>Or was it such a simple "kid's story"? Sure, it was the same stereotypical hero-beats-villain storyline that appeared in the two earlier Kung Fu Panda movies, but it added many creative twists and deeply-intertwined themes. To name a few:</p><ul><li>The importance of <strong>family</strong></li><li>The importance of <strong>individuality</strong></li><li>Finding your <strong>identity</strong> and place in life</li><li>Problematic <strong>relationships</strong> with white lies and true love</li><li><strong>Fantastical</strong> stories for children with no scientific or logical limitations</li></ul><p><small>It's difficult to keep this away from a movie review and more of an analytical, writing-focused piece that diverges away from the specifics and into the <em>meaning</em> of the movie, but I'll try anyways.</small></p><p>I've watched too many children's movies like this when I was little, and the animations and "cute" beings always fascinated me. The true themes behind the movie always eluded me, and I assume that it does for many other children too. However, in this creative high-school writing spree that has come upon me nowadays, I've emphasized the importance of paying attention to as much as I can in my everyday life&mdash; again, our writing classes have come to become more about the act of <em>thinking</em> than writing well. And what I realized was that, that which I was missing is the most important part! Those subtle themes allow us to subconsciously choose a movie over another. They make the movies different, even if the storylines are, for the most part, identical. They make the movies so wonderfully sweet and likeable. Large corporations like Disney or Dreamworks are the brilliant masterminds that do this so well.</p><p>Yes, I'll reiterate: in Kung Fu Panda, what kept the movies so vibrant was the changing up of themes and emotions. In the first two movies, there existed the concepts of the anonymous hero and the typical good-always-prevails. <small>(And there's probably many more important themes, but I don't remember them too well anymore.)</small> In this one, Po and the kung fu masters are stuck in a deeper ditch this time, in an even more drastic and disastrous situation that threatens all China. And again, he saves them with his ridiculous methods, even commanding the respect of a master from his teacher, Master Shi-Fu.</p><p>But the other pandas threw this idea off. What was their role in the movie? Well, they allowed Po to toy with his feelings of fitting into a family setting, something completely new to the movie. He keeps on learning more life lessons &mdash; more themes &mdash; that give him and the audience more wisdom. Ultimately, it is this new wisdom that fills our hearts with joy after watching a feel-good movie. They learned something, and we watched a movie. If we learned something, then we feel good. That is what differentiates it from the typical <em>cheesy</em> child-ish feel-good-ish movie that leaves you wondering, <em>Why did I waste my time watching this?</em></p><p>No matter how much we complain about school, we all love learning at heart.</p></p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/sketchy-hacking-potential">Sketchy Hacking Potential?</a><br>Next post: <a href="/posts/introducing-agenda">Introducing Agenda</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                If you have a difficult task, give it to a lazy person; they will find an easier way to do it.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Hlade's Law, sometimes misattributed to Bill Gates</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

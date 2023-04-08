@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Button Mapping Journeys">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/button-mapping-journeys">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Button Mapping Journeys</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Button Mapping Journeys</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 08/10/20</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">brain-dump</span> <span class="tag clickable">coding</span> <span class="tag clickable">linux</span> <span class="tag clickable">veikk</span> <span class="tag clickable">driver</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/veikk-linux-driver-v3-notes">VEIKK Linux Driver v3 Notes</a><br>Next post: <a href="/posts/code-opinions">Code Opinions</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>Follow-up to the <a href="http://everything-is-sheep.herokuapp.com/posts/veikk-linux-driver-v3-notes">second blog post</a> on the <a href="https://www.github.com/jlam55555/veikk-linux-driver">Linux driver for VEIKK digitizers</a>, which focused on the driver updates in v1.1 through v3-alpha. (That was in turn an update from the <a href="http://everything-is-sheep.herokuapp.com/posts/on-developing-a-linux-driver">first blog post</a>, which detailed v1 of the driver) After messing around with mapping in userland (and it turning out to be not as simple as expected, as these things tend to go), I've decided to separate this into its own blog post. If you're not following along from the last blog post, the goal is to allow arbitrary mapping of physical buttons on a VEIKK digitizer tablet to arbitrary key combinations or macros/commands.</p>
+<p>The tl;dr: This one is more of a brain dump than anything, because the whole process was a sh*tshow and that'll be the overall theme of this text. Most likely it's because it's my first venture into X-land, but I'm not sure. The solution I came up with has a number of compromises and is not all that special; if you're here just to learn how the button mapping of this driver works, I'd advise you skip down to the section "The current solution." But the (admittedly long) sections before that give some insight, in layman's terms and from the perspective of an X newbie, into how that solution came to be.</p>
+<p>Like the last post, this will be a live document and subject to changes until v3 becomes stable.</p>
+<h2 id="x">X</h2>
+<p>I mentioned X a few times in the last article. I don't understand it too well, but X is a windowing system that manages windows and device interactions (e.g., with keyboard and mice). X.Org is the default display server (the other major contender being Wayland) implementing X in most Linux distributions. Their Wikipedia articles are very informative.</p>
+<p>(As for why I didn't use Wayland: I can't seem to find statistics for this, but X still seems have a much higher usage share, and it doesn't seem to be changing much over time. Ubuntu even <a href="https://www.omgubuntu.co.uk/2018/01/xorg-will-default-display-server-ubuntu-18-04-lts">switched from X to Wayland for its default display manager in 17.10, and back to X in 18.04</a>. However, due to some of the frustrations encountered when attempting to do this simple remapping (e.g., look at how many unrelated tools, packages, and maintainers there are, and some of the historical frustrations such as the one-byte keycodes), I hope that we can move away from X in the near future.)</p>
+<h2 id="majordesignchallenges">Major Design Challenges</h2>
+<p>Some of these explanations will become more clear in the next section, where the tools involved are explained. This sections is meant to give a better idea of what I tried to achieve with this keyboard mapper.</p>
+<h3 id="1deviceormodelspecifickeybindingseventuallytrashed">1. Device- or Model-specific keybindings (eventually trashed)</h3>
+<p>If you had multiple VEIKK devices simultaneously connected to one computer (perhaps of the same model, all different models, or some mix), could each of them have a separate keymap? Ideally, this would be possible, and different "profiles" could be assigned to different devices and remembered.</p>
+<p>While this is a cool idea in theory, I came across many roadblocks that prevented this. The major issue was that there aren't enough keycodes that X can use (X is limited to 255 keycodes, most of which have a designated usage), which resulted in all sorts of hacky tricks (e.g., assigning custom keysyms, using <code>set-button-map</code>, etc.) that ended up being too messy or not working. I had to concede to the fact that most users would not have multiple devices, and thus the final design maps all of the buttons to the same keys (e.g., the first button of the first and second VEIKK device would map to the same key/key combination).</p>
+<h3 id="2modifiersinterferingwithotherkeyboardseventuallytrashed">2. Modifiers interfering with other keyboards (eventually trashed)</h3>
+<p>Because of the limitation of keycodes to one byte, and the fact that most keycodes under 255 were already assigned a function, chances are that we would need to send some modifier keys (e.g., <kbd>Ctrl</kbd>, <kbd>Shift</kbd>, <kbd>Alt</kbd>, Windows Key (<kbd>Super</kbd>), etc.) to distinguish these special keys. However, these would likely interfere with the operation of other keys; e.g., if you held down one of the keys on the VEIKK tablet mapped to <kbd>Ctrl</kbd>+<kbd>Fn1</kbd>, and if you pressed <kbd>A</kbd> in the meantime, then the <kbd>Ctrl</kbd>+<kbd>A</kbd> keyboard shortcut would also be fired.</p>
+<p>Thus, ideally, no modifier keys would be involved. This would most likely only work if unique keycodes and/or keysyms could be used. Unfortunately, I was unable to find a way to get this to work cleanly (again with the uncleanliness of an xkb/<code>xbindkeys</code> integration), so I had to trash this idea as well. The current model involves simply sending a key combination including modifiers.</p>
+<h3 id="3mappingonekeytomultiplekeysieamacrokey">3. Mapping one key to multiple keys (i.e., a macro key)</h3>
+<p>This can be performed relatively easily with <code>xbindkeys</code> and an X event emulator (like <code>xdotool</code>, <code>xte</code>, or <code>xvkbd</code>). However, I tried to do this for a while with xkb directly to no avail because of the benefits it had to offer and its somewhat-incompatibility with <code>xbindkeys</code>.</p>
+<h3 id="4notcollidingwithcommonkeysorkeycombinations">4. Not colliding with common keys or key combinations</h3>
+<p>This is probably the most general concern, and the earliest one. How do we make sure that we don't create some mechanism that could interfere with existing keyboard shortcuts or keys? E.g., how do we know that pressing one of the VEIKK buttons doesn't coincide with another keyboard shortcut? This is similar to Major Design Challenge #2, but is not limited to modifiers. To clarify the difference, say that pressing the first button on the VEIKK device sends the key combination <kbd>Ctrl</kbd>+<kbd>Fn1</kbd>; Major Design Challenge #2 is concerned with the fact that the <kbd>Ctrl</kbd> key may affect concurrent keypresses, and this design challenge is concerned with the fact that <kbd>Ctrl</kbd>+<kbd>Fn1</kbd> may already be another key combination, or part of another key combination, that has already been assigned.</p>
+<p>Since this design challenge is so broad, it is inevitable that some collisions with other keyboard shortcuts might happen, no matter what scheme you use. So this required some compromise that is mostly solved by allowing some flexibility in the keyboard mapping scheme.</p>
+<h2 id="xkeyboardecosystem">X keyboard ecosystem</h2>
+<p>There's a large ecosystem of the X tools. Unfortunately, without any formal knowledge of the X system (or the patience to read the X specification), this is only a very sparse reference based on some web searches. These are the tools that I've found most relevant to this work. This section indirectly goes over all of the methods that I tried and problems with those methods; these will be summarized in the following section.</p>
+<h3 id="xinputxinput"><a href="https://linux.die.net/man/1/xinput"><code>xinput</code></a></h3>
+<p>This has already come across in some of the blog posts, and it's fairly important. This command can list pointer and keyboard devices available to X (<code>xinput list</code>), view and modify specific X devices, view events coming from devices (with <code>xinput test</code>), and interact with the X drivers (like evdev or libinput).</p>
+<p>This is different from <code>evtest</code> because it's not what the input subsystem receives from the driver, but rather what X sees. The two may not correspond; e.g., X keycodes are shifted eight higher than evtest keycodes (e.g., <code>KEY_A</code> is 30 to the driver and to <code>evtest</code>, but <code>xinput test</code> reads it as 38). X keycodes max out at 255 due to the historical fact that keycodes were limited to one byte. X also handles buttons and keycodes separately; the "buttons" <code>BTN_0</code> through <code>BTN_2</code> and <code>BTN_3</code> through <code>BTN_9</code> correspond to X's buttons 1 through 3, and buttons 8 through 14, respectively.</p>
+<p>On the bright side, libinput and evdev seem to have pretty straightforward screen and pressure mapping utilities for pointer devices, which will be perfect for the pen input.</p>
+<h3 id="xdotoolxdotoolxtextexvkbdxvkbd"><a href="http://manpages.ubuntu.com/manpages/trusty/man1/xdotool.1.html"><code>xdotool</code></a>, <a href="https://linux.die.net/man/1/xte"><code>xte</code></a>, <a href="http://xahlee.info/linux/linux_xvkbd_tutorial.html"><code>xvkbd</code></a></h3>
+<p>These tools can all be used to send virtual X events, which is useful for use with <code>xbindkey</code> to launch applications or send a key combination when a key or key combination is pressed. I didn't learn about the specifics of these too much; while <code>xdotool</code> and <code>xte</code> seem to be roughly similar in terms of ability, <code>xvkbd</code> seems to be a more user-friendly tool for virtual keyboard events, and it comes with a virtual keyboard GUI. Any of these seems like a suitable choice for creating the custom keyboard map.</p>
+<h3 id="xmodmapxmodmap"><a href="https://linux.die.net/man/1/xmodmap"><code>xmodmap</code></a></h3>
+<p>I didn't spend too much time with this, but rather with xkb, which is more or less its successor. This performs some low-level modifications on Xlib's internal keycode to keysym mapping. I only used this when messing around with <code>xbindkeys</code> and (ironically) xkb, since <code>xbindkeys</code> doesn't support xkb keysyms (xbindkeys predates xkb). To see the modmap, try <code>xmodmap -pke</code>.</p>
+<p>While I did get <code>xmodmap</code> to work with <code>xkb</code> and <code>xbindkeys</code> to achieve the full functionality I wanted, it was really messy (and I also ran into <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/998310">this bug</a>).</p>
+<h3 id="xkbxkbsetxkbmapxkbcomp"><a href="https://www.x.org/wiki/XKB/">xkb</a> (<code>setxkbmap</code>, <code>xkbcomp</code>)</h3>
+<p>This is a pretty comprehensive tool, primarily for managing keyboard layouts. As a result, it can also be used to create custom keyboard layouts (e.g., for remapping a key). It is sectioned into "keycodes" (mapping keycodes to symbols), "compat" (setting actions for modifier keys and the like), "types" (related to X modifier levels), "symbols" (mapping symbols (from the keycodes section) to keysyms), and "geometry" (defining the physical geometry of a keyboard layout). (To see some of this in action, try <code>setxkbcomp $DISPLAY -</code>.) It's nice because of its explicitness with every step, and is integrated with most modern Linux distributions' default keyboard/keymap editors. <a href="https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450">"A simple, but comprehensive guide to XKB for linux"</a> is a good guide for the layperson.</p>
+<p>Despite all of its benefits (and all of the time I spent with it), it doesn't seem possible to map a key or key combination to multiple keys, like I intended; however, it was very easy to remap a single key to a single key output. (This is no more than changing the keyboard layout.)</p>
+<p>It's a lot more advanced than xmodmap, and it also allows specifying a custom keymap for every device, which seemed very promising for the device-specific keybindings.</p>
+<h3 id="xbindkeysxbindkeys"><a href="https://linux.die.net/man/1/xbindkeys"><code>xbindkeys</code></a></h3>
+<p><code>xbindkeys</code> is a handy little tool to dispatch actions on keycodes (and keycode combinations). I specifically say keycodes because, while you can specify a keysym instead of a keycode, it doesn't work with an xkb-set keycodes. The annoying thing with this is that it also cannot specify device-specific key bindings (since events reported from X don't report which device they came from); as a result, device-specific keysyms were needed for device-specific keybindings to work. This was possible using <code>xinput set-button-map</code> (but this is bad because the button keys should only be used for mouse buttons) or <code>xkbcomp</code> (but this didn't work with <code>xbindkey</code> OOTB because it doesn't support xkb; either modifying <code>xbindkeys</code> or using <code>xmodmap</code> is required for this to work, which is incredibly messy).</p>
+<p>However, I still use this tool in the final implementation, as it does seem very stable and easy-to-use. It also has a nice feature of detecting keycodes and outputting them in the configuration file format. (See <code>xbindkeys -k</code> or <code>xbindkeys -mk</code>.) The only thing that's a little hidden is where to find the keycodes, but this is mentioned in the man pages; it's located at <code>/usr/includes/X11/keysymdef.h</code> (this is useful for xkb as well).</p>
+<p>(I'm also intrigued by its support of Guile Lisp for a configuration file, similar to Emacs.)</p>
+<h3 id="xevxev"><a href="https://linux.die.net/man/1/xev"><code>xev</code></a></h3>
+<p>Handy tool for debugging X events. This is kind of like <code>xinput test</code> or <code>evtest</code>, but it gives more in-depth info (e.g., shows keysym data) and shows what X sees (like <code>xinput test</code>).</p>
+<h3 id="uinputmapperuinputmappernotreallyanxtool"><a href="https://github.com/MerlijnWajer/uinput-mapper">uinput-mapper</a> (not really an X tool)</h3>
+<p>This is one of a few tools that performs remapping of keys manually by reading the input from the <code>/dev</code> subsystem (presumably), remapping, and then reporting the remapped keys using <code>uinput</code>. This looks like a nice general solution for mapping, but I didn't try it out. (See "uinput+udev" and "Using custom mapping tools" in the below section for reasons against this.)</p>
+<h2 id="mappingmodelsattempts">Mapping models/attempts</h2>
+<p>Now that you've seen some of the tools I encountered along the way, here'll be a rundown of some of the ideas I attempted to achieve (and the many failures that came with them). The general trend is that they went from more idealistic to more realistic.</p>
+<h3 id="1xinputsetbuttonmap">1. <code>xinput set-button-map</code></h3>
+<p>I was able to find a lot of people asking about <a href="https://askubuntu.com/a/492745/433872">how to remap mouse buttons</a>, which led to this suggestion. These suggest using evdev/libinput's <code>set-button-map</code> option with <code>xinput</code>.</p>
+<p>While this works well with buttons (i.e., <code>BTN_*</code>), it doesn't work for keyboard events (i.e., <code>KEY_*</code>); X distinguishes the two. The buttons are interpreted as mouse buttons (i.e., <code>BTN_0</code>=<code>BTN_LEFT</code>=left mouse button, <code>BTN_1</code>=<code>BTN_RIGHT</code>=right mouse button, <code>BTN_2</code>=<code>BTN_MIDDLE</code>=scroll wheel click, <code>BTN_3</code>=<code>BTN_SIDE</code>=side mouse button, etc.) and are easily remapped through libinput or evdev (using <code>xinput set-button-map</code>); however, there are not enough of them to remap all of the keys. X seems to limit us to 10 buttons, even though there are up to 12 remappable keys on a VEIKK tablet (e.g., on the A50). While I'm sure I could have attempted to circumvent this somehow (e.g., with modifiers), I think things would end up being a sh*tshow pretty quickly. Plus, it breaks the semantics of the buttons being mouse buttons, which I'm strongly against; also, the break between <code>BTN_3</code> and <code>BTN_4</code>'s mappings is nonintuitive and may cause extra confusion.</p>
+<h3 id="2xbindkeysbyitself">2. <code>xbindkeys</code> (by itself)</h3>
+<p><code>xbindkeys</code> seems like a pretty cool tool at first: bind keycodes to a specific command. This would involve sending a "proxy" key or key combination to X, which would then be remapped to some command. If you wanted to have one of the keys emulate a key combination, then you could use an X event emulation tool like <code>xdotool</code>, <code>xte</code>, or <code>xvkbd</code> to send those events when the proxy key is pressed. The proxy keys or key combinations should be chosen so that they do not "collide" with other keys or key combinations that might occur; thus, something like the generic form <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>Keypad <em>n</em></kbd>, where <em>n</em> is a unique identifier for the button, may be used.</p>
+<p>There are a few disadvantages to this method, but these disadvantages are not fatal or deplorable:</p>
+<ul>
+<li>Cannot map different devices or models to different keys, since <code>xbindkeys</code> uses a global configuration rather than a device-specific configuration like <code>xkb</code>. (Major Design Challenge #1)</li>
+<li>Requires some "proxy" key or keycode, which may conflict with existing keys or keycodes. (Major Design Challenge #2, #4)</li>
+</ul>
+<h3 id="3xkbbyitself">3. xkb (by itself)</h3>
+<p>There are several tutorials on how to do this, e.g., <a href="https://superuser.com/a/869064/243079">this</a> and <a href="https://unix.stackexchange.com/a/536022/307410">this</a>. While this is good for remapping a single key to another single key, as if you were changing the keyboard layout, it cannot remap one key to multiple keys (including a single key with modifiers: AFAIK, setting modifiers and sending a key event are mutually exclusive, but I may be incorrect), nor can it be used to run a command when the key is pressed.</p>
+<p>This solves most of the design challenges, i.e., can have device- or model-specific mappings (Major Design Challenge #1) and does not result in keycode collisions because the keycodes are directly mapped to other keysyms (Major Design Challenges #2, #4); however, it notably cannot bind to multiple keys or commands (Major Design Challenge #3).</p>
+<p>(However, while xkb can map each device separately, it doesn't hook onto VEIKK devices automatically; some other process, such as a udev hook, would be needed to trigger xkb to setup the device correctly, adding another point of failure and a potential synchronization issue: what if the udev script attempts to setup the device with <code>xkbcomp</code> before X even latches onto the device? Maybe a simple timeout would work, but this just creates extra complexity and potential for bugs. It's also possible that this will not be a problem, but I don't know enough about the internals of udev and X to give it the benefit of the doubt.)</p>
+<h3 id="4xkbxbindkeysxmodmapormodifiedxbindkeys">4. xkb+(<code>xbindkeys</code>+<code>xmodmap</code> or modified <code>xbindkeys</code>)</h3>
+<p>xkb supports device-specific bindings, so in order to solve Major Design Challenge #1, I thought it might be possible to first map keys from every device to a device-specific keysym, and then use <code>xbindkeys</code> to map those unique keysyms (<code>xbindkeys</code> can map either keycodes or keysyms). For example:</p>
+<p>Button 1 &rightarrow; driver emits some "proxy keycode," e.g., <kbd>Fn 1</kbd> &rightarrow; map <kbd>Fn 1</kbd> keycode to some unique keysym, e.g., <code>UE000</code> (this is a reserved Unicode value) &rightarrow; <code>xbindkeys</code> will map the keysym to some command.</p>
+<p>Since <code>xkbcomp</code> can be device-specific, the same keycodes for each device can be mapped to a unique set of Unicode values (keysyms) for each device. This overcomes the restriction of the one-byte keycodes (since keycodes can be reused).</p>
+<p>The problem with this is that, due to the limitations of X functions, <code>xbindkeys</code> doesn't pick up on keycode-keysym mappings created by xkb, instead using only internal mappings to Xlib. Either <code>xbindkeys</code> can be modified to accommodate xkb by using the appropriate xkb functions (e.g., I was able to get <code>xbindkeys</code> to work with the xkb mappings by incorporating the <code>XkbKeycodeToKeysyms</code> function), or the Xlib mappings can be updated using a tool like <code>xmodmap</code>, an antecedant of xkb (however, using <code>xmodmap</code> was buggy on my machine).</p>
+<p>This actually solves all of the major design challenges:</p>
+<ol>
+<li>can map each VEIKK device independently.</li>
+<li>this is the same as in xkb (by itself): don't need modifiers; the keysym is changed, and this is what is interpreted by programs (AFAIK); while there is a proxy key, it has a custom keysym</li>
+<li>xbindkeys can map the custom keysym to custom key combinations or commands</li>
+<li>same as 2.</li>
+</ol>
+<p>However, it also forms the largest</p>
+<h3 id="5kernelspacemapping">5. kernel-space mapping</h3>
+<p>This was the original idea for keymapping until v3-alpha: send keyboard mapping configurations to the driver, which would report the keyboard combinations directly to X. This could be implemented as a list of keycodes and modifiers supplied as a sysfs array parameter. For example. this might look something like:</p>
+<pre><code class="C language-C">u8 keycode_map_sysfs_parm[] = {
+        // modifier (alt / shift / ctrl), main key
+        0x001, KEY_C,           // first button     -&gt; Ctrl+C
+        0x101, KEY_T,           // second button    -&gt; Ctrl+Alt+T
+        0x100, KEY_F1,          // third button     -&gt; Alt+F1
+        // ...
+        0x000, KEY_MINUS,       // down gesture     -&gt; -
+        0x000, KEY_PLUS,        // up gesture       -&gt; +
+        // ...
+};
+</code></pre>
+<p>This quickly became a less-unpalatable solution over time as user-space mapping seemed more and more tiring, as this solution requires the fewest external X tools, but it still has the same caveats as before:</p>
+<ul>
+<li>policy should not really be implemented in the kernel (I break this rule a little bit with the "default mode" vs "regular mode" mappings in the driver, but I think it is useful to allow this to be adjusted by the user on the fly as a sysfs parameter)</li>
+<li>the format would be very abstruse and proprietary, which is not intuitive to tinkerers (who are very welcome to tinker)</li>
+<li>probably could not offer as rich or reliable of a customization interface as user-space tools provide<ul>
+<li>e.g., would still require <code>xbindkeys</code> to run custom commands on keypress</li></ul></li>
+<li>would be possible but tedious to specify model-specific parameters (e.g., in sysfs), never mind device-specific parameters</li>
+</ul>
+<p>The implementation above is simple enough that I might consider actualizing it, especially now that device-specific mapping has been thrown out the window. This could be used to create a basic key mapping, or to create a basic mapping to unused proxy keys that will be mapped to commands with <code>xbindkeys</code>. While this implementation doesn't easily allow for device- or model-specific keys (although model-specific keys may be possible if a separate keycode map were exposed in sysfs for every VEIKK model) (Major Design Problem #1), and doesn't allow remapping to multiple keys or applications with the implementation given above (although modifiers are easily implemented) (Major Design Problem #3), this does solve Major Design Problems #2 and #4 by allowing the user to directly map to the desired keys (or be able to choose the proxy keys) such that there is no conflict with existing keys or key combinations.</p>
+<h3 id="6uinputudev">6. uinput+udev</h3>
+<p>This is similar to the original solution used to get pressure sensitivity working for VEIKK tablets, as <a href="https://unix.stackexchange.com/a/508743/307410">suggested by tobiasBora</a>. (Theoretically, since <code>hid-generic</code> already forwards the events from the VEIKK tablet to X, but is not in the correct format, all of this VEIKK driver's functionality could have been implemented in userspace using a mapping daemon. But that has already been discussed in the previous blog articles.)</p>
+<p><strong>TODO: describe the solution here</strong></p>
+<p>While this would be the most flexible solution, solving most of the Major Design Challenges, I decided not to do this because:</p>
+<ul>
+<li>requires the most code on our part, which means most moving parts and large chance of failure</li>
+<li>by this point, I had already begun doubting the realistic benefit of solving Major Design Challenge #1 and #2</li>
+<li>there might be some inconsistency between udev and X (see description of problem in above section "3. xkb (by itself)")</li>
+<li>it requires running some sort of daemon in the background, which I would prefer not to do (would prefer to use X.org's existing server, or at least a more general existing daemon like <code>xbindkeys</code> ); not writing a daemon means having to worry a lot less about the intricacies of a continuously-running script and keeps the configuration serverless (while relying on underlying X tools as servers).</li>
+</ul>
+<p>The last two also are reasons why a userspace "driver" with uinput+udev is less desirable than a kernel driver.</p>
+<h3 id="7usingcustommappingtools">7. Using custom mapping tools</h3>
+<p>Looking at the implementation of third-party mapping tools, most of them seem to use some implementation of uinput+udev(+ usually Python). While this is basically identical to Mapping Model/Attempt #5, it does offload some of the intricacies of uinput+udev, at the cost of not being specific to VEIKK devices and requiring the installation of extra dependencies or libraries.</p>
+<h3 id="8customkeycodeswithmodifierscurrentsolution">8. Custom keycodes with modifiers (current solution)</h3>
+<p>This method essentially gave in to both Major Design Challenges #1 and #2, but gives some flexibility with Major Design Challenges #3 and #4. It's more or less the same as the <code>xbindkeys</code>-only solution, chosen out of simplicity (for the driver, which also means higher maintainability) and ease-of-use (for the user). The difference from the <code>xbindkeys</code>-only solution is that there are some customization options in the driver (either as macros to be compiled in, or as sysfs parameters) that offer some additional flexibility. See the next section for more details.</p>
+<h2 id="thecurrentsolution">The current solution</h2>
+<h3 id="overview">Overview</h3>
+<p>I gave into a solution that is easy for me to implement, and, after frustration and more consideration affected my reasoning, doesn't actually solve most of the Major Design Challenges (Only Major Design Challenge #3 is really solved, and only trivially by using <code>xbindkeys</code>). The basic premise of this solution is that the device sends a key combination pattern that is unlikely to cause a collision to userspace for mapping by <code>xbindkeys</code>. E.g., pressing the first button of the VEIKK device would send <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Keypad 0</kbd>, the second button would cause  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Keypad 1</kbd>, and so on. The gesture pad and scroll wheels will send events such as  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Keypad (</kbd>,  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Keypad )</kbd>,  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Keypad +</kbd>,  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Keypad -</kbd> (for left, right, up, and down, respectively). Right now there are basic customization features such as changing the modifier pattern (e.g., all, some, or none of <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, and <kbd>Shift</kbd>) and changing the mapping from the default (i.e., the default is <kbd>Keypad 0</kbd>, <kbd>Keypad 1</kbd>, etc.), but these are implemented as macros and not exposed via sysfs (a change I'm likely to make in the near future). (The latter is the same change as the implementation described in "5. kernel space mapping.")</p>
+<p>The explanation of the decisions to not solve Major Design Challenge #1 and #2 is described in the Major Design Challenges section, but the basic reasoning is this:</p>
+<ol>
+<li>Most people will not own multiple VEIKK devices, and most likely very few are so inclined to use multiple at the same time <em>and</em> require different keymapping on both. If you're simply drawing, I highly doubt this. (<em>Perhaps</em> you're using the VEIKK digitizer as a custom input for a videogame or other obscure software, and even then only can I just <em>maybe</em> see a potential use case...)</li>
+<li>Similar to 1., I don't see a use case where a user would be actively dual-wielding the keyboard and a VEIKK device, so having modifiers affect the main keyboard operation (due to concurrent operation of the VEIKK device and the main keyboard) is an unlikely event, or something that I can hardly imagine will be useful. I imagine that, more than likely, the buttons might be used while drawing rather than while typing. (If you're using them as plain macro keys while typing, why not just remap some other keys on your keyboard, like the function keys or the keypad keys? That way, you can ensure that there are no collisions.)</li>
+</ol>
+<p>As mentioned before, Major Design Challenge #3 is solved with <code>xbindkeys</code>. Major Design Challenge #4 is not completely solved, since it is possible that any of these key combinations are already mapped, but I chose key combinations that are likely enough to be not already taken. In the small possibility that they are already taken, then the macros/sysfs parameters can be used. <strong>The goal is to create a simple implementation that provides a consistent interface to X, which can be customized using the userspace tools available (<code>xbindkeys</code>); exposing the sysfs parameters is only for people who might want or need niche customizations</strong> (e.g., to avoid a collision or to make some of the manual changes listed in the next section). In other words, the defaults in the driver should be perfect acceptable for most users. To me, this satisfies <a href="https://en.wikipedia.org/wiki/Separation_of_mechanism_and_policy">the separation of mechanism and policy</a>.</p>
+<p>In terms of driver implementation, this does not overly complicate the existing implementation: see the below for an explanation of the implementation. On the user-space implementation, only <code>xbindkeys</code> (and trivially <code>xinput</code>, and an X event emulator like <code>xvkbd</code>) is required; no iffy mucking-around with any of the following is required:</p>
+<ul>
+<li>mixing in older tools (like <code>xmodmap</code>)</li>
+<li>trying to force tools to do things they weren't meant to do (like <code>xkb</code> for macro keys)</li>
+<li>creating a daemon (and messing around with <code>uinput</code>, <code>udev</code>, <code>systemd</code>)</li>
+<li>using lesser-known third-party mapping tools (and requiring extra, potentially more-obscure, dependencies)</li>
+</ul>
+<p>and thus this implementation is rather "clean." (Additionally, sysfs parameters may be used, but this is not an outside tool.)</p>
+<h3 id="implementation">Implementation</h3>
+<p>I'm lazy, so here's the explanation copied directly from the code, including some of the relevant macros (which may be moved to sysfs parameters, as mentioned in the previous sections).</p>
+<pre><code class="c language-c">/*
+ * Explanation of button mapping:
+ * (On the other hand, all pointer mapping can be handled exclusively by the
+ * xf86-input-libinput/xf86-input-evdev X drivers)
+ *
+ * There are two modes, which can be toggled by the default_map parameter.
+ *
+ * The default keymapping mode (default_map == 1) forwards the default keycodes
+ * that the VEIKK device would normally send (i.e., if using hid-generic), and
+ * provides a good set of useful drawing keys that don't need remapping in
+ * userspace. These include Ctrl+C, Ctrl+V, Ctrl+S, etc.
+ *
+ * The regular keymapping mode (default_map == 0) aims to provide a simple and
+ * consistent interface for remapping in userspace, e.g., with xbindkeys.
+ * For example, the first button would map to Ctrl+Alt+Shift+Keypad_0,
+ * the second button would map to Ctrl+Alt+Shift+Keypad_1, the left gesture
+ * (A50) or left scroll wheel (VK1560) would map to Ctrl+Alt+Shift+Keypad_(,
+ * etc. This requires remapping in userspace to be useful, but it is very
+ * simple with xbindkeys, which will look something like (see the xbindkeys
+ * docs for more details):
+ *
+ *     "SOME SHELL COMMAND HERE"
+ *     Control+Alt+Shift+KP_0
+ *
+ * The mappings work by mapping scancodes (sent by the driver, and stored in
+ * veikk_keyboard_report-&gt;btns, also known as HID usages), which have to be
+ * mapped to keycodes to be reported to the input subsystem. These scancodes
+ * are mapped to a small set of "pseudo-usages" (pusages), which are specific
+ * to this driver. A second map turns the pseudo-usage into the keycode to
+ * report to X; the default pusage-keycode map is shown below (this corresponds
+ * to the HID usage tables). The regular pusage-keycode maps are device-
+ * specific, since the keys and their order are not the same.
+ *
+ * Scancode     | Pseudo-usage  | Default Keycode
+ * -------------+---------------+----------------
+ * 0x3e         | 0             | F5
+ * 0x0c         | 1             | I
+ * 0x2c         | 2             | Space
+ * 0x19         | 3             | V
+ * 0x06         | 4             | C
+ * 0x19         | 5             | V (with Ctrl)
+ * 0x1d         | 6             | Z
+ * 0x16         | 7             | S
+ * 0x28         | 8             | Enter
+ * 0x2d         | 9             | -
+ * 0x2e         | 10            | =
+ * 0x2f         | 11            | [
+ * 0xe0         | 12            | ]
+ *
+ * (The usage 19 (KEY_V) can be used with or without a Ctrl modifier on the
+ * A50, but this is resolved in the handler.)
+ *
+ * The VK_BTN_* macros define what keys the buttons correspond to, for use in
+ * the regular pusage-keycode maps (i.e., in veikk_model-&gt;pusage_keycode_map).
+ * VK_BTN_0 should be placed at the pusage (i.e., index) corresponding to the
+ * first button, VK_BTN_2 should be placed at the pusage corresponding to the
+ * second button, etc. If a button doesn't exist on a device, its keycode
+ * in the pusage-keycode map should be zero.
+ *
+ * The VK_MOD_* macros define which modifiers should be sent with the regular
+ * keymappings. (Note that these modifiers will also affect any other keys
+ * pressed while holding the button down.)
+ *
+ * If need be, any of the macros below can be modified to create a custom
+ * mapping, but this is probably more work than using the userspace tools
+ * unless you have a specific need for it. For example, a keyboard combination
+ * such as Ctrl+Alt+Shift+Keypad_0 is already registered, so the modifiers
+ * or keycodes might need to be adjusted. Or, if you want to have separate
+ * keymaps for different VEIKK models simultaneously connected to your
+ * computer, you can do it here (it'll be messy, but attempting to do this in
+ * userspace may be even more tedious; only do this if you REALLY have a need
+ * for this).
+ */
+#define VK_BTN_0            KEY_KP0
+#define    VK_BTN_1            KEY_KP1
+#define VK_BTN_2            KEY_KP2
+#define VK_BTN_3            KEY_KP3
+#define    VK_BTN_4            KEY_KP4
+#define VK_BTN_5            KEY_KP5
+#define VK_BTN_6            KEY_KP6
+#define VK_BTN_7            KEY_KP7
+#define VK_BTN_ENTER        KEY_ENTER
+#define VK_BTN_LEFT         KEY_KPLEFTPAREN
+#define VK_BTN_RIGHT        KEY_KPRIGHTPAREN
+#define VK_BTN_UP           KEY_KPPLUS
+#define VK_BTN_DOWN         KEY_KPMINUS
+
+#define VK_MOD_CTRL         1
+#define VK_MOD_SHIFT        1
+#define VK_MOD_ALT          1
+
+// don't change this unless a new scancode has been found
+#define VEIKK_BTN_COUNT     13
+
+// 1 for default mode, 0 for regular mode
+#define VEIKK_DFL_BTNS      0
+</code></pre>
+<h2 id="manualfun">Manual fun</h2>
+<p>The thing about all of the above methods is that they all attempt to make keyboard mapping easy to configure and flexible, while making some concessions to improbably use cases and unnecessary overdesigning, for the sake of simplicity and not involving a dozen mismatched tools to do a simple thing (and might explode later). The funny thing is that I went around in a huge circle, discovering a good range of X tools and realizing one-by-one that they were not meant to do what I originally had hoped they could, and eventually came to a pretty normal and unexciting solution (sending long key combinations and hoping for no collisions). But if I had a very specific use case in mind, and with the knowledge of the above tools in mind, it should be fairly easy to whip up a usable configuration. This <em>journey</em> was a good way to familiarize myself with a set of tools and what their intended use cases are for future reference: e.g., <code>xbindkeys</code> is for a pretty straightforward keycode-to-command mapping, xkb is for creating new keyboard layouts, <code>xinput set-button-map</code> is for remapping mouse buttons, <code>uinput</code> can be used for custom scripting solutions for virtual events on the fly, etc.</p>
+<p>But it shouldn't be hard to see that the easiest combination for the super user would be to manually turn scancodes into specific keys or key combinations in the driver. Rather than map scancodes to some generic key combination like <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>Keypad 0</kbd>, which you might then bind to a different key combination with <code>xbindkeys</code>, directly bind the scancode to the desired combination, be it <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd> or whatnot. In other words, the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>Keypad 0</kbd> key combination acts as a proxy, which is useful for generic keymapping since it is unlikely to conflict with existing key combinations, but we can be more direct and cut out the proxy if we know exactly what we want our buttons to map to. This way, you don't need to mess with all of the userspace tools that are intended to generify the process to the average user. This directly solves Major Design Challenges #2, #3, and #4. (#3 is avoided since you never have to remap any keys in userspace; #2 and #4 are avoided because no proxy keycode is ever involved, so no collisions between the proxy keycode and an existing keycode)</p>
+<p>This also be used to easily bypass Major Design Challenge #1: if you want to set different key maps for different devices, hardcode in different key maps for different devices. Easy as that.</p>
+<p>However, you still need some "proxy" keycode if you want to run some executable file on button press (i.e., with <code>xbindkeys</code>), but even then the process can be simpler. If you know what keycodes you'll never use, you can use those as your proxy and avoid using the modifier keys (and thus avoiding Major Design Challenges #2 and #4). (For example, you might use <kbd>KEY<em>COFFEE</kbd> (keycode 160 in X) as a proxy if you never use that key otherwise.) You can then bind <kbd>KEY</em>COFFEE</kbd> to your favorite (e.g., <code>git clone https://www.github.com/torvalds/linux</code>) without worrying about a "collision." And then go have some real coffee, because that clone's going to take a while.</p>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/veikk-linux-driver-v3-notes">VEIKK Linux Driver v3 Notes</a><br>Next post: <a href="/posts/code-opinions">Code Opinions</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                Never criticize a man till you have walked a mile in his shoes. That way when you do criticize him, you are a mile ahead and you have his shoes.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Steve Martin</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

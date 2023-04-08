@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A blog by Juliet and Jonathan Lam">
+    <meta name="author" content="Jonathan Lam <jlam55555@gmail.com>">
+    <meta name="keywords" content="everything is sheep, sheep, jonathan lam, juliet lam">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/res/mobile.css">
+    <link rel="stylesheet" href="/res/desktop.css" media="all and (min-width: 1024px)">
+    <link rel="stylesheet" href="/res/desktop.css" media="print">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|IBM+Plex+Mono:400&display=swap">
+    <link rel="icon" type="img/x-icon" href="/res/favicon.ico">
+    <link rel="apple-touch-icon" href="/res/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EiS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- Open Graph tags -->
+    <meta property="og:site_name" content="Everything is Sheep">
+    <meta property="og:title" content="Everything is Sheep: Better RTC with WebRTC">
+    <meta property="og:description" content="A playground for teenage creative and academic writing by Jonathan Lam.">
+    <meta property="og:url" content="http://localhost:5000/posts/better-rtc-with-webrtc">
+    <!-- Authentication for Bing/Yahoo site crawling --> <meta name="msvalidate.01" content="3528518A02A6DC24F12BDBDBF203C4D6" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a46f002d02.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="/res/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114380746-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-114380746-1'); </script>
+    <title>Everything is Sheep: Better RTC with WebRTC</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="titleBar">
+        <a href="/" class="center" id="title" title="Return home">
+          <span class="desktop">
+            <div id="titleTitle">
+              <p>EVERY</p>
+              <p>THING</p>
+              <p>IS</p>
+              <p>SHEEP</p>
+            </div>
+            <span class="smallText" id="titleDescription">A playground for free-form teenage writing</span>
+          </span>
+          <span class="mobile">
+            <img id="condensedLogo" src="/res/img/logo-condensed.png">
+            <span class="no-print">EiS</span>
+            <span class="print">Everything is Sheep</span>
+          </span>
+        </a>
+        <div id="menuButton" class="mobile no-print"></div>
+      </div>
+      <a href="/" class="navLink mobile">Return home</a>
+      <a href="/posts" class="navLink mobile">View all posts</a>
+      <a href="/authors" class="navLink mobile">View all authors</a>
+      <div id="postList" class="desktop">
+        <input type="text" id="sidebarSearchInput" placeholder="Search posts">
+        <i id="sidebarSearchIcon" class="fa fa-search"></i>
+        <div id="searchHint" class="smallText">Press <kbd>Enter</kbd> to search</div>
+          <div><a href="/posts/code-opinions" title="View post &quot;Code Opinions&quot;">Code Opinions</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/button-mapping-journeys" title="View post &quot;Button Mapping Journeys&quot;">Button Mapping Journeys</a> <span class="smallText">08/10/20</span></div>
+          <div><a href="/posts/veikk-linux-driver-v3-notes" title="View post &quot;VEIKK Linux Driver v3 Notes&quot;">VEIKK Linux Driver v3 Notes</a> <span class="smallText">08/01/20</span></div>
+          <div><a href="/posts/on-developing-a-linux-driver" title="View post &quot;On Developing a Linux Driver&quot;">On Developing a Linux Driver</a> <span class="smallText">06/11/19</span></div>
+          <div><a href="/posts/diary-of-a-college-kid" title="View post &quot;Diary of a College Kid&quot;">Diary of a College Kid</a> <span class="smallText">02/27/19</span></div>
+        <div>
+          <a class="smallText" href="/posts" title="View all posts">View all posts</a><br>
+          <a class="smallText" href="/authors" title="View all authors">View all authors</a><br>
+        </div>
+      </div>
+      <div class="shareIcons desktop no-print">
+        <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+        <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+        <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+        <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+      </div>
+    </div>
+    <div id="contentWrapper">
+      <div id="content">
+        <div id='postHeader'>
+  <div class='container'>
+    <div id='postMainInfo'>
+      <img src="/res/img/jonathan-lam-profile-pic.png" id="postAuthorPicture">
+      <div id='postMainInfoTitleAuthor'>
+        <h1 id="postTitle">Better RTC with WebRTC</h1>
+        <h3 id="postAuthor">By <a href="/authors/jonathan-lam" title="View author Jonathan Lam">Jonathan Lam</a> on 06/24/18</h3>
+      </div>
+    </div>
+    <p id="postTags">Tagged: <span class="tag clickable">coding</span> <span class="tag clickable">tutorial</span></p>
+    <p id='postAdjacentPosts'>Previous post: <a href="/posts/introducing-babap">Introducing BaBaP!</a><br>Next post: <a href="/posts/consolidation">Consolidation</a></p>
+    <div class="shareIcons mobile no-print">
+      <br>
+      <a href="/feed.xml" class="shareIcon" title="Subscribe to RSS feed"><i class="fa fa-rss fa-fw"></i></a>
+      <a class="shareIcon" title="Share on Facebook"><i class="fa fa-facebook-official fa-fw"></i></a>
+      <a class="shareIcon" title="Tweet this"><i class="fa fa-twitter fa-fw"></i></a>
+      <a class="shareIcon" title="Print article" href><i class="fa fa-print fa-fw"></i></a>
+    </div>
+  </div>
+</div>
+<div id="postBody">
+  <div class='container'>
+    <p>For years, I've been trying to get at real time communication (RTC). The best I've done is using websockets, which work fairly well, but it requires a server. Now, setting up a Node.js server with socket.io isn't too bad, so that's not a problem.</p>
+<p>The problem is for sending large amounts of data across in a short amount of time. I noticed this most with <a href="https://racing-game-csp.herokuapp.com/">the racing game</a> I've built, which usually has noticeable amounts of lag.</p>
+<p>The problem is that the data always is sent to the server (from the controllers), re-processed, and sent out to the client (the monitor). What happens with WebRTC is the middleman&mdash; the server&mdash; is cut out of the picture, and the faster UDP protocol is used (as opposed to the more error-safe TCP protocol used in WebSockets).</p>
+<p>Then what is WebRTC? WebRTC is a (relatively) new JavaScript protocol for peer-to-peer communication via simple APIs and no plugins. This means that the plugins that used to be necessary for high-quality and high-speed data streaming (especially Flash) are becoming a part of native JavaScript, as <a href="https://caniuse.com/#search=webrtc">most popular web browsers have widely adopted WebRTC standards</a>.</p>
+<p>The idea is similar to that of VoIP (Voice over IP). VoIP is an Internet-based phone call system that has been widely adopted due to its low-costs and use of existing Internet infrastructure. The first part of making a phone call over VoIP is the SIP (Session Initiation Protocol), which is a way of advertising availability on the phone network. Once the caller finds the callee over the SIP protocol, a handshake is made, initiating a direct (peer-to-peer) connection between the two phones for a fast connection.</p>
+<hr />
+<h3 id="howitworks">How it works</h3>
+<p>In the following description, "host" and "client" are used to distinguish two computers being connected via WebRTC ("peers"). However, this definition is arbitrary, and either host or client can add a stream that the other peer can view. The only difference is that the host initiates the handshake with <code>createOffer</code>, while the client answers the offer.</p>
+<ol>
+<li><p><em>Host:</em> <strong>Obtain a stream of data.</strong> A stream (or multiple streams) of data is used as the medium communicated by WebRTC. Usually, this is a video and/or audio stream (a MediaStream object), but it can be any valid stream. JavaScript makes this very easy using the <code>Navigator.getUserMedia()</code> function.</p></li>
+<li><p><em>Host and client:</em> <strong>Match a host and a client via some signalling channel/protocol.</strong> WebRTC doesn't include the initial SIP for connecting two clients. Some other messaging service, such as Websockets in a client-server model, must be made to find another computer to connect to and carry out the handshake communication.</p></li>
+<li><p><em>Host and client:</em> <strong>Create <code>RTCPeerConnection</code> instances.</strong> These are the objects used to carry out the WebRTC protocol. While support is pretty good in popular browsers, some Opera and Chrome versions require the webkit prefix (<code>webkitRTCPeerConnection</code>).</p></li>
+<li><p><em>Host and/or Client:</em> <strong>Add streams to the WebRTC connection.</strong> Either peer can use the <code>addStream()</code> function to add a stream to the connection.</p></li>
+<li><p><em>Host and/or Client:</em> <strong>Handle stream.</strong> Either peer can listen to the <code>onaddstream</code> function to receive streams on the connection.</p>
+<p><strong>Now, the media and basic objects have been set up. Next, the media two peers have to find a direct means of communication via the ICE framework.</strong></p></li>
+<li><p><em>Host:</em> <strong>Handle ICE candidates and send to client.</strong> Now, the client and host have to figure out how to obtain a direct connection between the two. This is done using the ICE framework, which abstracts away the navigation through network interfaces and ports to find the best method. The host receives the <code>onicecandidate</code> event for a potential ICE candidate, and sends it over the signalling channel to the client.</p></li>
+<li><p><em>Client:</em> <strong>Handle ICE candidates sent by the host.</strong> The client receives the ICE candidates via the signalling channel and adds them using the <code>addIceCandidate()</code> function.</p>
+<p><strong>The final steps are the WebRTC handshake.</strong></p></li>
+<li><p><em>Host:</em> <strong>Create offer.</strong> In order to establish a connection, both the host and the client need a pair of matching Session Description Protocol (SDP) descriptions: a local one (their own) and a remote one (the other one). The host creates their SDP description using <code>createdOffer()</code>, and sets it as their local SDP description using <code>setLocalDescription()</code>.</p></li>
+<li><p><em>Host</em>: <strong>Send host's SDP description to client via signalling channel.</strong></p></li>
+<li><p><em>Client:</em> <strong>Receive offer and create answer.</strong> Via the signalling channel, the client receives host's SDP description, and sets it as the remote description with <code>setRemoteDescription()</code>. Then, they create an "answer" to the offer with <code>createAnswer()</code>&mdash; this creates their local SDP description, which they set using <code>setLocalDescription()</code>.</p></li>
+<li><p><em>Client:</em> <strong>Send client's SDP description to host via signalling channel.</strong></p></li>
+<li><p><em>Host:</em> <strong>Receive answer.</strong> Via the signalling channel, the host receives the answer (the client's SDP description) and sets it as the remote description using <code>setRemoteDescription()</code>.</p>
+<p><strong>By this point, both host and client share a common pair of SDP descriptions, and the handshake is complete.</strong></p>
+<p><strong>Now, the connection should be complete.</strong></p></li>
+</ol>
+<p>That seems like a lot already, but all the hard work has already been abstracted away in the ICE framework and the <code>RTCPeerConnection</code> object.</p>
+<hr />
+<p>In summary, here's a linear representation of the entire process (you can copy-and-paste this to run on any web server):</p>
+<pre><code>/*
+  SET UP MEDIA AND RTCPEERCONNECTION OBJECTS
+  STEPS 1-5
+  note that createOffer (in the handshake) must occur after addStream() (in this section). More details here: https://stackoverflow.com/questions/27489881/webrtc-never-fires-onicecandidate/27758788#27758788
+*/
+/* step 1: host: obtain a stream of data */
+navigator.mediaDevices.getUserMedia({
+  video: true,
+  audio: false
+})
+  .then(hostBeginRTC)
+  .catch(handleError);
+
+/*
+  step 2: host and client: match a host and a client via some signalling channel/protocol
+  (here there is no signalling channel, so the other pc's functions will be called for simplicity)
+*/
+
+/* step 3: host and client: create RTCPeerConnection objects */
+let pc1 = new RTCPeerConnection();
+let pc2 = new RTCPeerConnection();
+
+/* step 4: (host): add stream to the WebRTC connectionn */
+function hostBeginRTC(stream) {
+  pc1.addStream(stream);
+
+  // also show in "input" video element
+  videoPlayer1.srcObject = stream;
+
+  // handshake
+  handshake();
+}
+
+/* step 5: (client): handle stream */
+pc2.onaddstream = event =&gt; {
+  // show in "output" video element
+  videoPlayer2.srcObject = event.stream;
+}
+
+/*
+  HANDLE ICE CANDIDATES
+  STEPS 6-7
+  note that ice candidates are generated when setLocalDescription() (in the handshake) is called
+*/
+
+/* step 6: host: handle ICE candidates and send to client */
+pc1.onicecandidate = event =&gt; {
+  /* step 7: client: handle ice candidates sent by the host */
+  if(event.candidate !== null)
+    pc2.addIceCandidate(event.candidate)
+      .catch(handleError);
+}
+
+/*
+  ESTABLISH THE HANDSHAKE
+  STEPS 8-12
+*/
+function handshake() {
+  /* step 8: host: create offer */
+  pc1.createOffer()
+    .then(offer =&gt; {
+      pc1.setLocalDescription(offer)
+        .catch(handleError);
+
+      /* step 9: host: send host's SDP description to client via signalling channel */
+      pc2.setRemoteDescription(offer)
+        .catch(handleError);
+
+      /* step 10: client: receive offer and create answer */
+      pc2.createAnswer()
+        .then(answer =&gt; {
+
+          /* step 11: client: send client's SDP offer and create answer */
+          pc2.setLocalDescription(answer);
+
+          /* step 12: host: receive answer */
+          pc1.setRemoteDescription(answer)
+            .catch(handleError);
+
+        });
+    });
+}
+</code></pre>
+<hr />
+<h3 id="resources">Resources</h3>
+<ul>
+<li>For a more in-depth introduction to WebRTC, there is a <a href="https://www.html5rocks.com/en/tutorials/webrtc/basics/">great article by HTML5 Rocks</a>, from where I got learnt most of this information.</li>
+<li>However, some of the code snippets use deprecated functions, so it might be a good idea to check out the <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection">MDN documentation on <code>RTCPeerConnection</code></a> as well.</li>
+<li>The WebRTC website has <a href="https://webrtc.github.io/samples/">many informative samples</a>.</li>
+<li>The code above can be found at <a href="https://github.com/jlam55555/webrtc-test">@jlam55555/webrtc-test on GitHub</a>.</li>
+</ul>
+<hr />
+<h3 id="notes">Notes</h3>
+<ul>
+<li>Unfortunately, I haven't yet implemented WebRTC in my applications yet, such as the multiplayer racing game, and the performance gain is theoretical. The benefits of WebRTC are described in more depth on <a href="https://stackoverflow.com/a/18805578/2397327">this Stack Overflow answer</a>.)</li>
+<li>This post was updated on 6/25/18 with a working example</li>
+</ul>
+  </div>
+</div>
+</div>
+<div id='postFooter'>
+  <div id='postFooterContainer' class='container'>
+    <h3>Comments</h3>
+    <div id="writeComment" class='no-print'>
+      <p>Write a comment</p>
+      <div id="commentError"></div>
+      <input type="text" id="commentName" placeholder="Name" maxlength="50">
+      <textarea id="commentText" placeholder="Comment" maxlength="500"></textarea>
+      <button id="submitComment">Submit</button>
+    </div>
+      <p>No comments for this post.</p>
+    <p>This post has 0 views. Return <a href="/" title="Return home">home</a>.</p>
+    Previous post: <a href="/posts/introducing-babap">Introducing BaBaP!</a><br>Next post: <a href="/posts/consolidation">Consolidation</a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  const outsideUrls = [ 'ht', '//' ];
+  $('#postBody a').each((i, linkElem) => {
+    if(outsideUrls.indexOf(linkElem.href.slice(0, 2)) >= 0)
+      linkElem.target = '_blank';
+  });
+</script>
+
+
+        <!-- quote box -->
+        <div class='container'>
+          <div id="quote">
+            <p id="circles" class="smallText">
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+              <i class="fa fa-circle-o"></i>
+              <i class="fa fa-circle"></i>
+            </p>
+            <p>
+              <sup><i class="fa fa-quote-left smallText"></i></sup>
+                No.
+              <sup><i class="fa fa-quote-right smallText"></i></sup>
+            </p>
+            <p class="smallText"><p>Grumpy Cat</p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
