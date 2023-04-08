@@ -11,9 +11,10 @@
 # Besides scraping the website, the other major change is
 # to turn the search feature into a static feature.
 #
-# Run this from the root of the repo.
+# Run this from the root of the repo while the node server
+# is also running (yes, I know this is an awful solution,
+# but it's a makeshift one just to get this site back up).
 set -o errexit
-set -o xtrace
 
 pages=(
     /
@@ -39,10 +40,14 @@ for page in "${pages[@]}"; do
     curl "${server}""${page}" >"${out_dir}""${page}"/index.html
 done
 
+# Scrape resources.
 for resource in "${resources[@]}"; do
     echo Scraping resource="${resource}..."
     mkdir -p "$(dirname "${out_dir}""${resource}")"
     curl "${server}""${resource}" >"${out_dir}""${resource}"
 done
+
+# Generate 404 page.
+curl "${server}"/404 >"${out_dir}"/404.html
 
 echo Done.
